@@ -10,9 +10,14 @@ public class PlayerMovment : MonoBehaviour {
     Rigidbody2D rdbody;
     Animator anim;
     float speed;
+
+    public bool canMove;
     
 	// Use this for initialization
 	void Start () {
+
+        canMove = true;
+
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         float value = 0.0f;
@@ -42,6 +47,13 @@ public class PlayerMovment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
+        if (!canMove)
+        {
+            rdbody.velocity = Vector2.zero;
+            return;
+        }
+
         Vector2 movment = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (movment != Vector2.zero)
         {
