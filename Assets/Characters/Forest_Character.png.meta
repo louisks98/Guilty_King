@@ -1,0 +1,3112 @@
+fileFormatVersion: 2
+guid: cbca8600baf87e44db61855ce258f764
+timeCreated: 1505951321
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Forest_Character_0
+    21300002: Forest_Character_1
+    21300004: Forest_Character_2
+    21300006: Forest_Character_3
+    21300008: Forest_Character_4
+    21300010: Forest_Character_5
+    21300012: Forest_Character_6
+    21300014: Forest_Character_7
+    21300016: Forest_Character_8
+    21300018: Forest_Character_9
+    21300020: Forest_Character_10
+    21300022: Forest_Character_11
+    21300024: Forest_Character_12
+    21300026: Forest_Character_13
+    21300028: Forest_Character_14
+    21300030: Forest_Character_15
+    21300032: Forest_Character_16
+    21300034: Forest_Character_17
+    21300036: Forest_Character_18
+    21300038: Forest_Character_19
+    21300040: Forest_Character_20
+    21300042: Forest_Character_21
+    21300044: Forest_Character_22
+    21300046: Forest_Character_23
+    21300048: Forest_Character_24
+    21300050: Forest_Character_25
+    21300052: Forest_Character_26
+    21300054: Forest_Character_27
+    21300056: Forest_Character_28
+    21300058: Forest_Character_29
+    21300060: Forest_Character_30
+    21300062: Forest_Character_31
+    21300064: Forest_Character_32
+    21300066: Forest_Character_33
+    21300068: Forest_Character_34
+    21300070: Forest_Character_35
+    21300072: Forest_Character_36
+    21300074: Forest_Character_37
+    21300076: Forest_Character_38
+    21300078: Forest_Character_39
+    21300080: Forest_Character_40
+    21300082: Forest_Character_41
+    21300084: Forest_Character_42
+    21300086: Forest_Character_43
+    21300088: Forest_Character_44
+    21300090: Forest_Character_45
+    21300092: Forest_Character_46
+    21300094: Forest_Character_47
+    21300096: Forest_Character_48
+    21300098: Forest_Character_49
+    21300100: Forest_Character_50
+    21300102: Forest_Character_51
+    21300104: Forest_Character_52
+    21300106: Forest_Character_53
+    21300108: Forest_Character_54
+    21300110: Forest_Character_55
+    21300112: Forest_Character_56
+    21300114: Forest_Character_57
+    21300116: Forest_Character_58
+    21300118: Forest_Character_59
+    21300120: Forest_Character_60
+    21300122: Forest_Character_61
+    21300124: Forest_Character_62
+    21300126: Forest_Character_63
+    21300128: Forest_Character_64
+    21300130: Forest_Character_65
+    21300132: Forest_Character_66
+    21300134: Forest_Character_67
+    21300136: Forest_Character_68
+    21300138: Forest_Character_69
+    21300140: Forest_Character_70
+    21300142: Forest_Character_71
+    21300144: Forest_Character_72
+    21300146: Forest_Character_73
+    21300148: Forest_Character_74
+    21300150: Forest_Character_75
+    21300152: Forest_Character_76
+    21300154: Forest_Character_77
+    21300156: Forest_Character_78
+    21300158: Forest_Character_79
+    21300160: Forest_Character_80
+    21300162: Forest_Character_81
+    21300164: Forest_Character_82
+    21300166: Forest_Character_83
+    21300168: Forest_Character_84
+    21300170: Forest_Character_85
+    21300172: Forest_Character_86
+    21300174: Forest_Character_87
+    21300176: Forest_Character_88
+    21300178: Forest_Character_89
+    21300180: Forest_Character_90
+    21300182: Forest_Character_91
+    21300184: Forest_Character_92
+    21300186: Forest_Character_93
+    21300188: Forest_Character_94
+    21300190: Forest_Character_95
+    21300192: Forest_Character_96
+    21300194: Forest_Character_97
+    21300196: Forest_Character_98
+    21300198: Forest_Character_99
+    21300200: Forest_Character_100
+    21300202: Forest_Character_101
+    21300204: Forest_Character_102
+    21300206: Forest_Character_103
+    21300208: Forest_Character_104
+    21300210: Forest_Character_105
+    21300212: Forest_Character_106
+    21300214: Forest_Character_107
+    21300216: Forest_Character_108
+    21300218: Forest_Character_109
+    21300220: Forest_Character_110
+    21300222: Forest_Character_111
+    21300224: Forest_Character_112
+    21300226: Forest_Character_113
+    21300228: Forest_Character_114
+    21300230: Forest_Character_115
+    21300232: Forest_Character_116
+    21300234: Forest_Character_117
+    21300236: Forest_Character_118
+    21300238: Forest_Character_119
+    21300240: Forest_Character_120
+    21300242: Forest_Character_121
+    21300244: Forest_Character_122
+    21300246: Forest_Character_123
+    21300248: Forest_Character_124
+    21300250: Forest_Character_125
+    21300252: Forest_Character_126
+    21300254: Forest_Character_127
+    21300256: Forest_Character_128
+    21300258: Forest_Character_129
+    21300260: Forest_Character_130
+    21300262: Forest_Character_131
+    21300264: Forest_Character_132
+    21300266: Forest_Character_133
+    21300268: Forest_Character_134
+    21300270: Forest_Character_135
+    21300272: Forest_Character_136
+    21300274: Forest_Character_137
+    21300276: Forest_Character_138
+    21300278: Forest_Character_139
+    21300280: Forest_Character_140
+    21300282: Forest_Character_141
+    21300284: Forest_Character_142
+    21300286: Forest_Character_143
+    21300288: Forest_Character_144
+    21300290: Forest_Character_145
+    21300292: Forest_Character_146
+    21300294: Forest_Character_147
+    21300296: Forest_Character_148
+    21300298: Forest_Character_149
+    21300300: Forest_Character_150
+    21300302: Forest_Character_151
+    21300304: Forest_Character_152
+    21300306: Forest_Character_153
+    21300308: Forest_Character_154
+    21300310: Forest_Character_155
+    21300312: Forest_Character_156
+    21300314: Forest_Character_157
+    21300316: Forest_Character_158
+    21300318: Forest_Character_159
+    21300320: Forest_Character_160
+    21300322: Forest_Character_161
+    21300324: Forest_Character_162
+    21300326: Forest_Character_163
+    21300328: Forest_Character_164
+    21300330: Forest_Character_165
+    21300332: Forest_Character_166
+    21300334: Forest_Character_167
+    21300336: Forest_Character_168
+    21300338: Forest_Character_169
+    21300340: Forest_Character_170
+    21300342: Forest_Character_171
+    21300344: Forest_Character_172
+    21300346: Forest_Character_173
+    21300348: Forest_Character_174
+    21300350: Forest_Character_175
+    21300352: Forest_Character_176
+    21300354: Forest_Character_177
+    21300356: Forest_Character_178
+    21300358: Forest_Character_179
+    21300360: Forest_Character_180
+    21300362: Forest_Character_181
+    21300364: Forest_Character_182
+    21300366: Forest_Character_183
+    21300368: Forest_Character_184
+    21300370: Forest_Character_185
+    21300372: Forest_Character_186
+    21300374: Forest_Character_187
+    21300376: Forest_Character_188
+    21300378: Forest_Character_189
+    21300380: Forest_Character_190
+    21300382: Forest_Character_191
+    21300384: Forest_Character_192
+    21300386: Forest_Character_193
+    21300388: Forest_Character_194
+    21300390: Forest_Character_195
+    21300392: Forest_Character_196
+    21300394: Forest_Character_197
+    21300396: Forest_Character_198
+    21300398: Forest_Character_199
+    21300400: Forest_Character_200
+    21300402: Forest_Character_201
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Forest_Character_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1987
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1987
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1987
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1987
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_4
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1987
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1987
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1987
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1924
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1924
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_9
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1924
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1924
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_11
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1924
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_12
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1924
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_13
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1924
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1861
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1860
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_16
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1860
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_17
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1861
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_18
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1860
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_19
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1860
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_20
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1860
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1800
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1800
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1800
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_24
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1800
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_25
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1800
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_26
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1800
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_27
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1800
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1739
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1737
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1737
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_31
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1737
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_32
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1737
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_33
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1737
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_34
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1737
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_35
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1737
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1676
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1676
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_38
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1676
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_39
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1675
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_40
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1675
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_41
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1675
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_42
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1675
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_43
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1675
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1613
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1614
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_46
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1614
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_47
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1614
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_48
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1614
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_49
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1614
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_50
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1614
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_51
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1614
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_52
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1552
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1552
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_54
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1552
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_55
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1551
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_56
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1551
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_57
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1551
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_58
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1551
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_59
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1551
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1492
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_61
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1492
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_62
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1491
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_63
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1490
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_64
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1491
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_65
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1492
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_66
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1491
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_67
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1490
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_68
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1491
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_69
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1428
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_70
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1429
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_71
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1430
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_72
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1430
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_73
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1429
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_74
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1429
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_75
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1429
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_76
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1429
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_77
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1429
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_78
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1365
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_79
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1365
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_80
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1366
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_81
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1366
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_82
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1365
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_83
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1365
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_84
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1366
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_85
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1366
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_86
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1365
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_87
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1304
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_88
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1305
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_89
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1305
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_90
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1306
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_91
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1305
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_92
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1305
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_93
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1305
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_94
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1305
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_95
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1305
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_96
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1243
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_97
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1242
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_98
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1242
+        width: 28
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_99
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1242
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_100
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1242
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_101
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1242
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_102
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1180
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_103
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1179
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_104
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1179
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_105
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1179
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_106
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1179
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_107
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1179
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_108
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1117
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_109
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1117
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_110
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1117
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_111
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1118
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_112
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1118
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_113
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1118
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_114
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1056
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_115
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1055
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_116
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1055
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_117
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1055
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_118
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1055
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_119
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1055
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_120
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 994
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_121
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 992
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_122
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 992
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_123
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 992
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_124
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 992
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_125
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 992
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_126
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 992
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_127
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 992
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_128
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 992
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_129
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 992
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_130
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 992
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_131
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 992
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_132
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 992
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_133
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 931
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_134
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 931
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_135
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 931
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_136
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 930
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_137
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 930
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_138
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 930
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_139
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 930
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_140
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 930
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_141
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 930
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_142
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 930
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_143
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 930
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_144
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 930
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_145
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 930
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_146
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 868
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_147
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 868
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_148
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 870
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_149
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 868
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_150
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 868
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_151
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 868
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_152
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 868
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_153
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 868
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_154
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 868
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_155
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 868
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_156
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 868
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_157
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 868
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_158
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 868
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_159
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 807
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_160
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 807
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_161
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 807
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_162
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 806
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_163
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 806
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_164
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 806
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_165
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 806
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_166
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 806
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_167
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 806
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_168
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 806
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_169
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 806
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_170
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 805
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_171
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 805
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_172
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 744
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_173
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 744
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_174
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 744
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_175
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 747
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_176
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 747
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_177
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 745
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_178
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 622
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_179
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 621
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_180
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 621
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_181
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 621
+        width: 57
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_182
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 621
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_183
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 621
+        width: 75
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_184
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 434
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_185
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 434
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_186
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 434
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_187
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 434
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_188
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 434
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_189
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 434
+        width: 89
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_190
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 247
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_191
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 248
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_192
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 248
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_193
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 249
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_194
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 231
+        width: 80
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_195
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 234
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_196
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 62
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_197
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 62
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_198
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 62
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_199
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 60
+        width: 57
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_200
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 62
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forest_Character_201
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 62
+        width: 89
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

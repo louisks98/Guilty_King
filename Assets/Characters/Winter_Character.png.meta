@@ -1,0 +1,3232 @@
+fileFormatVersion: 2
+guid: ae8182e8149554f4a85818a0c4d166ce
+timeCreated: 1505951427
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Winter_Character_0
+    21300002: Winter_Character_1
+    21300004: Winter_Character_2
+    21300006: Winter_Character_3
+    21300008: Winter_Character_4
+    21300010: Winter_Character_5
+    21300012: Winter_Character_6
+    21300014: Winter_Character_7
+    21300016: Winter_Character_8
+    21300018: Winter_Character_9
+    21300020: Winter_Character_10
+    21300022: Winter_Character_11
+    21300024: Winter_Character_12
+    21300026: Winter_Character_13
+    21300028: Winter_Character_14
+    21300030: Winter_Character_15
+    21300032: Winter_Character_16
+    21300034: Winter_Character_17
+    21300036: Winter_Character_18
+    21300038: Winter_Character_19
+    21300040: Winter_Character_20
+    21300042: Winter_Character_21
+    21300044: Winter_Character_22
+    21300046: Winter_Character_23
+    21300048: Winter_Character_24
+    21300050: Winter_Character_25
+    21300052: Winter_Character_26
+    21300054: Winter_Character_27
+    21300056: Winter_Character_28
+    21300058: Winter_Character_29
+    21300060: Winter_Character_30
+    21300062: Winter_Character_31
+    21300064: Winter_Character_32
+    21300066: Winter_Character_33
+    21300068: Winter_Character_34
+    21300070: Winter_Character_35
+    21300072: Winter_Character_36
+    21300074: Winter_Character_37
+    21300076: Winter_Character_38
+    21300078: Winter_Character_39
+    21300080: Winter_Character_40
+    21300082: Winter_Character_41
+    21300084: Winter_Character_42
+    21300086: Winter_Character_43
+    21300088: Winter_Character_44
+    21300090: Winter_Character_45
+    21300092: Winter_Character_46
+    21300094: Winter_Character_47
+    21300096: Winter_Character_48
+    21300098: Winter_Character_49
+    21300100: Winter_Character_50
+    21300102: Winter_Character_51
+    21300104: Winter_Character_52
+    21300106: Winter_Character_53
+    21300108: Winter_Character_54
+    21300110: Winter_Character_55
+    21300112: Winter_Character_56
+    21300114: Winter_Character_57
+    21300116: Winter_Character_58
+    21300118: Winter_Character_59
+    21300120: Winter_Character_60
+    21300122: Winter_Character_61
+    21300124: Winter_Character_62
+    21300126: Winter_Character_63
+    21300128: Winter_Character_64
+    21300130: Winter_Character_65
+    21300132: Winter_Character_66
+    21300134: Winter_Character_67
+    21300136: Winter_Character_68
+    21300138: Winter_Character_69
+    21300140: Winter_Character_70
+    21300142: Winter_Character_71
+    21300144: Winter_Character_72
+    21300146: Winter_Character_73
+    21300148: Winter_Character_74
+    21300150: Winter_Character_75
+    21300152: Winter_Character_76
+    21300154: Winter_Character_77
+    21300156: Winter_Character_78
+    21300158: Winter_Character_79
+    21300160: Winter_Character_80
+    21300162: Winter_Character_81
+    21300164: Winter_Character_82
+    21300166: Winter_Character_83
+    21300168: Winter_Character_84
+    21300170: Winter_Character_85
+    21300172: Winter_Character_86
+    21300174: Winter_Character_87
+    21300176: Winter_Character_88
+    21300178: Winter_Character_89
+    21300180: Winter_Character_90
+    21300182: Winter_Character_91
+    21300184: Winter_Character_92
+    21300186: Winter_Character_93
+    21300188: Winter_Character_94
+    21300190: Winter_Character_95
+    21300192: Winter_Character_96
+    21300194: Winter_Character_97
+    21300196: Winter_Character_98
+    21300198: Winter_Character_99
+    21300200: Winter_Character_100
+    21300202: Winter_Character_101
+    21300204: Winter_Character_102
+    21300206: Winter_Character_103
+    21300208: Winter_Character_104
+    21300210: Winter_Character_105
+    21300212: Winter_Character_106
+    21300214: Winter_Character_107
+    21300216: Winter_Character_108
+    21300218: Winter_Character_109
+    21300220: Winter_Character_110
+    21300222: Winter_Character_111
+    21300224: Winter_Character_112
+    21300226: Winter_Character_113
+    21300228: Winter_Character_114
+    21300230: Winter_Character_115
+    21300232: Winter_Character_116
+    21300234: Winter_Character_117
+    21300236: Winter_Character_118
+    21300238: Winter_Character_119
+    21300240: Winter_Character_120
+    21300242: Winter_Character_121
+    21300244: Winter_Character_122
+    21300246: Winter_Character_123
+    21300248: Winter_Character_124
+    21300250: Winter_Character_125
+    21300252: Winter_Character_126
+    21300254: Winter_Character_127
+    21300256: Winter_Character_128
+    21300258: Winter_Character_129
+    21300260: Winter_Character_130
+    21300262: Winter_Character_131
+    21300264: Winter_Character_132
+    21300266: Winter_Character_133
+    21300268: Winter_Character_134
+    21300270: Winter_Character_135
+    21300272: Winter_Character_136
+    21300274: Winter_Character_137
+    21300276: Winter_Character_138
+    21300278: Winter_Character_139
+    21300280: Winter_Character_140
+    21300282: Winter_Character_141
+    21300284: Winter_Character_142
+    21300286: Winter_Character_143
+    21300288: Winter_Character_144
+    21300290: Winter_Character_145
+    21300292: Winter_Character_146
+    21300294: Winter_Character_147
+    21300296: Winter_Character_148
+    21300298: Winter_Character_149
+    21300300: Winter_Character_150
+    21300302: Winter_Character_151
+    21300304: Winter_Character_152
+    21300306: Winter_Character_153
+    21300308: Winter_Character_154
+    21300310: Winter_Character_155
+    21300312: Winter_Character_156
+    21300314: Winter_Character_157
+    21300316: Winter_Character_158
+    21300318: Winter_Character_159
+    21300320: Winter_Character_160
+    21300322: Winter_Character_161
+    21300324: Winter_Character_162
+    21300326: Winter_Character_163
+    21300328: Winter_Character_164
+    21300330: Winter_Character_165
+    21300332: Winter_Character_166
+    21300334: Winter_Character_167
+    21300336: Winter_Character_168
+    21300338: Winter_Character_169
+    21300340: Winter_Character_170
+    21300342: Winter_Character_171
+    21300344: Winter_Character_172
+    21300346: Winter_Character_173
+    21300348: Winter_Character_174
+    21300350: Winter_Character_175
+    21300352: Winter_Character_176
+    21300354: Winter_Character_177
+    21300356: Winter_Character_178
+    21300358: Winter_Character_179
+    21300360: Winter_Character_180
+    21300362: Winter_Character_181
+    21300364: Winter_Character_182
+    21300366: Winter_Character_183
+    21300368: Winter_Character_184
+    21300370: Winter_Character_185
+    21300372: Winter_Character_186
+    21300374: Winter_Character_187
+    21300376: Winter_Character_188
+    21300378: Winter_Character_189
+    21300380: Winter_Character_190
+    21300382: Winter_Character_191
+    21300384: Winter_Character_192
+    21300386: Winter_Character_193
+    21300388: Winter_Character_194
+    21300390: Winter_Character_195
+    21300392: Winter_Character_196
+    21300394: Winter_Character_197
+    21300396: Winter_Character_198
+    21300398: Winter_Character_199
+    21300400: Winter_Character_200
+    21300402: Winter_Character_201
+    21300404: Winter_Character_202
+    21300406: Winter_Character_203
+    21300408: Winter_Character_204
+    21300410: Winter_Character_205
+    21300412: Winter_Character_206
+    21300414: Winter_Character_207
+    21300416: Winter_Character_208
+    21300418: Winter_Character_209
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Winter_Character_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1986
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1986
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1986
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1986
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1986
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1986
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1986
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1924
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1924
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_9
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1924
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_10
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1924
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_11
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1924
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_12
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1924
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1924
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1862
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1862
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_16
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1862
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_17
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1862
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_18
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1862
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_19
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1862
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1862
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_21
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1800
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1800
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_23
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1800
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1800
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_25
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1800
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_26
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1800
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_27
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1800
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_28
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_30
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_31
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_32
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_33
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_34
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_35
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1737
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1676
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1676
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_38
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1676
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_39
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1676
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_40
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1676
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_41
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1676
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_42
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1676
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_43
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1676
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1614
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1614
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_46
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1614
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_47
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1614
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_48
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1613
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_49
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1613
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_50
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1613
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_51
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1614
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_52
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1552
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_53
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1552
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_54
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1552
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_55
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1552
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_56
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1552
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_57
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1552
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_58
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1552
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1552
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_60
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1491
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_61
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1491
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_62
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1490
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_63
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1489
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_64
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1490
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_65
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1491
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_66
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1490
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_67
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1489
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_68
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1490
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_69
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1428
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_70
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1428
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_71
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1428
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_72
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1429
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_73
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1428
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_74
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1427
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_75
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1427
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_76
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1428
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_77
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1428
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_78
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1366
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_79
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1366
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_80
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1366
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_81
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1365
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_82
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1366
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_83
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1366
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_84
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1366
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_85
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1365
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_86
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1366
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_87
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1304
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_88
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1304
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_89
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1304
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_90
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1305
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_91
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1304
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_92
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1303
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_93
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1303
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_94
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1304
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_95
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1304
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_96
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1242
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_97
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1242
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_98
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1242
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_99
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1243
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_100
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1243
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_101
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1243
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_102
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1180
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_103
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1179
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_104
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1179
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_105
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1180
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_106
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1180
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_107
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1180
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_108
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1118
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_109
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1117
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_110
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1117
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_111
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1118
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_112
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1118
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_113
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1118
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_114
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1056
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_115
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1055
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_116
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1055
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_117
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1056
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_118
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1056
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_119
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1056
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_120
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 993
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_121
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 993
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_122
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 992
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_123
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 992
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_124
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 992
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_125
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 992
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_126
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 992
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_127
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 992
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_128
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 992
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_129
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 992
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_130
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 992
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_131
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 992
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_132
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 992
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_133
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 931
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_134
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 931
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_135
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 931
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_136
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 931
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_137
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 931
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_138
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 931
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_139
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 931
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_140
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 931
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_141
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 931
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_142
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 931
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_143
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 931
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_144
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 931
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_145
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 931
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_146
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 869
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_147
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 869
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_148
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 869
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_149
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 868
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_150
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 868
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_151
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 869
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_152
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 869
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_153
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 869
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_154
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 869
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_155
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 869
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_156
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 869
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_157
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 869
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_158
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 869
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_159
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 807
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_160
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 807
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_161
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 807
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_162
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 807
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_163
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 807
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_164
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 807
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_165
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 807
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_166
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 807
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_167
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 807
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_168
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 807
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_169
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 807
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_170
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 807
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_171
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 807
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_172
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 744
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_173
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 746
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_174
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 744
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_175
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 744
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_176
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 747
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_177
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 744
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_178
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 620
+        width: 91
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_179
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 620
+        width: 86
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_180
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 620
+        width: 64
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_181
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 618
+        width: 29
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_182
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 620
+        width: 30
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_183
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 620
+        width: 29
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_184
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 620
+        width: 29
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_185
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 618
+        width: 29
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_186
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 435
+        width: 87
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_187
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 435
+        width: 89
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_188
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 435
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_189
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 435
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_190
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 435
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_191
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 435
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_192
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 435
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_193
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 435
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_194
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 249
+        width: 92
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_195
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 244
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_196
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 220
+        width: 64
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_197
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 220
+        width: 27
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_198
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 212
+        width: 26
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_199
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 204
+        width: 25
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_200
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 212
+        width: 25
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_201
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 220
+        width: 27
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_202
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 63
+        width: 86
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_203
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 63
+        width: 90
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_204
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 63
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_205
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 63
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_206
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 63
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_207
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 63
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_208
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 63
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Winter_Character_209
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 63
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

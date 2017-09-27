@@ -1,0 +1,3161 @@
+fileFormatVersion: 2
+guid: 108bedf9496ff4b46b1bbe17a2ebfc8c
+timeCreated: 1505951046
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Fire_Character_0
+    21300002: Fire_Character_1
+    21300004: Fire_Character_2
+    21300006: Fire_Character_3
+    21300008: Fire_Character_4
+    21300010: Fire_Character_5
+    21300012: Fire_Character_6
+    21300014: Fire_Character_7
+    21300016: Fire_Character_8
+    21300018: Fire_Character_9
+    21300020: Fire_Character_10
+    21300022: Fire_Character_11
+    21300024: Fire_Character_12
+    21300026: Fire_Character_13
+    21300028: Fire_Character_14
+    21300030: Fire_Character_15
+    21300032: Fire_Character_16
+    21300034: Fire_Character_17
+    21300036: Fire_Character_18
+    21300038: Fire_Character_19
+    21300040: Fire_Character_20
+    21300042: Fire_Character_21
+    21300044: Fire_Character_22
+    21300046: Fire_Character_23
+    21300048: Fire_Character_24
+    21300050: Fire_Character_25
+    21300052: Fire_Character_26
+    21300054: Fire_Character_27
+    21300056: Fire_Character_28
+    21300058: Fire_Character_29
+    21300060: Fire_Character_30
+    21300062: Fire_Character_31
+    21300064: Fire_Character_32
+    21300066: Fire_Character_33
+    21300068: Fire_Character_34
+    21300070: Fire_Character_35
+    21300072: Fire_Character_36
+    21300074: Fire_Character_37
+    21300076: Fire_Character_38
+    21300078: Fire_Character_39
+    21300080: Fire_Character_40
+    21300082: Fire_Character_41
+    21300084: Fire_Character_42
+    21300086: Fire_Character_43
+    21300088: Fire_Character_44
+    21300090: Fire_Character_45
+    21300092: Fire_Character_46
+    21300094: Fire_Character_47
+    21300096: Fire_Character_48
+    21300098: Fire_Character_49
+    21300100: Fire_Character_50
+    21300102: Fire_Character_51
+    21300104: Fire_Character_52
+    21300106: Fire_Character_53
+    21300108: Fire_Character_54
+    21300110: Fire_Character_55
+    21300112: Fire_Character_56
+    21300114: Fire_Character_57
+    21300116: Fire_Character_58
+    21300118: Fire_Character_59
+    21300120: Fire_Character_60
+    21300122: Fire_Character_61
+    21300124: Fire_Character_62
+    21300126: Fire_Character_63
+    21300128: Fire_Character_64
+    21300130: Fire_Character_65
+    21300132: Fire_Character_66
+    21300134: Fire_Character_67
+    21300136: Fire_Character_68
+    21300138: Fire_Character_69
+    21300140: Fire_Character_70
+    21300142: Fire_Character_71
+    21300144: Fire_Character_72
+    21300146: Fire_Character_73
+    21300148: Fire_Character_74
+    21300150: Fire_Character_75
+    21300152: Fire_Character_76
+    21300154: Fire_Character_77
+    21300156: Fire_Character_78
+    21300158: Fire_Character_79
+    21300160: Fire_Character_80
+    21300162: Fire_Character_81
+    21300164: Fire_Character_82
+    21300166: Fire_Character_83
+    21300168: Fire_Character_84
+    21300170: Fire_Character_85
+    21300172: Fire_Character_86
+    21300174: Fire_Character_87
+    21300176: Fire_Character_88
+    21300178: Fire_Character_89
+    21300180: Fire_Character_90
+    21300182: Fire_Character_91
+    21300184: Fire_Character_92
+    21300186: Fire_Character_93
+    21300188: Fire_Character_94
+    21300190: Fire_Character_95
+    21300192: Fire_Character_96
+    21300194: Fire_Character_97
+    21300196: Fire_Character_98
+    21300198: Fire_Character_99
+    21300200: Fire_Character_100
+    21300202: Fire_Character_101
+    21300204: Fire_Character_102
+    21300206: Fire_Character_103
+    21300208: Fire_Character_104
+    21300210: Fire_Character_105
+    21300212: Fire_Character_106
+    21300214: Fire_Character_107
+    21300216: Fire_Character_108
+    21300218: Fire_Character_109
+    21300220: Fire_Character_110
+    21300222: Fire_Character_111
+    21300224: Fire_Character_112
+    21300226: Fire_Character_113
+    21300228: Fire_Character_114
+    21300230: Fire_Character_115
+    21300232: Fire_Character_116
+    21300234: Fire_Character_117
+    21300236: Fire_Character_118
+    21300238: Fire_Character_119
+    21300240: Fire_Character_120
+    21300242: Fire_Character_121
+    21300244: Fire_Character_122
+    21300246: Fire_Character_123
+    21300248: Fire_Character_124
+    21300250: Fire_Character_125
+    21300252: Fire_Character_126
+    21300254: Fire_Character_127
+    21300256: Fire_Character_128
+    21300258: Fire_Character_129
+    21300260: Fire_Character_130
+    21300262: Fire_Character_131
+    21300264: Fire_Character_132
+    21300266: Fire_Character_133
+    21300268: Fire_Character_134
+    21300270: Fire_Character_135
+    21300272: Fire_Character_136
+    21300274: Fire_Character_137
+    21300276: Fire_Character_138
+    21300278: Fire_Character_139
+    21300280: Fire_Character_140
+    21300282: Fire_Character_141
+    21300284: Fire_Character_142
+    21300286: Fire_Character_143
+    21300288: Fire_Character_144
+    21300290: Fire_Character_145
+    21300292: Fire_Character_146
+    21300294: Fire_Character_147
+    21300296: Fire_Character_148
+    21300298: Fire_Character_149
+    21300300: Fire_Character_150
+    21300302: Fire_Character_151
+    21300304: Fire_Character_152
+    21300306: Fire_Character_153
+    21300308: Fire_Character_154
+    21300310: Fire_Character_155
+    21300312: Fire_Character_156
+    21300314: Fire_Character_157
+    21300316: Fire_Character_158
+    21300318: Fire_Character_159
+    21300320: Fire_Character_160
+    21300322: Fire_Character_161
+    21300324: Fire_Character_162
+    21300326: Fire_Character_163
+    21300328: Fire_Character_164
+    21300330: Fire_Character_165
+    21300332: Fire_Character_166
+    21300334: Fire_Character_167
+    21300336: Fire_Character_168
+    21300338: Fire_Character_169
+    21300340: Fire_Character_170
+    21300342: Fire_Character_171
+    21300344: Fire_Character_172
+    21300346: Fire_Character_173
+    21300348: Fire_Character_174
+    21300350: Fire_Character_175
+    21300352: Fire_Character_176
+    21300354: Fire_Character_177
+    21300356: Fire_Character_178
+    21300358: Fire_Character_179
+    21300360: Fire_Character_180
+    21300362: Fire_Character_181
+    21300364: Fire_Character_182
+    21300366: Fire_Character_183
+    21300368: Fire_Character_184
+    21300370: Fire_Character_185
+    21300372: Fire_Character_186
+    21300374: Fire_Character_187
+    21300376: Fire_Character_188
+    21300378: Fire_Character_189
+    21300380: Fire_Character_190
+    21300382: Fire_Character_191
+    21300384: Fire_Character_192
+    21300386: Fire_Character_193
+    21300388: Fire_Character_194
+    21300390: Fire_Character_195
+    21300392: Fire_Character_196
+    21300394: Fire_Character_197
+    21300396: Fire_Character_198
+    21300398: Fire_Character_199
+    21300400: Fire_Character_200
+    21300402: Fire_Character_201
+    21300404: Fire_Character_202
+    21300406: Fire_Character_203
+    21300408: Fire_Character_204
+    21300410: Fire_Character_205
+    21300412: Fire_Character_206
+    21300414: Fire_Character_207
+    21300416: Fire_Character_208
+    21300418: Fire_Character_209
+    21300420: Fire_Character_210
+    21300422: Fire_Character_211
+    21300424: Fire_Character_212
+    21300426: Fire_Character_213
+    21300428: Fire_Character_214
+    21300430: Fire_Character_215
+    21300432: Fire_Character_216
+    21300434: Fire_Character_217
+    21300436: Fire_Character_218
+    21300438: Fire_Character_219
+    21300440: Fire_Character_220
+    21300442: Fire_Character_221
+    21300444: Fire_Character_222
+    21300446: Fire_Character_223
+    21300448: Fire_Character_224
+    21300450: Fire_Character_225
+    21300452: Fire_Character_226
+    21300454: Fire_Character_227
+    21300456: Fire_Character_228
+    21300458: Fire_Character_229
+    21300460: Fire_Character_230
+    21300462: Fire_Character_231
+    21300464: Fire_Character_232
+    21300466: Fire_Character_233
+    21300468: Fire_Character_234
+    21300470: Fire_Character_235
+    21300472: Fire_Character_236
+    21300474: Fire_Character_237
+    21300476: Fire_Character_238
+    21300478: Fire_Character_239
+    21300480: Fire_Character_240
+    21300482: Fire_Character_241
+    21300484: Fire_Character_242
+    21300486: Fire_Character_243
+    21300488: Fire_Character_244
+    21300490: Fire_Character_245
+    21300492: Fire_Character_246
+    21300494: Fire_Character_247
+    21300496: Fire_Character_248
+    21300498: Fire_Character_249
+    21300500: Fire_Character_250
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fire_Character_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1987
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1987
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1987
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1987
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1987
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1987
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1987
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1924
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1924
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_9
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1924
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1924
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_11
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1924
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_12
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1924
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_13
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1925
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1863
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1862
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_16
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1862
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_17
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1862
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_18
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1862
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_19
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1863
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1863
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1801
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1801
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_23
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1801
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_24
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1801
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_25
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1801
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_26
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1801
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_27
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1801
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_28
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1738
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1737
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1737
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_31
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1737
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_32
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1737
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_33
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1737
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_34
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1737
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_35
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1737
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_36
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1677
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1677
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_38
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1677
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_39
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1677
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_40
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1677
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_41
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1677
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_42
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1677
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_43
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1677
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1615
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_45
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1615
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_46
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1616
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_47
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1616
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_48
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1616
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_49
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1616
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_50
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1616
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_51
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1616
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_52
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1553
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1553
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_54
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1553
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_55
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1553
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_56
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1553
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_57
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1553
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_58
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1553
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_59
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1553
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_60
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1491
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_61
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1491
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_62
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1490
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_63
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1489
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_64
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1490
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_65
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1491
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_66
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1490
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_67
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1489
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_68
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1490
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_69
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1429
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_70
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1429
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_71
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1430
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_72
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1430
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_73
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1429
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_74
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1429
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_75
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1429
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_76
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1429
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_77
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1429
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_78
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1367
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_79
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1367
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_80
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1366
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_81
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1366
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_82
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1366
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_83
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1367
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_84
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1366
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_85
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1366
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_86
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1366
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_87
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1305
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_88
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1305
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_89
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1306
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_90
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1306
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_91
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1305
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_92
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1305
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_93
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1305
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_94
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1305
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_95
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1305
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_96
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1243
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_97
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1243
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_98
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1243
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_99
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1243
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_100
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1243
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_101
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1243
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_102
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1181
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_103
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1181
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_104
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1181
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_105
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1181
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_106
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1181
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_107
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1181
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_108
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1119
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_109
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1119
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_110
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1119
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_111
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1119
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_112
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1119
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_113
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1119
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_114
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1056
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_115
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1056
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1056
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_117
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1056
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_118
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1056
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_119
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1056
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_120
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 994
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_121
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 993
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_122
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 992
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_123
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 992
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_124
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 992
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_125
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 992
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_126
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 992
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_127
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 992
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_128
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 992
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_129
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 992
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_130
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 992
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_131
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 992
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_132
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 992
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_133
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 932
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_134
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 932
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_135
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 932
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_136
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 932
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_137
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 932
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_138
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 932
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_139
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 932
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_140
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 932
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_141
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 932
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_142
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 932
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_143
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 932
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_144
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 932
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_145
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 932
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_146
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 869
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_147
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 868
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_148
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 871
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_149
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 870
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_150
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 869
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_151
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 869
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_152
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 869
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_153
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 869
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_154
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 870
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_155
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 870
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_156
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 870
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_157
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 870
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_158
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 870
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_159
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 808
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_160
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 808
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_161
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 808
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_162
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 808
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_163
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 808
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_164
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 808
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_165
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 808
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_166
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 808
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_167
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 808
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_168
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 808
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_169
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 808
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_170
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 807
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_171
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 808
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_172
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 745
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_173
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 746
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_174
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 746
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_175
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 746
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_176
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 747
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_177
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 744
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_178
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 622
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_179
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 622
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_180
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 622
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_181
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 622
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_182
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 622
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_183
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 622
+        width: 59
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_184
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 436
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_185
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 436
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_186
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 436
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_187
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 436
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_188
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 436
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_189
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 436
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_190
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 250
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_191
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 250
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_192
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 250
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_193
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 250
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_194
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 242
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_195
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 250
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_196
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 64
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_197
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 64
+        width: 25
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_198
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 64
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_199
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 64
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_200
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 64
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Character_201
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 64
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
