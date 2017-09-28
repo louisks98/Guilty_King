@@ -559,11 +559,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4720384132384748, guid: 5f57da48c39e7434784e60ba13cee4e8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 183.96829
+      value: 171
       objectReference: {fileID: 0}
     - target: {fileID: 4720384132384748, guid: 5f57da48c39e7434784e60ba13cee4e8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 60.422672
+      value: -165
       objectReference: {fileID: 0}
     - target: {fileID: 4720384132384748, guid: 5f57da48c39e7434784e60ba13cee4e8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 127374438}
   - component: {fileID: 127374440}
   - component: {fileID: 127374439}
+  - component: {fileID: 127374441}
   m_Layer: 0
   m_Name: IceBoss
   m_TagString: Untagged
@@ -714,6 +715,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.8111839}
   serializedVersion: 2
   m_Radius: 1.9800911
+--- !u!114 &127374441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127374436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 1
+  dialogueLines:
+  - "Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
+    \xE0 l'est dans la carte d'eau..."
+  - "Am\xE8ne toi!"
 --- !u!4 &145695701 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4070630688951658, guid: c74ed9bcfdf6dde4b816b1c30066a7af,
@@ -1091,11 +1108,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4817681721208448, guid: 41e47bb0f69eed14a8e6f15ccffa10f4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 151.4
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 4817681721208448, guid: 41e47bb0f69eed14a8e6f15ccffa10f4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 154.1
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 4817681721208448, guid: 41e47bb0f69eed14a8e6f15ccffa10f4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1589,6 +1606,7 @@ GameObject:
   - component: {fileID: 523527871}
   - component: {fileID: 523527873}
   - component: {fileID: 523527872}
+  - component: {fileID: 523527874}
   m_Layer: 0
   m_Name: FireBoss
   m_TagString: Untagged
@@ -1666,6 +1684,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &523527874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523527870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - "Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le nord de
+    la carte d'eau..."
+  - "Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
 --- !u!1 &528632337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,10 +1745,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1877,7 +1911,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Vous avez ramass\xE9 ..,"
+  - 'Maman: Salut mon enfant!'
+  - "Maman: Tu devrais faire quelque chose de ta vie au lieu de jouer au jeu vid\xE9o
+    toute la journ\xE9e."
+  - "Le H\xE9ro: D'accord, je vais aller tuer le roi et prendre sa place sur le throne!"
+  - "Maman: Pfft! Tu penses devenir roi...? Il te faudra de l'aide et beaucoup de
+    courage pour prendre sa place h\xE9 h\xE9..."
+  - "Maman: Bonne chance dans ta qu\xEAte!"
 --- !u!1001 &534603746
 Prefab:
   m_ObjectHideFlags: 0
@@ -1887,11 +1927,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4434907687307830, guid: 89cabef639bf59049b7a38ff3fa72c9d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 310.3
+      value: 297
       objectReference: {fileID: 0}
     - target: {fileID: 4434907687307830, guid: 89cabef639bf59049b7a38ff3fa72c9d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 24.5
+      value: -201
       objectReference: {fileID: 0}
     - target: {fileID: 4434907687307830, guid: 89cabef639bf59049b7a38ff3fa72c9d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1954,6 +1994,7 @@ GameObject:
   - component: {fileID: 542883401}
   - component: {fileID: 542883403}
   - component: {fileID: 542883402}
+  - component: {fileID: 542883404}
   m_Layer: 0
   m_Name: FinalBoss
   m_TagString: Untagged
@@ -2046,6 +2087,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2070961}
   serializedVersion: 2
   m_Radius: 2.3741722
+--- !u!114 &542883404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 542883399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - "Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
+  - "Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce throne!"
+  - Battons-nous!
 --- !u!1 &547333326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,11 +2233,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4021745324571742, guid: f47cd3d7810a01e4bb769b681fcdb6ef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 317.6
+      value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 4021745324571742, guid: f47cd3d7810a01e4bb769b681fcdb6ef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 83.4
+      value: -142
       objectReference: {fileID: 0}
     - target: {fileID: 4021745324571742, guid: f47cd3d7810a01e4bb769b681fcdb6ef, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2857,6 +2914,7 @@ GameObject:
   - component: {fileID: 835133026}
   - component: {fileID: 835133025}
   - component: {fileID: 835133024}
+  - component: {fileID: 835133027}
   m_Layer: 0
   m_Name: ForestBoss
   m_TagString: Untagged
@@ -2949,6 +3007,27 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &835133027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835133022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - Bonjour jeune homme
+  - "Pour continuer ta qu\xEAte, il faudra que tu ailles dans la carte d'eau situ\xE9e
+    au nord-est \xE0 partir d'ici"
+  - Une fois dans la carte d'eau, tu devras aller battre la reine de feu qui est au
+    sud de celle-ci
+  - Oh... tu veux que je vienne t'aider? Malheureusement il faudra que tu me prouves
+    ta force avant que je t'aide!
+  - "Tu ne r\xE9ussiras jamais \xE0 me battre!"
 --- !u!1001 &867207885
 Prefab:
   m_ObjectHideFlags: 0
@@ -2994,11 +3073,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4727629040317278, guid: 6bca1dc5adb141d48b2c6fae9901a9ca, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 68.4
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4727629040317278, guid: 6bca1dc5adb141d48b2c6fae9901a9ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 141.3
+      value: -84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bca1dc5adb141d48b2c6fae9901a9ca, type: 2}
@@ -3276,7 +3355,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 899150442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.08, y: 168.5, z: -10}
+  m_LocalPosition: {x: 65, y: -57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3967,11 +4046,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4669616710881870, guid: 737c7287e4dfebd46bb68bdf9805f7b4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 69
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4669616710881870, guid: 737c7287e4dfebd46bb68bdf9805f7b4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 174.8
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 737c7287e4dfebd46bb68bdf9805f7b4, type: 2}
@@ -4107,8 +4186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.15999913, y: 6.199997}
-  m_SizeDelta: {x: 854.16, y: 79.5}
+  m_AnchoredPosition: {x: 0.6, y: 9.9}
+  m_SizeDelta: {x: 1147.8, y: 99.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229952016
 MonoBehaviour:
@@ -4131,10 +4210,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4458,11 +4537,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4124722492869858, guid: ddbbd3c05fef94d44b86b87e15136f5b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 243.9
+      value: 231
       objectReference: {fileID: 0}
     - target: {fileID: 4124722492869858, guid: ddbbd3c05fef94d44b86b87e15136f5b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 166.3
+      value: -59
       objectReference: {fileID: 0}
     - target: {fileID: 4124722492869858, guid: ddbbd3c05fef94d44b86b87e15136f5b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5053,11 +5132,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4070630688951658, guid: c74ed9bcfdf6dde4b816b1c30066a7af, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 101.89345
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 4070630688951658, guid: c74ed9bcfdf6dde4b816b1c30066a7af, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -44.376427
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: 4070630688951658, guid: c74ed9bcfdf6dde4b816b1c30066a7af, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7001,7 +7080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1813024000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7019,8 +7098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -165}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -255}
+  m_SizeDelta: {x: 136, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813024001
 MonoBehaviour:
@@ -7317,8 +7396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.179993, y: -37.59999}
-  m_SizeDelta: {x: 256.94, y: 18.4}
+  m_AnchoredPosition: {x: 50.6, y: -51.6}
+  m_SizeDelta: {x: 322.8, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025590869
 MonoBehaviour:
@@ -7341,10 +7420,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7496,6 +7575,7 @@ GameObject:
   - component: {fileID: 2082990817}
   - component: {fileID: 2082990816}
   - component: {fileID: 2082990815}
+  - component: {fileID: 2082990818}
   m_Layer: 0
   m_Name: Rich
   m_TagString: Untagged
@@ -7588,6 +7668,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &2082990818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2082990813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - Hic! J'ai beaucoup trop bu... Hic!
+  - "Bonjour mon enfant! Bois ce jus enchant\xE9, tu te sentiras beaucoup plus fort!
+    H\xE9 h\xE9!"
+  - '...Glou Glou...'
+  - Vous vous sentez automatiquement plus fort!
 --- !u!1 &2094395285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7863,7 +7961,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132323858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 176.1, y: 119.5, z: 0}
+  m_LocalPosition: {x: 62.5, y: -56.4, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
