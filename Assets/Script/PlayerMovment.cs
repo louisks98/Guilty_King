@@ -4,27 +4,32 @@ using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
 using System;
+using Assets.Script;
 
 public class PlayerMovment : MonoBehaviour {
 
     Rigidbody2D rdbody;
     Animator anim;
     float speed;
-    
-	// Use this for initialization
-	void Start () {
+    AccesBD bd;
+
+    // Use this for initialization
+    void Start () {
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         float value = 0.0f;
+        bd = new AccesBD();
 
-        string conn = "URI=file:" + Application.dataPath + "/BD.db"; //Path to database.
-        IDbConnection dbconn;
-        dbconn = (IDbConnection)new SqliteConnection(conn);
-        dbconn.Open(); //Open connection to the database.
-        IDbCommand dbcmd = dbconn.CreateCommand();
+        //string conn = "URI=file:" + Application.dataPath + "/BD.db"; //Path to database.
+        //IDbConnection dbconn;
+        //dbconn = (IDbConnection)new SqliteConnection(conn);
+        //dbconn.Open(); //Open connection to the database.
+        //IDbCommand dbcmd = dbconn.CreateCommand();
         string sqlQuery = "SELECT Vitesse FROM Stats where idStats = 1";
-        dbcmd.CommandText = sqlQuery;
-        IDataReader reader = dbcmd.ExecuteReader();
+        
+        //dbcmd.CommandText = sqlQuery;
+        IDataReader reader = bd.select(sqlQuery);
+        //dbcmd.ExecuteReader();
         while (reader.Read())
         {
             value = reader.GetFloat(0);
@@ -32,11 +37,12 @@ public class PlayerMovment : MonoBehaviour {
         }
         reader.Close();
         reader = null;
-        dbcmd.Dispose();
-        dbcmd = null;
-        dbconn.Close();
-        dbconn = null;
 
+        //dbcmd.Dispose();
+        //dbcmd = null;
+        //dbconn.Close();
+        //dbconn = null;
+        bd.Close();
         speed = value;
     }
 	
@@ -56,4 +62,14 @@ public class PlayerMovment : MonoBehaviour {
 
         rdbody.MovePosition(rdbody.position + movment * Time.deltaTime * speed);
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Chests"))
+        {
+            bd = new AccesBD();
+            string query = "insert into InventaireItem values(4, 3, 1, 1)";
+            bd.insert(query);
+        }
+    }
 }
