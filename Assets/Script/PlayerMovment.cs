@@ -13,9 +13,13 @@ public class PlayerMovment : MonoBehaviour {
     float speed;
     public float walkSpeed = 4;
     public float runModifier = 1.5f;
+	public bool canMove;
     
 	// Use this for initialization
 	void Start () {
+		
+		 canMove = true;
+		
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -44,6 +48,13 @@ public class PlayerMovment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		  if (!canMove)
+        {
+            rdbody.velocity = Vector2.zero;
+            return;
+        }
+		
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = walkSpeed * runModifier;
