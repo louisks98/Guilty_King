@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-    public enum MenuStates { None, Main, Inventory}
+    public enum MenuStates { None, Main, Inventory, Team}
     MenuStates states;
 
     public GameObject pauseMenu;
     public GameObject inventoryMenu;
+    public GameObject teamMenu;
 
     
 
@@ -24,46 +25,36 @@ public class PauseMenu : MonoBehaviour {
             case MenuStates.None:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
+                teamMenu.SetActive(false);
                 break;
 
             case MenuStates.Main:
                 pauseMenu.SetActive(true);
                 inventoryMenu.SetActive(false);
+                teamMenu.SetActive(false);
                 break;
 
             case MenuStates.Inventory:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(true);
+                teamMenu.SetActive(false);
+                break;
+
+            case MenuStates.Team:
+                pauseMenu.SetActive(false);
+                inventoryMenu.SetActive(false);
+                teamMenu.SetActive(true);
                 break;
         }
-        //if (isPaused)
-        //{
-        //    pauseMenu.SetActive(true);
-        //    Time.timeScale = 0f;
-        //}
-        //else
-        //{
-        //    pauseMenu.SetActive(false);
-        //    Time.timeScale = 1f;
-        //}
-
+       
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (states == MenuStates.Main)
                 states = MenuStates.None;
 
-            if (states == MenuStates.None)
+            else if (states == MenuStates.None)
                 states = MenuStates.Main;
         }
-
-        //if(isInventaire)
-        //{
-        //    //pauseMenu.SetActive(false);
-        //    inventaire.isOpen = true;
-        //    isPaused = false;
-        //    //inventaireMenu.SetActive(true);
-
-        //}
     }
 
     public void Quit()
@@ -76,7 +67,12 @@ public class PauseMenu : MonoBehaviour {
         states = MenuStates.Inventory;
     }
 
-    public void Retour_Menu_Inventory()
+    public void Open_Team()
+    {
+        states = MenuStates.Team;
+    }
+
+    public void Retour_Menu()
     {
         states = MenuStates.Main;
     }
