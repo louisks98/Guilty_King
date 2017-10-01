@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-    public enum MenuStates { None, Main, Inventory, Team}
+    public enum MenuStates { None, Main, Inventory, Team, Stats}
     MenuStates states;
 
     public GameObject pauseMenu;
     public GameObject inventoryMenu;
     public GameObject teamMenu;
+    public GameObject statsMenu;
 
     
 
@@ -26,25 +27,37 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(false);
+                statsMenu.SetActive(false);
                 break;
 
             case MenuStates.Main:
                 pauseMenu.SetActive(true);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(false);
+                statsMenu.SetActive(false);
                 break;
 
             case MenuStates.Inventory:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(true);
                 teamMenu.SetActive(false);
+                statsMenu.SetActive(false);
                 break;
 
             case MenuStates.Team:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(true);
+                statsMenu.SetActive(false);
                 break;
+
+            case MenuStates.Stats:
+                pauseMenu.SetActive(false);
+                inventoryMenu.SetActive(false);
+                teamMenu.SetActive(false);
+                statsMenu.SetActive(true);
+                break;
+
         }
        
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -70,6 +83,11 @@ public class PauseMenu : MonoBehaviour {
     public void Open_Team()
     {
         states = MenuStates.Team;
+    }
+
+    public void Open_Stats()
+    {
+        states = MenuStates.Stats;
     }
 
     public void Retour_Menu()
