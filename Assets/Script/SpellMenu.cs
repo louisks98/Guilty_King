@@ -1,4 +1,5 @@
-﻿using Mono.Data.Sqlite;
+﻿using Assets.Script;
+using Mono.Data.Sqlite;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,6 @@ using UnityEngine.UI;
 
 public class SpellMenu : MonoBehaviour {
 
-    public bool ispaused;
     public GameObject spellMenuCanva;
     public Text spellName;
     public Text spellType;
@@ -20,33 +20,7 @@ public class SpellMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (ispaused)
-        {
-            spellMenuCanva.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            spellMenuCanva.SetActive(false);
-            Time.timeScale = 1f;
-        }
-
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            ispaused = !ispaused;
-        }
     }
-
-    public void Quit()
-    {
-        ispaused = false;   
-    }
-
-    public void Open()
-    {
-        ispaused = true;
-    }
-
 
     public void DrawSpellInfo(string name)
     {
@@ -56,14 +30,8 @@ public class SpellMenu : MonoBehaviour {
 
         try
         {
-            string conn = "URI=file:" + Application.dataPath + "/BD.db"; //Path to database.
-            IDbConnection dbconn;
-            dbconn = (IDbConnection)new SqliteConnection(conn);
-            dbconn.Open(); //Open connection to the database.
-            IDbCommand dbcmd = dbconn.CreateCommand();
-            string sqlQuery = "select Description from sort where Nom = '"+ name +"'";
-            dbcmd.CommandText = sqlQuery;
-            IDataReader reader = dbcmd.ExecuteReader();
+            AccesBD bd = new AccesBD();
+            IDataReader reader = bd.select("select Description from sort where Nom = '" + name + "'");
             while (reader.Read())
             {
                 spelldesc = reader.GetString(0);
@@ -71,10 +39,7 @@ public class SpellMenu : MonoBehaviour {
             }
             reader.Close();
             reader = null;
-            dbcmd.Dispose();
-            dbcmd = null;
-            dbconn.Close();
-            dbconn = null;
+            bd.Close();
 
             //if flag = n sort inconnu
             spellName.text = name;
