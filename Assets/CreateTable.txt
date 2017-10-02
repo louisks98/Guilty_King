@@ -1,0 +1,55 @@
+CREATE TABLE "InventaireItem" 
+( 
+`idInventaireItem` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`Item` INTEGER, 
+`Quantite` INTEGER, 
+`personnage` INTEGER, 
+FOREIGN KEY(`personnage`) REFERENCES `Personnage`(`idPersonnage`), 
+FOREIGN KEY(`Item`) REFERENCES `Item`(`idItem`) 
+);
+
+CREATE TABLE `Item` (
+	`idItem`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`Nom`	TEXT UNIQUE,
+	`Type`	TEXT,
+	`Stat`	NUMERIC,
+	`Description`	TEXT,
+	`Image`	TEXT,
+	FOREIGN KEY(`Type`) REFERENCES `TypeItem`(`codeType`)
+);
+
+CREATE TABLE "Personnage" 
+( 
+`idPersonnage` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`Niveau` TEXT, 
+`vaincue` TEXT, 
+`Stats` INTEGER, 
+`Position` INTEGER, 
+FOREIGN KEY(`Stats`) REFERENCES `Stats`(`idStats`), 
+FOREIGN KEY(`Position`) REFERENCES `Position`(`idPosition`) 
+);
+
+CREATE TABLE `Position` 
+( 
+`idPosition` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`PosX` NUMERIC, 
+`PosY` NUMERIC 
+);
+
+CREATE TABLE "Stats" 
+( 
+`idStats` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`Point de vie` NUMERIC, 
+`Force` NUMERIC, 
+`Defence` NUMERIC, 
+`Vitesse` INTEGER 
+);
+
+CREATE TABLE `TypeItem` 
+( 
+`codeType` TEXT, 
+`NomType` INTEGER, PRIMARY KEY(`codeType`) 
+);
+
+
+
