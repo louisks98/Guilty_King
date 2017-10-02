@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-    public enum MenuStates { None, Main, Inventory, Team, Stats}
+    public enum MenuStates { None, Main, Inventory, Team, Stats, Skill}
     MenuStates states;
 
     public GameObject pauseMenu;
     public GameObject inventoryMenu;
     public GameObject teamMenu;
     public GameObject statsMenu;
-
+    public GameObject skillMenu;
     
 
     // Use this for initialization
@@ -27,6 +27,7 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(false);
+                skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 break;
 
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenu.SetActive(true);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(false);
+                skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 break;
 
@@ -41,6 +43,7 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(true);
                 teamMenu.SetActive(false);
+                skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 break;
 
@@ -48,6 +51,7 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(true);
+                skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 break;
 
@@ -55,9 +59,17 @@ public class PauseMenu : MonoBehaviour {
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
                 teamMenu.SetActive(false);
+                skillMenu.SetActive(false);
                 statsMenu.SetActive(true);
                 break;
 
+            case MenuStates.Skill:
+                pauseMenu.SetActive(false);
+                inventoryMenu.SetActive(false);
+                teamMenu.SetActive(false);
+                statsMenu.SetActive(false);
+                skillMenu.SetActive(true);
+                break;
         }
        
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -93,5 +105,10 @@ public class PauseMenu : MonoBehaviour {
     public void Retour_Menu()
     {
         states = MenuStates.Main;
+    }
+
+    public void Open_Skill()
+    {
+        states = MenuStates.Skill;
     }
 }

@@ -18,8 +18,7 @@ public class PlayerMovment : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		 canMove = true;
-		
+		canMove = true;
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -49,7 +48,7 @@ public class PlayerMovment : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		  if (!canMove)
+		if (!canMove)
         {
             rdbody.velocity = Vector2.zero;
             return;
@@ -63,6 +62,7 @@ public class PlayerMovment : MonoBehaviour {
         {
             speed = walkSpeed;
         }
+
 
         Vector2 movment = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (movment != Vector2.zero)
