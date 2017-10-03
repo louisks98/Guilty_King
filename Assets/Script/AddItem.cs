@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddItem : MonoBehaviour {
 
@@ -31,12 +32,12 @@ public class AddItem : MonoBehaviour {
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
                     int nbItem = 0;
-                    IDataReader reader;
+                    SqliteDataReader reader;
                     
                     try
                     {
                         
-                        reader = bd.select("select count(idItem) from Item");
+                        reader = bd.select("select count(idInventaireItem) from InventaireItem where Personnage = 1");
                         while (reader.Read())
                         {
                             nbItem = reader.GetInt32(0);
@@ -47,20 +48,25 @@ public class AddItem : MonoBehaviour {
                         Debug.Log("item ajouter");
                         Open = true;
                         sprite = GetComponent<SpriteRenderer>();
-                        sprite.sprite = Resources.Load("chest_Open", typeof(Sprite)) as Sprite;
+                        sprite.sprite = Resources.Load(Application.dataPath + @"\Item\chest_Open", typeof(Image)) as Sprite;
                         reader.Dispose();
-                        bd.Close();
+                        
                     }
                     catch(SqliteException e)
                     {
                         bd.Close();
                         Debug.Log(e);
                     }
+                    finally
+                    {
+                        bd.Close();
+                        Debug.Log("bd fermer");
+                    }
                 }
                 
             }
             
         }
-    }
+   }
 
 }
