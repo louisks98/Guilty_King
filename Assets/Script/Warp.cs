@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class Warp : MonoBehaviour {
     public Transform warpTarget;
+    private PlayerMovment thePlayer;
+
+    void Start()
+    {
+        thePlayer = FindObjectOfType<PlayerMovment>();
+    }
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        thePlayer.canMove = false;
 
         yield return StartCoroutine(sf.FadeToBlack());
 
@@ -16,5 +24,6 @@ public class Warp : MonoBehaviour {
         Camera.main.transform.position = warpTarget.position;
 
         yield return StartCoroutine(sf.FadeToClear());
+        thePlayer.canMove = true;
     }
 }
