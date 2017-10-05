@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour {
             if (states == MenuStates.Main)
                 states = MenuStates.None;
 
-            else if (states == MenuStates.None)
+            else if (states != MenuStates.Main)
                 states = MenuStates.Main;
         }
     }
