@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour {
 	void Update () {
 		if (dialogActive && Input.GetKeyUp(KeyCode.Space))
         {
+            Time.timeScale = 0;
             currentLine++;
         }
         if (currentLine >= dialogLines.Length)
@@ -33,6 +34,7 @@ public class DialogueManager : MonoBehaviour {
             dialogActive = false;
 
             currentLine = 0;
+            Time.timeScale = 1;
             thePlayer.canMove = true;
         }
 
