@@ -9,15 +9,16 @@ public class MenuInventaire : MonoBehaviour {
 
     // todo change tes tableau en list
 
-    private int[] item = new int[20];
-    private Sprite[] imageItem = new Sprite[10];
+    private List<int> item = new List<int>();
+    public List<Sprite> imageItem = new List<Sprite>();
+    public GameObject panel;
 
     // Use this for initialization
     void Start()
     {
-        imageItem[0] = Resources.Load(Application.dataPath + @"\Item\health") as Sprite;
-        imageItem[1] = Resources.Load(Application.dataPath + @"\Item\mana") as Sprite;
-        imageItem[2] = Resources.Load(Application.dataPath + @"\Item\steroid") as Sprite;
+        //imageItem.Add(Resources.Load(@"\health.png") as Sprite);
+        //imageItem.Add(Resources.Load(@"\mana.png") as Sprite);
+        //imageItem.Add(Resources.Load(@"\steroid.png") as Sprite);
         get_Item();
         Afficher();
     }
@@ -35,42 +36,48 @@ public class MenuInventaire : MonoBehaviour {
         while(reader.Read())
         {
             int i = 0;
-            item[i] = reader.GetInt32(0);
+            item.Add(reader.GetInt32(0));
             i++;
         }
+        bd.Close();
         Debug.Log("get item");
     }
     private void Afficher()
     {
-        GameObject panel = GameObject.Find("Slot panel");
-        Image[] slots = panel.GetComponents<Image>();
+        List<Image> slots = new List<Image>(panel.GetComponentsInChildren<Image>());
         Image img;
+        bool isPlaced;
 
-        for(int i = 0; i < item.Length; i++)
+        for(int i = 0; i < item.Count ; i++)
         {
-            for (int j = 0; j < slots.Length; i++)
+            isPlaced = false;
+            for (int j = 1; j < slots.Count && !isPlaced; j++)
             {
-                if(slots[i] == null)
+                if(slots[j + 1].sprite == null)
                 {
                     switch(item[i])
                     {
                         case 3:
-                            img = slots[i].GetComponentInChildren<Image>();
+                            img = slots[i + 1].transform.GetChild(0).GetComponent<Image>();
                             img.sprite = imageItem[0];
                             Debug.Log("health");
+                            isPlaced = true;
                             break;
                         case 4:
-                            img = slots[i].GetComponentInChildren<Image>();
+                            img = slots[i + 1].transform.GetChild(0).GetComponent<Image>();
                             img.sprite = imageItem[1];
                             Debug.Log("mana");
+                            isPlaced = true;
                             break;
                         case 7:
-                            img = slots[i].GetComponentInChildren<Image>();
+                            img = slots[i + 1].transform.GetChild(0).GetComponent<Image>();
                             img.sprite = imageItem[3];
                             Debug.Log("steroid");
+                            isPlaced = true;
                             break;
                     }
                 }
+                j++;
             }
         }
     }
