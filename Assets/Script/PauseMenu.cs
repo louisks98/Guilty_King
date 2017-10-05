@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
 
-    public enum MenuStates { None, Main, Inventory, Team, Stats, Skill}
-    MenuStates states;
+    public enum MenuStates { None, Main, Inventory, Team, Stats, Skill, Level}
+    private MenuStates states;
+    
 
     public GameObject pauseMenu;
     public GameObject inventoryMenu;
     public GameObject teamMenu;
     public GameObject statsMenu;
     public GameObject skillMenu;
+    public GameObject levelMenu;
     
 
     // Use this for initialization
@@ -37,6 +39,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
+                levelMenu.SetActive(false);
                 break;
 
             case MenuStates.Inventory:
@@ -70,6 +73,16 @@ public class PauseMenu : MonoBehaviour {
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(true);
                 break;
+
+            case MenuStates.Level:
+                pauseMenu.SetActive(false);
+                inventoryMenu.SetActive(false);
+                teamMenu.SetActive(false);
+                statsMenu.SetActive(false);
+                skillMenu.SetActive(false);
+                levelMenu.SetActive(true);
+                break;
+
         }
        
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -110,5 +123,10 @@ public class PauseMenu : MonoBehaviour {
     public void Open_Skill()
     {
         states = MenuStates.Skill;
+    }
+
+    public void Open_LevelUp()
+    {
+        states = MenuStates.Level;
     }
 }

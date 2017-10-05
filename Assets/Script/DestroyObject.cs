@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class DestroyObject : MonoBehaviour {
 
     public GameObject theEnemy;
-    public GameObject LvlMenu;
+    public GameObject Menus;
     public int soulsPerKill;
     private PlayerMovment thePlayer;
+    PauseMenu theMenus;
 
     public Text textRemainingSouls;
 
@@ -29,6 +30,7 @@ public class DestroyObject : MonoBehaviour {
     // Use this for initialization
     void Start () {
         thePlayer = FindObjectOfType<PlayerMovment>();
+        theMenus = Menus.GetComponent<PauseMenu>();
 
         // Get de la bd
         forceValue = 2;
@@ -41,23 +43,26 @@ public class DestroyObject : MonoBehaviour {
         buttonForce.onClick.AddListener(onForceClick);
         buttonDef.onClick.AddListener(onDefenseClick);
         buttonSpeed.onClick.AddListener(onSpeedClick);
-        exitButton.onClick.AddListener(exitLevelMenu);
+        //exitButton.onClick.AddListener(exitLevelMenu);
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        buttonForce.onClick.AddListener(onForceClick);
+        buttonDef.onClick.AddListener(onDefenseClick);
+        buttonSpeed.onClick.AddListener(onSpeedClick);
         if (Input.GetKey(KeyCode.Space))
         {
             Destroy(theEnemy);
             soulsNumber += soulsPerKill;
             textRemainingSouls.text = soulsNumber.ToString();
             InitialiserLevels();
-            LvlMenu.SetActive(true);
+            theMenus.Open_LevelUp();
         }
     }
 
@@ -101,10 +106,10 @@ public class DestroyObject : MonoBehaviour {
         }
     }
 
-    private void exitLevelMenu()
-    {
-        LvlMenu.SetActive(false);
-        // Mettre à jour la bd...
-        // Fermer la bd.
-    }
+    //private void exitLevelMenu()
+    //{
+    //    LvlMenu.SetActive(false);
+    //    // Mettre à jour la bd...
+    //    // Fermer la bd.
+    //}
 }
