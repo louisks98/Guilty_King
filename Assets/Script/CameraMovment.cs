@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraMovment : MonoBehaviour {
 
-    public Transform target;
+    public GameObject hero;
+    public GameObject boat;
     Camera cam;
 
 	// Use this for initialization
@@ -16,9 +17,20 @@ public class CameraMovment : MonoBehaviour {
 	void Update () {
         cam.orthographicSize = (Screen.height / 100f) / 2f;
 
-        if (target)
+        if (hero.activeInHierarchy == true)
         {
-            transform.position = Vector3.Lerp(transform.position,target.position,0.1f) + new Vector3(0,0,-10);
+            if (hero.GetComponent<Transform>())
+            {
+                transform.position = Vector3.Lerp(transform.position, hero.GetComponent<Transform>().position, 0.1f) + new Vector3(0, 0, -10);
+            }
         }
-	}
+
+        if (boat.activeInHierarchy == true)
+        {
+            if (boat.GetComponent<Transform>())
+            {
+                transform.position = Vector3.Lerp(transform.position, boat.GetComponent<Transform>().position, 0.1f) + new Vector3(0, 0, -10);
+            }
+        }
+    }
 }

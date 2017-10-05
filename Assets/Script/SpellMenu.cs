@@ -16,89 +16,103 @@ public class SpellMenu : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        hero_spell_1();
 	}
 	
 	// Update is called once per frame
 	void Update () {
     }
 
-    public void DrawSpellInfo(string name)
+    public void DrawSpellInfo(string spellId)
     {
-        string spelldesc = "";
-
-        spellName.text = name;
+        string name = "";
+        string description = "";
+        string type = "";
+        string acquis = "";
 
         try
         {
             AccesBD bd = new AccesBD();
-            IDataReader reader = bd.select("select Description from sort where Nom = '" + name + "'");
+            IDataReader reader = bd.select("SELECT Sort.Nom,Sort.Description,TypeSort.Nom,Sort.Valeur,Sort.Acquis FROM Sort INNER JOIN TypeSort ON Sort.Type = TypeSort.id where Sort.id ='" + spellId + "'");
             while (reader.Read())
             {
-                spelldesc = reader.GetString(0);
-                Debug.Log("Spell description= " + spellDescription);
+                name = reader.GetString(0);
+                description = reader.GetString(1);
+                type = reader.GetString(2) + " (X): " + reader.GetDecimal(3).ToString();
+                acquis = reader.GetString(4);
+                Debug.Log("GetSort(" + name + "," + description + "," + type + "," + acquis +  ")");
             }
             reader.Close();
             reader = null;
             bd.Close();
 
-            //if flag = n sort inconnu
-            spellName.text = name;
-            spellDescription.text = spelldesc;
+            if (acquis.Equals("O"))
+            {
+                spellName.text = name;
+                spellDescription.text = description;
+                spellType.text = type;
+            }
+            else
+            {
+                spellName.text = "Sort inconnu"; 
+                spellDescription.text = "Vous n'avez pas encore découvert ce sort.";
+                spellType.text = "";
+            }
         }
         catch (Exception e)
         {
-            spellName.text = "Oups! Le sort à été volé";
-            spellDescription.text = "Revenez plus tard il y sera peutêtre :)"; 
+            spellName.text = "Oups! Le sort a été volé";
+            spellDescription.text = "Revenez plus tard il y sera peut-être :)"; 
         }
     }
 
     public void hero_spell_1()
     {
-        DrawSpellInfo("Spell hero 1");
+        DrawSpellInfo("H1");
     }
 
     public void hero_spell_2()
     {
-        DrawSpellInfo("Spell hero 2");
+        DrawSpellInfo("H2");
     }
 
     public void hero_spell_3()
     {
-        DrawSpellInfo("Spell hero 3");
+        DrawSpellInfo("H3");
     }
 
     public void hero_spell_4()
     {
-        DrawSpellInfo("Spell hero 4");
+        DrawSpellInfo("H4");
     }
 
     public void fire_spell_1()
     {
-        DrawSpellInfo("Fire Breath");
+        DrawSpellInfo("F1");
     }
 
     public void fire_spell_2()
     {
-        DrawSpellInfo("Explosion");
+        DrawSpellInfo("F2");
     }
 
     public void winter_spell_1()
     {
-        DrawSpellInfo("Ice Spikes");
+        DrawSpellInfo("G1");
     }
 
     public void winter_spell_2()
     {
-        DrawSpellInfo("Cone of Frost");
+        DrawSpellInfo("G2");
     }
 
     public void earth_spell_1()
     {
-        DrawSpellInfo("Bite");
+        DrawSpellInfo("T1");
     }
 
     public void earth_spell_2()
     {
-        DrawSpellInfo("Heal");
+        DrawSpellInfo("T2");
     }
 }
