@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121990464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1db811d22b232b243852a793cca2210d, type: 3}
   m_Name: 
@@ -1263,6 +1263,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 98e0a4426292936479bcfed27e9451f0, type: 3}
   - {fileID: 21300000, guid: 8d1362a1c9541534bbbd70bd61d09c9a, type: 3}
   panel: {fileID: 90922859}
+  inventaire: {fileID: 1077866883}
 --- !u!4 &121990466
 Transform:
   m_ObjectHideFlags: 0
