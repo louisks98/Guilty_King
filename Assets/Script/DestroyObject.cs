@@ -11,7 +11,21 @@ public class DestroyObject : MonoBehaviour {
     private PlayerMovment thePlayer;
     PauseMenu theMenus;
 
-   
+    public Text textRemainingSouls;
+
+    public Slider sliderForce;
+    public Slider sliderDef;
+    public Slider sliderSpeed;
+
+    public Button buttonForce;
+    public Button buttonDef;
+    public Button buttonSpeed;
+    public Button exitButton;
+
+    private int forceValue;
+    private int DefenseValue;
+    private int SpeedValue;
+    private int soulsNumber;
 
     // Use this for initialization
     void Start () {
