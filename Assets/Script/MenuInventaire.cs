@@ -7,10 +7,11 @@ using Mono.Data.Sqlite;
 
 public class MenuInventaire : MonoBehaviour {
 
+    // todo change tes tableau en list
+
     private List<int> item = new List<int>();
     public List<Sprite> imageItem = new List<Sprite>();
     public GameObject panel;
-    public Canvas inventaire;
 
     // Use this for initialization
     void Start()
@@ -18,19 +19,14 @@ public class MenuInventaire : MonoBehaviour {
         //imageItem.Add(Resources.Load(@"\health.png") as Sprite);
         //imageItem.Add(Resources.Load(@"\mana.png") as Sprite);
         //imageItem.Add(Resources.Load(@"\steroid.png") as Sprite);
-        //get_Item();
+        get_Item();
+        Afficher();
     }
 	// Update is called once per frame
 	void Update ()
     {
-        
-    }
-
-    void OnEnable()
-    {
-        get_Item();
-        Afficher();
-    }
+		
+	}
 
     private void get_Item()
     {
@@ -62,19 +58,19 @@ public class MenuInventaire : MonoBehaviour {
                     switch(item[i])
                     {
                         case 3:
-                            img = slots[j + 1];//.transform.GetChild(0).GetComponent<Image>();
+                            img = slots[i + 1].transform.GetChild(0).GetComponent<Image>();
                             img.sprite = imageItem[0];
                             Debug.Log("health");
                             isPlaced = true;
                             break;
                         case 4:
-                            img = slots[j + 1];//.transform.GetChild(0).GetComponent<Image>();
+                            img = slots[i + 1].transform.GetChild(0).GetComponent<Image>();
                             img.sprite = imageItem[1];
                             Debug.Log("mana");
                             isPlaced = true;
                             break;
                         case 7:
-                            img = slots[j + 1];//.transform.GetChild(0).GetComponent<Image>();
+                            img = slots[i + 1].transform.GetChild(0).GetComponent<Image>();
                             img.sprite = imageItem[3];
                             Debug.Log("steroid");
                             isPlaced = true;
