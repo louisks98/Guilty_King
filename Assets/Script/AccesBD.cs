@@ -11,7 +11,8 @@ namespace Assets.Script
     class AccesBD
     {
         private SqliteConnection dbconn;
-        private IDbCommand dbcmd;
+        SqliteCommand cmd;
+        //private IDbCommand dbcmd;
         public AccesBD()
         {
             string conn = "URI=file:" + Application.dataPath + "/BD.db"; //Path to database.
@@ -19,27 +20,45 @@ namespace Assets.Script
             dbconn.Open();
         }
 
-        public IDataReader select(string query)
+        public SqliteDataReader select(string query)
         {
-            
-            IDbCommand dbcmd = dbconn.CreateCommand();
-            dbcmd.CommandText = query;
-            return dbcmd.ExecuteReader();
+            try
+            {
+               cmd = new SqliteCommand(query, dbconn);
+
+                //IDbCommand dbcmd = dbconn.CreateCommand();
+                //dbcmd.CommandText = query;
+            }
+            catch(SqliteException e)
+            {
+                Close();
+                Debug.Log(e);
+            }
+            return cmd.ExecuteReader();
         }
 
         public void insert(string query)
         {
-            SqliteCommand cmd = new SqliteCommand();
-            cmd.Connection = dbconn;
-            cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
+            try
+            {
+                cmd = new SqliteCommand();
+                cmd.Connection = dbconn;
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+            }
+            catch(SqliteException e)
+            {
+                Close();
+                Debug.Log(e);
+            }
+            
         }
 
         public void Close()
         {
-            //dbcmd.Dispose();
-            //dbcmd = null;
+            //cmd.Dispose();
+            //cmd = null;
             dbconn.Close();
             dbconn = null;
         }

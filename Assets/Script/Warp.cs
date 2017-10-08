@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class Warp : MonoBehaviour {
     public Transform warpTarget;
-    private PlayerMovment thePlayer;
+    private PlayerMovment hero;
+    private PlayerMovment boat;
+    public bool isBoat;
 
     void Start()
     {
-        thePlayer = FindObjectOfType<PlayerMovment>();
+        boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<PlayerMovment>();
+        hero = GameObject.FindGameObjectWithTag("Hero").GetComponent<PlayerMovment>();
     }
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
 
-        thePlayer.canMove = false;
+        PlayerMovment.isTransition = true;
+        hero.GetComponent<Animator>().enabled = false;
+        boat.GetComponent<Animator>().enabled = false;
 
         yield return StartCoroutine(sf.FadeToBlack());
-
-        Debug.Log("Un objet est untré en colision.");
+        
         collision.gameObject.transform.position = warpTarget.position;
         Camera.main.transform.position = warpTarget.position;
-
+        PlayerMovment.isBoat = isBoat;
+        
         yield return StartCoroutine(sf.FadeToClear());
-        thePlayer.canMove = true;
+
+        hero.GetComponent<Animator>().enabled = true;
+        boat.GetComponent<Animator>().enabled = true;
+        PlayerMovment.isTransition = false;
+
+        Debug.Log("Un objet est untré en colision.");
     }
 }
