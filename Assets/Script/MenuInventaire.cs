@@ -7,77 +7,75 @@ using Mono.Data.Sqlite;
 
 public class MenuInventaire : MonoBehaviour {
 
-    private List<int> item = new List<int>();
+    private List<string> item = new List<string>();
+    private Dictionary<int, bool> placed = new Dictionary<int, bool>();
     public List<Sprite> imageItem = new List<Sprite>();
     public GameObject panel;
-    public Canvas inventaire;
-
-    // Use this for initialization
-    void Start()
-    {
-        //imageItem.Add(Resources.Load(@"\health.png") as Sprite);
-        //imageItem.Add(Resources.Load(@"\mana.png") as Sprite);
-        //imageItem.Add(Resources.Load(@"\steroid.png") as Sprite);
-        //get_Item();
-    }
-	// Update is called once per frame
-	void Update ()
-    {
-        
-    }
-
+   
     void OnEnable()
     {
         get_Item();
         Afficher();
     }
 
+    void OnDisable()
+    {
+        item.Clear();
+    }
+
     private void get_Item()
     {
         AccesBD bd = new AccesBD();
         SqliteDataReader reader;
+        SqliteDataReader reader2;
         reader =  bd.select("select Item from InventaireItem where Personnage = 1");
+
+        int i = 0;
         while(reader.Read())
         {
-            int i = 0;
-            item.Add(reader.GetInt32(0));
+            reader2 =  bd.select("select Nom from Item where idItem = " + reader.GetInt32(0));
+            while(reader2.Read())
+            {
+                item.Add(reader2.GetString(0));
+                if (!placed.ContainsKey(i))
+                    placed.Add(i, false);
+            }
             i++;
         }
         bd.Close();
+        Debug.Log("close get_item");
         Debug.Log("get item");
     }
     private void Afficher()
     {
         List<Image> slots = new List<Image>(panel.GetComponentsInChildren<Image>());
         Image img;
-        bool isPlaced;
 
         for(int i = 0; i < item.Count ; i++)
         {
-            isPlaced = false;
-            for (int j = 1; j < slots.Count && !isPlaced; j++)
+            for (int j = 1; j < slots.Count && !placed[i]; j++)
             {
                 if(slots[j + 1].sprite == null)
                 {
                     switch(item[i])
                     {
-                        case 3:
-                            img = slots[j + 1];//.transform.GetChild(0).GetComponent<Image>();
+                        case "Regeneration":
+                            img = slots[j + 1];
                             img.sprite = imageItem[0];
                             Debug.Log("health");
-                            isPlaced = true;
+                            placed[i] = true;
                             break;
-                        case 4:
-                            img = slots[j + 1];//.transform.GetChild(0).GetComponent<Image>();
+                        case "Mana regen":
+                            img = slots[j + 1];
                             img.sprite = imageItem[1];
                             Debug.Log("mana");
-                            isPlaced = true;
+                            placed[i] = true;
                             break;
-                        case 7:
-                            img = slots[j + 1];//.transform.GetChild(0).GetComponent<Image>();
+                        case "steroids":
+                            img = slots[j + 1];
                             img.sprite = imageItem[3];
                             Debug.Log("steroid");
-                            isPlaced = true;
+                            placed[i] = true;
                             break;
                     }
                 }
