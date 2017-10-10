@@ -12,7 +12,7 @@ public class PlayerMovment : MonoBehaviour {
     float speed;
     public float walkSpeed = 4;
     public float runModifier = 1.5f;
-	public bool canMove;
+	public static bool canMove;
     public GameObject boat;
     public GameObject hero;
     public static bool isBoat;
@@ -33,9 +33,10 @@ public class PlayerMovment : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (!canMove)
+        if (!canMove || PauseMenu.paused)
         {
             rdbody.velocity = Vector2.zero;
+            Time.timeScale = 0;
             return;
         }
 
