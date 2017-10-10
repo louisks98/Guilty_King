@@ -123,6 +123,7 @@ public class PauseMenu : MonoBehaviour {
     public void Open_Skill()
     {
         states = MenuStates.Skill;
+        SpellMenu.update = true;
     }
 
     public void Open_LevelUp()
