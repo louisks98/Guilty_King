@@ -22,15 +22,21 @@ public class SpellMenu : MonoBehaviour {
     public Sprite spForest;
     public Sprite spQuestionMark;
 
+    public static bool update;
+
     // Use this for initialization
     void Start () {
         hero_spell_1();
-        DrawHeroKnown();
+        update = true;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        DrawHeroKnown();
+
+    private void Update()
+    {
+        if(update)
+        {
+            DrawHeroKnown();
+            update = false;
+        }
     }
 
     public void DrawHeroKnown()
