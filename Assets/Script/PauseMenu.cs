@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
+                Time.timeScale = 1f;
                 break;
 
             case MenuStates.Main:
@@ -40,6 +41,7 @@ public class PauseMenu : MonoBehaviour {
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 levelMenu.SetActive(false);
+                Time.timeScale = 0f;
                 break;
 
             case MenuStates.Inventory:
@@ -48,6 +50,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
+                Time.timeScale = 0f;
                 break;
 
             case MenuStates.Team:
@@ -56,6 +59,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(true);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
+                Time.timeScale = 0f;
                 break;
 
             case MenuStates.Stats:
@@ -64,6 +68,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(true);
+                Time.timeScale = 0f;
                 break;
 
             case MenuStates.Skill:
@@ -72,6 +77,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(true);
+                Time.timeScale = 0f;
                 break;
 
             case MenuStates.Level:
@@ -81,6 +87,7 @@ public class PauseMenu : MonoBehaviour {
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 levelMenu.SetActive(true);
+                Time.timeScale = 0f;
                 break;
 
         }
