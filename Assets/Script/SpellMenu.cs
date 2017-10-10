@@ -13,14 +13,100 @@ public class SpellMenu : MonoBehaviour {
     public Text spellName;
     public Text spellType;
     public Text spellDescription;
+    public Image fire;
+    public Image winter;
+    public Image forest;
+
+    public Sprite spFire;
+    public Sprite spWinter;
+    public Sprite spForest;
+    public Sprite spQuestionMark;
+
+    public static bool update;
 
     // Use this for initialization
     void Start () {
         hero_spell_1();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        update = true;
+    }
+
+    private void Update()
+    {
+        if(update)
+        {
+            DrawHeroKnown();
+            update = false;
+        }
+    }
+
+    public void DrawHeroKnown()
+    {
+        if (IsKnown(2))
+        {
+            forest.sprite = spForest;
+        }
+        else
+        {
+            forest.sprite = spQuestionMark;
+        }
+
+        if (IsKnown(3))
+        {
+            fire.sprite = spFire;
+        }
+        else
+        {
+            fire.sprite = spQuestionMark;
+        }
+
+        if (IsKnown(4))
+        {
+            winter.sprite = spWinter;
+        }
+        else
+        {
+            winter.sprite = spQuestionMark;
+        }
+    }
+
+    public bool IsKnown(int heroId)
+    {
+        bool isKnown = false;
+        AccesBD bd = new AccesBD();
+        IDataReader reader = null;
+
+        try
+        {
+            string rep = "";
+            reader = bd.select("SELECT Personnage.vaincue FROM Personnage WHERE Personnage.idPersonnage =" + heroId.ToString());
+            while (reader.Read())
+            {
+                rep = reader.GetString(0);
+                Debug.Log("Hero " + heroId + " vaincue:" + rep);
+            }
+
+            if (rep.Equals("O"))
+            {
+                isKnown = true;
+            }
+            else
+            {
+                isKnown = false;
+            }
+        }
+        catch (Exception e)
+        {
+            isKnown = false;
+            Debug.Log("Error when search for hero " + heroId);
+        }
+        finally
+        {
+            reader.Close();
+            reader = null;
+            bd.Close();
+        }
+
+        return isKnown;
     }
 
     public void DrawSpellInfo(string spellId)
@@ -30,21 +116,20 @@ public class SpellMenu : MonoBehaviour {
         string type = "";
         string acquis = "";
 
+        AccesBD bd = new AccesBD();
+        IDataReader reader = null;
+
         try
         {
-            AccesBD bd = new AccesBD();
-            IDataReader reader = bd.select("SELECT Sort.Nom,Sort.Description,TypeSort.Nom,Sort.Valeur,Sort.Acquis FROM Sort INNER JOIN TypeSort ON Sort.Type = TypeSort.id where Sort.id ='" + spellId + "'");
+            reader = bd.select("SELECT Sort.Nom,Sort.Description,TypeSort.Nom,Sort.Valeur,Sort.Acquis FROM Sort INNER JOIN TypeSort ON Sort.Type = TypeSort.id where Sort.id ='" + spellId + "'");
             while (reader.Read())
             {
                 name = reader.GetString(0);
                 description = reader.GetString(1);
                 type = reader.GetString(2) + " (X): " + reader.GetDecimal(3).ToString();
                 acquis = reader.GetString(4);
-                Debug.Log("GetSort(" + name + "," + description + "," + type + "," + acquis +  ")");
+                Debug.Log("GetSort(" + name + "," + description + "," + type + "," + acquis + ")");
             }
-            reader.Close();
-            reader = null;
-            bd.Close();
 
             if (acquis.Equals("O"))
             {
@@ -54,7 +139,7 @@ public class SpellMenu : MonoBehaviour {
             }
             else
             {
-                spellName.text = "Sort inconnu"; 
+                spellName.text = "Sort inconnu";
                 spellDescription.text = "Vous n'avez pas encore découvert ce sort.";
                 spellType.text = "";
             }
@@ -62,7 +147,14 @@ public class SpellMenu : MonoBehaviour {
         catch (Exception e)
         {
             spellName.text = "Oups! Le sort a été volé";
-            spellDescription.text = "Revenez plus tard il y sera peut-être :)"; 
+            spellDescription.text = "Revenez plus tard il y sera peut-être :)";
+            Debug.Log("Error when search for spell " + spellId);
+        }
+        finally
+        {
+            reader.Close();
+            reader = null;
+            bd.Close();
         }
     }
 
