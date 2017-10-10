@@ -50,17 +50,14 @@ public class AddItem : MonoBehaviour {
                         sprite = GetComponent<SpriteRenderer>();
                         sprite.sprite = Resources.Load(Application.dataPath + @"\Item\chest_Open", typeof(Image)) as Sprite;
                         reader.Dispose();
-                        
+                        bd.Close();
+                        Debug.Log("close addItem");
+
                     }
                     catch(SqliteException e)
                     {
                         bd.Close();
                         Debug.Log(e);
-                    }
-                    finally
-                    {
-                        bd.Close();
-                        Debug.Log("bd fermer");
                     }
                 }
                 
