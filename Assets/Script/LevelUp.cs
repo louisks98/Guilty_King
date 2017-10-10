@@ -36,7 +36,7 @@ public class LevelUp : MonoBehaviour
         AccesBD bd = new AccesBD();
 
         try
-        {  
+        {
             IDataReader reader;
             reader = bd.select("select * from Stats where Stats.idStats = 2"); // *voir quelle personnage sera le main*
 
