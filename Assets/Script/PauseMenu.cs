@@ -33,7 +33,6 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Debug.Log("TimeScale 1");
                 if (paused)
                 {
                     Time.timeScale = 1f;
