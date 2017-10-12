@@ -33,7 +33,11 @@ public class MenuStatTeam : MonoBehaviour {
         reader = bd.select("select Nom, Point_de_vie, niveau, nbAmes from Personnage inner join Stats on Personnage.Stat = Stats.idStats");
         while(reader.Read())
         {
-            listPers.Add(new Personnage(reader.GetString(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3)));
+            string nom = reader.GetString(0);
+            int hp = reader.GetInt32(1);
+            int level = reader.GetInt32(2);
+            int ames = reader.GetInt32(3);
+            listPers.Add(new Personnage(nom, hp, level, ames));
         }
         reader.Close();
         bd.Close();
@@ -41,15 +45,15 @@ public class MenuStatTeam : MonoBehaviour {
 
     void Afficher()
     {
-        foreach(GameObject obj in characterPanels)
+        int i = 0;
+        foreach (GameObject obj in characterPanels)
         {
-            int i = 0;
             List<Text> txt = new List<Text>(obj.GetComponentsInChildren<Text>());
            
             txt[0].text = listPers[i].Name;
-            txt[1].text = listPers[i].Level.ToString();
-            txt[2].text = listPers[i].Hp.ToString();
-            txt[3].text = listPers[i].NbAmes.ToString();
+            txt[1].text = "Niveau : " + listPers[i].Level.ToString();
+            txt[2].text = "Hp : "  + listPers[i].Hp.ToString() + "/" + listPers[i].Hp.ToString();
+            txt[3].text = "Ames : " + listPers[i].NbAmes.ToString();
             i++;
         }
     }
