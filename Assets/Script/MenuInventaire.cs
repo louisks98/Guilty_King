@@ -11,7 +11,12 @@ public class MenuInventaire : MonoBehaviour {
     private Dictionary<int, bool> placed = new Dictionary<int, bool>();
     public List<Sprite> imageItem = new List<Sprite>();
     public GameObject panel;
-   
+
+    //void Start()
+    //{
+    //    enabled = false;
+    //}
+
     void OnEnable()
     {
         get_Item();
@@ -46,8 +51,9 @@ public class MenuInventaire : MonoBehaviour {
         Debug.Log("close get_item");
         Debug.Log("get item");
     }
-    private void Afficher()
+    public void Afficher()
     {
+        //get_Item();
         List<Image> slots = new List<Image>(panel.GetComponentsInChildren<Image>());
         Image img;
 

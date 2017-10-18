@@ -14,11 +14,15 @@ public class PauseMenu : MonoBehaviour {
     public GameObject statsMenu;
     public GameObject skillMenu;
     public GameObject levelMenu;
+
+    public static bool paused;
     
+
+    private MenuInventaire script;
 
     // Use this for initialization
     void Start() {
-        
+        script = inventoryMenu.GetComponent<MenuInventaire>();
     }
 
     // Update is called once per frame
@@ -28,68 +32,80 @@ public class PauseMenu : MonoBehaviour {
             case MenuStates.None:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = false;
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Time.timeScale = 1f;
+                if (paused)
+                {
+                    Time.timeScale = 1f;
+                    paused = false;
+
+                }
                 break;
 
             case MenuStates.Main:
                 pauseMenu.SetActive(true);
                 inventoryMenu.SetActive(false);
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = false;
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 levelMenu.SetActive(false);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Inventory:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(true);
+                //script.Afficher();
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = true;
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Team:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = false;
                 teamMenu.SetActive(true);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Stats:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = true;
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(true);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Skill:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = false;
                 teamMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(true);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Level:
                 pauseMenu.SetActive(false);
                 inventoryMenu.SetActive(false);
+                //inventoryMenu.GetComponent<MenuInventaire>().enabled = false;
                 teamMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 levelMenu.SetActive(true);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
-
         }
        
         if (Input.GetKeyDown(KeyCode.Escape))
