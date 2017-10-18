@@ -1292,6 +1292,7 @@ GameObject:
   - component: {fileID: 127374440}
   - component: {fileID: 127374439}
   - component: {fileID: 127374441}
+  - component: {fileID: 127374442}
   m_Layer: 0
   m_Name: IceBoss
   m_TagString: Untagged
@@ -1400,6 +1401,33 @@ MonoBehaviour:
   - "Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
     \xE0 l'est dans la carte d'eau..."
   - "Am\xE8ne toi!"
+--- !u!114 &127374442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127374436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ally1: {fileID: 0}
+  ally2: {fileID: 0}
+  ally3: {fileID: 0}
+  ally4: {fileID: 0}
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemy4: {fileID: 0}
+  id_ally1: 
+  id_ally2: 
+  id_ally3: 
+  id_ally4: 
+  id_enemy1: 
+  id_enemy2: 
+  id_enemy3: 
+  id_enemy4: 
 --- !u!4 &145695701 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4070630688951658, guid: c74ed9bcfdf6dde4b816b1c30066a7af,
@@ -5462,7 +5490,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542883399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.54, y: -6.9, z: 0}
+  m_LocalPosition: {x: 320.55, y: -149.53, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11552,7 +11580,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1204718590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.71, y: -8.19, z: 0}
+  m_LocalPosition: {x: 321.71997, y: -150.81999, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14842,7 +14870,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620634201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.34, y: -8.19, z: 0}
+  m_LocalPosition: {x: 319.34998, y: -150.81999, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
