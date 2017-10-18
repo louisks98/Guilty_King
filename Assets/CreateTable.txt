@@ -21,7 +21,7 @@ CREATE TABLE `Item` (
 CREATE TABLE "Personnage" 
 ( 
 `idPersonnage` INTEGER PRIMARY KEY AUTOINCREMENT, 
-`Niveau` TEXT, 
+`Niveau` INTEGER, 
 `vaincue` TEXT, 
 `Stats` INTEGER, 
 `Position` INTEGER, 
@@ -36,13 +36,13 @@ CREATE TABLE `Position`
 `PosY` NUMERIC 
 );
 
-CREATE TABLE "Stats" 
-( 
-`idStats` INTEGER PRIMARY KEY AUTOINCREMENT, 
-`Point de vie` NUMERIC, 
-`Force` NUMERIC, 
-`Defence` NUMERIC, 
-`Vitesse` INTEGER 
+CREATE TABLE `Stats` (
+	`idStats`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`Point_de_vie`	INTEGER,
+	`Force`	INTEGER,
+	`Defence`	INTEGER,
+	`Vitesse`	INTEGER,
+	`nbAmes`	INTEGER
 );
 
 CREATE TABLE `TypeItem` 
