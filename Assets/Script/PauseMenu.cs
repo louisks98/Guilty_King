@@ -15,6 +15,9 @@ public class PauseMenu : MonoBehaviour {
     public GameObject skillMenu;
     public GameObject levelMenu;
 
+    public static bool paused;
+    
+
     private MenuInventaire script;
 
     // Use this for initialization
@@ -33,7 +36,12 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Time.timeScale = 1f;
+                if (paused)
+                {
+                    Time.timeScale = 1f;
+                    paused = false;
+
+                }
                 break;
 
             case MenuStates.Main:
@@ -44,7 +52,7 @@ public class PauseMenu : MonoBehaviour {
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 levelMenu.SetActive(false);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Inventory:
@@ -55,7 +63,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Team:
@@ -65,7 +73,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(true);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(false);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Stats:
@@ -75,7 +83,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 statsMenu.SetActive(true);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Skill:
@@ -85,7 +93,7 @@ public class PauseMenu : MonoBehaviour {
                 teamMenu.SetActive(false);
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(true);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
 
             case MenuStates.Level:
@@ -96,9 +104,8 @@ public class PauseMenu : MonoBehaviour {
                 statsMenu.SetActive(false);
                 skillMenu.SetActive(false);
                 levelMenu.SetActive(true);
-                Time.timeScale = 0f;
+                paused = true;
                 break;
-
         }
        
         if (Input.GetKeyDown(KeyCode.Escape))
