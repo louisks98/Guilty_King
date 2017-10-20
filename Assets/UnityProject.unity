@@ -2566,7 +2566,7 @@ GameObject:
   - component: {fileID: 297265147}
   - component: {fileID: 297265149}
   m_Layer: 0
-  m_Name: PanelCharacter (3)
+  m_Name: PanelCharacter4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4565,7 +4565,7 @@ GameObject:
   - component: {fileID: 520902763}
   - component: {fileID: 520902765}
   m_Layer: 0
-  m_Name: PanelCharacter
+  m_Name: PanelCharacter1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6979,6 +6979,7 @@ MonoBehaviour:
   - {fileID: 915679736}
   - {fileID: 741384480}
   - {fileID: 297265145}
+  statsCharacterPanel: {fileID: 2121777684}
   sp_hero: {fileID: 21300156, guid: 4b280e0753531e541babdf393742ec67, type: 3}
   sp_Fire: {fileID: 21300216, guid: 108bedf9496ff4b46b1bbe17a2ebfc8c, type: 3}
   sp_Forest: {fileID: 21300028, guid: cbca8600baf87e44db61855ce258f764, type: 3}
@@ -7437,7 +7438,7 @@ GameObject:
   - component: {fileID: 741384482}
   - component: {fileID: 741384484}
   m_Layer: 0
-  m_Name: PanelCharacter (2)
+  m_Name: PanelCharacter3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9225,7 +9226,7 @@ GameObject:
   - component: {fileID: 915679738}
   - component: {fileID: 915679740}
   m_Layer: 0
-  m_Name: PanelCharacter (1)
+  m_Name: PanelCharacter2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18632,7 +18633,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 579880828}
-        m_MethodName: Retour_Menu
+        m_MethodName: Open_Team
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

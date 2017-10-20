@@ -8,6 +8,10 @@ TagManager:
   - Fader
   - Hero
   - Boat
+  - charPanel1
+  - charPanel2
+  - charpanel3
+  - charpanel4
   layers:
   - Default
   - TransparentFX
