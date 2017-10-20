@@ -4,76 +4,48 @@ using System.Linq;
 using System.Text;
 using UnityEngine.UI;
 using UnityEngine;
+using Mono.Data.Sqlite;
+using System.Data;
 
 namespace Assets.Script
 {
     class Personnage
     {
-        private string name;
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        private int hp;
-        public int Hp
-        {
-            get { return hp; }
-            set { hp = value; }
-        }
-        private int level;
-        public int Level
-        {
-            get { return level; }
-            set { level = value; }
-        }
-        private int nbAmes;
-        public int NbAmes
-        {
-            get { return nbAmes; }
-            set { nbAmes = value; }
-        }
-        private int strength;
-        public int Strength
-        {
-            get { return strength; }
-            set { strength = value; }
-        }
-        private int defence;
-        public int Defence
-        {
-            get { return defence; }
-            set { defence = value; }
-        }
-        private int speed;
-        public int Speed
-        {
-            get { return speed; }
-            set { speed = value; }
-        }
-        private Sprite image;
-        public Sprite Image
-        {
-            get { return image; }
-            set { image = value; }
-        }
-        private bool defeated;
-        public bool isDefeated
-        {
-            get { return defeated; }
-            set { defeated = value; }
-        }
-
+        public string name { get; set; }
+        public int hp { get; set; }
+        public int level { get; set; }
+        public int nbAmes { get; set; }
+        public int strength { get; set; }
+        public int defence { get; set; }
+        public int speed { get; set; }
+        public Sprite image { get; set; }
+        public bool defeated { get; set; }
+        public GameObject gameObject { get; set; }
 
         public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
         {
-            Name = name;
-            Hp = hp;
-            Level = level;
-            NbAmes = nbAme;
-            Strength = str;
-            Defence = def;
-            Speed = sp;
+            this.name = name;
+            this.hp = hp;
+            this.level = level;
+            this.nbAmes = nbAme;
+            this.strength = str;
+            this.defence = def;
+            this.speed = sp;
+        }
+
+        public Personnage(GameObject gameObject, int id_personnage)
+        {
+            this.gameObject = gameObject;
+
+            AccesBD bd = new AccesBD();
+            SqliteDataReader reader = bd.select("SELECT * FROM Personnage INNER JOIN Stats ON Personnage.Stat = Stats.idStats WHERE idPersonnage =" + id_personnage);
+
+            while (reader.Read())
+            {
+                Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+            }
+                        
+            bd.Close();
         }
     }
 }
