@@ -46,11 +46,7 @@ namespace Assets.Script
         public int battleDef { get; set; }
         public int battleSpd { get; set; }
 
-        private Personnage()
-        {
-            battleHp = hpTotal;
-            battleStr =
-        }
+        
 
         public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
         {
@@ -76,6 +72,15 @@ namespace Assets.Script
             }
                         
             bd.Close();
+        }
+
+        public void setupBattleStats()
+        {
+            turnStunned = 0;
+            battleHp = hpTotal;
+            battleStr = strength;
+            battleDef = defence;
+            battleSpd = speed;
         }
     }
 }
