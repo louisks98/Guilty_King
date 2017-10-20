@@ -81,47 +81,47 @@ public class MenuStatTeam : MonoBehaviour {
         switch (EventSystem.current.currentSelectedGameObject.name)
         {
             case "PanelCharacter1":
-                txt[0].text = listPers[0].Name;
-                txt[1].text = "Niveau : " + listPers[0].Level.ToString();
-                txt[2].text = "HP : " + listPers[0].Hp.ToString();
-                txt[3].text = "Force : " + listPers[0].Strength.ToString();
-                txt[4].text = "Defence : " + listPers[0].Defence.ToString();
-                txt[5].text = "Speed : " + listPers[0].Speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[0].NbAmes.ToString();
-                img[1].sprite = listPers[0].Image;
+                txt[0].text = listPers[0].name;
+                txt[1].text = "Niveau : " + listPers[0].level.ToString();
+                txt[2].text = "HP : " + listPers[0].hp.ToString();
+                txt[3].text = "Force : " + listPers[0].strength.ToString();
+                txt[4].text = "Defence : " + listPers[0].defence.ToString();
+                txt[5].text = "Speed : " + listPers[0].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[0].nbAmes.ToString();
+                img[1].sprite = listPers[0].image;
                 break;
 
             case "PanelCharacter2":
-                txt[0].text = listPers[1].Name;
-                txt[1].text = "Niveau : " + listPers[1].Level.ToString();
-                txt[2].text = "HP : " + listPers[1].Hp.ToString();
-                txt[3].text = "Force : " + listPers[1].Strength.ToString();
-                txt[4].text = "Defence : " + listPers[1].Defence.ToString();
-                txt[5].text = "Speed : " + listPers[1].Speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[1].NbAmes.ToString();
-                img[1].sprite = listPers[1].Image;
+                txt[0].text = listPers[1].name;
+                txt[1].text = "Niveau : " + listPers[1].level.ToString();
+                txt[2].text = "HP : " + listPers[1].hp.ToString();
+                txt[3].text = "Force : " + listPers[1].strength.ToString();
+                txt[4].text = "Defence : " + listPers[1].defence.ToString();
+                txt[5].text = "Speed : " + listPers[1].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[1].nbAmes.ToString();
+                img[1].sprite = listPers[1].image;
                 break;
 
             case "PanelCharacter3":
-                txt[0].text = listPers[2].Name;
-                txt[1].text = "Niveau : " + listPers[2].Level.ToString();
-                txt[2].text = "HP : " + listPers[2].Hp.ToString();
-                txt[3].text = "Force : " + listPers[2].Strength.ToString();
-                txt[4].text = "Defence : " + listPers[2].Defence.ToString();
-                txt[5].text = "Speed : " + listPers[2].Speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[2].NbAmes.ToString();
-                img[1].sprite = listPers[2].Image;
+                txt[0].text = listPers[2].name;
+                txt[1].text = "Niveau : " + listPers[2].level.ToString();
+                txt[2].text = "HP : " + listPers[2].hp.ToString();
+                txt[3].text = "Force : " + listPers[2].strength.ToString();
+                txt[4].text = "Defence : " + listPers[2].defence.ToString();
+                txt[5].text = "Speed : " + listPers[2].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[2].nbAmes.ToString();
+                img[1].sprite = listPers[2].image;
                 break;
 
             case "PanelCharacter4":
-                txt[0].text = listPers[3].Name;
-                txt[1].text = "Niveau : " + listPers[3].Level.ToString();
-                txt[2].text = "HP : " + listPers[3].Hp.ToString();
-                txt[3].text = "Force : " + listPers[3].Strength.ToString();
-                txt[4].text = "Defence : " + listPers[3].Defence.ToString();
-                txt[5].text = "Speed : " + listPers[3].Speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[3].NbAmes.ToString();
-                img[1].sprite = listPers[3].Image;
+                txt[0].text = listPers[3].name;
+                txt[1].text = "Niveau : " + listPers[3].level.ToString();
+                txt[2].text = "HP : " + listPers[3].hp.ToString();
+                txt[3].text = "Force : " + listPers[3].strength.ToString();
+                txt[4].text = "Defence : " + listPers[3].defence.ToString();
+                txt[5].text = "Speed : " + listPers[3].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[3].nbAmes.ToString();
+                img[1].sprite = listPers[3].image;
                 break;
         }
         
