@@ -11,8 +11,9 @@ namespace Assets.Script
 {
     class Personnage
     {
+        // base stats
         public string name { get; set; }
-        public int hp { get; set; }
+        public int hpTotal { get; set; }
         public int level { get; set; }
         public int nbAmes { get; set; }
         public int strength { get; set; }
@@ -22,10 +23,39 @@ namespace Assets.Script
         public bool defeated { get; set; }
         public GameObject gameObject { get; set; }
 
+        // battle stats
+        public int battleHp {
+            get { return battleHp; }
+            set
+            {
+                if(battleHp + value <= 0)
+                {
+                    battleHp = 0;
+                    defeated = true;
+                }
+                else { battleHp -= value; }
+
+                if (battleHp + value >= hpTotal) {battleHp = hpTotal;}
+                else { battleHp += value; }
+                
+            }
+        }
+        public int turnStunned { get; set; }
+        public bool stunned { get; set; } //?
+        public int battleStr { get; set; }
+        public int battleDef { get; set; }
+        public int battleSpd { get; set; }
+
+        private Personnage()
+        {
+            battleHp = hpTotal;
+            battleStr =
+        }
+
         public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
         {
             this.name = name;
-            this.hp = hp;
+            this.hpTotal = hp;
             this.level = level;
             this.nbAmes = nbAme;
             this.strength = str;
