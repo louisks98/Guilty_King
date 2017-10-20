@@ -1412,22 +1412,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ally1: {fileID: 0}
-  ally2: {fileID: 0}
-  ally3: {fileID: 0}
-  ally4: {fileID: 0}
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  enemy4: {fileID: 0}
-  id_ally1: 
-  id_ally2: 
-  id_ally3: 
-  id_ally4: 
-  id_enemy1: 
-  id_enemy2: 
-  id_enemy3: 
-  id_enemy4: 
+  id_enemy1: 1
+  id_enemy2: 0
+  id_enemy3: 0
+  id_enemy4: 0
+  gm_enemy1: {fileID: 656548714}
+  gm_enemy2: {fileID: 0}
+  gm_enemy3: {fileID: 0}
+  gm_enemy4: {fileID: 0}
 --- !u!4 &145695701 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4070630688951658, guid: c74ed9bcfdf6dde4b816b1c30066a7af,

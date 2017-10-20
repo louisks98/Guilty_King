@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using Assets.Script;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mono.Data.Sqlite;
 
 public class CombatTurn : MonoBehaviour {
 
@@ -19,39 +22,29 @@ public class CombatTurn : MonoBehaviour {
         NOTINCOMBAT
     }
 
-    public GameObject ally1;
-    public GameObject ally2;
-    public GameObject ally3;
-    public GameObject ally4;
+    public int id_enemy1;
+    public int id_enemy2;
+    public int id_enemy3;
+    public int id_enemy4;
 
-    public GameObject enemy1;
-    public GameObject enemy2;
-    public GameObject enemy3;
-    public GameObject enemy4;
+    public GameObject gm_enemy1 = null;
+    public GameObject gm_enemy2 = null;
+    public GameObject gm_enemy3 = null;
+    public GameObject gm_enemy4 = null;
 
-    public string id_ally1;
-    public string id_ally2;
-    public string id_ally3;
-    public string id_ally4;
-
-    public string id_enemy1;
-    public string id_enemy2;
-    public string id_enemy3;
-    public string id_enemy4;
-
-
+    List<Personnage> ennemies;
+    List<Personnage> allies;
 
 
     public CombatStates currentState { get; set; }
 
-	// Use this for initialization
 	void Start () {
-        currentState = CombatStates.NOTINCOMBAT;
-	}
+        //currentState = CombatStates.NOTINCOMBAT;
+        currentState = CombatStates.START;
+    }
 	
-	// Update is called once per frame
 	void Update () {
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
 		switch(currentState)
         {
             case (CombatStates.START):
@@ -105,73 +98,49 @@ public class CombatTurn : MonoBehaviour {
 
     void Combat_Ally1_Turn()
     {
-        if (true) //Ally 1 exist
-        {
-            Ally_Turn(ally1,id_ally1);  //Est t'il passe en reférence ou en param ???   
-        }
+        Ally_Turn(0);
         Next_Turn(CombatStates.ALLY2);
     }
 
     void Combat_Ally2_Turn()
     {
-        if (true) //Ally 2 exist
-        {
-            Ally_Turn(ally2,id_ally2);  //Est t'il passe en reférence ou en param ???   
-        }
+        Ally_Turn(1);
         Next_Turn(CombatStates.ALLY3);
     }
 
     void Combat_Ally3_Turn()
     {
-        if (true) //Ally 3 exist
-        {
-            Ally_Turn(ally3,id_ally3);  //Est t'il passe en reférence ou en param ???   
-        }
+        Ally_Turn(2);
         Next_Turn(CombatStates.ALLY4);
     }
 
     void Combat_Ally4_Turn()
     {
-        if (true) //Ally 4 exist
-        {
-            Ally_Turn(ally4,id_ally4);  //Est t'il passe en reférence ou en param ???   
-        }
+        Ally_Turn(3);
         Next_Turn(CombatStates.ENEMY1);
     }
 
     void Combat_Enemy1_Turn()
     {
-        if (true) //Enemy 1 exist
-        {
-            Enemy_Turn(enemy1,id_enemy1);  //Est t'il passe en reférence ou en param ???   
-        }
+        Enemy_Turn(0);
         Next_Turn(CombatStates.ENEMY2);
     }
 
     void Combat_Enemy2_Turn()
     {
-        if (true) //Enemy 2 exist
-        {
-            Enemy_Turn(enemy2,id_enemy2);  //Est t'il passe en reférence ou en param ???   
-        }
+        Enemy_Turn(1);
         Next_Turn(CombatStates.ENEMY3);
     }
 
     void Combat_Enemy3_Turn()
     {
-        if (true) //Enemy 3 exist
-        {
-            Enemy_Turn(enemy3,id_enemy3);  //Est t'il passe en reférence ou en param ???   
-        }
+        Enemy_Turn(2);
         Next_Turn(CombatStates.ENEMY4);
     }
 
     void Combat_Enemy4_Turn()
     {
-        if (true) //Enemy 4 exist
-        {
-            Enemy_Turn(enemy4,id_enemy4);  //Est t'il passe en reférence ou en param ???   
-        }
+        Enemy_Turn(3);
         Next_Turn(CombatStates.ALLY1);
     }
 
@@ -197,20 +166,22 @@ public class CombatTurn : MonoBehaviour {
        //remet la camera sur le personnage
     }
 
-    void Ally_Turn(GameObject ally, string id_ally)
+    void Ally_Turn(int id)
     {
         //selectionner l'oposant à attaquer
         //sélectionner l'attaque
         //faire l'animation
         //faire de dégat
+        //Victoire ? défaite ?
     }
 
-    void Enemy_Turn(GameObject enemy, string id_ennemy)
+    void Enemy_Turn(int id)
     {
         //Choisir un target aléatoire 
         //Choisir une ataque aléatoire 
         //faire l'animation
         //faire le dégat
+        //Victoire ? défaite ?
     }
 
     void Combat_WIN()
@@ -235,7 +206,96 @@ public class CombatTurn : MonoBehaviour {
 
     void Initialize_Component()
     {
+        Init_Personnages();
+    }
 
+    void Init_Personnages()
+    {
+        Init_Ally();
+        Init_Ennemy();
+    }
+
+    void Init_Ally()
+    {
+        allies = new List<Personnage>();
+        allies.Add(null);
+        allies.Add(null);
+        allies.Add(null);
+        allies.Add(null);
+        if (Personnage_Is_In_Team(1))
+        {
+            allies.Insert(0, new Personnage(gm_enemy1, id_enemy1));
+        }
+        if (Personnage_Is_In_Team(2))
+        {
+            allies.Insert(1, new Personnage(gm_enemy1, id_enemy1));
+        }
+        if (Personnage_Is_In_Team(3))
+        {
+            allies.Insert(2, new Personnage(gm_enemy1, id_enemy1));
+        }
+        if (Personnage_Is_In_Team(4))
+        {
+            allies.Insert(3, new Personnage(gm_enemy1, id_enemy1));
+        }
+    }
+
+    bool Personnage_Is_In_Team(int id_Personnage)
+    {
+        bool isKnown = false;
+        AccesBD bd = new AccesBD();
+        try
+        {
+            SqliteDataReader reader = bd.select("SELECT vaincue FROM Personnage where idPersonnage =" + id_Personnage);
+
+            while (reader.Read())
+            {
+                string rep = reader.GetString(0).ToString();
+                if (rep.Equals("O"))
+                {
+                    isKnown = true;
+                }
+            }
+        }
+        catch (SqliteException e)
+        {
+            Debug.Log(e);
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+        finally
+        {
+            bd.Close();
+        }
+
+        return isKnown;
+    }
+
+    void Init_Ennemy()
+    {
+        ennemies = new List<Personnage>();
+        ennemies.Add(null);
+        ennemies.Add(null);
+        ennemies.Add(null);
+        ennemies.Add(null);
+        if (gm_enemy1 != null && id_enemy1 != 0)
+        {
+            ennemies.Insert(0,new Personnage(gm_enemy1, id_enemy1));
+        }
+        if (gm_enemy2 != null && id_enemy2 != 0)
+        {
+            ennemies.Insert(1, new Personnage(gm_enemy2, id_enemy2));
+        }
+        if (gm_enemy3 != null && id_enemy3 != 0)
+        {
+            ennemies.Insert(2, new Personnage(gm_enemy3, id_enemy3));
+        }
+        if (gm_enemy4 != null && id_enemy4 != 0)
+        {
+            ennemies.Insert(3, new Personnage(gm_enemy4, id_enemy4));
+        }
     }
     
     //Regarder les speed des players pour savoir qui qui commence.

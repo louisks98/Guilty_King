@@ -50,10 +50,10 @@ public class MenuStatTeam : MonoBehaviour {
         }
         reader.Close();
         bd.Close();
-        listPers[0].Image = sp_hero;
-        listPers[1].Image = sp_Forest;
-        listPers[2].Image = sp_Fire;
-        listPers[3].Image = sp_Ice;
+        listPers[0].image = sp_hero;
+        listPers[1].image = sp_Forest;
+        listPers[2].image = sp_Fire;
+        listPers[3].image = sp_Ice;
     }
 
     void AfficherTeam()
@@ -65,11 +65,11 @@ public class MenuStatTeam : MonoBehaviour {
             List<Image> img = new List<Image>(obj.GetComponentsInChildren<Image>());
             obj.GetComponent<Button>().onClick.AddListener(() => { Affichercharacter(); });
 
-            img[1].sprite = listPers[i].Image;
-            txt[0].text = listPers[i].Name;
-            txt[1].text = "Niveau : " + listPers[i].Level.ToString();
-            txt[2].text = "Hp : "  + listPers[i].Hp.ToString() + "/" + listPers[i].Hp.ToString();
-            txt[3].text = "Ames : " + listPers[i].NbAmes.ToString();
+            img[1].sprite = listPers[i].image;
+            txt[0].text = listPers[i].name;
+            txt[1].text = "Niveau : " + listPers[i].level.ToString();
+            txt[2].text = "Hp : "  + listPers[i].hp.ToString() + "/" + listPers[i].hp.ToString();
+            txt[3].text = "Ames : " + listPers[i].nbAmes.ToString();
             i++;
         }
     }
