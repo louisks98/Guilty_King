@@ -13,6 +13,7 @@ public class PlayerMovment : MonoBehaviour {
     public float walkSpeed = 4;
     public float runModifier = 1.5f;
 	public static bool canMove;
+    public static bool inCombat;
     public GameObject boat;
     public GameObject hero;
     public static bool isBoat;
@@ -24,6 +25,7 @@ public class PlayerMovment : MonoBehaviour {
     void Start () {
         isTransition = false;
 		canMove = true;
+        inCombat = false;
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         heroActive = !isBoat;
@@ -36,7 +38,10 @@ public class PlayerMovment : MonoBehaviour {
         if (!canMove || PauseMenu.paused)
         {
             rdbody.velocity = Vector2.zero;
-            Time.timeScale = 0;
+            if(!inCombat)
+            {
+                Time.timeScale = 0;
+            }
             return;
         }
 

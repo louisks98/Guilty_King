@@ -35,17 +35,41 @@ public class CombatTurn : MonoBehaviour {
     List<Personnage> ennemies;
     List<Personnage> allies;
 
-
     public CombatStates currentState { get; set; }
 
-	void Start () {
-        //currentState = CombatStates.NOTINCOMBAT;
+    public Transform target_combat;
+    public Transform target_win;
+    public Transform target_loose;
+
+    public GameObject hero;
+
+    void Start () {
+        currentState = CombatStates.NOTINCOMBAT;
+    }
+
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
+    {
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        yield return StartCoroutine(sf.FadeToBlack());
+
+        //Positionner la caméra sur le combat
+        CameraMovment.inCombat = true;
+        CameraMovment.target_Combat = target_combat;
+
+        //Empêcher le joueur de bouger
+        PlayerMovment.inCombat = true;
+        PlayerMovment.canMove = false;
+
+        yield return StartCoroutine(sf.FadeToClear());
+
         currentState = CombatStates.START;
     }
-	
-	void Update () {
+
+    void Update () {
         //Debug.Log(currentState);
-		switch(currentState)
+        //yield WaitForSeconds(1);
+        switch (currentState)
         {
             case (CombatStates.START):
                 Combat_Start();
@@ -75,10 +99,13 @@ public class CombatTurn : MonoBehaviour {
                 Combat_Enemy4_Turn();
                 break;
             case (CombatStates.WIN):
+                Combat_WIN();
                 break;
             case (CombatStates.LOSE):
+                Combat_Lose();
                 break;
             case (CombatStates.NOTINCOMBAT):
+                //On ne fait rien on est pas en combat
                 break;
         }
 	}
@@ -90,10 +117,8 @@ public class CombatTurn : MonoBehaviour {
 
     void Combat_Start()
     {
-        Change_Camera_Position();
-        Stop_Player_Movement();
-        Initialize_Component();
-        Define_Turn();
+        //Initialize_Component();
+        //Define_Turn();
     }
 
     void Combat_Ally1_Turn()
@@ -144,26 +169,21 @@ public class CombatTurn : MonoBehaviour {
         Next_Turn(CombatStates.ALLY1);
     }
 
-    void Win()
-    {
-        //Animation de victoire 
-        //Set les variable indiquant la victoire
-        Quit();
-    }
 
-    void Loose()
+    void Quit(Transform target)
     {
-        //Animation de défaite
-        //Reset les variables de combat point de vie etc
-        //déplacer le personnage au début du jeu
-        Quit();
-    }
+        //Repositionne la caméra sur le personnage.
+        CameraMovment.target_Combat = hero.GetComponent<Transform>();
 
-    void Quit()
-    {
-       //ferme le canva 
-       //reperment au personnage de bouger 
-       //remet la camera sur le personnage
+        //Hero retourne ou il doit etre après le combat.
+        hero.transform.position = target_win.position;
+
+        //Le personnage peut bouger
+        CameraMovment.inCombat = false;
+        PlayerMovment.canMove = true;
+
+        //Le combet est terminer
+        currentState = CombatStates.NOTINCOMBAT;
     }
 
     void Ally_Turn(int id)
@@ -186,22 +206,12 @@ public class CombatTurn : MonoBehaviour {
 
     void Combat_WIN()
     {
-        
+        Quit(target_win);
     }
 
     void Combat_Lose()
     {
-
-    }
-
-    void Change_Camera_Position()
-    {
-
-    }
-
-    void Stop_Player_Movement()
-    {
-
+        Quit(target_loose);
     }
 
     void Initialize_Component()
@@ -297,11 +307,32 @@ public class CombatTurn : MonoBehaviour {
             ennemies.Insert(3, new Personnage(gm_enemy4, id_enemy4));
         }
     }
-    
-    //Regarder les speed des players pour savoir qui qui commence.
+
+    //Define_Turn
+    //Détermine qu'elle équipe selon la ripidité qui commence.
     void Define_Turn()
     {
-        currentState = CombatStates.ALLY1;
+        if (Team_Speed(allies) >= Team_Speed(ennemies))
+        {
+            currentState = CombatStates.ALLY1;
+        }
+        else
+        {
+            currentState = CombatStates.ENEMY1;
+        }        
+    }
+
+    int Team_Speed(List<Personnage> team)
+    {
+        int speed = 0;
+        foreach (Personnage personnage in team)
+        {
+            if (personnage != null)
+            {
+                speed += personnage.speed;
+            }
+        }
+        return speed;
     }
 
     void Next_Turn(CombatStates nextPlayer)
@@ -332,15 +363,47 @@ public class CombatTurn : MonoBehaviour {
         }
     }
 
+    //IsLoose
+    //Retourne true si la partie est perdue.
     bool isLoose()
     {
-        //Regarder si la partie est perdue
-        return false;
+        return Team_Defeated(allies);
     }
 
+    //IsWin
+    //Retourne false si la partie est gagnée.
     bool isWin()
     {
-        //Regarder si la partie est gagner
-        return false;
+        return Team_Defeated(ennemies);
     }
+
+    bool Team_Defeated(List<Personnage> team)
+    {
+        bool defeted = true;
+        foreach (Personnage personnage in team)
+        {
+            if (personnage != null)
+            {
+                if (!personnage.defeated)
+                {
+                    defeted = false;
+                }
+            }
+        }
+        return defeted;
+    }
+
+    public class ExtendedBehavior : MonoBehaviour
+    {
+        public void Wait(float seconds)
+        {
+            StartCoroutine(_wait(seconds));
+        }
+        IEnumerator _wait(float time)
+        {
+            yield return new WaitForSeconds(time);
+        }
+    }
+
 }
+
