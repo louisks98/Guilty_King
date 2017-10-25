@@ -15,6 +15,7 @@ TagManager:
   - FireAlly
   - IceAlly
   - ForestAlly
+  - HeroCombat
   layers:
   - Default
   - TransparentFX
