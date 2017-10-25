@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mono.Data.Sqlite;
+using UnityEngine.UI;
 
 public class CombatTurn : MonoBehaviour {
 
@@ -43,12 +44,17 @@ public class CombatTurn : MonoBehaviour {
 
     public GameObject hero;
 
+    public GameObject CombatUI;
+    private GameObject pnlAlly;
+    private GameObject pnlEnemy;
+    private GameObject pnlButton;
+
     void Start () {
         currentState = CombatStates.NOTINCOMBAT;
     }
 
     void Update () {
-        //Debug.Log(currentState);
+        Debug.Log(currentState);
         //yield WaitForSeconds(1);
         switch (currentState)
         {
@@ -181,6 +187,8 @@ public class CombatTurn : MonoBehaviour {
 
         //Le combet est terminer
         currentState = CombatStates.NOTINCOMBAT;
+
+        CombatUI.SetActive(false);
     }
 
     void Ally_Turn(int id)
@@ -214,7 +222,7 @@ public class CombatTurn : MonoBehaviour {
     void Initialize_Component()
     {
         Init_Personnages();
-        //Init_Canva();
+        InitUI();
     }
 
     void Init_Personnages()
@@ -232,19 +240,19 @@ public class CombatTurn : MonoBehaviour {
         allies.Add(null);
         if (Personnage_Is_In_Team(1))
         {
-            allies.Insert(0, new Personnage(GameObject.FindGameObjectWithTag("Hero"),1));
+            allies[0] = new Personnage(gm_enemy1, id_enemy1);
         }
         if (Personnage_Is_In_Team(2))
         {
-            allies.Insert(1, new Personnage(GameObject.FindGameObjectWithTag("Hero"), 2));
+            allies[1]  = new Personnage(gm_enemy1, id_enemy1);
         }
         if (Personnage_Is_In_Team(3))
         {
-            allies.Insert(2, new Personnage(GameObject.FindGameObjectWithTag("Hero"), 3));
+            allies[2] = new Personnage(gm_enemy1, id_enemy1);
         }
         if (Personnage_Is_In_Team(4))
         {
-            allies.Insert(3, new Personnage(GameObject.FindGameObjectWithTag("Hero"), 4));
+            allies[3] = new Personnage(gm_enemy1, id_enemy1);
         }
     }
 
@@ -291,19 +299,19 @@ public class CombatTurn : MonoBehaviour {
         ennemies.Add(null);
         if (gm_enemy1 != null && id_enemy1 != 0)
         {
-            ennemies.Insert(0,new Personnage(gm_enemy1, id_enemy1));
+            ennemies[0] = new Personnage(gm_enemy1, id_enemy1);
         }
         if (gm_enemy2 != null && id_enemy2 != 0)
         {
-            ennemies.Insert(1, new Personnage(gm_enemy2, id_enemy2));
+            ennemies[1] = new Personnage(gm_enemy2, id_enemy2);
         }
         if (gm_enemy3 != null && id_enemy3 != 0)
         {
-            ennemies.Insert(2, new Personnage(gm_enemy3, id_enemy3));
+            ennemies[2] = new Personnage(gm_enemy3, id_enemy3);
         }
         if (gm_enemy4 != null && id_enemy4 != 0)
         {
-            ennemies.Insert(3, new Personnage(gm_enemy4, id_enemy4));
+            ennemies[3] = new Personnage(gm_enemy4, id_enemy4);
         }
     }
 
@@ -350,30 +358,32 @@ public class CombatTurn : MonoBehaviour {
         }
     }
 
-    void isFinish()
-    {
-        if (isLoose())
-        {
-            currentState = CombatStates.LOSE;
-        }
-        else if(isWin())
-        {
-            currentState = CombatStates.WIN;
-        }
-    }
+    //void isFinish()
+    //{
+    //    if (isLoose())
+    //    {
+    //        currentState = CombatStates.LOSE;
+    //    }
+    //    else if(isWin())
+    //    {
+    //        currentState = CombatStates.WIN;
+    //    }
+    //}
 
     //IsLoose
     //Retourne true si la partie est perdue.
     bool isLoose()
     {
-        return Team_Defeated(allies);
+        //return Team_Defeated(allies);
+        return false;
     }
 
     //IsWin
     //Retourne false si la partie est gagnée.
     bool isWin()
     {
-        return Team_Defeated(ennemies);
+        //return Team_Defeated(ennemies);
+        return false;
     }
 
     bool Team_Defeated(List<Personnage> team)
@@ -392,6 +402,48 @@ public class CombatTurn : MonoBehaviour {
         return defeted;
     }
 
+    void InitUI()
+    {
+        CombatUI.SetActive(true);
+        pnlAlly = GameObject.Find("PNL_TeamHp");
+        pnlEnemy = GameObject.Find("PNL_Enemy");
+        pnlButton = GameObject.Find("PNL_Button");
+        List<Button> ListBtn = new List<Button>(pnlButton.GetComponentsInChildren<Button>());
+        List<Text> hpTextAlly = new List<Text>(pnlAlly.GetComponentsInChildren<Text>());
+        List<Text> hpTextEnemy = new List<Text>(pnlEnemy.GetComponentsInChildren<Text>());
+        List<Slider> hpBarAlly = new List<Slider>(pnlAlly.GetComponentsInChildren<Slider>());
+        List<Slider> hpBarEnemy = new List<Slider>(pnlEnemy.GetComponentsInChildren<Slider>());
+
+        ListBtn[2].onClick.AddListener(QuitButton);
+        for(int i = 0; i < hpTextAlly.Count; i++)
+        {
+            if(allies[i] != null)
+            {
+                hpTextAlly[i].text = allies[i].name + " : " + allies[i].BattleHp + "/" + allies[i].hpTotal;
+                hpBarAlly[i].minValue = 0;
+                hpBarAlly[i].maxValue = allies[i].hpTotal;
+                hpBarAlly[i].value = allies[i].BattleHp;
+            }
+            
+        }
+        for(int i = 0; i < hpTextEnemy.Count; i++)
+        {
+            if(ennemies[i] != null)
+            {
+                hpTextEnemy[i].text = ennemies[i].name;
+                hpBarEnemy[i].minValue = 0;
+                hpBarEnemy[i].maxValue = ennemies[i].hpTotal;
+                hpBarEnemy[i].value = ennemies[i].BattleHp;
+            }
+        }
+        
+    }
+
+    public void QuitButton()
+    {
+        Quit(target_loose);
+    }
+
     public class ExtendedBehavior : MonoBehaviour
     {
         public void Wait(float seconds)
@@ -403,6 +455,7 @@ public class CombatTurn : MonoBehaviour {
             yield return new WaitForSeconds(time);
         }
     }
+
 
 }
 
