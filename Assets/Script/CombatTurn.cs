@@ -53,25 +53,6 @@ public class CombatTurn : MonoBehaviour {
         currentState = CombatStates.NOTINCOMBAT;
     }
 
-    private IEnumerator OnTriggerEnter2D(Collider2D collision)
-    {
-        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
-
-        yield return StartCoroutine(sf.FadeToBlack());
-
-        //Positionner la caméra sur le combat
-        CameraMovment.inCombat = true;
-        CameraMovment.target_Combat = target_combat;
-
-        //Empêcher le joueur de bouger
-        PlayerMovment.inCombat = true;
-        PlayerMovment.canMove = false;
-
-        yield return StartCoroutine(sf.FadeToClear());
-
-        currentState = CombatStates.START;
-    }
-
     void Update () {
         Debug.Log(currentState);
         //yield WaitForSeconds(1);
@@ -116,16 +97,31 @@ public class CombatTurn : MonoBehaviour {
         }
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        currentState = CombatStates.START;
-    }
-
     void Combat_Start()
     {
-
+        StartCoroutine(Animation_Start());
         Initialize_Component();
         Define_Turn();
+    }
+
+    IEnumerator Animation_Start()
+    {
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        yield return StartCoroutine(sf.FadeToBlack());
+
+        //Positionner la caméra sur le combat
+        CameraMovment.inCombat = true;
+        CameraMovment.target_Combat = target_combat;
+
+        //Empêcher le joueur de bouger
+        PlayerMovment.inCombat = true;
+        PlayerMovment.canMove = false;
+
+        yield return StartCoroutine(sf.FadeToClear());
+
+        //Le combat débute
+        currentState = CombatStates.ENEMY1;
     }
 
     void Combat_Ally1_Turn()
@@ -290,6 +286,7 @@ public class CombatTurn : MonoBehaviour {
             bd.Close();
         }
 
+        Debug.Log("Est dans la team:" + isKnown.ToString());
         return isKnown;
     }
 

@@ -23,6 +23,8 @@ namespace Assets.Script
         public bool defeated { get; set; }
         public GameObject gameObject { get; set; }
 
+        private FighterMovement deplacement;
+
         // battle stats
         private int battleHp;
         public int BattleHp {
@@ -58,6 +60,7 @@ namespace Assets.Script
             this.strength = str;
             this.defence = def;
             this.speed = sp;
+            deplacement = gameObject.GetComponent<FighterMovement>();
             setupBattleStats();
         }
 
@@ -81,6 +84,7 @@ namespace Assets.Script
                     defeated = false;
                 else if (reader.GetString(7) == "O")
                     defeated = true;
+                Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
 
                 setupBattleStats();
                 //Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
@@ -96,6 +100,14 @@ namespace Assets.Script
             battleStr = strength;
             battleDef = defence;
             battleSpd = speed;
+        }
+        public void MoveLeft()
+        {
+            deplacement.movingLeft = true;
+        }
+        public void MoveRight()
+        {
+            deplacement.movingRight = true;
         }
     }
 }
