@@ -4,76 +4,94 @@ using System.Linq;
 using System.Text;
 using UnityEngine.UI;
 using UnityEngine;
+using Mono.Data.Sqlite;
+using System.Data;
 
 namespace Assets.Script
 {
     class Personnage
     {
-        private string name;
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        private int hp;
-        public int Hp
-        {
-            get { return hp; }
-            set { hp = value; }
-        }
-        private int level;
-        public int Level
-        {
-            get { return level; }
-            set { level = value; }
-        }
-        private int nbAmes;
-        public int NbAmes
-        {
-            get { return nbAmes; }
-            set { nbAmes = value; }
-        }
-        private int strength;
-        public int Strength
-        {
-            get { return strength; }
-            set { strength = value; }
-        }
-        private int defence;
-        public int Defence
-        {
-            get { return defence; }
-            set { defence = value; }
-        }
-        private int speed;
-        public int Speed
-        {
-            get { return speed; }
-            set { speed = value; }
-        }
-        private Sprite image;
-        public Sprite Image
-        {
-            get { return image; }
-            set { image = value; }
-        }
-        private bool defeated;
-        public bool isDefeated
-        {
-            get { return defeated; }
-            set { defeated = value; }
-        }
+        // base stats
+        public string name { get; set; }
+        public int hpTotal { get; set; }
+        public int level { get; set; }
+        public int nbAmes { get; set; }
+        public int strength { get; set; }
+        public int defence { get; set; }
+        public int speed { get; set; }
+        public Sprite image { get; set; }
+        public bool defeated { get; set; }
+        public GameObject gameObject { get; set; }
 
+        // battle stats
+        public int battleHp {
+            get { return battleHp; }
+            set
+            {
+                if(battleHp + value <= 0)
+                {
+                    battleHp = 0;
+                    defeated = true;
+                }
+                else { battleHp -= value; }
+
+                if (battleHp + value >= hpTotal) {battleHp = hpTotal;}
+                else { battleHp += value; }
+                
+            }
+        }
+        public int turnStunned { get; set; }
+        public bool stunned { get; set; } //?
+        public int battleStr { get; set; }
+        public int battleDef { get; set; }
+        public int battleSpd { get; set; }
+
+        
 
         public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
         {
-            Name = name;
-            Hp = hp;
-            Level = level;
-            NbAmes = nbAme;
-            Strength = str;
-            Defence = def;
-            Speed = sp;
+            this.name = name;
+            this.hpTotal = hp;
+            this.level = level;
+            this.nbAmes = nbAme;
+            this.strength = str;
+            this.defence = def;
+            this.speed = sp;
+        }
+
+        public Personnage(GameObject gameObject, int id_personnage)
+        {
+            this.gameObject = gameObject;
+
+            AccesBD bd = new AccesBD();
+            SqliteDataReader reader = bd.select("select Nom, Point_de_vie, niveau, nbAmes, Force, Defence, Vitesse, vaincue from Personnage inner join Stats on Personnage.Stat = Stats.idStats WHERE idPersonnage =" + id_personnage);
+
+            while (reader.Read())
+            {
+                name = reader.GetString(0);
+                hpTotal = reader.GetInt32(1);
+                level = reader.GetInt32(2);
+                nbAmes = reader.GetInt32(3);
+                strength = reader.GetInt32(4);
+                defence = reader.GetInt32(5);
+                speed = reader.GetInt32(6);
+                if (reader.GetString(7) == "N")
+                    defeated = false;
+                else if (reader.GetString(7) == "O")
+                    defeated = true;
+                //Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+            }
+                        
+            bd.Close();
+        }
+
+        public void setupBattleStats()
+        {
+            turnStunned = 0;
+            battleHp = hpTotal;
+            battleStr = strength;
+            battleDef = defence;
+            battleSpd = speed;
         }
     }
 }

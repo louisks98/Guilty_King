@@ -4,11 +4,13 @@ using UnityEngine;
 using Assets.Script;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuStatTeam : MonoBehaviour {
 
     private List<Personnage> listPers = new List<Personnage>();
     public List<GameObject> characterPanels = new List<GameObject>();
+    public GameObject statsCharacterPanel;
     public Sprite sp_hero;
     public Sprite sp_Fire;
     public Sprite sp_Forest;
@@ -27,7 +29,7 @@ public class MenuStatTeam : MonoBehaviour {
     void OnEnable()
     {
         GetStatsTeam();
-        Afficher();
+        AfficherTeam();
     }
 
     void GetStatsTeam()
@@ -48,64 +50,82 @@ public class MenuStatTeam : MonoBehaviour {
         }
         reader.Close();
         bd.Close();
-        listPers[0].Image = sp_hero;
-        listPers[1].Image = sp_Forest;
-        listPers[2].Image = sp_Fire;
-        listPers[3].Image = sp_Ice;
+        listPers[0].image = sp_hero;
+        listPers[1].image = sp_Forest;
+        listPers[2].image = sp_Fire;
+        listPers[3].image = sp_Ice;
     }
 
-    void Afficher()
+    void AfficherTeam()
     {
         int i = 0;
         foreach (GameObject obj in characterPanels)
         {
             List<Text> txt = new List<Text>(obj.GetComponentsInChildren<Text>());
             List<Image> img = new List<Image>(obj.GetComponentsInChildren<Image>());
+            obj.GetComponent<Button>().onClick.AddListener(() => { Affichercharacter(); });
 
-            img[1].sprite = listPers[i].Image;
-            txt[0].text = listPers[i].Name;
-            txt[1].text = "Niveau : " + listPers[i].Level.ToString();
-            txt[2].text = "Hp : "  + listPers[i].Hp.ToString() + "/" + listPers[i].Hp.ToString();
-            txt[3].text = "Ames : " + listPers[i].NbAmes.ToString();
+            img[1].sprite = listPers[i].image;
+            txt[0].text = listPers[i].name;
+            txt[1].text = "Niveau : " + listPers[i].level.ToString();
+            txt[2].text = "Hp : "  + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
+            txt[3].text = "Ames : " + listPers[i].nbAmes.ToString();
             i++;
         }
     }
+    void Affichercharacter()
+    {
+        List<Text> txt = new List<Text>(statsCharacterPanel.GetComponentsInChildren<Text>());
+        List<Image> img = new List<Image>(statsCharacterPanel.GetComponentsInChildren<Image>());
+
+        switch (EventSystem.current.currentSelectedGameObject.name)
+        {
+            case "PanelCharacter1":
+                txt[0].text = listPers[0].name;
+                txt[1].text = "Niveau : " + listPers[0].level.ToString();
+                txt[2].text = "HP : " + listPers[0].hpTotal.ToString();
+                txt[3].text = "Force : " + listPers[0].strength.ToString();
+                txt[4].text = "Defence : " + listPers[0].defence.ToString();
+                txt[5].text = "Speed : " + listPers[0].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[0].nbAmes.ToString();
+                img[1].sprite = listPers[0].image;
+                break;
+
+            case "PanelCharacter2":
+                txt[0].text = listPers[1].name;
+                txt[1].text = "Niveau : " + listPers[1].level.ToString();
+                txt[2].text = "HP : " + listPers[1].hpTotal.ToString();
+                txt[3].text = "Force : " + listPers[1].strength.ToString();
+                txt[4].text = "Defence : " + listPers[1].defence.ToString();
+                txt[5].text = "Speed : " + listPers[1].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[1].nbAmes.ToString();
+                img[1].sprite = listPers[1].image;
+                break;
+
+            case "PanelCharacter3":
+                txt[0].text = listPers[2].name;
+                txt[1].text = "Niveau : " + listPers[2].level.ToString();
+                txt[2].text = "HP : " + listPers[2].hpTotal.ToString();
+                txt[3].text = "Force : " + listPers[2].strength.ToString();
+                txt[4].text = "Defence : " + listPers[2].defence.ToString();
+                txt[5].text = "Speed : " + listPers[2].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[2].nbAmes.ToString();
+                img[1].sprite = listPers[2].image;
+                break;
+
+            case "PanelCharacter4":
+                txt[0].text = listPers[3].name;
+                txt[1].text = "Niveau : " + listPers[3].level.ToString();
+                txt[2].text = "HP : " + listPers[3].hpTotal.ToString();
+                txt[3].text = "Force : " + listPers[3].strength.ToString();
+                txt[4].text = "Defence : " + listPers[3].defence.ToString();
+                txt[5].text = "Speed : " + listPers[3].speed.ToString();
+                txt[6].text = "Nombre d'ame : " + listPers[3].nbAmes.ToString();
+                img[1].sprite = listPers[3].image;
+                break;
+        }
+        
+
+    }
 }
-
-//public class Personnage
-//{
-//    private string name;
-//    public string Name
-//    {
-//        get { return name; }
-//        set { name = value; }
-//    }
-//    private int hp;
-//    public int Hp
-//    {
-//        get { return hp; }
-//        set { hp = value; }
-//    }
-//    private int level;
-//    public int Level
-//    {
-//        get { return level; }
-//        set { level = value; }
-//    }
-//    private int nbAmes;
-//    public int NbAmes
-//    {
-//        get { return nbAmes; }
-//        set { nbAmes = value; }
-//    }
-
-
-//    public Personnage(string name, int hp, int level, int nbAme)
-//    {
-//        this.Name = name;
-//        this.Hp = hp;
-//        this.Level = level;
-//        this.NbAmes = nbAme;
-//    }
-//}
 
