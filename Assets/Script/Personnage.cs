@@ -23,6 +23,8 @@ namespace Assets.Script
         public bool defeated { get; set; }
         public GameObject gameObject { get; set; }
 
+        private FighterMovement deplacement;
+
         // battle stats
         public int battleHp {
             get { return battleHp; }
@@ -57,6 +59,7 @@ namespace Assets.Script
             this.strength = str;
             this.defence = def;
             this.speed = sp;
+            deplacement = gameObject.GetComponent<FighterMovement>();
         }
 
         public Personnage(GameObject gameObject, int id_personnage)
@@ -92,6 +95,14 @@ namespace Assets.Script
             battleStr = strength;
             battleDef = defence;
             battleSpd = speed;
+        }
+        public void MoveLeft()
+        {
+            deplacement.movingLeft = true;
+        }
+        public void MoveRight()
+        {
+            deplacement.movingRight = true;
         }
     }
 }
