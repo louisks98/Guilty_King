@@ -47,25 +47,6 @@ public class CombatTurn : MonoBehaviour {
         currentState = CombatStates.NOTINCOMBAT;
     }
 
-    private IEnumerator OnTriggerEnter2D(Collider2D collision)
-    {
-        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
-
-        yield return StartCoroutine(sf.FadeToBlack());
-
-        //Positionner la caméra sur le combat
-        CameraMovment.inCombat = true;
-        CameraMovment.target_Combat = target_combat;
-
-        //Empêcher le joueur de bouger
-        PlayerMovment.inCombat = true;
-        PlayerMovment.canMove = false;
-
-        yield return StartCoroutine(sf.FadeToClear());
-
-        currentState = CombatStates.START;
-    }
-
     void Update () {
         //Debug.Log(currentState);
         //yield WaitForSeconds(1);
@@ -110,15 +91,31 @@ public class CombatTurn : MonoBehaviour {
         }
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        currentState = CombatStates.START;
-    }
-
     void Combat_Start()
     {
-        //Initialize_Component();
-        //Define_Turn();
+        StartCoroutine(Animation_Start());
+        Initialize_Component();
+        Define_Turn();
+    }
+
+    IEnumerator Animation_Start()
+    {
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        yield return StartCoroutine(sf.FadeToBlack());
+
+        //Positionner la caméra sur le combat
+        CameraMovment.inCombat = true;
+        CameraMovment.target_Combat = target_combat;
+
+        //Empêcher le joueur de bouger
+        PlayerMovment.inCombat = true;
+        PlayerMovment.canMove = false;
+
+        yield return StartCoroutine(sf.FadeToClear());
+
+        //Le combat débute
+        currentState = CombatStates.ENEMY1;
     }
 
     void Combat_Ally1_Turn()
@@ -217,6 +214,7 @@ public class CombatTurn : MonoBehaviour {
     void Initialize_Component()
     {
         Init_Personnages();
+        //Init_Canva();
     }
 
     void Init_Personnages()
@@ -234,19 +232,19 @@ public class CombatTurn : MonoBehaviour {
         allies.Add(null);
         if (Personnage_Is_In_Team(1))
         {
-            allies.Insert(0, new Personnage(gm_enemy1, id_enemy1));
+            allies.Insert(0, new Personnage(GameObject.FindGameObjectWithTag("Hero"),1));
         }
         if (Personnage_Is_In_Team(2))
         {
-            allies.Insert(1, new Personnage(gm_enemy1, id_enemy1));
+            allies.Insert(1, new Personnage(GameObject.FindGameObjectWithTag("Hero"), 2));
         }
         if (Personnage_Is_In_Team(3))
         {
-            allies.Insert(2, new Personnage(gm_enemy1, id_enemy1));
+            allies.Insert(2, new Personnage(GameObject.FindGameObjectWithTag("Hero"), 3));
         }
         if (Personnage_Is_In_Team(4))
         {
-            allies.Insert(3, new Personnage(gm_enemy1, id_enemy1));
+            allies.Insert(3, new Personnage(GameObject.FindGameObjectWithTag("Hero"), 4));
         }
     }
 
@@ -280,6 +278,7 @@ public class CombatTurn : MonoBehaviour {
             bd.Close();
         }
 
+        Debug.Log("Est dans la team:" + isKnown.ToString());
         return isKnown;
     }
 

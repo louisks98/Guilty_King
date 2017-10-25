@@ -1401,6 +1401,7 @@ MonoBehaviour:
   - "Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
     \xE0 l'est dans la carte d'eau..."
   - "Am\xE8ne toi!"
+  ennemy: {fileID: 127374436}
 --- !u!114 &127374442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,6 +1969,7 @@ MonoBehaviour:
   dialogue: 
   dialogueLines:
   - Vous avez recu une potion de regeneration
+  ennemy: {fileID: 0}
 --- !u!58 &219965371
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5453,6 +5455,7 @@ MonoBehaviour:
   - "Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le nord de
     la carte d'eau..."
   - "Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
+  ennemy: {fileID: 0}
 --- !u!1 &528632337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5671,6 +5674,7 @@ MonoBehaviour:
   - "Maman: Pfft! Tu penses devenir roi...? Il te faudra de l'aide et beaucoup de
     courage pour prendre sa place h\xE9 h\xE9..."
   - "Maman: Bonne chance dans ta qu\xEAte!"
+  ennemy: {fileID: 0}
 --- !u!1 &532811508
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,6 +6007,7 @@ MonoBehaviour:
   - "Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
   - "Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce throne!"
   - Battons-nous!
+  ennemy: {fileID: 0}
 --- !u!1 &545767982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9246,6 +9251,7 @@ MonoBehaviour:
   - Oh... tu veux que je vienne t'aider? Malheureusement il faudra que tu me prouves
     ta force avant que je t'aide!
   - "Tu ne r\xE9ussiras jamais \xE0 me battre!"
+  ennemy: {fileID: 0}
 --- !u!1 &841473946
 GameObject:
   m_ObjectHideFlags: 0
@@ -22013,6 +22019,7 @@ MonoBehaviour:
     H\xE9 h\xE9!"
   - '...Glou Glou...'
   - Vous vous sentez automatiquement plus fort!
+  ennemy: {fileID: 0}
 --- !u!1 &2094395285
 GameObject:
   m_ObjectHideFlags: 0
