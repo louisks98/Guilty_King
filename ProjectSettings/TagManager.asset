@@ -12,6 +12,9 @@ TagManager:
   - charPanel2
   - charpanel3
   - charpanel4
+  - FireAlly
+  - IceAlly
+  - ForestAlly
   layers:
   - Default
   - TransparentFX
