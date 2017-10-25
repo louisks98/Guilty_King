@@ -24,7 +24,8 @@ namespace Assets.Script
         public GameObject gameObject { get; set; }
 
         // battle stats
-        public int battleHp {
+        private int battleHp;
+        public int BattleHp {
             get { return battleHp; }
             set
             {
@@ -57,6 +58,7 @@ namespace Assets.Script
             this.strength = str;
             this.defence = def;
             this.speed = sp;
+            setupBattleStats();
         }
 
         public Personnage(GameObject gameObject, int id_personnage)
@@ -79,6 +81,8 @@ namespace Assets.Script
                     defeated = false;
                 else if (reader.GetString(7) == "O")
                     defeated = true;
+
+                setupBattleStats();
                 //Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
             }
                         
