@@ -64,11 +64,22 @@ namespace Assets.Script
             this.gameObject = gameObject;
 
             AccesBD bd = new AccesBD();
-            SqliteDataReader reader = bd.select("SELECT * FROM Personnage INNER JOIN Stats ON Personnage.Stat = Stats.idStats WHERE idPersonnage =" + id_personnage);
+            SqliteDataReader reader = bd.select("select Nom, Point_de_vie, niveau, nbAmes, Force, Defence, Vitesse, vaincue from Personnage inner join Stats on Personnage.Stat = Stats.idStats WHERE idPersonnage =" + id_personnage);
 
             while (reader.Read())
             {
-                Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+                name = reader.GetString(0);
+                hpTotal = reader.GetInt32(1);
+                level = reader.GetInt32(2);
+                nbAmes = reader.GetInt32(3);
+                strength = reader.GetInt32(4);
+                defence = reader.GetInt32(5);
+                speed = reader.GetInt32(6);
+                if (reader.GetString(7) == "N")
+                    defeated = false;
+                else if (reader.GetString(7) == "O")
+                    defeated = true;
+                //Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
             }
                         
             bd.Close();
