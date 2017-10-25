@@ -6,8 +6,9 @@ public class DialogHolder : MonoBehaviour {
 
     public string dialogue;
     private DialogueManager dMan;
-
     public string[] dialogueLines;
+
+    public GameObject ennemy;
 
     
 	// Use this for initialization
@@ -28,6 +29,14 @@ public class DialogHolder : MonoBehaviour {
             {
                 if (!dMan.dialogActive)
                 {
+                    if (ennemy != null)
+                    {
+                        dMan.SetEnnemy(ennemy);
+                    }
+                    else
+                    {
+                        dMan.SetEnnemy(null);
+                    }
                     dMan.dialogLines = dialogueLines;
                     dMan.currentLine = -1;
                     dMan.ShowDialogue();
@@ -39,7 +48,9 @@ public class DialogHolder : MonoBehaviour {
             //              transform.parent.GetComponent<ObjectMovement>().canMove = false;
             //          }
             //    IL FAUDRAIT PROGRAMMER UN SCRIPT OBJECTMOVEMENT ET FAIRE LA PROG DE CELUI-CI https://www.youtube.com/watch?v=KWNzLT46w9Q
-
         }
+
+        
+
     }
 }

@@ -13,10 +13,11 @@ public class DialogueManager : MonoBehaviour {
     public string[] dialogLines;
     public int currentLine;
 
+    GameObject ennemy;
+
 	// Use this for initialization
 	void Start () {
         dialogLines = new string[1]; // pour enlever l'exception mais inutile.
-
 	}
 	
 	// Update is called once per frame
@@ -33,6 +34,11 @@ public class DialogueManager : MonoBehaviour {
             currentLine = 0;
             Time.timeScale = 1f;
             PlayerMovment.canMove = true;
+
+            if (ennemy != null)
+            {
+                ennemy.GetComponent<CombatTurn>().currentState = CombatTurn.CombatStates.START;
+            }
         }
 
         dText.text = dialogLines[currentLine];
@@ -43,5 +49,10 @@ public class DialogueManager : MonoBehaviour {
         dialogActive = true;
         dBox.SetActive(true);
         PlayerMovment.canMove = false;
+    }
+
+    public void SetEnnemy(GameObject ennemy)
+    {
+        this.ennemy = ennemy;
     }
 }
