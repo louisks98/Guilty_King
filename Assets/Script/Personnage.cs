@@ -23,7 +23,7 @@ namespace Assets.Script
         public bool defeated { get; set; }
         public GameObject gameObject { get; set; }
 
-        private FighterMovement deplacement;
+        public FighterMovement deplacement;
 
         // battle stats
         private int battleHp;
