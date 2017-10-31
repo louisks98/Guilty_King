@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Script;
+using Mono.Data.Sqlite;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +16,7 @@ public class CombatUI : MonoBehaviour {
     public GameObject pnlMenuBtn;
     public GameObject pnlAttakBtn;
     public GameObject pnlEnemySelect;
+    public GameObject pnlItemSelect;
 
     // Use this for initialization
     void Start() {
@@ -29,12 +33,14 @@ public class CombatUI : MonoBehaviour {
         pnlEnemySelect.SetActive(false);
         pnlMenuBtn.SetActive(false);
         pnlAttakBtn.SetActive(true);
+        pnlItemSelect.SetActive(false);
     }
     public void onClickCancel()
     {
         pnlEnemySelect.SetActive(false);
         pnlMenuBtn.SetActive(true);
         pnlAttakBtn.SetActive(false);
+        pnlItemSelect.SetActive(false);
     }
 
     public void onClickSpell()
@@ -42,10 +48,66 @@ public class CombatUI : MonoBehaviour {
         pnlEnemySelect.SetActive(true);
         pnlMenuBtn.SetActive(false);
         pnlAttakBtn.SetActive(false);
+        pnlItemSelect.SetActive(false);
         AfficherEnemy();
     }
 
-    public void AfficherEnemy()
+    public void onClickItem()
+    {
+        pnlEnemySelect.SetActive(false);
+        pnlMenuBtn.SetActive(false);
+        pnlAttakBtn.SetActive(false);
+        pnlItemSelect.SetActive(true);
+        AfficherItem();
+    }
+
+    private void AfficherItem()
+    {
+        try
+        {
+            List<Text> listText = new List<Text>(pnlItemSelect.GetComponentsInChildren<Text>());
+            AccesBD bd = new AccesBD();
+            SqliteDataReader reader;
+            string selectNbHealth = "select Quantite from InventaireItem where Personnage = 1 and Item = 3";
+            string selectNbDef = "select Quantite from InventaireItem where Personnage = 1 and Item = 6";
+            string selectNbSpeed = "select Quantite from InventaireItem where Personnage = 1 and Item = 5";
+            string selectNbSteroid = "select Quantite from InventaireItem where Personnage = 1 and Item = 7";
+
+            reader = bd.select(selectNbHealth);
+            while(reader.Read())
+            {
+                listText[0].text = "x" + reader.GetInt32(0).ToString();
+            }
+            reader.Close();
+
+            reader = bd.select(selectNbDef);
+            while (reader.Read())
+            {
+                listText[1].text = "x" + reader.GetInt32(0).ToString();
+            }
+            reader.Close();
+            
+            reader = bd.select(selectNbSpeed);
+            while (reader.Read())
+            {
+                listText[2].text = "x" + reader.GetInt32(0).ToString();
+            }
+            reader.Close();
+
+            reader = bd.select(selectNbSteroid);
+            while (reader.Read())
+            {
+                listText[3].text = "x" + reader.GetInt32(0).ToString();
+            }
+            reader.Close();
+            bd.Close();
+        }
+        catch(SqliteException e) { Debug.Log(e.Message); }
+        
+    }
+    
+
+    private void AfficherEnemy()
     {
         List<Button> lstBtn = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
         for (int i = 0; i < lstBtn.Count; i++)

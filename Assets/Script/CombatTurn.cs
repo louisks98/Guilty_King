@@ -402,26 +402,23 @@ public class CombatTurn : MonoBehaviour {
             {
                 sprite = go_enemy1.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[0] = sprite.sprite;
-                Debug.Log("enemy sprite 1");
             }
             if (go_enemy2 != null)
             {
                 sprite = go_enemy2.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[1] = sprite.sprite;
-                Debug.Log("enemy sprite 2");
             }
             if (go_enemy3 != null)
             {
                 sprite = go_enemy3.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[2] = sprite.sprite;
-                Debug.Log("enemy sprite 3");
             }
                 
             if (go_enemy4 != null)
             {
                 sprite = go_enemy4.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[3] = sprite.sprite;
-                Debug.Log("enemy sprite 4");
+
             }
                 
         }
