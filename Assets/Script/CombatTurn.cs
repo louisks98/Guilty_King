@@ -9,19 +9,23 @@ using UnityEngine.UI;
 public class CombatTurn : MonoBehaviour {
 
    public enum CombatStates {
+        ANIMSTART,
         START,
-        ALLY1,
-        ALLY2,
-        ALLY3,
-        ALLY4,
-        ENEMY1,
-        ENEMY2,
-        ENEMY3,
-        ENEMY4,
+        ATTACK,
+        ANIMLEFT,
+        ANIMRIGHT,
+        ANIMATTACK,
+        NEXTPLAYER,
         LOSE,
         WIN,
         NOTINCOMBAT
     }
+
+    bool anim;
+    public CombatStates currentState { get; set; }
+
+    public bool currentTeamIsAlly { get; set; }
+    public int currentPlayer { get; set; }
 
     public int id_enemy1;
     public int id_enemy2;
@@ -36,11 +40,14 @@ public class CombatTurn : MonoBehaviour {
     List<Personnage> ennemies;
     List<Personnage> allies;
 
-    public CombatStates currentState { get; set; }
-
     public Transform target_combat;
     public Transform target_win;
     public Transform target_loose;
+
+    public Transform target_Ally_1;
+    public Transform target_Ally_2;
+    public Transform target_Ally_3;
+    public Transform target_Ally_4;
 
     public GameObject hero;
 
@@ -51,55 +58,99 @@ public class CombatTurn : MonoBehaviour {
 
     void Start () {
         currentState = CombatStates.NOTINCOMBAT;
+        anim = false;
     }
 
     void Update () {
-        Debug.Log(currentState);
-        //yield WaitForSeconds(1);
-        switch (currentState)
+        if(!anim && !currentPlayerIsMoving())
         {
-            case (CombatStates.START):
-                Combat_Start();
-                break;
-            case (CombatStates.ALLY1):
-                Combat_Ally1_Turn();
-                break;
-            case (CombatStates.ALLY2):
-                Combat_Ally2_Turn();
-                break;
-            case (CombatStates.ALLY3):
-                Combat_Ally3_Turn();
-                break;
-            case (CombatStates.ALLY4):
-                Combat_Ally4_Turn();
-                break;
-            case (CombatStates.ENEMY1):
-                Combat_Enemy1_Turn();
-                break;
-            case (CombatStates.ENEMY2):
-                Combat_Enemy2_Turn();
-                break;
-            case (CombatStates.ENEMY3):
-                Combat_Enemy3_Turn();
-                break;
-            case (CombatStates.ENEMY4):
-                Combat_Enemy4_Turn();
-                break;
-            case (CombatStates.WIN):
-                Combat_WIN();
-                break;
-            case (CombatStates.LOSE):
-                Combat_Lose();
-                break;
-            case (CombatStates.NOTINCOMBAT):
-                //On ne fait rien on est pas en combat
-                break;
+            Debug.Log(currentState);
+            switch (currentState)
+            {
+                case (CombatStates.ANIMSTART):
+                    StartCoroutine(Animation_Start());
+                    currentState = CombatStates.START;
+                    break;
+                case (CombatStates.START):
+                    Combat_Start();
+                    currentState = CombatStates.ATTACK;
+                    break;
+                case (CombatStates.ATTACK):
+                    if(currentTeamIsAlly)
+                    {
+                        //Draw spell list
+                        currentState = CombatStates.ANIMLEFT;
+                    }
+                    else
+                    {
+                        //Select a random spell
+                        currentState = CombatStates.ANIMRIGHT;
+                    }
+                    break;
+                case (CombatStates.ANIMATTACK):
+                    if (currentTeamIsAlly)
+                    {
+                        currentState = CombatStates.ANIMRIGHT;
+                    }
+                    else
+                    {
+                        currentState = CombatStates.ANIMLEFT;
+                    }
+                    break;
+                case (CombatStates.ANIMLEFT):
+                    if (currentTeamIsAlly)
+                    {
+                        if(allies[currentPlayer] != null)
+                        {
+                            allies[currentPlayer].MoveLeft();
+                        }
+                        currentState = CombatStates.ANIMATTACK;
+                    }
+                    else
+                    {
+                        if(ennemies[currentPlayer] != null)
+                        {
+                            ennemies[currentPlayer].MoveLeft();
+                        }
+                        currentState = CombatStates.NEXTPLAYER;
+                    }
+                    break;
+                case (CombatStates.ANIMRIGHT):
+                    if (currentTeamIsAlly)
+                    {
+                        if (allies[currentPlayer] != null)
+                        {
+                            allies[currentPlayer].MoveRight();
+                        }
+                        currentState = CombatStates.NEXTPLAYER;
+                    }
+                    else
+                    {
+                        if(ennemies[currentPlayer] != null)
+                        {
+                            ennemies[currentPlayer].MoveRight();
+                        }
+                        currentState = CombatStates.ANIMATTACK;
+                    }
+                    break;
+                case (CombatStates.NEXTPLAYER):
+                    Next_Turn();
+                    break;
+                case (CombatStates.WIN):
+                    Combat_WIN();
+                    break;
+                case (CombatStates.LOSE):
+                    Combat_Lose();
+                    break;
+                case (CombatStates.NOTINCOMBAT):
+                    //On ne fait rien on est pas en combat
+                    break;
+            }
         }
 	}
 
     void Combat_Start()
     {
-        StartCoroutine(Animation_Start());
         Initialize_Component();
         Define_Turn();
     }
@@ -108,8 +159,9 @@ public class CombatTurn : MonoBehaviour {
     {
         ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
 
+        anim = true;
         yield return StartCoroutine(sf.FadeToBlack());
-
+        anim = false;
         //Positionner la caméra sur le combat
         CameraMovment.inCombat = true;
         CameraMovment.target_Combat = target_combat;
@@ -119,59 +171,7 @@ public class CombatTurn : MonoBehaviour {
         PlayerMovment.canMove = false;
 
         yield return StartCoroutine(sf.FadeToClear());
-
-        //Le combat débute
-        currentState = CombatStates.ENEMY1;
     }
-
-    void Combat_Ally1_Turn()
-    {
-        Ally_Turn(0);
-        Next_Turn(CombatStates.ALLY2);
-    }
-
-    void Combat_Ally2_Turn()
-    {
-        Ally_Turn(1);
-        Next_Turn(CombatStates.ALLY3);
-    }
-
-    void Combat_Ally3_Turn()
-    {
-        Ally_Turn(2);
-        Next_Turn(CombatStates.ALLY4);
-    }
-
-    void Combat_Ally4_Turn()
-    {
-        Ally_Turn(3);
-        Next_Turn(CombatStates.ENEMY1);
-    }
-
-    void Combat_Enemy1_Turn()
-    {
-        Enemy_Turn(0);
-        Next_Turn(CombatStates.ENEMY2);
-    }
-
-    void Combat_Enemy2_Turn()
-    {
-        Enemy_Turn(1);
-        Next_Turn(CombatStates.ENEMY3);
-    }
-
-    void Combat_Enemy3_Turn()
-    {
-        Enemy_Turn(2);
-        Next_Turn(CombatStates.ENEMY4);
-    }
-
-    void Combat_Enemy4_Turn()
-    {
-        Enemy_Turn(3);
-        Next_Turn(CombatStates.ALLY1);
-    }
-
 
     void Quit(Transform target)
     {
@@ -193,6 +193,9 @@ public class CombatTurn : MonoBehaviour {
 
     void Ally_Turn(int id)
     {
+        allies[id].MoveLeft();
+        allies[id].MoveRight();
+
         //selectionner l'oposant à attaquer
         //sélectionner l'attaque
         //faire l'animation
@@ -241,18 +244,26 @@ public class CombatTurn : MonoBehaviour {
         if (Personnage_Is_In_Team(1))
         {
             allies[0] = new Personnage(GameObject.FindGameObjectWithTag("HeroCombat"), 1);
+            allies[0].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_1.position;
+            allies[0].deplacement.Init_Position();
         }
         if (Personnage_Is_In_Team(2))
         {
             allies[1]  = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
+            allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
+            allies[1].deplacement.Init_Position();
         }
         if (Personnage_Is_In_Team(3))
         {
             allies[2] = new Personnage(GameObject.FindGameObjectWithTag("FireAlly"), 3);
+            allies[2].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_3.position;
+            allies[2].deplacement.Init_Position();
         }
         if (Personnage_Is_In_Team(4))
         {
             allies[3] = new Personnage(GameObject.FindGameObjectWithTag("IceAlly"), 4);
+            allies[3].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_4.position;
+            allies[3].deplacement.Init_Position();
         }
     }
 
@@ -321,11 +332,13 @@ public class CombatTurn : MonoBehaviour {
     {
         if (Team_Speed(allies) >= Team_Speed(ennemies))
         {
-            currentState = CombatStates.ALLY1;
+            currentTeamIsAlly = true;
+            currentPlayer = 0;
         }
         else
         {
-            currentState = CombatStates.ENEMY1;
+            currentTeamIsAlly = false;
+            currentPlayer = 0;
         }        
     }
 
@@ -342,8 +355,18 @@ public class CombatTurn : MonoBehaviour {
         return speed;
     }
 
-    void Next_Turn(CombatStates nextPlayer)
+    void Next_Turn()
     {
+        if(currentPlayer <3)
+        {
+            currentPlayer++;
+        }
+        else
+        {
+            currentPlayer = 0;
+            currentTeamIsAlly = !currentTeamIsAlly;
+        }
+
         if (isWin())
         {
             currentState = CombatStates.WIN;
@@ -354,8 +377,9 @@ public class CombatTurn : MonoBehaviour {
         }
         else
         {
-            currentState = nextPlayer;
+            currentState = CombatStates.ATTACK;
         }
+        Debug.Log(currentTeamIsAlly.ToString() + currentPlayer);
     }
 
     //IsLoose
@@ -452,6 +476,27 @@ public class CombatTurn : MonoBehaviour {
         }
     }
 
-
+    bool currentPlayerIsMoving()
+    {
+        bool moving = false;
+        if(allies != null && ennemies != null)
+        {
+            if (currentTeamIsAlly)
+            {
+                if(allies[currentPlayer] != null)
+                {
+                    moving = allies[currentPlayer].deplacement.anim.GetBool("iswalking");
+                }
+            }
+            else
+            {
+                if(ennemies[currentPlayer] != null)
+                {
+                    moving = ennemies[currentPlayer].deplacement.anim.GetBool("iswalking");
+                }
+            }
+        }
+        return moving;
+    }
 }
 
