@@ -71,7 +71,7 @@ public class MenuInventaire : MonoBehaviour {
                             Debug.Log("health");
                             placed[i] = true;
                             break;
-                        case "Mana regen":
+                        case "Harden":
                             img = slots[j + 1];
                             img.sprite = imageItem[1];
                             Debug.Log("mana");
@@ -79,8 +79,14 @@ public class MenuInventaire : MonoBehaviour {
                             break;
                         case "steroids":
                             img = slots[j + 1];
-                            img.sprite = imageItem[3];
+                            img.sprite = imageItem[2];
                             Debug.Log("steroid");
+                            placed[i] = true;
+                            break;
+                        case "Speed boost" :
+                            img = slots[j + 1];
+                            img.sprite = imageItem[3];
+                            Debug.Log("Speed boost");
                             placed[i] = true;
                             break;
                     }

@@ -51,7 +51,7 @@ public class CombatTurn : MonoBehaviour {
 
     public GameObject hero;
 
-    public GameObject CombatUI;
+    public GameObject combatUI;
     private GameObject pnlAlly;
     private GameObject pnlEnemy;
     private GameObject pnlButton;
@@ -79,6 +79,7 @@ public class CombatTurn : MonoBehaviour {
                     if(currentTeamIsAlly)
                     {
                         //Draw spell list
+                        //combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer);
                         currentState = CombatStates.ANIMLEFT;
                     }
                     else
@@ -173,6 +174,7 @@ public class CombatTurn : MonoBehaviour {
         yield return StartCoroutine(sf.FadeToClear());
     }
 
+   
     void Quit(Transform target)
     {
         //Repositionne la caméra sur le personnage.
@@ -188,7 +190,7 @@ public class CombatTurn : MonoBehaviour {
         //Le combet est terminer
         currentState = CombatStates.NOTINCOMBAT;
 
-        CombatUI.SetActive(false);
+        combatUI.SetActive(false);
     }
 
     void Ally_Turn(int id)
@@ -414,7 +416,41 @@ public class CombatTurn : MonoBehaviour {
 
     void InitUI()
     {
-        CombatUI.SetActive(true);
+        CombatUI ui = combatUI.GetComponent<CombatUI>();
+        SpriteRenderer sprite;
+        try
+        {
+            if (go_enemy1 != null)
+            {
+                sprite = go_enemy1.GetComponent<SpriteRenderer>();
+                ui.listEnemySprites[0] = sprite.sprite;
+            }
+            if (go_enemy2 != null)
+            {
+                sprite = go_enemy2.GetComponent<SpriteRenderer>();
+                ui.listEnemySprites[1] = sprite.sprite;
+            }
+            if (go_enemy3 != null)
+            {
+                sprite = go_enemy3.GetComponent<SpriteRenderer>();
+                ui.listEnemySprites[2] = sprite.sprite;
+            }
+                
+            if (go_enemy4 != null)
+            {
+                sprite = go_enemy4.GetComponent<SpriteRenderer>();
+                ui.listEnemySprites[3] = sprite.sprite;
+
+            }
+                
+        }
+        catch(Exception e)
+        {
+            Debug.Log(e.Message);
+        }
+        
+
+        combatUI.SetActive(true);
         pnlAlly = GameObject.Find("PNL_TeamHp");
         pnlEnemy = GameObject.Find("PNL_Enemy");
         pnlButton = GameObject.Find("PNL_Button");
@@ -500,3 +536,5 @@ public class CombatTurn : MonoBehaviour {
     }
 }
 
+
+    
