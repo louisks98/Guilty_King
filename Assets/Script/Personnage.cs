@@ -27,20 +27,22 @@ namespace Assets.Script
 
         // battle stats
         private int battleHp;
-        public int BattleHp {
+        public int BattleHp
+        {
             get { return battleHp; }
             set
             {
-                if(battleHp + value <= 0)
+                battleHp = value;
+                if (battleHp <= 0)
                 {
                     battleHp = 0;
                     defeated = true;
                 }
-                else { battleHp -= value; }
 
-                if (battleHp + value >= hpTotal) {battleHp = hpTotal;}
-                else { battleHp += value; }
-                
+                if (battleHp >= hpTotal)
+                {
+                    battleHp = hpTotal;
+                }
             }
         }
         public int turnStunned { get; set; }
@@ -49,7 +51,7 @@ namespace Assets.Script
         public int battleDef { get; set; }
         public int battleSpd { get; set; }
 
-        
+        public List<Sort> sorts { get; set; }
 
         public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
         {
@@ -80,16 +82,23 @@ namespace Assets.Script
                 strength = reader.GetInt32(4);
                 defence = reader.GetInt32(5);
                 speed = reader.GetInt32(6);
-                if (reader.GetString(7) == "N")
-                    defeated = false;
-                else if (reader.GetString(7) == "O")
-                    defeated = true;
-                // Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+                //if (reader.GetString(7) == "N")
+                //    defeated = false;
+                //else if (reader.GetString(7) == "O")
+                //    defeated = true;
                 deplacement = gameObject.GetComponent<FighterMovement>();
                 setupBattleStats();
-                //Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+                defeated = false;
             }
-                        
+
+            reader = bd.select("select id,nom,description,valeur,acquis,type,nbattaque from Sort where personnage = " + id_personnage);
+            sorts = new List<Sort>();
+
+            while (reader.Read())
+            {
+                sorts.Add(new Sort(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6)));
+            }
+
             bd.Close();
         }
 
@@ -108,6 +117,31 @@ namespace Assets.Script
         public void MoveRight()
         {
             deplacement.movingRight = true;
+        }
+        public void dealDamage(int nbDamage)
+        {
+            BattleHp = BattleHp + nbDamage;
+        }
+    }
+    public class Sort
+    {
+        public string id { get; set; }
+        public string nom { get; set; }
+        public string description { get; set; }
+        public int valeur { get; set; }
+        public string acquis { get; set; }
+        public string type { get; set; }
+        public int nbattaque { get; set; }
+
+        public Sort(string id, string nom, string description, int valeur, string acquis, string type, int nbattaque)
+        {
+            this.id = id;
+            this.nom = nom;
+            this.description = description;
+            this.valeur = valeur;
+            this.acquis = acquis;
+            this.type = type;
+            this.nbattaque = nbattaque;
         }
     }
 }

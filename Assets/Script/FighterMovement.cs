@@ -25,11 +25,11 @@ public class FighterMovement : MonoBehaviour
         pointA = rdbody.position;
         if (isAlly)
         {
-            pointB.x = pointA.x - 4;
+            pointB.x = pointA.x - 1;
         }
         else
         {
-            pointB.x = pointA.x + 4;
+            pointB.x = pointA.x + 1;
         }
         Debug.Log("Player position is: " + rdbody.position);
     }

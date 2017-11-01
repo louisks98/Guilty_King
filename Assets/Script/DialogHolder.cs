@@ -9,11 +9,13 @@ public class DialogHolder : MonoBehaviour {
     public string[] dialogueLines;
 
     public GameObject ennemy;
+    bool inCombat;
 
     
 	// Use this for initialization
 	void Start () {
         dMan = FindObjectOfType<DialogueManager>();
+        inCombat = false;
 	}
 	
 	// Update is called once per frame
@@ -23,34 +25,49 @@ public class DialogHolder : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Hero")
+        if (ennemy != null)
         {
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (ennemy.GetComponent<CombatTurn>() != null)
             {
-                if (!dMan.dialogActive)
+                if (ennemy.GetComponent<CombatTurn>().currentState == CombatTurn.CombatStates.NOTINCOMBAT)
                 {
-                    if (ennemy != null)
-                    {
-                        dMan.SetEnnemy(ennemy);
-                    }
-                    else
-                    {
-                        dMan.SetEnnemy(null);
-                    }
-                    dMan.dialogLines = dialogueLines;
-                    dMan.currentLine = -1;
-                    dMan.ShowDialogue();
+                    inCombat = false;
+                }
+                else
+                {
+                    inCombat = true;
                 }
             }
-            //     CECI SERA INTÉRESSANT POUR EMPECHER DE BOUGER UN OBJET(MERCENAIRE?) LORSQU'ON DISCUTE AVEC LUI.    
-            //         if (transform.parent.GetComponent<ObjectMovement>() != null)
-            //          {
-            //              transform.parent.GetComponent<ObjectMovement>().canMove = false;
-            //          }
-            //    IL FAUDRAIT PROGRAMMER UN SCRIPT OBJECTMOVEMENT ET FAIRE LA PROG DE CELUI-CI https://www.youtube.com/watch?v=KWNzLT46w9Q
         }
 
-        
-
+        if (!inCombat)
+        {
+            if (collision.gameObject.name == "Hero")
+            {
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    if (!dMan.dialogActive)
+                    {
+                        if (ennemy != null)
+                        {
+                            dMan.SetEnnemy(ennemy);
+                        }
+                        else
+                        {
+                            dMan.SetEnnemy(null);
+                        }
+                        dMan.dialogLines = dialogueLines;
+                        dMan.currentLine = -1;
+                        dMan.ShowDialogue();
+                    }
+                }
+                //     CECI SERA INTÉRESSANT POUR EMPECHER DE BOUGER UN OBJET(MERCENAIRE?) LORSQU'ON DISCUTE AVEC LUI.    
+                //         if (transform.parent.GetComponent<ObjectMovement>() != null)
+                //          {
+                //              transform.parent.GetComponent<ObjectMovement>().canMove = false;
+                //          }
+                //    IL FAUDRAIT PROGRAMMER UN SCRIPT OBJECTMOVEMENT ET FAIRE LA PROG DE CELUI-CI https://www.youtube.com/watch?v=KWNzLT46w9Q
+            }
+        }
     }
 }
