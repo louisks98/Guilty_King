@@ -18,14 +18,13 @@ public class CombatUI : MonoBehaviour {
     public GameObject pnlEnemySelect;
     public GameObject pnlItemSelect;
 
-    // Use this for initialization
-    void Start() {
-        
-    }
+    private List<Button> listBtnEnemy;
+    private List<Button> listBtnSpell;
 
-    // Update is called once per frame
-    void Update() {
-
+    void Start()
+    {
+        listBtnSpell = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
+        listBtnEnemy = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
     }
 
     public void onClickAttack()
@@ -109,64 +108,82 @@ public class CombatUI : MonoBehaviour {
 
     private void AfficherEnemy()
     {
-        List<Button> lstBtn = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
-        for (int i = 0; i < lstBtn.Count; i++)
+        ReactivateButtons(listBtnEnemy);
+        if(listBtnEnemy != null)
         {
-            if (listEnemySprites[i] != null)
+            for (int i = 0; i < listBtnEnemy.Count; i++)
             {
-                lstBtn[i].image.sprite = listEnemySprites[i];
-                Debug.Log("Afficher enemy sprite" + i);
+                if (i < listEnemySprites.Count && listEnemySprites[i] != null)
+                {
+                    listBtnEnemy[i].image.sprite = listEnemySprites[i];
+                    Debug.Log("Afficher enemy sprite" + i);
+                }
+                else
+                    listBtnEnemy[i].gameObject.SetActive(false);
             }
-            else
-                lstBtn[i].gameObject.SetActive(false);
+            listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
         }
     }
         
     public void AfficherSpells(int player)
     {
-        List<Button> lstBtn = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
-
-        switch(player)
+        ReactivateButtons(listBtnSpell);
+        if(listBtnSpell != null)
         {
-            case 0:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellHero[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+            switch (player)
+            {
+                case 0:
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellHero.Count - 1 && listSpellHero[i] != null)
+                            listBtnSpell[i].image.sprite = listSpellHero[i];
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
 
-            case 1:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellFire[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+                case 1:
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellFire.Count - 1 && listSpellFire[i] != null)
+                            listBtnSpell[i].image.sprite = listSpellFire[i];
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
 
-            case 2:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellEarth[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+                case 2:
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellEarth.Count - 1 && listSpellEarth[i] != null)
+                            listBtnSpell[i].image.sprite = listSpellEarth[i];
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
 
-            case 3:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellIce[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+                case 3:
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellIce.Count - 1 && listSpellIce[i] != null)
+                            listBtnSpell[i].image.sprite = listSpellIce[i];
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
+            }
+            listBtnSpell[listBtnSpell.Count - 1].gameObject.SetActive(true);
+        }
+    }
+
+    private void ReactivateButtons(List<Button> listBtn)
+    {
+        if(listBtn != null)
+        {
+            foreach (Button b in listBtn)
+            {
+                b.gameObject.SetActive(true);
+            }
         }
     }
 }

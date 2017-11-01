@@ -362,6 +362,7 @@ public class CombatTurn : MonoBehaviour {
         if(currentPlayer <3)
         {
             currentPlayer++;
+            combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer);
         }
         else
         {
@@ -416,8 +417,10 @@ public class CombatTurn : MonoBehaviour {
 
     void InitUI()
     {
+        
         CombatUI ui = combatUI.GetComponent<CombatUI>();
         SpriteRenderer sprite;
+        ui.AfficherSpells(currentPlayer);
         try
         {
             if (go_enemy1 != null)
