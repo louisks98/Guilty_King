@@ -122,13 +122,13 @@ public class CombatUI : MonoBehaviour {
         }
     }
         
-    public void AfficherSpells(CombatTurn.CombatStates state)
+    public void AfficherSpells(int player)
     {
         List<Button> lstBtn = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
 
-        switch(state)
+        switch(player)
         {
-            case CombatTurn.CombatStates.ALLY1:
+            case 0:
                 for (int i = 0; i < lstBtn.Count; i++)
                 {
                     if (listSpellHero[i] != null)
@@ -138,7 +138,7 @@ public class CombatUI : MonoBehaviour {
                 }
                 break;
 
-            case CombatTurn.CombatStates.ALLY2:
+            case 1:
                 for (int i = 0; i < lstBtn.Count; i++)
                 {
                     if (listSpellHero[i] != null)
@@ -148,7 +148,7 @@ public class CombatUI : MonoBehaviour {
                 }
                 break;
 
-            case CombatTurn.CombatStates.ALLY3:
+            case 2:
                 for (int i = 0; i < lstBtn.Count; i++)
                 {
                     if (listSpellHero[i] != null)
@@ -158,7 +158,7 @@ public class CombatUI : MonoBehaviour {
                 }
                 break;
 
-            case CombatTurn.CombatStates.ALLY4:
+            case 3:
                 for (int i = 0; i < lstBtn.Count; i++)
                 {
                     if (listSpellHero[i] != null)

@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class FighterMovement : MonoBehaviour
 {
-
     Vector3 pointA;
     Vector3 pointB;
     Rigidbody2D rdbody;
-    Animator anim;
+    public Animator anim;
     public bool isAlly;
     public bool movingLeft;
     public bool movingRight;
 
     // Use this for initialization
-
     void Start()
     {
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        Init_Position();
+    }
+
+    public void Init_Position()
+    {
         pointA = rdbody.position;
         if (isAlly)
         {
@@ -28,9 +31,9 @@ public class FighterMovement : MonoBehaviour
         {
             pointB.x = pointA.x + 4;
         }
-        
         Debug.Log("Player position is: " + rdbody.position);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -51,7 +54,7 @@ public class FighterMovement : MonoBehaviour
                 {
                     movingLeft = false;
                     anim.SetBool("iswalking", false);
-       //             movingRight = true; // À RETIRER
+                    //             movingRight = true; // À RETIRER
                 }
             }
             if (movingRight)
@@ -85,7 +88,7 @@ public class FighterMovement : MonoBehaviour
                 {
                     movingRight = false;
                     anim.SetBool("iswalking", false);
-        //            movingLeft = true; // À RETIRER
+                    //            movingLeft = true; // À RETIRER
                 }
             }
             if (movingLeft)
