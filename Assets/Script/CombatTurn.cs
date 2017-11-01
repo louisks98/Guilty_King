@@ -193,26 +193,26 @@ public class CombatTurn : MonoBehaviour {
         combatUI.SetActive(false);
     }
 
-    void Ally_Turn(int id)
-    {
-        allies[id].MoveLeft();
-        allies[id].MoveRight();
+    //void Ally_Turn(int id)
+    //{
+    //    allies[id].MoveLeft();
+    //    allies[id].MoveRight();
 
-        //selectionner l'oposant à attaquer
-        //sélectionner l'attaque
-        //faire l'animation
-        //faire de dégat
-        //Victoire ? défaite ?
-    }
+    //    //selectionner l'oposant à attaquer
+    //    //sélectionner l'attaque
+    //    //faire l'animation
+    //    //faire de dégat
+    //    //Victoire ? défaite ?
+    //}
 
-    void Enemy_Turn(int id)
-    {
-        //Choisir un target aléatoire 
-        //Choisir une ataque aléatoire 
-        //faire l'animation
-        //faire le dégat
-        //Victoire ? défaite ?
-    }
+    //void Enemy_Turn(int id)
+    //{
+    //    //Choisir un target aléatoire 
+    //    //Choisir une ataque aléatoire 
+    //    //faire l'animation
+    //    //faire le dégat
+    //    //Victoire ? défaite ?
+    //}
 
     void Combat_WIN()
     {
