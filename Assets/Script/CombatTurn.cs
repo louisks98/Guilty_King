@@ -79,7 +79,10 @@ public class CombatTurn : MonoBehaviour {
                 case (CombatStates.STARTATTACK):
                     if(currentTeamIsAlly)
                     {
-                        //combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer); //Draw spell list //////////////////////////////////////////////////////////
+                        //if (allies[currentPlayer] != null)
+                        //{
+                        //    combatUI.GetComponent<CombatUI>().AfficherSpells(allies[currentPlayer]); //Draw spell list //////////////////////////////////////////////////////////
+                        //}
                         currentState = CombatStates.ANIMLEFT;
                     }
                     else
@@ -216,26 +219,39 @@ public class CombatTurn : MonoBehaviour {
         yield return StartCoroutine(sf.FadeToClear());
     }
 
-    void Quit(Transform target)
+    IEnumerator Animation_End(Transform target)
     {
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        anim = true;
+        yield return StartCoroutine(sf.FadeToBlack());
+        anim = false;
+
         //Repositionne la caméra sur le personnage.
-        CameraMovment.target_Combat = hero.GetComponent<Transform>();
+        CameraMovment.target_Combat = target;
 
         //Hero retourne ou il doit etre après le combat.
-        hero.transform.position = target_win.position;
+        hero.transform.position = target.position;
 
         //Le personnage peut bouger
         CameraMovment.inCombat = false;
         PlayerMovment.canMove = true;
 
+        combatUI.SetActive(false);
+
+        yield return StartCoroutine(sf.FadeToClear());
+    }
+
+    void Quit(Transform target)
+    {
+        StartCoroutine(Animation_End(target));
         //Le combet est terminer
         currentState = CombatStates.NOTINCOMBAT;
-
-        combatUI.SetActive(false);
     }
 
     void Combat_WIN()
     {
+        //Changer la variable vaincue a true ////////////////////////////////////////////////////////////////////////////
         Quit(target_win);
     }
 

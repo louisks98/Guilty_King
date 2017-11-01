@@ -12,6 +12,7 @@ namespace Assets.Script
     class Personnage
     {
         // base stats
+        public int id { get; set; }
         public string name { get; set; }
         public int hpTotal { get; set; }
         public int level { get; set; }
@@ -51,6 +52,7 @@ namespace Assets.Script
         public int battleDef { get; set; }
         public int battleSpd { get; set; }
 
+        public List<Sort> sorts { get; set; }
         
 
         public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
@@ -69,6 +71,8 @@ namespace Assets.Script
         public Personnage(GameObject gameObject, int id_personnage)
         {
             this.gameObject = gameObject;
+
+            id = id_personnage;
 
             AccesBD bd = new AccesBD();
             SqliteDataReader reader = bd.select("select Nom, Point_de_vie, niveau, nbAmes, Force, Defence, Vitesse, vaincue from Personnage inner join Stats on Personnage.Stat = Stats.idStats WHERE idPersonnage =" + id_personnage);
@@ -89,6 +93,14 @@ namespace Assets.Script
                 deplacement = gameObject.GetComponent<FighterMovement>();
                 setupBattleStats();
                 defeated = false;
+            }
+
+            reader = bd.select("SELECT Valeur,Type,NbAttaque,Acquis,Nom from Sort where Personnage = " + id_personnage);
+            sorts = new List<Sort>();
+
+            while (reader.Read())
+            {
+                sorts.Add(new Sort(reader.GetInt32(0),reader.GetString(1),reader.GetInt32(2),reader.GetString(3),reader.GetString(4)));
             }
 
             bd.Close();
@@ -113,6 +125,29 @@ namespace Assets.Script
         public void dealDamage(int nbDamage)
         {
             BattleHp = BattleHp + nbDamage;
+        }
+    }
+
+    public class Sort
+    {
+        public int damage { get; set; }
+        public string type { get; set; }
+        public int nbAttaque { get; set; }
+        public string acquis { get; set; }
+        public string nom { get; set; }
+
+        public Sort()
+        {
+
+        }
+
+        public Sort(int damage, string type, int nbAttaque, string acquis, string nom)
+        {
+            this.damage = damage;
+            this.type = type;
+            this.nbAttaque = nbAttaque;
+            this.acquis = acquis;
+            this.nom = nom;
         }
     }
 }
