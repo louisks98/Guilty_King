@@ -27,20 +27,22 @@ namespace Assets.Script
 
         // battle stats
         private int battleHp;
-        public int BattleHp {
+        public int BattleHp
+        {
             get { return battleHp; }
             set
             {
-                if(battleHp + value <= 0)
+                battleHp = value;
+                if (battleHp <= 0)
                 {
                     battleHp = 0;
                     defeated = true;
                 }
-                else { battleHp -= value; }
 
-                if (battleHp + value >= hpTotal) {battleHp = hpTotal;}
-                else { battleHp += value; }
-                
+                if (battleHp >= hpTotal)
+                {
+                    battleHp = hpTotal;
+                }
             }
         }
         public int turnStunned { get; set; }
@@ -80,16 +82,15 @@ namespace Assets.Script
                 strength = reader.GetInt32(4);
                 defence = reader.GetInt32(5);
                 speed = reader.GetInt32(6);
-                if (reader.GetString(7) == "N")
-                    defeated = false;
-                else if (reader.GetString(7) == "O")
-                    defeated = true;
-                // Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+                //if (reader.GetString(7) == "N")
+                //    defeated = false;
+                //else if (reader.GetString(7) == "O")
+                //    defeated = true;
                 deplacement = gameObject.GetComponent<FighterMovement>();
                 setupBattleStats();
-                //Debug.Log(reader.GetValue(0).ToString() + reader.GetValue(1).ToString() + reader.GetValue(2).ToString() + reader.GetValue(3).ToString() + reader.GetValue(4).ToString() + reader.GetValue(5).ToString());
+                defeated = false;
             }
-                        
+
             bd.Close();
         }
 
@@ -108,6 +109,10 @@ namespace Assets.Script
         public void MoveRight()
         {
             deplacement.movingRight = true;
+        }
+        public void dealDamage(int nbDamage)
+        {
+            BattleHp = BattleHp + nbDamage;
         }
     }
 }
