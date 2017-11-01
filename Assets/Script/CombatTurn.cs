@@ -79,7 +79,7 @@ public class CombatTurn : MonoBehaviour {
                     if(currentTeamIsAlly)
                     {
                         //Draw spell list
-                        combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer);
+                        //combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer);
                         currentState = CombatStates.ANIMLEFT;
                     }
                     else
