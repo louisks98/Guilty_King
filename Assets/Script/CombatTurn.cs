@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class CombatTurn : MonoBehaviour {
 
-   public enum CombatStates {
+    public enum CombatStates {
         ANIMSTART,
         START,
         STARTATTACK,
@@ -57,13 +57,13 @@ public class CombatTurn : MonoBehaviour {
     private GameObject pnlEnemy;
     private GameObject pnlButton;
 
-    void Start () {
+    void Start() {
         currentState = CombatStates.NOTINCOMBAT;
         anim = false;
     }
 
-    void Update () {
-        if(!anim && !currentPlayerIsMoving())
+    void Update() {
+        if (!anim && !currentPlayerIsMoving())
         {
             Debug.Log(currentState);
             switch (currentState)
@@ -77,25 +77,28 @@ public class CombatTurn : MonoBehaviour {
                     currentState = CombatStates.STARTATTACK;
                     break;
                 case (CombatStates.STARTATTACK):
-                    if(currentTeamIsAlly)
+                    if (currentTeamIsAlly)
                     {
-                        //combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer); //Draw spell list //////////////////////////////////////////////////////////
+                        //if (allies[currentPlayer] != null)
+                        //{
+                        //    combatUI.GetComponent<CombatUI>().AfficherSpells(allies[currentPlayer]); //Draw spell list //////////////////////////////////////////////////////////
+                        //}
                         currentState = CombatStates.ANIMLEFT;
                     }
                     else
                     {
                         //Select a random spell /////////////////////////////////////////////////////////////////////////////
-                        currentState = CombatStates.ANIMRIGHT;                         
+                        currentState = CombatStates.ANIMRIGHT;
                     }
                     break;
                 case (CombatStates.ANIMATTACK):
                     //attack animation //////////////////////////////////////////////////////////////////////////////////////
-                    currentState = CombatStates.ATTACK;   
+                    currentState = CombatStates.ATTACK;
                     break;
                 case (CombatStates.ANIMLEFT):
                     if (currentTeamIsAlly)
                     {
-                        if(allies[currentPlayer] != null)
+                        if (allies[currentPlayer] != null)
                         {
                             allies[currentPlayer].MoveLeft();
                         }
@@ -103,7 +106,7 @@ public class CombatTurn : MonoBehaviour {
                     }
                     else
                     {
-                        if(ennemies[currentPlayer] != null)
+                        if (ennemies[currentPlayer] != null)
                         {
                             ennemies[currentPlayer].MoveLeft();
                         }
@@ -143,7 +146,7 @@ public class CombatTurn : MonoBehaviour {
                     }
                     else
                     {
-                        if(ennemies[currentPlayer] != null)
+                        if (ennemies[currentPlayer] != null)
                         {
                             ennemies[currentPlayer].MoveRight();
                         }
@@ -190,7 +193,7 @@ public class CombatTurn : MonoBehaviour {
                     break;
             }
         }
-	}
+    }
 
     void Combat_Start()
     {
@@ -216,13 +219,19 @@ public class CombatTurn : MonoBehaviour {
         yield return StartCoroutine(sf.FadeToClear());
     }
 
-    void Quit(Transform target)
-    {
+    IEnumerator Animation_End(Transform target)
+    { 
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        anim = true;
+        yield return StartCoroutine(sf.FadeToBlack());
+        anim = false;
+
         //Repositionne la caméra sur le personnage.
-        CameraMovment.target_Combat = hero.GetComponent<Transform>();
+        CameraMovment.target_Combat = target;
 
         //Hero retourne ou il doit etre après le combat.
-        hero.transform.position = target_win.position;
+        hero.transform.position = target.position;
 
         //Le personnage peut bouger
         CameraMovment.inCombat = false;
@@ -232,6 +241,14 @@ public class CombatTurn : MonoBehaviour {
         currentState = CombatStates.NOTINCOMBAT;
 
         combatUI.SetActive(false);
+
+        yield return StartCoroutine(sf.FadeToClear());
+    }
+
+    void Quit(Transform target)
+    {
+        StartCoroutine(Animation_End(target));
+        currentState = CombatStates.NOTINCOMBAT;
     }
 
     void Combat_WIN()
