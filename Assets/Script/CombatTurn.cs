@@ -169,7 +169,7 @@ public class CombatTurn : MonoBehaviour {
                         }
                     }
 
-                    InitUI();
+                    //InitUI();
 
                     if (currentTeamIsAlly)
                     {
@@ -399,7 +399,7 @@ public class CombatTurn : MonoBehaviour {
         if(currentPlayer <3)
         {
             currentPlayer++;
-            combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer);
+            combatUI.GetComponent<CombatUI>().AfficherSpells(allies[currentPlayer]);
         }
         else
         {
@@ -457,30 +457,33 @@ public class CombatTurn : MonoBehaviour {
         
         CombatUI ui = combatUI.GetComponent<CombatUI>();
         SpriteRenderer sprite;
-        ui.AfficherSpells(currentPlayer);
+        ui.AfficherSpells(allies[currentPlayer]);
         try
         {
             if (go_enemy1 != null)
             {
                 sprite = go_enemy1.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[0] = sprite.sprite;
+                ui.listEnnemies[0] = ennemies[0];
             }
             if (go_enemy2 != null)
             {
                 sprite = go_enemy2.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[1] = sprite.sprite;
+                ui.listEnnemies[1] = ennemies[1];
             }
             if (go_enemy3 != null)
             {
                 sprite = go_enemy3.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[2] = sprite.sprite;
+                ui.listEnnemies[2] = ennemies[2];
             }
-                
+
             if (go_enemy4 != null)
             {
                 sprite = go_enemy4.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[3] = sprite.sprite;
-
+                ui.listEnnemies[3] = ennemies[3];
             }
                 
         }
