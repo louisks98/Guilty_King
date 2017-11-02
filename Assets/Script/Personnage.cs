@@ -9,9 +9,10 @@ using System.Data;
 
 namespace Assets.Script
 {
-    class Personnage
+    public class Personnage
     {
         // base stats
+        public int id { get; set; }
         public string name { get; set; }
         public int hpTotal { get; set; }
         public int level { get; set; }
@@ -75,6 +76,7 @@ namespace Assets.Script
 
             while (reader.Read())
             {
+                id = id_personnage;
                 name = reader.GetString(0);
                 hpTotal = reader.GetInt32(1);
                 level = reader.GetInt32(2);
