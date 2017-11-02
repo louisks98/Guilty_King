@@ -21,7 +21,7 @@ public class CombatTurn : MonoBehaviour {
         WIN,
         NOTINCOMBAT
     }
-
+    public static bool selecting { get; set; }
     bool anim;
     public CombatStates currentState { get; set; }
 
@@ -60,10 +60,11 @@ public class CombatTurn : MonoBehaviour {
     void Start() {
         currentState = CombatStates.NOTINCOMBAT;
         anim = false;
+        CombatTurn.selecting = false;
     }
 
     void Update() {
-        if (!anim && !currentPlayerIsMoving())
+        if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             Debug.Log(currentState);
             switch (currentState)
@@ -77,6 +78,7 @@ public class CombatTurn : MonoBehaviour {
                     currentState = CombatStates.STARTATTACK;
                     break;
                 case (CombatStates.STARTATTACK):
+                    CombatTurn.selecting = true;
                     if (currentTeamIsAlly)
                     {
                         //if (allies[currentPlayer] != null)
@@ -169,7 +171,7 @@ public class CombatTurn : MonoBehaviour {
                         }
                     }
 
-                    //InitUI();
+                    InitUI();
 
                     if (currentTeamIsAlly)
                     {
@@ -454,7 +456,6 @@ public class CombatTurn : MonoBehaviour {
 
     void InitUI()
     {
-        
         CombatUI ui = combatUI.GetComponent<CombatUI>();
         SpriteRenderer sprite;
         ui.AfficherSpells(allies[currentPlayer]);
@@ -535,7 +536,6 @@ public class CombatTurn : MonoBehaviour {
                 hpBarEnemy[i].gameObject.SetActive(false);
             }
         }
-        
     }
 
     public void QuitButton()

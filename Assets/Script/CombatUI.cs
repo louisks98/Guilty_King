@@ -46,6 +46,7 @@ public class CombatUI : MonoBehaviour {
         pnlMenuBtn.SetActive(false);
         pnlAttakBtn.SetActive(true);
         pnlItemSelect.SetActive(false);
+        CombatTurn.selecting = false;
     }
     public void onClickCancel()
     {
@@ -61,7 +62,8 @@ public class CombatUI : MonoBehaviour {
         pnlMenuBtn.SetActive(false);
         pnlAttakBtn.SetActive(false);
         pnlItemSelect.SetActive(false);
-        AfficherEnemy();
+        AfficherEnemy(); //Il y a des sots avec plus d'une attaque.
+        CombatTurn.selecting = false;
     }
 
     public void onClickItem()
