@@ -1491,11 +1491,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471755031}
         m_MethodName: onClickSpell
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6472,10 +6472,6 @@ MonoBehaviour:
   listSpellIce:
   - {fileID: 21300016, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
   - {fileID: 21300046, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
-  listEnemySprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   pnlMenuBtn: {fileID: 1494026721}
   pnlAttakBtn: {fileID: 59134102}
   pnlEnemySelect: {fileID: 783617344}
@@ -7955,6 +7951,10 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1764182594456012, guid: 89cabef639bf59049b7a38ff3fa72c9d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620845971877514, guid: 89cabef639bf59049b7a38ff3fa72c9d, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -10106,11 +10106,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471755031}
         m_MethodName: onClickSpell
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11415,7 +11415,6 @@ Transform:
   m_Father: {fileID: 988075921}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_MaskInteraction: 0
 --- !u!1 &763193330
 GameObject:
   m_ObjectHideFlags: 0
@@ -12642,7 +12641,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858835519}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471755031}
+        m_MethodName: onCLickTarget
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &858835519
@@ -16722,7 +16732,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1141320512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471755031}
+        m_MethodName: onCLickTarget
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1141320512
@@ -21214,11 +21235,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471755031}
         m_MethodName: onClickSpell
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22986,7 +23007,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1598848410}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471755031}
+        m_MethodName: onCLickTarget
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1598848410
@@ -23440,7 +23472,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471755031}
         m_MethodName: onClickSpell
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -29008,6 +29040,10 @@ Prefab:
       propertyPath: m_Name
       value: Fire_Fight
       objectReference: {fileID: 0}
+    - target: {fileID: 1709576934548116, guid: c74ed9bcfdf6dde4b816b1c30066a7af, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c74ed9bcfdf6dde4b816b1c30066a7af, type: 2}
   m_IsPrefabParent: 0
@@ -32132,7 +32168,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2096286694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471755031}
+        m_MethodName: onCLickTarget
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2096286694
