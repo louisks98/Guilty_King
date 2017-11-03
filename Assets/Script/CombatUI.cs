@@ -13,22 +13,23 @@ public class CombatUI : MonoBehaviour {
     public List<Sprite> listSpellFire;
     public List<Sprite> listSpellEarth;
     public List<Sprite> listSpellIce;
-    public List<Sprite> listEnemySprites;
+    public List<Sprite> listEnemySprites { get; set; }
     public GameObject pnlMenuBtn;
     public GameObject pnlAttakBtn;
     public GameObject pnlEnemySelect;
     public GameObject pnlItemSelect;
     public string selectedSpell { get; set; }
     public int selectedEnemy { get; set; }
-    public List<Personnage> listEnnemies;
+    public List<Personnage> listEnnemies { get; set; }
 
     private List<Button> listBtnEnemy;
     private List<Button> listBtnSpell;
     private List<Button> ListBtnItem;
     private Dictionary<string, int> listNbItem;
-    
 
-    void Start()
+    private Personnage currentPerso { get; set; }
+
+    public void Start_Init_UI()
     {
         listNbItem = new Dictionary<string, int>();
         listNbItem.Add("health", 0);
@@ -38,7 +39,7 @@ public class CombatUI : MonoBehaviour {
         listBtnSpell = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
         listBtnEnemy = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
         ListBtnItem = new List<Button>(pnlItemSelect.GetComponentsInChildren<Button>());
-    }
+    } 
 
     public void onClickAttack()
     {
@@ -55,13 +56,17 @@ public class CombatUI : MonoBehaviour {
         pnlItemSelect.SetActive(false);
     }
 
-    public void onClickSpell()
+    public void onClickSpell(int i)
     {
         pnlEnemySelect.SetActive(true);
         pnlMenuBtn.SetActive(false);
         pnlAttakBtn.SetActive(false);
         pnlItemSelect.SetActive(false);
-        AfficherEnemy();
+
+        selectedSpell = currentPerso.sorts[i].id;
+        Debug.Log("id sort Jeanne :" + currentPerso.sorts[i].id);
+
+        AfficherEnemy(); //Il y a des sots avec plus d'une attaque.
     }
 
     public void onClickItem()
@@ -71,6 +76,18 @@ public class CombatUI : MonoBehaviour {
         pnlAttakBtn.SetActive(false);
         pnlItemSelect.SetActive(true);
         AfficherItem();
+    }
+
+    public void onCLickTarget(int i)
+    {
+        if(listEnnemies[i] != null)
+        {
+            selectedEnemy = listEnnemies[i].id;
+        }
+        onClickCancel();
+        Debug.Log("enemy id : " + listEnnemies[i].id);
+        CombatTurn.selecting = false;
+        HideMenu();
     }
 
     public void UseItem()
@@ -110,6 +127,7 @@ public class CombatUI : MonoBehaviour {
         }
         onClickCancel();
         bd.Close();
+        CombatTurn.selecting = false;
     }
 
     private void AfficherItem()
@@ -161,8 +179,7 @@ public class CombatUI : MonoBehaviour {
         
     }
     
-
-    private void AfficherEnemy()
+    public void AfficherEnemy()
     {
         ReactivateButtons(listBtnEnemy);
         if(listBtnEnemy != null && listEnnemies != null)
@@ -172,10 +189,6 @@ public class CombatUI : MonoBehaviour {
                 if (i < listEnemySprites.Count && listEnemySprites[i] != null && listEnnemies[i] != null)
                 {
                     listBtnEnemy[i].image.sprite = listEnemySprites[i];
-                    listBtnEnemy[i].onClick.AddListener(() => {
-                        selectedEnemy = listEnnemies[i].id;
-                        Debug.Log("enemy id : " + listEnnemies[i].id);
-                    });
                     Debug.Log("Afficher enemy sprite" + i);
                 }
                 else
@@ -187,6 +200,7 @@ public class CombatUI : MonoBehaviour {
         
     public void AfficherSpells(Personnage pers)
     {
+        currentPerso = pers;
         ReactivateButtons(listBtnSpell);
         if(listBtnSpell != null && pers != null)
         {
@@ -195,13 +209,9 @@ public class CombatUI : MonoBehaviour {
                 case "Jimmy":
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
-                        if (i < listSpellHero.Count - 1 && listSpellHero[i] != null && pers.sorts[i] != null)
+                        if (i < listSpellHero.Count && listSpellHero[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellHero[i];
-                            listBtnSpell[i].onClick.AddListener(() => {
-                                selectedSpell = pers.sorts[i].id;
-                                Debug.Log("id sort jimmy :" + pers.sorts[i].id);
-                            });
                         }
                         else
                             listBtnSpell[i].gameObject.SetActive(false);
@@ -211,13 +221,9 @@ public class CombatUI : MonoBehaviour {
                 case "Maryse":
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
-                        if (i < listSpellFire.Count - 1 && listSpellFire[i] != null && pers.sorts[i] != null)
+                        if (i < listSpellFire.Count && listSpellFire[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellFire[i];
-                            listBtnSpell[i].onClick.AddListener(() => {
-                                selectedSpell = pers.sorts[i].id;
-                                Debug.Log("id sort Maryse :" + pers.sorts[i].id);
-                            });
                         }
                             
                         else
@@ -228,13 +234,9 @@ public class CombatUI : MonoBehaviour {
                 case "Bob":
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
-                        if (i < listSpellEarth.Count - 1 && listSpellEarth[i] != null && pers.sorts[i] != null)
+                        if (i < listSpellEarth.Count && listSpellEarth[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellEarth[i];
-                            listBtnSpell[i].onClick.AddListener(() => {
-                                selectedSpell = pers.sorts[i].id;
-                                Debug.Log("id sort Bob :" + pers.sorts[i].id);
-                            });
                         }
                         else
                             listBtnSpell[i].gameObject.SetActive(false);
@@ -244,13 +246,9 @@ public class CombatUI : MonoBehaviour {
                 case "Jeanne":
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
-                        if (i < listSpellIce.Count - 1 && listSpellIce[i] != null && pers.sorts[i] != null)
+                        if (i < listSpellIce.Count && listSpellIce[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellIce[i];
-                            listBtnSpell[i].onClick.AddListener(() => {
-                                selectedSpell = pers.sorts[i].id;
-                                Debug.Log("id sort Jeanne :" + pers.sorts[i].id);
-                            });
                         }
                         else
                             listBtnSpell[i].gameObject.SetActive(false);
@@ -270,5 +268,15 @@ public class CombatUI : MonoBehaviour {
                 b.gameObject.SetActive(true);
             }
         }
+    }
+
+    public void HideMenu()
+    {
+        pnlMenuBtn.SetActive(false);
+    }
+
+    public void ShowMenu()
+    {
+        pnlMenuBtn.SetActive(true);
     }
 }

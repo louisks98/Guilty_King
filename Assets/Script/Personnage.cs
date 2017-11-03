@@ -124,6 +124,18 @@ namespace Assets.Script
         {
             BattleHp = BattleHp + nbDamage;
         }
+        public int GetDamage(string id)
+        {
+            int damage = 0;
+            foreach(Sort item in sorts)
+            {
+                if(item.id.Equals(id))
+                {
+                    damage = item.valeur;
+                }
+            }
+            return damage;
+        }
     }
     public class Sort
     {
