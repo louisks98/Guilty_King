@@ -82,28 +82,28 @@ public class CombatUI : MonoBehaviour {
             case "Btn_Item_Health":
                 if(listNbItem["health"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["health"]-- + "where Item = 3";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["health"]- 1) + " where Item = 3";
                     bd.insert(sqlupdate);
                 }
                 break;
             case "Btn_Item_Def":
                 if (listNbItem["def"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["def"]-- + "where Item = 6";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["def"]-1) + " where Item = 6";
                     bd.insert(sqlupdate);
                 }
                 break;
             case "Btn_Item_Steroids":
                 if (listNbItem["steroid"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["steroid"]-- + "where Item = 7";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["steroid"]-1) + " where Item = 7";
                     bd.insert(sqlupdate);
                 }
                 break;
             case "Btn_Item_Speed":
                 if (listNbItem["speed"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["speed"]-- + "where Item = 5";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["speed"]- 1) + " where Item = 5";
                     bd.insert(sqlupdate);
                 }
                 break;
