@@ -49,6 +49,7 @@ public class CombatTurn : MonoBehaviour {
     public Transform target_Ally_2;
     public Transform target_Ally_3;
     public Transform target_Ally_4;
+    public Transform target_Exile;
 
     public GameObject hero;
 
@@ -87,9 +88,6 @@ public class CombatTurn : MonoBehaviour {
                     currentState = CombatStates.STARTATTACK;
                     break;
                 case (CombatStates.STARTATTACK):
-                    combatUI.GetComponent<CombatUI>().ShowMenu();
-                    //InitUI();
-
                     if (currentTeamIsAlly)
                     {
                         if (allies[currentPlayer] != null)
@@ -101,12 +99,10 @@ public class CombatTurn : MonoBehaviour {
                     }
                     else
                     {
-                        combatUI.GetComponent<CombatUI>().HideMenu();
                         currentState = CombatStates.ANIMRIGHT;
                     }
                     break;
                 case (CombatStates.ANIMATTACK):
-                    //attack animation //////////////////////////////////////////////////////////////////////////////////////
                     currentState = CombatStates.ATTACK;
                     break;
                 case (CombatStates.ANIMLEFT):
@@ -124,17 +120,6 @@ public class CombatTurn : MonoBehaviour {
                         {
                             ennemies[currentPlayer].MoveLeft();
                         }
-
-                        foreach (Personnage perso in allies)
-                        {
-                            if (perso != null)
-                            {
-                                if (perso.BattleHp == 0)
-                                {
-                                    perso.MoveLeft(); //Drop this for death anim //////////////////////////////////////////////////////////////////
-                                }
-                            }
-                        }
                         currentState = CombatStates.NEXTPLAYER;
                     }
                     break;
@@ -144,17 +129,6 @@ public class CombatTurn : MonoBehaviour {
                         if (allies[currentPlayer] != null)
                         {
                             allies[currentPlayer].MoveRight();
-                        }
-
-                        foreach (Personnage perso in ennemies)
-                        {
-                            if (perso != null)
-                            {
-                                if (perso.BattleHp == 0)
-                                {
-                                    perso.MoveRight(); //Drop this for death anim //////////////////////////////////////////////////////////////////////
-                                }
-                            }
                         }
                         currentState = CombatStates.NEXTPLAYER;
                     }
@@ -188,7 +162,7 @@ public class CombatTurn : MonoBehaviour {
                             DealDamageToTargetPlayer(ennemies[currentPlayer].sorts[randomNumber].id,allies[id].id, ennemies[currentPlayer]);
                         }
                     }
-
+                    combatUI.GetComponent<CombatUI>().HideMenu();
                     Clean_The_Board();
                     Update_Stats();
 
@@ -498,6 +472,7 @@ public class CombatTurn : MonoBehaviour {
     {
         CombatUI ui = combatUI.GetComponent<CombatUI>();
         SpriteRenderer sprite;
+        combatUI.GetComponent<CombatUI>().ShowMenu();
         ui.AfficherSpells(allies[currentPlayer]);
 
         try
@@ -635,6 +610,7 @@ public class CombatTurn : MonoBehaviour {
             {
                 if (allies[i].defeated)
                 {
+                    allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
                     allies[i] = null;
                 }
             }
@@ -646,6 +622,7 @@ public class CombatTurn : MonoBehaviour {
             {
                 if (ennemies[i].defeated)
                 {
+                    ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
                     ennemies[i] = null;
                 }
             }

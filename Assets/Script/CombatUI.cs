@@ -29,19 +29,6 @@ public class CombatUI : MonoBehaviour {
 
     private Personnage currentPerso { get; set; }
 
-
-    void Start()
-    {
-        //listNbItem = new Dictionary<string, int>();
-        //listNbItem.Add("health", 0);
-        //listNbItem.Add("def", 0);
-        //listNbItem.Add("steroid", 0);
-        //listNbItem.Add("speed", 0);
-        //listBtnSpell = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
-        //listBtnEnemy = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
-        //ListBtnItem = new List<Button>(pnlItemSelect.GetComponentsInChildren<Button>());
-    }
-
     public void Start_Init_UI()
     {
         listNbItem = new Dictionary<string, int>();
@@ -100,6 +87,7 @@ public class CombatUI : MonoBehaviour {
         onClickCancel();
         Debug.Log("enemy id : " + listEnnemies[i].id);
         CombatTurn.selecting = false;
+        HideMenu();
     }
 
     public void UseItem()
@@ -201,10 +189,6 @@ public class CombatUI : MonoBehaviour {
                 if (i < listEnemySprites.Count && listEnemySprites[i] != null && listEnnemies[i] != null)
                 {
                     listBtnEnemy[i].image.sprite = listEnemySprites[i];
-                    //listBtnEnemy[i].onClick.AddListener(() => {
-                    //    selectedEnemy = listEnnemies[i].id;
-                    //    Debug.Log("enemy id : " + listEnnemies[i].id);
-                    //});
                     Debug.Log("Afficher enemy sprite" + i);
                 }
                 else
@@ -228,10 +212,6 @@ public class CombatUI : MonoBehaviour {
                         if (i < listSpellHero.Count && listSpellHero[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellHero[i];
-                            //listBtnSpell[i].onClick.AddListener(() => {
-                            //    selectedSpell = pers.sorts[i].id;
-                            //    Debug.Log("id sort jimmy :" + pers.sorts[i].id);
-                            //});
                         }
                         else
                             listBtnSpell[i].gameObject.SetActive(false);
@@ -244,10 +224,6 @@ public class CombatUI : MonoBehaviour {
                         if (i < listSpellFire.Count && listSpellFire[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellFire[i];
-                            //listBtnSpell[i].onClick.AddListener(() => {
-                            //    selectedSpell = pers.sorts[i].id;
-                            //    Debug.Log("id sort Maryse :" + pers.sorts[i].id);
-                            //});
                         }
                             
                         else
@@ -261,10 +237,6 @@ public class CombatUI : MonoBehaviour {
                         if (i < listSpellEarth.Count && listSpellEarth[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellEarth[i];
-                            //listBtnSpell[i].onClick.AddListener(() => {
-                            //    selectedSpell = pers.sorts[i].id;
-                            //    Debug.Log("id sort Bob :" + pers.sorts[i].id);
-                            //});
                         }
                         else
                             listBtnSpell[i].gameObject.SetActive(false);
@@ -277,10 +249,6 @@ public class CombatUI : MonoBehaviour {
                         if (i < listSpellIce.Count && listSpellIce[i] != null && pers.sorts[i] != null)
                         {
                             listBtnSpell[i].image.sprite = listSpellIce[i];
-                            //listBtnSpell[i].onClick.AddListener(() => {
-                            //    selectedSpell = pers.sorts[i].id;
-                            //    Debug.Log("id sort Jeanne :" + pers.sorts[i].id);
-                            //});
                         }
                         else
                             listBtnSpell[i].gameObject.SetActive(false);
