@@ -2192,7 +2192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_enemy1: 5
   id_enemy2: 4
-  id_enemy3: 5
+  id_enemy3: 6
   id_enemy4: 0
   go_enemy1: {fileID: 1446800658}
   go_enemy2: {fileID: 757587450}
