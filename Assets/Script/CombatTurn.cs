@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class CombatTurn : MonoBehaviour {
 
-   public enum CombatStates {
+    public enum CombatStates {
         ANIMSTART,
         START,
         STARTATTACK,
@@ -21,7 +21,7 @@ public class CombatTurn : MonoBehaviour {
         WIN,
         NOTINCOMBAT
     }
-
+    public static bool selecting { get; set; }
     bool anim;
     public CombatStates currentState { get; set; }
 
@@ -49,6 +49,7 @@ public class CombatTurn : MonoBehaviour {
     public Transform target_Ally_2;
     public Transform target_Ally_3;
     public Transform target_Ally_4;
+    public Transform target_Exile;
 
     public GameObject hero;
 
@@ -57,13 +58,23 @@ public class CombatTurn : MonoBehaviour {
     private GameObject pnlEnemy;
     private GameObject pnlButton;
 
-    void Start () {
+    private List<Button> ListBtn;
+    private List<Text> hpTextAlly;
+    private List<Text> hpTextEnemy;
+    private List<Slider> hpBarAlly;
+    private List<Slider> hpBarEnemy;
+
+    System.Random random;
+
+    void Start() {
         currentState = CombatStates.NOTINCOMBAT;
         anim = false;
+        CombatTurn.selecting = false;
+        random = new System.Random();
     }
 
-    void Update () {
-        if(!anim && !currentPlayerIsMoving())
+    void Update() {
+        if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             Debug.Log(currentState);
             switch (currentState)
@@ -77,25 +88,27 @@ public class CombatTurn : MonoBehaviour {
                     currentState = CombatStates.STARTATTACK;
                     break;
                 case (CombatStates.STARTATTACK):
-                    if(currentTeamIsAlly)
+                    if (currentTeamIsAlly)
                     {
-                        //combatUI.GetComponent<CombatUI>().AfficherSpells(currentPlayer); //Draw spell list //////////////////////////////////////////////////////////
+                        if (allies[currentPlayer] != null)
+                        {
+                            Draw_Spell_And_Target();
+                            CombatTurn.selecting = true;
+                        }
                         currentState = CombatStates.ANIMLEFT;
                     }
                     else
                     {
-                        //Select a random spell /////////////////////////////////////////////////////////////////////////////
-                        currentState = CombatStates.ANIMRIGHT;                         
+                        currentState = CombatStates.ANIMRIGHT;
                     }
                     break;
                 case (CombatStates.ANIMATTACK):
-                    //attack animation //////////////////////////////////////////////////////////////////////////////////////
-                    currentState = CombatStates.ATTACK;   
+                    currentState = CombatStates.ATTACK;
                     break;
                 case (CombatStates.ANIMLEFT):
                     if (currentTeamIsAlly)
                     {
-                        if(allies[currentPlayer] != null)
+                        if (allies[currentPlayer] != null)
                         {
                             allies[currentPlayer].MoveLeft();
                         }
@@ -103,20 +116,9 @@ public class CombatTurn : MonoBehaviour {
                     }
                     else
                     {
-                        if(ennemies[currentPlayer] != null)
+                        if (ennemies[currentPlayer] != null)
                         {
                             ennemies[currentPlayer].MoveLeft();
-                        }
-
-                        foreach (Personnage perso in allies)
-                        {
-                            if (perso != null)
-                            {
-                                if (perso.BattleHp == 0)
-                                {
-                                    perso.MoveLeft(); //Drop this for death anim //////////////////////////////////////////////////////////////////
-                                }
-                            }
                         }
                         currentState = CombatStates.NEXTPLAYER;
                     }
@@ -128,22 +130,11 @@ public class CombatTurn : MonoBehaviour {
                         {
                             allies[currentPlayer].MoveRight();
                         }
-
-                        foreach (Personnage perso in ennemies)
-                        {
-                            if (perso != null)
-                            {
-                                if (perso.BattleHp == 0)
-                                {
-                                    perso.MoveRight(); //Drop this for death anim //////////////////////////////////////////////////////////////////////
-                                }
-                            }
-                        }
                         currentState = CombatStates.NEXTPLAYER;
                     }
                     else
                     {
-                        if(ennemies[currentPlayer] != null)
+                        if (ennemies[currentPlayer] != null)
                         {
                             ennemies[currentPlayer].MoveRight();
                         }
@@ -153,20 +144,27 @@ public class CombatTurn : MonoBehaviour {
                 case (CombatStates.ATTACK):
                     if (currentTeamIsAlly)
                     {
-                        if (ennemies[currentPlayer] != null)
+                        if (allies[currentPlayer] != null)
                         {
-                            ennemies[currentPlayer].dealDamage(-10); //Deal damage with target spell to target opponment¸//////////////////////////////////////////////////////////////
+                            DealDamageToTargetPlayer(combatUI.GetComponent<CombatUI>().selectedSpell, combatUI.GetComponent<CombatUI>().selectedEnemy, allies[currentPlayer]);
                         }
                     }
                     else
                     {
-                        if (allies[currentPlayer] != null)
+                        if (ennemies[currentPlayer] != null)
                         {
-                            allies[currentPlayer].dealDamage(-50);  //Deal damage with target spell to target opponment.///////////////////////////////////////////////////////////////////
+                            int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
+                            int id = random.Next(-1, allies.Count);
+                            while (allies[id] == null)
+                            {
+                                id = random.Next(-1, 4);
+                            }
+                            DealDamageToTargetPlayer(ennemies[currentPlayer].sorts[randomNumber].id,allies[id].id, ennemies[currentPlayer]);
                         }
                     }
-
-                    InitUI();
+                    combatUI.GetComponent<CombatUI>().HideMenu();
+                    Clean_The_Board();
+                    Update_Stats();
 
                     if (currentTeamIsAlly)
                     {
@@ -190,12 +188,13 @@ public class CombatTurn : MonoBehaviour {
                     break;
             }
         }
-	}
+    }
 
     void Combat_Start()
     {
         Initialize_Component();
         Define_Turn();
+        combatUI.GetComponent<CombatUI>().Start_Init_UI();
     }
 
     IEnumerator Animation_Start()
@@ -216,13 +215,19 @@ public class CombatTurn : MonoBehaviour {
         yield return StartCoroutine(sf.FadeToClear());
     }
 
-    void Quit(Transform target)
-    {
+    IEnumerator Animation_End(Transform target)
+    { 
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+
+        anim = true;
+        yield return StartCoroutine(sf.FadeToBlack());
+        anim = false;
+
         //Repositionne la caméra sur le personnage.
-        CameraMovment.target_Combat = hero.GetComponent<Transform>();
+        CameraMovment.target_Combat = target;
 
         //Hero retourne ou il doit etre après le combat.
-        hero.transform.position = target_win.position;
+        hero.transform.position = target.position;
 
         //Le personnage peut bouger
         CameraMovment.inCombat = false;
@@ -232,6 +237,15 @@ public class CombatTurn : MonoBehaviour {
         currentState = CombatStates.NOTINCOMBAT;
 
         combatUI.SetActive(false);
+
+        yield return StartCoroutine(sf.FadeToClear());
+    }
+
+    void Quit(Transform target)
+    {
+        StartCoroutine(Animation_End(target));
+        CombatTurn.selecting = false;
+        currentState = CombatStates.NOTINCOMBAT;
     }
 
     void Combat_WIN()
@@ -382,6 +396,7 @@ public class CombatTurn : MonoBehaviour {
         if(currentPlayer <3)
         {
             currentPlayer++;
+            //combatUI.GetComponent<CombatUI>().AfficherSpells(allies[currentPlayer]);
         }
         else
         {
@@ -436,10 +451,40 @@ public class CombatTurn : MonoBehaviour {
 
     void InitUI()
     {
+        Draw_Spell_And_Target();
+        
+        combatUI.SetActive(true);
+        pnlAlly = GameObject.Find("PNL_TeamHp");
+        pnlEnemy = GameObject.Find("PNL_Enemy");
+        pnlButton = GameObject.Find("PNL_Button");
+        ListBtn = new List<Button>(pnlButton.GetComponentsInChildren<Button>());
+        hpTextAlly = new List<Text>(pnlAlly.GetComponentsInChildren<Text>());
+        hpTextEnemy = new List<Text>(pnlEnemy.GetComponentsInChildren<Text>());
+        hpBarAlly = new List<Slider>(pnlAlly.GetComponentsInChildren<Slider>());
+        hpBarEnemy = new List<Slider>(pnlEnemy.GetComponentsInChildren<Slider>());
+
+        ListBtn[2].onClick.AddListener(QuitButton);
+
+        Update_Stats();
+    }
+
+    void Draw_Spell_And_Target()
+    {
         CombatUI ui = combatUI.GetComponent<CombatUI>();
         SpriteRenderer sprite;
+        combatUI.GetComponent<CombatUI>().ShowMenu();
+        ui.AfficherSpells(allies[currentPlayer]);
+
         try
         {
+            ui.listEnemySprites = new List<Sprite>();
+            ui.listEnemySprites.Add(null);
+            ui.listEnemySprites.Add(null);
+            ui.listEnemySprites.Add(null);
+            ui.listEnemySprites.Add(null);
+
+            ui.listEnnemies = ennemies;
+
             if (go_enemy1 != null)
             {
                 sprite = go_enemy1.GetComponent<SpriteRenderer>();
@@ -455,35 +500,25 @@ public class CombatTurn : MonoBehaviour {
                 sprite = go_enemy3.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[2] = sprite.sprite;
             }
-                
+
             if (go_enemy4 != null)
             {
                 sprite = go_enemy4.GetComponent<SpriteRenderer>();
                 ui.listEnemySprites[3] = sprite.sprite;
-
             }
-                
+
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             Debug.Log(e.Message);
         }
-        
+    }
 
-        combatUI.SetActive(true);
-        pnlAlly = GameObject.Find("PNL_TeamHp");
-        pnlEnemy = GameObject.Find("PNL_Enemy");
-        pnlButton = GameObject.Find("PNL_Button");
-        List<Button> ListBtn = new List<Button>(pnlButton.GetComponentsInChildren<Button>());
-        List<Text> hpTextAlly = new List<Text>(pnlAlly.GetComponentsInChildren<Text>());
-        List<Text> hpTextEnemy = new List<Text>(pnlEnemy.GetComponentsInChildren<Text>());
-        List<Slider> hpBarAlly = new List<Slider>(pnlAlly.GetComponentsInChildren<Slider>());
-        List<Slider> hpBarEnemy = new List<Slider>(pnlEnemy.GetComponentsInChildren<Slider>());
-
-        ListBtn[2].onClick.AddListener(QuitButton);
-        for(int i = 0; i < hpTextAlly.Count; i++)
+    void Update_Stats()
+    {
+        for (int i = 0; i < hpTextAlly.Count; i++)
         {
-            if(allies[i] != null)
+            if (allies[i] != null)
             {
                 hpTextAlly[i].text = allies[i].name + " : " + allies[i].BattleHp + "/" + allies[i].hpTotal;
                 hpBarAlly[i].minValue = 0;
@@ -495,9 +530,9 @@ public class CombatTurn : MonoBehaviour {
                 hpTextAlly[i].gameObject.SetActive(false);
                 hpBarAlly[i].gameObject.SetActive(false);
             }
-            
+
         }
-        for(int i = 0; i < hpTextEnemy.Count; i++)
+        for (int i = 0; i < hpTextEnemy.Count; i++)
         {
             if (ennemies[i] != null)
             {
@@ -512,7 +547,6 @@ public class CombatTurn : MonoBehaviour {
                 hpBarEnemy[i].gameObject.SetActive(false);
             }
         }
-        
     }
 
     public void QuitButton()
@@ -541,6 +575,58 @@ public class CombatTurn : MonoBehaviour {
             }
         }
         return moving;
+    }
+    
+    void DealDamageToTargetPlayer(string idSpell,int idPersonnage, Personnage persoDealer)
+    {
+        foreach(Personnage perso in allies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPersonnage)
+                {
+                    perso.dealDamage(-(persoDealer.GetDamage(idSpell)));
+                }
+            }
+        }
+
+        foreach(Personnage perso in ennemies)
+        {
+            if(perso !=null)
+            {
+                if(perso.id == idPersonnage)
+                {
+                    perso.dealDamage(-(persoDealer.GetDamage(idSpell)));
+                }
+            }
+        }
+    }
+
+    void Clean_The_Board()
+    {
+        for (int i = 0; i < allies.Count; i++)
+        {
+            if (allies[i] != null)
+            {
+                if (allies[i].defeated)
+                {
+                    allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    allies[i] = null;
+                }
+            }
+        }
+
+        for (int i = 0; i < ennemies.Count; i++)
+        {
+            if (ennemies[i] != null)
+            {
+                if (ennemies[i].defeated)
+                {
+                    ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    ennemies[i] = null;
+                }
+            }
+        }
     }
 }
 

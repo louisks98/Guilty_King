@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CombatUI : MonoBehaviour {
@@ -12,21 +13,33 @@ public class CombatUI : MonoBehaviour {
     public List<Sprite> listSpellFire;
     public List<Sprite> listSpellEarth;
     public List<Sprite> listSpellIce;
-    public List<Sprite> listEnemySprites;
+    public List<Sprite> listEnemySprites { get; set; }
     public GameObject pnlMenuBtn;
     public GameObject pnlAttakBtn;
     public GameObject pnlEnemySelect;
     public GameObject pnlItemSelect;
+    public string selectedSpell { get; set; }
+    public int selectedEnemy { get; set; }
+    public List<Personnage> listEnnemies { get; set; }
 
-    // Use this for initialization
-    void Start() {
-        
-    }
+    private List<Button> listBtnEnemy;
+    private List<Button> listBtnSpell;
+    private List<Button> ListBtnItem;
+    private Dictionary<string, int> listNbItem;
 
-    // Update is called once per frame
-    void Update() {
+    private Personnage currentPerso { get; set; }
 
-    }
+    public void Start_Init_UI()
+    {
+        listNbItem = new Dictionary<string, int>();
+        listNbItem.Add("health", 0);
+        listNbItem.Add("def", 0);
+        listNbItem.Add("steroid", 0);
+        listNbItem.Add("speed", 0);
+        listBtnSpell = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
+        listBtnEnemy = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
+        ListBtnItem = new List<Button>(pnlItemSelect.GetComponentsInChildren<Button>());
+    } 
 
     public void onClickAttack()
     {
@@ -43,13 +56,17 @@ public class CombatUI : MonoBehaviour {
         pnlItemSelect.SetActive(false);
     }
 
-    public void onClickSpell()
+    public void onClickSpell(int i)
     {
         pnlEnemySelect.SetActive(true);
         pnlMenuBtn.SetActive(false);
         pnlAttakBtn.SetActive(false);
         pnlItemSelect.SetActive(false);
-        AfficherEnemy();
+
+        selectedSpell = currentPerso.sorts[i].id;
+        Debug.Log("id sort Jeanne :" + currentPerso.sorts[i].id);
+
+        AfficherEnemy(); //Il y a des sots avec plus d'une attaque.
     }
 
     public void onClickItem()
@@ -59,6 +76,58 @@ public class CombatUI : MonoBehaviour {
         pnlAttakBtn.SetActive(false);
         pnlItemSelect.SetActive(true);
         AfficherItem();
+    }
+
+    public void onCLickTarget(int i)
+    {
+        if(listEnnemies[i] != null)
+        {
+            selectedEnemy = listEnnemies[i].id;
+        }
+        onClickCancel();
+        Debug.Log("enemy id : " + listEnnemies[i].id);
+        CombatTurn.selecting = false;
+        HideMenu();
+    }
+
+    public void UseItem()
+    {
+        string btnName = EventSystem.current.currentSelectedGameObject.name;
+        AccesBD bd = new AccesBD();
+        switch (btnName)
+        {
+            case "Btn_Item_Health":
+                if(listNbItem["health"] > 0)
+                {
+                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["health"]-- + "where Item = 3";
+                    bd.insert(sqlupdate);
+                }
+                break;
+            case "Btn_Item_Def":
+                if (listNbItem["def"] > 0)
+                {
+                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["def"]-- + "where Item = 6";
+                    bd.insert(sqlupdate);
+                }
+                break;
+            case "Btn_Item_Steroids":
+                if (listNbItem["steroid"] > 0)
+                {
+                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["steroid"]-- + "where Item = 7";
+                    bd.insert(sqlupdate);
+                }
+                break;
+            case "Btn_Item_Speed":
+                if (listNbItem["speed"] > 0)
+                {
+                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["speed"]-- + "where Item = 5";
+                    bd.insert(sqlupdate);
+                }
+                break;
+        }
+        onClickCancel();
+        bd.Close();
+        CombatTurn.selecting = false;
     }
 
     private void AfficherItem()
@@ -77,6 +146,7 @@ public class CombatUI : MonoBehaviour {
             while(reader.Read())
             {
                 listText[0].text = "x" + reader.GetInt32(0).ToString();
+                listNbItem["health"] = reader.GetInt32(0);
             }
             reader.Close();
 
@@ -84,6 +154,7 @@ public class CombatUI : MonoBehaviour {
             while (reader.Read())
             {
                 listText[1].text = "x" + reader.GetInt32(0).ToString();
+                listNbItem["def"] = reader.GetInt32(0);
             }
             reader.Close();
             
@@ -91,6 +162,7 @@ public class CombatUI : MonoBehaviour {
             while (reader.Read())
             {
                 listText[2].text = "x" + reader.GetInt32(0).ToString();
+                listNbItem["speed"] = reader.GetInt32(0);
             }
             reader.Close();
 
@@ -98,6 +170,7 @@ public class CombatUI : MonoBehaviour {
             while (reader.Read())
             {
                 listText[3].text = "x" + reader.GetInt32(0).ToString();
+                listNbItem["steroid"] = reader.GetInt32(0);
             }
             reader.Close();
             bd.Close();
@@ -106,67 +179,104 @@ public class CombatUI : MonoBehaviour {
         
     }
     
-
-    private void AfficherEnemy()
+    public void AfficherEnemy()
     {
-        List<Button> lstBtn = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
-        for (int i = 0; i < lstBtn.Count; i++)
+        ReactivateButtons(listBtnEnemy);
+        if(listBtnEnemy != null && listEnnemies != null)
         {
-            if (listEnemySprites[i] != null)
+            for (int i = 0; i < listBtnEnemy.Count; i++)
             {
-                lstBtn[i].image.sprite = listEnemySprites[i];
-                Debug.Log("Afficher enemy sprite" + i);
+                if (i < listEnemySprites.Count && listEnemySprites[i] != null && listEnnemies[i] != null)
+                {
+                    listBtnEnemy[i].image.sprite = listEnemySprites[i];
+                    Debug.Log("Afficher enemy sprite" + i);
+                }
+                else
+                    listBtnEnemy[i].gameObject.SetActive(false);
             }
-            else
-                lstBtn[i].gameObject.SetActive(false);
+            listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
         }
     }
         
-    public void AfficherSpells(int player)
+    public void AfficherSpells(Personnage pers)
     {
-        List<Button> lstBtn = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
-
-        switch(player)
+        currentPerso = pers;
+        ReactivateButtons(listBtnSpell);
+        if(listBtnSpell != null && pers != null)
         {
-            case 0:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellHero[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+            switch (pers.name)
+            {
+                case "Jimmy":
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellHero.Count && listSpellHero[i] != null && pers.sorts[i] != null)
+                        {
+                            listBtnSpell[i].image.sprite = listSpellHero[i];
+                        }
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
 
-            case 1:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellFire[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+                case "Maryse":
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellFire.Count && listSpellFire[i] != null && pers.sorts[i] != null)
+                        {
+                            listBtnSpell[i].image.sprite = listSpellFire[i];
+                        }
+                            
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
 
-            case 2:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellEarth[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+                case "Bob":
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellEarth.Count && listSpellEarth[i] != null && pers.sorts[i] != null)
+                        {
+                            listBtnSpell[i].image.sprite = listSpellEarth[i];
+                        }
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
 
-            case 3:
-                for (int i = 0; i < lstBtn.Count; i++)
-                {
-                    if (listSpellHero[i] != null)
-                        lstBtn[i].image.sprite = listSpellIce[i];
-                    else
-                        lstBtn[i].gameObject.SetActive(false);
-                }
-                break;
+                case "Jeanne":
+                    for (int i = 0; i < listBtnSpell.Count; i++)
+                    {
+                        if (i < listSpellIce.Count && listSpellIce[i] != null && pers.sorts[i] != null)
+                        {
+                            listBtnSpell[i].image.sprite = listSpellIce[i];
+                        }
+                        else
+                            listBtnSpell[i].gameObject.SetActive(false);
+                    }
+                    break;
+            }
+            listBtnSpell[listBtnSpell.Count - 1].gameObject.SetActive(true);
         }
+    }
+
+    private void ReactivateButtons(List<Button> listBtn)
+    {
+        if(listBtn != null)
+        {
+            foreach (Button b in listBtn)
+            {
+                b.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void HideMenu()
+    {
+        pnlMenuBtn.SetActive(false);
+    }
+
+    public void ShowMenu()
+    {
+        pnlMenuBtn.SetActive(true);
     }
 }
