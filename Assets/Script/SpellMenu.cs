@@ -109,7 +109,7 @@ public class SpellMenu : MonoBehaviour {
         return isKnown;
     }
 
-    public void DrawSpellInfo(string spellId)
+    public void DrawSpellInfo(bool isKnown,string spellId)
     {
         string name = "";
         string description = "";
@@ -131,7 +131,7 @@ public class SpellMenu : MonoBehaviour {
                 Debug.Log("GetSort(" + name + "," + description + "," + type + "," + acquis + ")");
             }
 
-            if (acquis.Equals("O"))
+            if (acquis.Equals("O") && isKnown)
             {
                 spellName.text = name;
                 spellDescription.text = description;
@@ -160,51 +160,51 @@ public class SpellMenu : MonoBehaviour {
 
     public void hero_spell_1()
     {
-        DrawSpellInfo("H1");
+        DrawSpellInfo(IsKnown(1),"H1");
     }
 
     public void hero_spell_2()
     {
-        DrawSpellInfo("H2");
+        DrawSpellInfo(IsKnown(1),"H2");
     }
 
     public void hero_spell_3()
     {
-        DrawSpellInfo("H3");
+        DrawSpellInfo(IsKnown(1),"H3");
     }
 
     public void hero_spell_4()
     {
-        DrawSpellInfo("H4");
+        DrawSpellInfo(IsKnown(1),"H4");
     }
 
     public void fire_spell_1()
     {
-        DrawSpellInfo("F1");
+        DrawSpellInfo(IsKnown(3),"F1");
     }
 
     public void fire_spell_2()
     {
-        DrawSpellInfo("F2");
+        DrawSpellInfo(IsKnown(3),"F2");
     }
 
     public void winter_spell_1()
     {
-        DrawSpellInfo("G1");
+        DrawSpellInfo(IsKnown(4),"G1");
     }
 
     public void winter_spell_2()
     {
-        DrawSpellInfo("G2");
+        DrawSpellInfo(IsKnown(4),"G2");
     }
 
     public void earth_spell_1()
     {
-        DrawSpellInfo("T1");
+        DrawSpellInfo(IsKnown(2),"T1");
     }
 
     public void earth_spell_2()
     {
-        DrawSpellInfo("T2");
+        DrawSpellInfo(IsKnown(2),"T2");
     }
 }
