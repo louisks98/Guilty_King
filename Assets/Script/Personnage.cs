@@ -112,18 +112,27 @@ namespace Assets.Script
             battleDef = defence;
             battleSpd = speed;
         }
+
         public void MoveLeft()
         {
             deplacement.movingLeft = true;
         }
+
         public void MoveRight()
         {
             deplacement.movingRight = true;
         }
+
+        public void Attaque()
+        {
+            deplacement.isAttacking = true;
+        }
+
         public void dealDamage(int nbDamage)
         {
             BattleHp = BattleHp + nbDamage;
         }
+
         public int GetDamage(string id)
         {
             int damage = 0;
@@ -137,6 +146,7 @@ namespace Assets.Script
             return damage;
         }
     }
+
     public class Sort
     {
         public string id { get; set; }
@@ -152,7 +162,10 @@ namespace Assets.Script
             this.id = id;
             this.nom = nom;
             this.description = description;
-            this.valeur = valeur;
+            if (type == "GR")
+                this.valeur = -valeur;
+            else
+                this.valeur = valeur;
             this.acquis = acquis;
             this.type = type;
             this.nbattaque = nbattaque;

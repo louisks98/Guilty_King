@@ -18,7 +18,7 @@ public class CombatUI : MonoBehaviour {
     public GameObject pnlAttakBtn;
     public GameObject pnlEnemySelect;
     public GameObject pnlItemSelect;
-    public string selectedSpell { get; set; }
+    public Sort selectedSpell { get; set; }
     public int selectedEnemy { get; set; }
     public List<Personnage> listEnnemies { get; set; }
 
@@ -48,6 +48,7 @@ public class CombatUI : MonoBehaviour {
         pnlAttakBtn.SetActive(true);
         pnlItemSelect.SetActive(false);
     }
+
     public void onClickCancel()
     {
         pnlEnemySelect.SetActive(false);
@@ -63,10 +64,20 @@ public class CombatUI : MonoBehaviour {
         pnlAttakBtn.SetActive(false);
         pnlItemSelect.SetActive(false);
 
-        selectedSpell = currentPerso.sorts[i].id;
-        Debug.Log("id sort Jeanne :" + currentPerso.sorts[i].id);
+        selectedSpell = currentPerso.sorts[i];
 
-        AfficherEnemy(); //Il y a des sots avec plus d'une attaque.
+        if (currentPerso.sorts[i].type == "GR")
+        {
+            AfficherAlly();
+        }
+        else if (currentPerso.sorts[i].type == "AZ")
+        {
+            closeMenu();
+        }
+        else
+        {
+            AfficherEnemy();
+        }
     }
 
     public void onClickItem()
@@ -84,8 +95,12 @@ public class CombatUI : MonoBehaviour {
         {
             selectedEnemy = listEnnemies[i].id;
         }
+        closeMenu();
+    }
+
+    public void closeMenu()
+    {
         onClickCancel();
-        Debug.Log("enemy id : " + listEnnemies[i].id);
         CombatTurn.selecting = false;
         HideMenu();
     }
@@ -197,7 +212,26 @@ public class CombatUI : MonoBehaviour {
             listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
         }
     }
-        
+
+    public void AfficherAlly()
+    {
+        ReactivateButtons(listBtnEnemy);
+        if (listBtnEnemy != null && listEnnemies != null)
+        {
+            for (int i = 0; i < listBtnEnemy.Count; i++)
+            {
+                if (i < listEnemySprites.Count && listEnemySprites[i] != null && listEnnemies[i] != null)
+                {
+                    listBtnEnemy[i].image.sprite = listEnemySprites[i];
+                    Debug.Log("Afficher enemy sprite" + i);
+                }
+                else
+                    listBtnEnemy[i].gameObject.SetActive(false);
+            }
+            listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
+        }
+    }
+
     public void AfficherSpells(Personnage pers)
     {
         currentPerso = pers;
@@ -218,7 +252,7 @@ public class CombatUI : MonoBehaviour {
                     }
                     break;
 
-                case "Maryse":
+                case "Jeanne":
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
                         if (i < listSpellFire.Count && listSpellFire[i] != null && pers.sorts[i] != null)
@@ -243,7 +277,7 @@ public class CombatUI : MonoBehaviour {
                     }
                     break;
 
-                case "Jeanne":
+                case "Maryse":
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
                         if (i < listSpellIce.Count && listSpellIce[i] != null && pers.sorts[i] != null)
