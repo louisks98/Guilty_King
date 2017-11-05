@@ -606,7 +606,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (allies[currentPlayer] != null)
                 {
-                    if(allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
+                    if (allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
                     {
                         moving = true;
                     }
@@ -616,7 +616,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (ennemies[currentPlayer] != null)
                 {
-                    if(ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
+                    if (ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
                     {
                         moving = true;
                     }
@@ -687,122 +687,5 @@ public class CombatTurn : MonoBehaviour
                 }
             }
         }
-<<<<<<< Updated upstream
     }
-=======
-    }
-}
-
-
-    
-
-                        {
-                            int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
-
-                            if(ennemies[currentPlayer].sorts[randomNumber].type == "GR")
-                            {
-                                int id = random.Next(-1, ennemies.Count);
-                                while (ennemies[id] == null)
-                                {
-                                    id = random.Next(-1, 4);
-                                }
-                                Attack(ennemies[currentPlayer].sorts[randomNumber], ennemies[id].id);
-                            }
-                            else if(ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
-                            {
-                                Attack_AOI(allies, ennemies[currentPlayer].sorts[randomNumber]);
-                            }
-                            else
-                            {
-                                int id = random.Next(-1, allies.Count);
-                                while (allies[id] == null)
-                                {
-                                    id = random.Next(-1, 4);
-                                }
-                                Attack(ennemies[currentPlayer].sorts[randomNumber], allies[id].id);
-                            }
-    void Attack(Sort spell, int idPersonnage)
-
-{
-
-    foreach (Personnage perso in allies)
-
-    {
-
-        if (perso != null)
-
-        {
-
-            if (perso.id == idPersonnage)
-
-            {
-
-                perso.dealDamage(-(spell.valeur));
-
-            }
-
-        }
-
-    }
-
-
-
-    foreach (Personnage perso in ennemies)
-
-    {
-
-        if (perso != null)
-
-        {
-
-            if (perso.id == idPersonnage)
-
-            {
-
-                perso.dealDamage(-(spell.valeur));
-
-            }
-
-        }
-
-    }
-    void Attack_AOI(List<Personnage> personnages, Sort spell)
-    {
-        foreach (Personnage perso in personnages)
-        {
-            if (perso != null)
-            {
-                perso.dealDamage(-(spell.valeur));
-
-            }
-        }
-    }
-
-    void Clean_The_Board()
-    {
-        for (int i = 0; i < allies.Count; i++)
-        {
-            if (allies[i] != null)
-            {
-                if (allies[i].defeated)
-                {
-                    allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
-                    allies[i] = null;
-                }
-            }
-        }
-
-        for (int i = 0; i < ennemies.Count; i++)
-        {
-            if (ennemies[i] != null)
-            {
-                if (ennemies[i].defeated)
-                {
-                    ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
-                    ennemies[i] = null;
-                }
-            }
-        }
-    }
->>>>>>> Stashed changes
 }
