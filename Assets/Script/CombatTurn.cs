@@ -108,6 +108,20 @@ public class CombatTurn : MonoBehaviour
                     }
                     break;
                 case (CombatStates.ANIMATTACK):
+                    if (currentTeamIsAlly)
+                    {
+                        if (allies[currentPlayer] != null)
+                        {
+                            allies[currentPlayer].Attaque();
+                        }
+                    }
+                    else
+                    {
+                        if (ennemies[currentPlayer] != null)
+                        {
+                            ennemies[currentPlayer].Attaque();
+                        }
+                    }
                     currentState = CombatStates.ATTACK;
                     break;
                 case (CombatStates.ANIMLEFT):
@@ -592,14 +606,20 @@ public class CombatTurn : MonoBehaviour
             {
                 if (allies[currentPlayer] != null)
                 {
-                    moving = allies[currentPlayer].deplacement.anim.GetBool("iswalking");
+                    if(allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
+                    {
+                        moving = true;
+                    }
                 }
             }
             else
             {
                 if (ennemies[currentPlayer] != null)
                 {
-                    moving = ennemies[currentPlayer].deplacement.anim.GetBool("iswalking");
+                    if(ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
+                    {
+                        moving = true;
+                    }
                 }
             }
         }
