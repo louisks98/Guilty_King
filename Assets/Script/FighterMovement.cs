@@ -12,6 +12,13 @@ public class FighterMovement : MonoBehaviour
     public bool movingLeft;
     public bool movingRight;
 
+    // Attacking
+    public bool isAttacking;
+    public float attackTime;
+    private float attacTimeCounter;
+    private bool isCounting = false;
+
+
     // Use this for initialization
     void Start()
     {
@@ -70,6 +77,31 @@ public class FighterMovement : MonoBehaviour
                     movingRight = false;
                     anim.SetBool("iswalking", false);
                 }
+            }
+            if (isAttacking)
+            {
+                if (!isCounting)
+                {
+                    attacTimeCounter = attackTime;
+                    isCounting = true;
+                }
+                rdbody.velocity = Vector2.zero;
+                anim.SetBool("isAttacking", true);
+
+            }
+
+            if (attacTimeCounter > 0)
+            {
+                attacTimeCounter -= Time.deltaTime;
+                Debug.Log("Counter is: " + attacTimeCounter);
+            }
+
+            if (attacTimeCounter <= 0)
+            {
+                isAttacking = false;
+                isCounting = false;
+                anim.SetBool("isAttacking", false);
+                Debug.Log("Counter is: " + attacTimeCounter);
             }
         }
         else

@@ -6,9 +6,11 @@ using UnityEngine;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
 
-public class CombatTurn : MonoBehaviour {
+public class CombatTurn : MonoBehaviour
+{
 
-    public enum CombatStates {
+    public enum CombatStates
+    {
         ANIMSTART,
         START,
         STARTATTACK,
@@ -66,14 +68,16 @@ public class CombatTurn : MonoBehaviour {
 
     System.Random random;
 
-    void Start() {
+    void Start()
+    {
         currentState = CombatStates.NOTINCOMBAT;
         anim = false;
         CombatTurn.selecting = false;
         random = new System.Random();
     }
 
-    void Update() {
+    void Update()
+    {
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             Debug.Log(currentState);
@@ -149,7 +153,7 @@ public class CombatTurn : MonoBehaviour {
                         {
                             if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
                             {
-                                Attack_AOI(ennemies,combatUI.GetComponent<CombatUI>().selectedSpell);
+                                Attack_AOI(ennemies, combatUI.GetComponent<CombatUI>().selectedSpell);
                             }
                             else
                             {
@@ -163,7 +167,7 @@ public class CombatTurn : MonoBehaviour {
                         {
                             int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
 
-                            if(ennemies[currentPlayer].sorts[randomNumber].type == "GR")
+                            if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
                             {
                                 int id = random.Next(-1, ennemies.Count);
                                 while (ennemies[id] == null)
@@ -172,7 +176,7 @@ public class CombatTurn : MonoBehaviour {
                                 }
                                 Attack(ennemies[currentPlayer].sorts[randomNumber], ennemies[id].id);
                             }
-                            else if(ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
+                            else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
                             {
                                 Attack_AOI(allies, ennemies[currentPlayer].sorts[randomNumber]);
                             }
@@ -241,7 +245,7 @@ public class CombatTurn : MonoBehaviour {
     }
 
     IEnumerator Animation_End(Transform target)
-    { 
+    {
         ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
 
         anim = true;
@@ -310,7 +314,7 @@ public class CombatTurn : MonoBehaviour {
         }
         if (Personnage_Is_In_Team(2))
         {
-            allies[1]  = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
+            allies[1] = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
             allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
             allies[1].deplacement.Init_Position();
         }
@@ -401,7 +405,7 @@ public class CombatTurn : MonoBehaviour {
             combatUI.GetComponent<CombatUI>().HideMenu();
             currentTeamIsAlly = false;
             currentPlayer = 0;
-        }        
+        }
     }
 
     int Team_Speed(List<Personnage> team)
@@ -419,7 +423,7 @@ public class CombatTurn : MonoBehaviour {
 
     void Next_Turn()
     {
-        if(currentPlayer < 3)
+        if (currentPlayer < 3)
         {
             currentPlayer++;
         }
@@ -465,10 +469,10 @@ public class CombatTurn : MonoBehaviour {
         {
             if (personnage != null)
             {
-               if (!personnage.defeated)
-               {
+                if (!personnage.defeated)
+                {
                     defeted = false;
-               }
+                }
             }
         }
         return defeted;
@@ -477,7 +481,7 @@ public class CombatTurn : MonoBehaviour {
     void InitUI()
     {
         Draw_Spell_And_Target();
-        
+
         combatUI.SetActive(true);
         pnlAlly = GameObject.Find("PNL_TeamHp");
         pnlEnemy = GameObject.Find("PNL_Enemy");
@@ -582,18 +586,18 @@ public class CombatTurn : MonoBehaviour {
     bool currentPlayerIsMoving()
     {
         bool moving = false;
-        if(allies != null && ennemies != null)
+        if (allies != null && ennemies != null)
         {
             if (currentTeamIsAlly)
             {
-                if(allies[currentPlayer] != null)
+                if (allies[currentPlayer] != null)
                 {
                     moving = allies[currentPlayer].deplacement.anim.GetBool("iswalking");
                 }
             }
             else
             {
-                if(ennemies[currentPlayer] != null)
+                if (ennemies[currentPlayer] != null)
                 {
                     moving = ennemies[currentPlayer].deplacement.anim.GetBool("iswalking");
                 }
@@ -601,10 +605,10 @@ public class CombatTurn : MonoBehaviour {
         }
         return moving;
     }
-    
-    void Attack(Sort spell,int idPersonnage)
+
+    void Attack(Sort spell, int idPersonnage)
     {
-        foreach(Personnage perso in allies)
+        foreach (Personnage perso in allies)
         {
             if (perso != null)
             {
@@ -615,11 +619,11 @@ public class CombatTurn : MonoBehaviour {
             }
         }
 
-        foreach(Personnage perso in ennemies)
+        foreach (Personnage perso in ennemies)
         {
-            if(perso !=null)
+            if (perso != null)
             {
-                if(perso.id == idPersonnage)
+                if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(spell.valeur));
                 }
@@ -633,7 +637,7 @@ public class CombatTurn : MonoBehaviour {
         {
             if (perso != null)
             {
-                perso.dealDamage(-(spell.valeur)); 
+                perso.dealDamage(-(spell.valeur));
             }
         }
     }
@@ -665,6 +669,3 @@ public class CombatTurn : MonoBehaviour {
         }
     }
 }
-
-
-    
