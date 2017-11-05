@@ -85,6 +85,7 @@ public class CombatTurn : MonoBehaviour {
                     break;
                 case (CombatStates.START):
                     Combat_Start();
+
                     currentState = CombatStates.STARTATTACK;
                     break;
                 case (CombatStates.STARTATTACK):
@@ -146,7 +147,14 @@ public class CombatTurn : MonoBehaviour {
                     {
                         if (allies[currentPlayer] != null)
                         {
-                            DealDamageToTargetPlayer(combatUI.GetComponent<CombatUI>().selectedSpell, combatUI.GetComponent<CombatUI>().selectedEnemy, allies[currentPlayer]);
+                            if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
+                            {
+                                Attack_AOI(ennemies,combatUI.GetComponent<CombatUI>().selectedSpell);
+                            }
+                            else
+                            {
+                                Attack(combatUI.GetComponent<CombatUI>().selectedSpell, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                            }
                         }
                     }
                     else
@@ -154,12 +162,29 @@ public class CombatTurn : MonoBehaviour {
                         if (ennemies[currentPlayer] != null)
                         {
                             int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
-                            int id = random.Next(-1, allies.Count);
-                            while (allies[id] == null)
+
+                            if(ennemies[currentPlayer].sorts[randomNumber].type == "GR")
                             {
-                                id = random.Next(-1, 4);
+                                int id = random.Next(-1, ennemies.Count);
+                                while (ennemies[id] == null)
+                                {
+                                    id = random.Next(-1, 4);
+                                }
+                                Attack(ennemies[currentPlayer].sorts[randomNumber], ennemies[id].id);
                             }
-                            DealDamageToTargetPlayer(ennemies[currentPlayer].sorts[randomNumber].id,allies[id].id, ennemies[currentPlayer]);
+                            else if(ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
+                            {
+                                Attack_AOI(allies, ennemies[currentPlayer].sorts[randomNumber]);
+                            }
+                            else
+                            {
+                                int id = random.Next(-1, allies.Count);
+                                while (allies[id] == null)
+                                {
+                                    id = random.Next(-1, 4);
+                                }
+                                Attack(ennemies[currentPlayer].sorts[randomNumber], allies[id].id);
+                            }
                         }
                     }
                     combatUI.GetComponent<CombatUI>().HideMenu();
@@ -373,6 +398,7 @@ public class CombatTurn : MonoBehaviour {
         }
         else
         {
+            combatUI.GetComponent<CombatUI>().HideMenu();
             currentTeamIsAlly = false;
             currentPlayer = 0;
         }        
@@ -393,10 +419,9 @@ public class CombatTurn : MonoBehaviour {
 
     void Next_Turn()
     {
-        if(currentPlayer <3)
+        if(currentPlayer < 3)
         {
             currentPlayer++;
-            //combatUI.GetComponent<CombatUI>().AfficherSpells(allies[currentPlayer]);
         }
         else
         {
@@ -577,7 +602,7 @@ public class CombatTurn : MonoBehaviour {
         return moving;
     }
     
-    void DealDamageToTargetPlayer(string idSpell,int idPersonnage, Personnage persoDealer)
+    void Attack(Sort spell,int idPersonnage)
     {
         foreach(Personnage perso in allies)
         {
@@ -585,7 +610,7 @@ public class CombatTurn : MonoBehaviour {
             {
                 if (perso.id == idPersonnage)
                 {
-                    perso.dealDamage(-(persoDealer.GetDamage(idSpell)));
+                    perso.dealDamage(-(spell.valeur));
                 }
             }
         }
@@ -596,8 +621,19 @@ public class CombatTurn : MonoBehaviour {
             {
                 if(perso.id == idPersonnage)
                 {
-                    perso.dealDamage(-(persoDealer.GetDamage(idSpell)));
+                    perso.dealDamage(-(spell.valeur));
                 }
+            }
+        }
+    }
+
+    void Attack_AOI(List<Personnage> personnages, Sort spell)
+    {
+        foreach (Personnage perso in personnages)
+        {
+            if (perso != null)
+            {
+                perso.dealDamage(-(spell.valeur)); 
             }
         }
     }

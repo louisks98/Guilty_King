@@ -152,7 +152,10 @@ namespace Assets.Script
             this.id = id;
             this.nom = nom;
             this.description = description;
-            this.valeur = valeur;
+            if (type == "GR")
+                this.valeur = -valeur;
+            else
+                this.valeur = valeur;
             this.acquis = acquis;
             this.type = type;
             this.nbattaque = nbattaque;
