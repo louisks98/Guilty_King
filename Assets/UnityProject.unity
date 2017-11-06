@@ -838,7 +838,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &52773900
 Animator:
   serializedVersion: 3
@@ -2328,7 +2328,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &142197715
 Animator:
   serializedVersion: 3
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &320841758
 Animator:
   serializedVersion: 3
@@ -5824,7 +5824,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &412088184
 Animator:
   serializedVersion: 3
@@ -6234,7 +6234,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &463607595
 Animator:
   serializedVersion: 3
@@ -9843,7 +9843,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0.8
+  attackTime: 0.9
 --- !u!1 &661569829
 GameObject:
   m_ObjectHideFlags: 0
@@ -10399,7 +10399,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &727907089
 Animator:
   serializedVersion: 3
@@ -11354,7 +11354,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &757587453
 Animator:
   serializedVersion: 3
@@ -20486,7 +20486,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
 --- !u!95 &1446800661
 Animator:
   serializedVersion: 3
@@ -20614,7 +20614,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
 --- !u!95 &1459843812
 Animator:
   serializedVersion: 3
@@ -22699,7 +22699,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
 --- !u!95 &1588512822
 Animator:
   serializedVersion: 3
@@ -26565,7 +26565,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
 --- !u!95 &1800367288
 Animator:
   serializedVersion: 3
@@ -31851,7 +31851,7 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
 --- !u!95 &2092012959
 Animator:
   serializedVersion: 3
