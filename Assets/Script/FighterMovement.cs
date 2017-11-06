@@ -137,6 +137,32 @@ public class FighterMovement : MonoBehaviour
                     anim.SetBool("iswalking", false);
                 }
             }
+
+            if (isAttacking)
+            {
+                if (!isCounting)
+                {
+                    attacTimeCounter = attackTime;
+                    isCounting = true;
+                }
+                rdbody.velocity = Vector2.zero;
+                anim.SetBool("isAttacking", true);
+
+            }
+
+            if (attacTimeCounter > 0)
+            {
+                attacTimeCounter -= Time.deltaTime;
+                Debug.Log("Counter is: " + attacTimeCounter);
+            }
+
+            if (attacTimeCounter <= 0)
+            {
+                isAttacking = false;
+                isCounting = false;
+                anim.SetBool("isAttacking", false);
+                Debug.Log("Counter is: " + attacTimeCounter);
+            }
         }
     }
 }
