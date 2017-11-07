@@ -316,6 +316,15 @@ public class CombatUI : MonoBehaviour {
         }
     }
 
+    public void Reset_BTN()
+    {
+        ReactivateButtons(listBtnEnemy);
+        ReactivateButtons(listBtnSpell);
+        ReactivateButtons(ListBtnItem);
+
+        onClickCancel();
+    }
+
     public void HideMenu()
     {
         pnlMenuBtn.SetActive(false);
