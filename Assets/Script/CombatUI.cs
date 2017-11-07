@@ -39,8 +39,13 @@ public class CombatUI : MonoBehaviour {
         listNbItem.Add("steroid", 0);
         listNbItem.Add("speed", 0);
         listBtnSpell = new List<Button>(pnlAttakBtn.GetComponentsInChildren<Button>());
+        listBtnSpell.Remove(listBtnSpell[listBtnSpell.Count-1]);
+
         listBtnEnemy = new List<Button>(pnlEnemySelect.GetComponentsInChildren<Button>());
+        listBtnEnemy.Remove(listBtnEnemy[listBtnEnemy.Count - 1]);
+
         ListBtnItem = new List<Button>(pnlItemSelect.GetComponentsInChildren<Button>());
+        ListBtnItem.Remove(ListBtnItem[ListBtnItem.Count - 1]);
     } 
 
     public void onClickAttack()
@@ -208,6 +213,7 @@ public class CombatUI : MonoBehaviour {
     
     public void AfficherEnemy()
     {
+        Debug.Log("call ReactivateButtons enemy");
         ReactivateButtons(listBtnEnemy);
         if(listBtnEnemy != null && listEnnemies != null)
         {
@@ -221,12 +227,13 @@ public class CombatUI : MonoBehaviour {
                 else
                     listBtnEnemy[i].gameObject.SetActive(false);
             }
-            listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
+            //listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
         }
     }
 
     public void AfficherAlly()
     {
+        Debug.Log("call ReactivateButtons ally");
         ReactivateButtons(listBtnEnemy);
         if (listBtnEnemy != null && listAllies != null)
         {
@@ -240,13 +247,14 @@ public class CombatUI : MonoBehaviour {
                 else
                     listBtnEnemy[i].gameObject.SetActive(false);
             }
-            listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
+            //listBtnEnemy[listBtnEnemy.Count - 1].gameObject.SetActive(true);
         }
     }
 
     public void AfficherSpells(Personnage pers)
     {
         currentPerso = pers;
+        Debug.Log("call ReactivateButtons spell");
         ReactivateButtons(listBtnSpell);
         if(listBtnSpell != null && pers != null)
         {
@@ -301,7 +309,7 @@ public class CombatUI : MonoBehaviour {
                     }
                     break;
             }
-            listBtnSpell[listBtnSpell.Count - 1].gameObject.SetActive(true);
+            //listBtnSpell[listBtnSpell.Count - 1].gameObject.SetActive(true);
         }
     }
 
@@ -312,6 +320,7 @@ public class CombatUI : MonoBehaviour {
             foreach (Button b in listBtn)
             {
                 b.gameObject.SetActive(true);
+                Debug.Log("ReactivateButtons");
             }
         }
     }
@@ -319,6 +328,7 @@ public class CombatUI : MonoBehaviour {
     public void Reset_BTN()
     {
         ReactivateButtons(listBtnEnemy);
+        Debug.Log("call ReactivateButtons QUIT");
         ReactivateButtons(listBtnSpell);
         ReactivateButtons(ListBtnItem);
 
@@ -334,4 +344,4 @@ public class CombatUI : MonoBehaviour {
     {
         pnlMenuBtn.SetActive(true);
     }
-}
+}

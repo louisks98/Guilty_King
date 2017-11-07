@@ -38,7 +38,7 @@ public class FighterMovement : MonoBehaviour
         {
             pointB.x = pointA.x + 1;
         }
-        Debug.Log("Player position is: " + rdbody.position);
+        //Debug.Log("Player position is: " + rdbody.position);
     }
 
 
@@ -93,7 +93,7 @@ public class FighterMovement : MonoBehaviour
             if (attacTimeCounter > 0)
             {
                 attacTimeCounter -= Time.deltaTime;
-                Debug.Log("Counter is: " + attacTimeCounter);
+                //Debug.Log("Counter is: " + attacTimeCounter);
             }
 
             if (attacTimeCounter <= 0)
@@ -101,7 +101,7 @@ public class FighterMovement : MonoBehaviour
                 isAttacking = false;
                 isCounting = false;
                 anim.SetBool("isAttacking", false);
-                Debug.Log("Counter is: " + attacTimeCounter);
+                //Debug.Log("Counter is: " + attacTimeCounter);
             }
         }
         else
@@ -153,7 +153,7 @@ public class FighterMovement : MonoBehaviour
             if (attacTimeCounter > 0)
             {
                 attacTimeCounter -= Time.deltaTime;
-                Debug.Log("Counter is: " + attacTimeCounter);
+                //Debug.Log("Counter is: " + attacTimeCounter);
             }
 
             if (attacTimeCounter <= 0)
@@ -161,7 +161,7 @@ public class FighterMovement : MonoBehaviour
                 isAttacking = false;
                 isCounting = false;
                 anim.SetBool("isAttacking", false);
-                Debug.Log("Counter is: " + attacTimeCounter);
+                //Debug.Log("Counter is: " + attacTimeCounter);
             }
         }
     }

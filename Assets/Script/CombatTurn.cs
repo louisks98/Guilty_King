@@ -80,7 +80,7 @@ public class CombatTurn : MonoBehaviour
     {
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
             switch (currentState)
             {
                 case (CombatStates.ANIMSTART):
@@ -525,7 +525,7 @@ public class CombatTurn : MonoBehaviour
 
     void InitUI()
     {
-        Draw_Spell_And_Target();
+        //Draw_Spell_And_Target();
 
         combatUI.SetActive(true);
         pnlAlly = GameObject.Find("PNL_TeamHp");
