@@ -291,11 +291,14 @@ public class CombatTurn : MonoBehaviour
             hpTextAlly[i].gameObject.SetActive(true);
             hpBarAlly[i].gameObject.SetActive(true);
         }
+
         for (int i = 0; i < hpTextEnemy.Count; i++)
         {
             hpTextEnemy[i].gameObject.SetActive(true);
             hpBarEnemy[i].gameObject.SetActive(true);
         }
+
+        combatUI.GetComponent<CombatUI>().Reset_BTN();
 
         currentState = CombatStates.NOTINCOMBAT;
     }
