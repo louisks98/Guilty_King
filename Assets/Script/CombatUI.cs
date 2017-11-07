@@ -345,11 +345,3 @@ public class CombatUI : MonoBehaviour {
     }
 }
 
-    public void Reset_BTN()
-    {
-        ReactivateButtons(listBtnEnemy);
-        Debug.Log("call ReactivateButtons QUIT");
-        ReactivateButtons(listBtnSpell);
-        ReactivateButtons(ListBtnItem);
-
-        onClickCancel();

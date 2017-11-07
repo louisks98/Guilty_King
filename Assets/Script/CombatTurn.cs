@@ -533,7 +533,7 @@ public class CombatTurn : MonoBehaviour
 
     void InitUI()
     {
-        Draw_Spell_And_Target();
+       // Draw_Spell_And_Target();
 
         combatUI.SetActive(true);
         pnlAlly = GameObject.Find("PNL_TeamHp");
@@ -732,5 +732,6 @@ public class CombatTurn : MonoBehaviour
         }
     }
 }
-        //Draw_Spell_And_Target();
-
+
+
+
