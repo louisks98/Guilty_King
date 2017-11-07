@@ -334,4 +334,4 @@ public class CombatUI : MonoBehaviour {
     {
         pnlMenuBtn.SetActive(true);
     }
-}
+}
