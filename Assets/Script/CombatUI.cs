@@ -93,9 +93,19 @@ public class CombatUI : MonoBehaviour {
 
     public void onCLickTarget(int i)
     {
-        if(listEnnemies[i] != null)
+        if (selectedSpell.type == "GR")
         {
-            selectedEnemy = listEnnemies[i].id;
+            if (listAllies[i] != null)
+            {
+                selectedEnemy = listAllies[i].id;
+            }
+        }
+        else
+        {
+            if (listEnnemies[i] != null)
+            {
+                selectedEnemy = listEnnemies[i].id;
+            }
         }
         closeMenu();
     }
@@ -315,21 +325,4 @@ public class CombatUI : MonoBehaviour {
     {
         pnlMenuBtn.SetActive(true);
     }
-}
-
-    {
-        if(selectedSpell.type == "GR")
-        {
-            if (listAllies[i] != null)
-            {
-                selectedEnemy = listAllies[i].id;
-            }
-        }
-        else
-        {
-            if (listEnnemies[i] != null)
-            {
-                selectedEnemy = listEnnemies[i].id;
-            }
-        }
-        closeMenu();
+}
