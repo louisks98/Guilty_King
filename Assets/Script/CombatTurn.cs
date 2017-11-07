@@ -89,7 +89,6 @@ public class CombatTurn : MonoBehaviour
                     break;
                 case (CombatStates.START):
                     Combat_Start();
-
                     currentState = CombatStates.STARTATTACK;
                     break;
                 case (CombatStates.STARTATTACK):
@@ -266,28 +265,41 @@ public class CombatTurn : MonoBehaviour
         yield return StartCoroutine(sf.FadeToBlack());
         anim = false;
 
-        //Repositionne la caméra sur le personnage.
-        CameraMovment.target_Combat = target;
-
         //Hero retourne ou il doit etre après le combat.
         hero.transform.position = target.position;
+
+        //Repositionne la caméra sur le personnage.
+        // CameraMovment.target_Combat = target;
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position = target.position;
 
         //Le personnage peut bouger
         CameraMovment.inCombat = false;
         PlayerMovment.canMove = true;
-
-        //Le combet est terminer
-        currentState = CombatStates.NOTINCOMBAT;
-
-        combatUI.SetActive(false);
 
         yield return StartCoroutine(sf.FadeToClear());
     }
 
     void Quit(Transform target)
     {
+        combatUI.SetActive(false);
+
         StartCoroutine(Animation_End(target));
         CombatTurn.selecting = false;
+
+        for (int i = 0; i < hpTextAlly.Count; i++)
+        {
+            hpTextAlly[i].gameObject.SetActive(true);
+            hpBarAlly[i].gameObject.SetActive(true);
+        }
+
+        for (int i = 0; i < hpTextEnemy.Count; i++)
+        {
+            hpTextEnemy[i].gameObject.SetActive(true);
+            hpBarEnemy[i].gameObject.SetActive(true);
+        }
+
+        combatUI.GetComponent<CombatUI>().Reset_BTN();
+
         currentState = CombatStates.NOTINCOMBAT;
     }
 
@@ -320,30 +332,45 @@ public class CombatTurn : MonoBehaviour
         allies.Add(null);
         allies.Add(null);
         allies.Add(null);
+
+        CombatUI ui = combatUI.GetComponent<CombatUI>();
+
+        ui.listAllySprites = new List<Sprite>();
+        ui.listAllySprites.Add(null);
+        ui.listAllySprites.Add(null);
+        ui.listAllySprites.Add(null);
+        ui.listAllySprites.Add(null);
+
         if (Personnage_Is_In_Team(1))
         {
             allies[0] = new Personnage(GameObject.FindGameObjectWithTag("HeroCombat"), 1);
             allies[0].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_1.position;
             allies[0].deplacement.Init_Position();
+            ui.listAllySprites[0] = allies[0].gameObject.GetComponent<SpriteRenderer>().sprite;
         }
         if (Personnage_Is_In_Team(2))
         {
             allies[1] = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
             allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
             allies[1].deplacement.Init_Position();
+            ui.listAllySprites[1] = allies[1].gameObject.GetComponent<SpriteRenderer>().sprite;
         }
         if (Personnage_Is_In_Team(3))
         {
             allies[2] = new Personnage(GameObject.FindGameObjectWithTag("FireAlly"), 3);
             allies[2].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_3.position;
             allies[2].deplacement.Init_Position();
+            ui.listAllySprites[2] = allies[2].gameObject.GetComponent<SpriteRenderer>().sprite;
         }
         if (Personnage_Is_In_Team(4))
         {
             allies[3] = new Personnage(GameObject.FindGameObjectWithTag("IceAlly"), 4);
             allies[3].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_4.position;
             allies[3].deplacement.Init_Position();
+            ui.listAllySprites[3] = allies[3].gameObject.GetComponent<SpriteRenderer>().sprite;
         }
+
+        ui.listAllies = allies;
     }
 
     bool Personnage_Is_In_Team(int id_Personnage)
@@ -390,18 +417,22 @@ public class CombatTurn : MonoBehaviour
         if (go_enemy1 != null && id_enemy1 != 0)
         {
             ennemies[0] = new Personnage(go_enemy1, id_enemy1);
+            ennemies[0].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
         }
         if (go_enemy2 != null && id_enemy2 != 0)
         {
             ennemies[1] = new Personnage(go_enemy2, id_enemy2);
+            ennemies[1].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
         }
         if (go_enemy3 != null && id_enemy3 != 0)
         {
             ennemies[2] = new Personnage(go_enemy3, id_enemy3);
+            ennemies[2].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
         }
         if (go_enemy4 != null && id_enemy4 != 0)
         {
             ennemies[3] = new Personnage(go_enemy4, id_enemy4);
+            ennemies[3].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
         }
     }
 
@@ -671,6 +702,7 @@ public class CombatTurn : MonoBehaviour
                 if (allies[i].defeated)
                 {
                     allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    //allies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     allies[i] = null;
                 }
             }
@@ -682,7 +714,8 @@ public class CombatTurn : MonoBehaviour
             {
                 if (ennemies[i].defeated)
                 {
-                    ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    //ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    ennemies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     ennemies[i] = null;
                 }
             }

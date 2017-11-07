@@ -14,6 +14,7 @@ public class CombatUI : MonoBehaviour {
     public List<Sprite> listSpellEarth;
     public List<Sprite> listSpellIce;
     public List<Sprite> listEnemySprites { get; set; }
+    public List<Sprite> listAllySprites { get; set; }
     public GameObject pnlMenuBtn;
     public GameObject pnlAttakBtn;
     public GameObject pnlEnemySelect;
@@ -21,6 +22,7 @@ public class CombatUI : MonoBehaviour {
     public Sort selectedSpell { get; set; }
     public int selectedEnemy { get; set; }
     public List<Personnage> listEnnemies { get; set; }
+    public List<Personnage> listAllies { get; set; }
 
     private List<Button> listBtnEnemy;
     private List<Button> listBtnSpell;
@@ -91,9 +93,19 @@ public class CombatUI : MonoBehaviour {
 
     public void onCLickTarget(int i)
     {
-        if(listEnnemies[i] != null)
+        if (selectedSpell.type == "GR")
         {
-            selectedEnemy = listEnnemies[i].id;
+            if (listAllies[i] != null)
+            {
+                selectedEnemy = listAllies[i].id;
+            }
+        }
+        else
+        {
+            if (listEnnemies[i] != null)
+            {
+                selectedEnemy = listEnnemies[i].id;
+            }
         }
         closeMenu();
     }
@@ -114,28 +126,28 @@ public class CombatUI : MonoBehaviour {
             case "Btn_Item_Health":
                 if(listNbItem["health"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["health"]-- + "where Item = 3";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["health"]- 1) + " where Item = 3";
                     bd.insert(sqlupdate);
                 }
                 break;
             case "Btn_Item_Def":
                 if (listNbItem["def"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["def"]-- + "where Item = 6";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["def"]-1) + " where Item = 6";
                     bd.insert(sqlupdate);
                 }
                 break;
             case "Btn_Item_Steroids":
                 if (listNbItem["steroid"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["steroid"]-- + "where Item = 7";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["steroid"]-1) + " where Item = 7";
                     bd.insert(sqlupdate);
                 }
                 break;
             case "Btn_Item_Speed":
                 if (listNbItem["speed"] > 0)
                 {
-                    string sqlupdate = "update InventaireItem set Quantite = " + listNbItem["speed"]-- + "where Item = 5";
+                    string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["speed"]- 1) + " where Item = 5";
                     bd.insert(sqlupdate);
                 }
                 break;
@@ -216,13 +228,13 @@ public class CombatUI : MonoBehaviour {
     public void AfficherAlly()
     {
         ReactivateButtons(listBtnEnemy);
-        if (listBtnEnemy != null && listEnnemies != null)
+        if (listBtnEnemy != null && listAllies != null)
         {
             for (int i = 0; i < listBtnEnemy.Count; i++)
             {
-                if (i < listEnemySprites.Count && listEnemySprites[i] != null && listEnnemies[i] != null)
+                if (i < listAllySprites.Count && listAllySprites[i] != null && listAllies[i] != null)
                 {
-                    listBtnEnemy[i].image.sprite = listEnemySprites[i];
+                    listBtnEnemy[i].image.sprite = listAllySprites[i];
                     Debug.Log("Afficher enemy sprite" + i);
                 }
                 else
@@ -304,6 +316,15 @@ public class CombatUI : MonoBehaviour {
         }
     }
 
+    public void Reset_BTN()
+    {
+        ReactivateButtons(listBtnEnemy);
+        ReactivateButtons(listBtnSpell);
+        ReactivateButtons(ListBtnItem);
+
+        onClickCancel();
+    }
+
     public void HideMenu()
     {
         pnlMenuBtn.SetActive(false);
@@ -313,4 +334,4 @@ public class CombatUI : MonoBehaviour {
     {
         pnlMenuBtn.SetActive(true);
     }
-}
+}
