@@ -18,6 +18,8 @@ public class FighterMovement : MonoBehaviour
     private float attacTimeCounter;
     private bool isCounting = false;
 
+    // Dying
+    public bool isDying = false;
 
     // Use this for initialization
     void Start()
@@ -38,7 +40,6 @@ public class FighterMovement : MonoBehaviour
         {
             pointB.x = pointA.x + 1;
         }
-        Debug.Log("Player position is: " + rdbody.position);
     }
 
 
@@ -78,6 +79,18 @@ public class FighterMovement : MonoBehaviour
                     anim.SetBool("iswalking", false);
                 }
             }
+
+            if (isDying)
+            {
+
+                rdbody.velocity = Vector2.zero;
+                anim.SetBool("isDying", true);
+            }
+            else
+            {
+                anim.SetBool("isDying", false);
+            }
+
             if (isAttacking)
             {
                 if (!isCounting)
@@ -93,7 +106,6 @@ public class FighterMovement : MonoBehaviour
             if (attacTimeCounter > 0)
             {
                 attacTimeCounter -= Time.deltaTime;
-                Debug.Log("Counter is: " + attacTimeCounter);
             }
 
             if (attacTimeCounter <= 0)
@@ -101,8 +113,9 @@ public class FighterMovement : MonoBehaviour
                 isAttacking = false;
                 isCounting = false;
                 anim.SetBool("isAttacking", false);
-                Debug.Log("Counter is: " + attacTimeCounter);
             }
+
+           
         }
         else
         {
@@ -138,6 +151,17 @@ public class FighterMovement : MonoBehaviour
                 }
             }
 
+            if (isDying)
+            {
+
+                rdbody.velocity = Vector2.zero;
+                anim.SetBool("isDying", true);
+            }
+            else
+            {
+                anim.SetBool("isDying", false);
+            }
+
             if (isAttacking)
             {
                 if (!isCounting)
@@ -153,7 +177,6 @@ public class FighterMovement : MonoBehaviour
             if (attacTimeCounter > 0)
             {
                 attacTimeCounter -= Time.deltaTime;
-                Debug.Log("Counter is: " + attacTimeCounter);
             }
 
             if (attacTimeCounter <= 0)
@@ -161,7 +184,6 @@ public class FighterMovement : MonoBehaviour
                 isAttacking = false;
                 isCounting = false;
                 anim.SetBool("isAttacking", false);
-                Debug.Log("Counter is: " + attacTimeCounter);
             }
         }
     }

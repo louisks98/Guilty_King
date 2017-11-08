@@ -80,7 +80,7 @@ public class CombatTurn : MonoBehaviour
     {
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
             switch (currentState)
             {
                 case (CombatStates.ANIMSTART):
@@ -347,6 +347,7 @@ public class CombatTurn : MonoBehaviour
             allies[0].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_1.position;
             allies[0].deplacement.Init_Position();
             ui.listAllySprites[0] = allies[0].gameObject.GetComponent<SpriteRenderer>().sprite;
+            allies[0].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(2))
         {
@@ -354,6 +355,7 @@ public class CombatTurn : MonoBehaviour
             allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
             allies[1].deplacement.Init_Position();
             ui.listAllySprites[1] = allies[1].gameObject.GetComponent<SpriteRenderer>().sprite;
+            allies[1].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(3))
         {
@@ -361,6 +363,7 @@ public class CombatTurn : MonoBehaviour
             allies[2].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_3.position;
             allies[2].deplacement.Init_Position();
             ui.listAllySprites[2] = allies[2].gameObject.GetComponent<SpriteRenderer>().sprite;
+            allies[2].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(4))
         {
@@ -368,6 +371,7 @@ public class CombatTurn : MonoBehaviour
             allies[3].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_4.position;
             allies[3].deplacement.Init_Position();
             ui.listAllySprites[3] = allies[3].gameObject.GetComponent<SpriteRenderer>().sprite;
+            allies[3].deplacement.isDying = false;
         }
 
         ui.listAllies = allies;
@@ -418,21 +422,25 @@ public class CombatTurn : MonoBehaviour
         {
             ennemies[0] = new Personnage(go_enemy1, id_enemy1);
             ennemies[0].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
+            ennemies[0].deplacement.isDying = false;
         }
         if (go_enemy2 != null && id_enemy2 != 0)
         {
             ennemies[1] = new Personnage(go_enemy2, id_enemy2);
             ennemies[1].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
+            ennemies[1].deplacement.isDying = false;
         }
         if (go_enemy3 != null && id_enemy3 != 0)
         {
             ennemies[2] = new Personnage(go_enemy3, id_enemy3);
             ennemies[2].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
+            ennemies[2].deplacement.isDying = false;
         }
         if (go_enemy4 != null && id_enemy4 != 0)
         {
             ennemies[3] = new Personnage(go_enemy4, id_enemy4);
             ennemies[3].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
+            ennemies[3].deplacement.isDying = false;
         }
     }
 
@@ -525,7 +533,7 @@ public class CombatTurn : MonoBehaviour
 
     void InitUI()
     {
-        Draw_Spell_And_Target();
+       // Draw_Spell_And_Target();
 
         combatUI.SetActive(true);
         pnlAlly = GameObject.Find("PNL_TeamHp");
@@ -637,7 +645,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (allies[currentPlayer] != null)
                 {
-                    if (allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
+                    if (allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking") || allies[currentPlayer].deplacement.anim.GetBool("isDying"))
                     {
                         moving = true;
                     }
@@ -647,7 +655,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (ennemies[currentPlayer] != null)
                 {
-                    if (ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking"))
+                    if (ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking") || ennemies[currentPlayer].deplacement.anim.GetBool("isDying"))
                     {
                         moving = true;
                     }
@@ -701,7 +709,8 @@ public class CombatTurn : MonoBehaviour
             {
                 if (allies[i].defeated)
                 {
-                    allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    //allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    allies[i].Die();
                     //allies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     allies[i] = null;
                 }
@@ -715,10 +724,14 @@ public class CombatTurn : MonoBehaviour
                 if (ennemies[i].defeated)
                 {
                     //ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
-                    ennemies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    //ennemies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    ennemies[i].Die();
                     ennemies[i] = null;
                 }
             }
         }
     }
 }
+
+
+
