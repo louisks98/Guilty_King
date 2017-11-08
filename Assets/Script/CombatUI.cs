@@ -145,7 +145,7 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.BattleHp += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["health"]- 1) + " where Item = 3";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + "a utilisé : Regénération", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Regénération", 2));
                     selectedSpell = null;
 
                 }
@@ -153,7 +153,7 @@ public class CombatUI : MonoBehaviour {
             case "Btn_Item_Def":
                 if (listNbItem["def"] > 0)
                 {
-                    string sqlStat = "select Stat from Item where iditem = 3";
+                    string sqlStat = "select Stat from Item where iditem = 6";
                     reader = bd.select(sqlStat);
                     while (reader.Read())
                     {
@@ -162,14 +162,14 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.battleDef += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["def"]-1) + " where Item = 6";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + "a utilisé : Harden", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Harden", 2));
                     selectedSpell = null;
                 }
                 break;
             case "Btn_Item_Steroids":
                 if (listNbItem["steroid"] > 0)
                 {
-                    string sqlStat = "select Stat from Item where iditem = 3";
+                    string sqlStat = "select Stat from Item where iditem = 7";
                     reader = bd.select(sqlStat);
                     while (reader.Read())
                     {
@@ -178,14 +178,14 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.battleStr += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["steroid"]-1) + " where Item = 7";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + "a utilisé : Stéroid", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Stéroid", 2));
                     selectedSpell = null;
                 }
                 break;
             case "Btn_Item_Speed":
                 if (listNbItem["speed"] > 0)
                 {
-                    string sqlStat = "select Stat from Item where iditem = 3";
+                    string sqlStat = "select Stat from Item where idItem = 5";
                     reader = bd.select(sqlStat);
                     while (reader.Read())
                     {
@@ -194,7 +194,7 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.battleSpd += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["speed"]- 1) + " where Item = 5";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + "a utilisé : Speed boost", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Speed boost", 2));
                     selectedSpell = null;
                 }
                 break;
@@ -235,7 +235,7 @@ public class CombatUI : MonoBehaviour {
             reader = bd.select(selectNbSpeed);
             while (reader.Read())
             {
-                listText[2].text = "x" + reader.GetInt32(0).ToString();
+                listText[3].text = "x" + reader.GetInt32(0).ToString();
                 listNbItem["speed"] = reader.GetInt32(0);
             }
             reader.Close();
@@ -243,7 +243,7 @@ public class CombatUI : MonoBehaviour {
             reader = bd.select(selectNbSteroid);
             while (reader.Read())
             {
-                listText[3].text = "x" + reader.GetInt32(0).ToString();
+                listText[2].text = "x" + reader.GetInt32(0).ToString();
                 listNbItem["steroid"] = reader.GetInt32(0);
             }
             reader.Close();
