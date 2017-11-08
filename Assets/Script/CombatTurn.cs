@@ -160,50 +160,58 @@ public class CombatTurn : MonoBehaviour
                     }
                     break;
                 case (CombatStates.ATTACK):
-                    if (currentTeamIsAlly)
+                    if (combatUI.GetComponent<CombatUI>().selectedSpell != null)
                     {
-                        if (allies[currentPlayer] != null)
+                        if (currentTeamIsAlly)
                         {
-                            if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
+                            if (allies[currentPlayer] != null)
                             {
-                                Attack_AOI(ennemies, combatUI.GetComponent<CombatUI>().selectedSpell);
+                                if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
+                                {
+                                    Attack_AOI(ennemies, combatUI.GetComponent<CombatUI>().selectedSpell);
+                                }
+                                else
+                                {
+                                    Attack(combatUI.GetComponent<CombatUI>().selectedSpell, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                }
                             }
-                            else
+                        }
+                        else
+                        {
+                            if (ennemies[currentPlayer] != null)
                             {
-                                Attack(combatUI.GetComponent<CombatUI>().selectedSpell, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
+
+                                if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
+                                {
+                                    int id = random.Next(-1, ennemies.Count);
+                                    while (ennemies[id] == null)
+                                    {
+                                        id = random.Next(-1, 4);
+                                    }
+                                    Attack(ennemies[currentPlayer].sorts[randomNumber], ennemies[id].id);
+                                }
+                                else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
+                                {
+                                    Attack_AOI(allies, ennemies[currentPlayer].sorts[randomNumber]);
+                                }
+                                else
+                                {
+                                    int id = random.Next(-1, allies.Count);
+                                    while (allies[id] == null)
+                                    {
+                                        id = random.Next(-1, 4);
+                                    }
+                                    Attack(ennemies[currentPlayer].sorts[randomNumber], allies[id].id);
+                                }
                             }
                         }
                     }
                     else
                     {
-                        if (ennemies[currentPlayer] != null)
-                        {
-                            int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
-
-                            if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
-                            {
-                                int id = random.Next(-1, ennemies.Count);
-                                while (ennemies[id] == null)
-                                {
-                                    id = random.Next(-1, 4);
-                                }
-                                Attack(ennemies[currentPlayer].sorts[randomNumber], ennemies[id].id);
-                            }
-                            else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
-                            {
-                                Attack_AOI(allies, ennemies[currentPlayer].sorts[randomNumber]);
-                            }
-                            else
-                            {
-                                int id = random.Next(-1, allies.Count);
-                                while (allies[id] == null)
-                                {
-                                    id = random.Next(-1, 4);
-                                }
-                                Attack(ennemies[currentPlayer].sorts[randomNumber], allies[id].id);
-                            }
-                        }
+                        //Utiliser la potion
                     }
+
                     combatUI.GetComponent<CombatUI>().HideMenu();
                     Clean_The_Board();
                     Update_Stats();
