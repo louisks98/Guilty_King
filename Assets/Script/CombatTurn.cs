@@ -309,7 +309,7 @@ public class CombatTurn : MonoBehaviour
     {
         Quit(target_win);
         LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
-        LvlMenu.addSouls(3);
+        LvlMenu.addSouls(10);
         LvlMenu.UpdateUI();
 
         lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
