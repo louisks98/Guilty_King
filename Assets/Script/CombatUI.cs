@@ -258,9 +258,9 @@ public class CombatUI : MonoBehaviour {
         ReactivateButtons(listBtnSpell);
         if(listBtnSpell != null && pers != null)
         {
-            switch (pers.name)
+            switch (pers.id)
             {
-                case "Jimmy":
+                case 1:
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
                         if (i < listSpellHero.Count && listSpellHero[i] != null && pers.sorts[i] != null)
@@ -272,7 +272,7 @@ public class CombatUI : MonoBehaviour {
                     }
                     break;
 
-                case "Jeanne":
+                case 3:
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
                         if (i < listSpellFire.Count && listSpellFire[i] != null && pers.sorts[i] != null)
@@ -285,7 +285,7 @@ public class CombatUI : MonoBehaviour {
                     }
                     break;
 
-                case "Bob":
+                case 2:
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
                         if (i < listSpellEarth.Count && listSpellEarth[i] != null && pers.sorts[i] != null)
@@ -297,7 +297,7 @@ public class CombatUI : MonoBehaviour {
                     }
                     break;
 
-                case "Maryse":
+                case 4:
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
                         if (i < listSpellIce.Count && listSpellIce[i] != null && pers.sorts[i] != null)
