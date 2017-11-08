@@ -68,6 +68,8 @@ public class CombatTurn : MonoBehaviour
 
     System.Random random;
 
+    public GameObject lvlMenu;
+
     void Start()
     {
         currentState = CombatStates.NOTINCOMBAT;
@@ -306,6 +308,11 @@ public class CombatTurn : MonoBehaviour
     void Combat_WIN()
     {
         Quit(target_win);
+        LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
+        LvlMenu.addSouls(3);
+        LvlMenu.UpdateUI();
+
+        lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
     }
 
     void Combat_Lose()
