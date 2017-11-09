@@ -59,6 +59,7 @@ public class CombatTurn : MonoBehaviour
     private GameObject pnlAlly;
     private GameObject pnlEnemy;
     private GameObject pnlButton;
+    public GameObject lvlMenu;
 
     private List<Button> ListBtn;
     private List<Text> hpTextAlly;
@@ -671,7 +672,24 @@ public class CombatTurn : MonoBehaviour
         return moving;
     }
 
-    void Attack(Sort spell, int idPersonnage)
+    void Clean_The_Board()
+    {
+        for (int i = 0; i < allies.Count; i++)
+        {
+            if (allies[i] != null)
+            {
+                if (allies[i].defeated)
+                {
+                    //allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
+                    allies[i].Die();
+                    //allies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    allies[i] = null;
+                }
+            }
+        }
+    }
+
+        void Attack(Sort spell, int idPersonnage)
     {
         foreach (Personnage perso in allies)
         {
@@ -711,9 +729,9 @@ public class CombatTurn : MonoBehaviour
 
 
 
-    public GameObject lvlMenu;
 
-    void Start()
+
+void Start()
                             if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
                             {
                                 Attack_AOI(ennemies, combatUI.GetComponent<CombatUI>().selectedSpell);
@@ -756,23 +774,9 @@ public class CombatTurn : MonoBehaviour
                     {
                         moving = true;
 
-    void Clean_The_Board()
-    {
-        for (int i = 0; i < allies.Count; i++)
-        {
-            if (allies[i] != null)
-            {
-                if (allies[i].defeated)
-                {
-                    //allies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
-                    allies[i].Die();
-                    //allies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
-                    allies[i] = null;
-                }
-            }
-        }
+    
 
-        for (int i = 0; i < ennemies.Count; i++)
+        for (int i = 0; i<ennemies.Count; i++)
         {
             if (ennemies[i] != null)
             {
@@ -781,7 +785,7 @@ public class CombatTurn : MonoBehaviour
                     //ennemies[i].gameObject.GetComponent<Rigidbody2D>().position = target_Exile.position;
                     //ennemies[i].gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     ennemies[i].Die();
-                    ennemies[i] = null;
+ennemies[i] = null;
                 }
             }
         }
