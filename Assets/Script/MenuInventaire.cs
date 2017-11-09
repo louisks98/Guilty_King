@@ -75,6 +75,7 @@ public class MenuInventaire : MonoBehaviour {
         List<Image> slots = new List<Image>(panel.GetComponentsInChildren<Image>());
         List<Text> textNb = new List<Text>(panel.GetComponentsInChildren<Text>());
         Image img;
+        int NbItemPlacer= 0;
 
         for(int i = 0; i < item.Count ; i++)
         {
@@ -95,9 +96,10 @@ public class MenuInventaire : MonoBehaviour {
                             {
                                 img = slots[j + 1];
                                 img.sprite = imageItem[0];
-                                textNb[i].text = "x" + nbItem.ToString();
+                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
                                 Debug.Log("health");
                                 placed[i] = true;
+                                NbItemPlacer++;
                             }
                             reader.Close();
                             break;
@@ -112,9 +114,10 @@ public class MenuInventaire : MonoBehaviour {
                             {
                                 img = slots[j + 1];
                                 img.sprite = imageItem[1];
-                                textNb[i].text = "x" + nbItem.ToString();
+                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
                                 Debug.Log("mana");
                                 placed[i] = true;
+                                NbItemPlacer++;
                             }
                             reader.Close();
                             break;
@@ -129,9 +132,10 @@ public class MenuInventaire : MonoBehaviour {
                             {
                                 img = slots[j + 1];
                                 img.sprite = imageItem[2];
-                                textNb[i].text = "x" + nbItem.ToString();
+                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
                                 Debug.Log("steroid");
                                 placed[i] = true;
+                                NbItemPlacer++;
                             }
                             reader.Close();
                             break;
@@ -146,9 +150,10 @@ public class MenuInventaire : MonoBehaviour {
                             {
                                 img = slots[j + 1];
                                 img.sprite = imageItem[3];
-                                textNb[i].text = "x" + nbItem.ToString();
+                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
                                 Debug.Log("Speed boost");
                                 placed[i] = true;
+                                NbItemPlacer++;
                             }
                             break;
                     }
