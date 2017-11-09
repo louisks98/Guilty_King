@@ -10,6 +10,7 @@ public class AddItem : MonoBehaviour {
 
     public string item;
     public bool Open = false;
+    public Sprite imgChest;
     private SpriteRenderer sprite;
 
 	// Use this for initialization
@@ -37,18 +38,18 @@ public class AddItem : MonoBehaviour {
                     try
                     {
                         
-                        reader = bd.select("select count(idInventaireItem) from InventaireItem where Personnage = 1");
+                        reader = bd.select("select Quantite from InventaireItem where Personnage = 1 and Item = (select idItem from Item where Nom = '"+ item +"')");
                         while (reader.Read())
                         {
                             nbItem = reader.GetInt32(0);
                             Debug.Log("nbItem : " + nbItem);
                         }
 
-                        bd.insert("insert into InventaireItem values(" + (nbItem + 1) + ",(select idItem from Item where Nom = '" + item + "'), 1, 1)");
+                        bd.insert("update InventaireItem set Quantite = " + (nbItem + 1) + " where Item = (select idItem from Item where Nom = '" + item + "') and Personnage = 1");
                         Debug.Log("item ajouter");
                         Open = true;
                         sprite = GetComponent<SpriteRenderer>();
-                        sprite.sprite = Resources.Load(Application.dataPath + @"\Item\chest_Open", typeof(Image)) as Sprite;
+                        sprite.sprite = imgChest;
                         reader.Dispose();
                         bd.Close();
                         Debug.Log("close addItem");
