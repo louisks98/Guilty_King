@@ -18,9 +18,8 @@ public class DestroyObject : MonoBehaviour {
         theMenus = Menus.GetComponent<PauseMenu>();
         LvlMenu = FindObjectOfType<LevelUp>();
 
-        LvlMenu.addSouls(10);
+        //LvlMenu.addSouls(10);
         LvlMenu.UpdateUI();
-
     }
 	
 	// Update is called once per frame

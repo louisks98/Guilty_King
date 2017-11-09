@@ -82,7 +82,7 @@ public class LevelUp : MonoBehaviour
         if (forceValue < 600 && soulsNumber > 0)
         {
             bdModifier = true;
-            forceValue += 100;
+            forceValue += 1;
             soulsNumber--;
             UpdateUI();
         }
@@ -93,7 +93,7 @@ public class LevelUp : MonoBehaviour
         if (DefenseValue < 600 && soulsNumber > 0)
         {
             bdModifier = true;
-            DefenseValue += 100;
+            DefenseValue += 1;
             soulsNumber--;
             UpdateUI();
         }
@@ -104,7 +104,7 @@ public class LevelUp : MonoBehaviour
         if (SpeedValue < 600 && soulsNumber > 0)
         {
             bdModifier = true;
-            SpeedValue += 100;
+            SpeedValue += 1;
             soulsNumber--;
             UpdateUI();
         }

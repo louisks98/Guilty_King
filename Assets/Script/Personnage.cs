@@ -128,6 +128,11 @@ namespace Assets.Script
             deplacement.isAttacking = true;
         }
 
+        public void Die()
+        {
+            deplacement.isDying = true;
+        }
+
         public void dealDamage(int nbDamage)
         {
             BattleHp = BattleHp + nbDamage;
