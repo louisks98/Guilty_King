@@ -7,7 +7,6 @@ public class DialogHolder : MonoBehaviour {
     public string dialogue;
     private DialogueManager dMan;
     public string[] dialogueLines;
-
     public GameObject ennemy;
     bool inCombat;
 

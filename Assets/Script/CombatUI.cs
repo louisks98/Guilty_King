@@ -147,7 +147,7 @@ public class CombatUI : MonoBehaviour {
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Regénération", 2));
                     selectedSpell = null;
-
+                    closeMenu();
                 }
                 break;
             case "Btn_Item_Def":
@@ -164,6 +164,7 @@ public class CombatUI : MonoBehaviour {
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Harden", 2));
                     selectedSpell = null;
+                    closeMenu();
                 }
                 break;
             case "Btn_Item_Steroids":
@@ -180,6 +181,7 @@ public class CombatUI : MonoBehaviour {
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Stéroid", 2));
                     selectedSpell = null;
+                    closeMenu();
                 }
                 break;
             case "Btn_Item_Speed":
@@ -196,12 +198,11 @@ public class CombatUI : MonoBehaviour {
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Speed boost", 2));
                     selectedSpell = null;
+                    closeMenu();
                 }
                 break;
         }
-        onClickCancel();
         bd.Close();
-        CombatTurn.selecting = false;
     }
 
     private void AfficherItem()
