@@ -27,6 +27,8 @@ public class CombatUI : MonoBehaviour {
     private List<Button> listBtnEnemy;
     private List<Button> listBtnSpell;
     private List<Button> ListBtnItem;
+    private List<Text> toolTipSpellCharacter;
+    private List<Text> toolTipItem;
     private Dictionary<string, int> listNbItem;
     private GameObject combatMessage;
 
@@ -49,6 +51,9 @@ public class CombatUI : MonoBehaviour {
         ListBtnItem.Remove(ListBtnItem[ListBtnItem.Count - 1]);
 
         combatMessage =GameObject.Find("Combat_Message");
+
+        toolTipItem = new List<Text>(GameObject.Find("ToolTipItem").GetComponentsInChildren<Text>());
+        toolTipSpellCharacter = new List<Text>(GameObject.Find("ToolTipSpell_CharSelect").GetComponentsInChildren<Text>());
     } 
 
     public void onClickAttack()
@@ -387,6 +392,40 @@ public class CombatUI : MonoBehaviour {
     public void ShowMenu()
     {
         pnlMenuBtn.SetActive(true);
+    }
+
+    public void ShowToolTipSpell(int idBtn)
+    {
+        toolTipSpellCharacter[idBtn].text = currentPerso.sorts[idBtn].nom + " ," + currentPerso.sorts[idBtn].type + " ," + currentPerso.sorts[idBtn].nbattaque;
+    }
+
+    public void HideToolTipSpell(int idBtn)
+    {
+        toolTipSpellCharacter[idBtn].text = "";
+    }
+
+    public void ShowTooltipItem(int idBtn)
+    {
+        switch(idBtn)
+        {
+            case 0:
+                toolTipItem[idBtn].text = "Potion Regeneration: +10hp";
+                break;
+            case 1:
+                toolTipItem[idBtn].text = "Potion Steroids: +10Str";
+                break;
+            case 2:
+                toolTipItem[idBtn].text = "Potion Harden: +10Def";
+                break;
+            case 3:
+                toolTipItem[idBtn].text = "Potion Speed boost: +10Spd";
+                break;
+        }
+    }
+
+    public void HideToolTipItem(int idBtn)
+    {
+        toolTipItem[idBtn].text = "";
     }
 }
 
