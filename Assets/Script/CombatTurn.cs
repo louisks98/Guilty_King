@@ -81,7 +81,7 @@ public class CombatTurn : MonoBehaviour
 
     void Update()
     {
-       
+        Debug.Log(!currentPlayerIsMoving());
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             Debug.Log(currentState);
