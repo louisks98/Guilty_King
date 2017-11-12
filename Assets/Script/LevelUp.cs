@@ -140,12 +140,6 @@ public class LevelUp : MonoBehaviour
                 Debug.Log(e);
                 bdModifier = false;
             }
-            //finally
-            //{
-            //    bd.Close();
-            //    Debug.Log("bd fermer");
-            //    bdModifier = false;
-            //}
         }
     }
 

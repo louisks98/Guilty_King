@@ -8515,7 +8515,7 @@ MonoBehaviour:
   go_enemy1: {fileID: 35983432}
   go_enemy2: {fileID: 1375124214}
   go_enemy3: {fileID: 2140523080}
-  go_enemy4: {fileID: 1239609146}
+  go_enemy4: {fileID: 0}
   target_combat: {fileID: 1810083723}
   target_win: {fileID: 761507643}
   target_loose: {fileID: 1398425819}
@@ -10595,9 +10595,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 850647963}
   - {fileID: 833927800}
   - {fileID: 1956831379}
-  - {fileID: 850647963}
   m_Father: {fileID: 453415698}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13052,7 +13052,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 704149322}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835133022
 GameObject:
@@ -13202,7 +13202,7 @@ MonoBehaviour:
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
   target_combat: {fileID: 200958520}
-  target_win: {fileID: 835133023}
+  target_win: {fileID: 850647963}
   target_loose: {fileID: 1398425819}
   target_Ally_1: {fileID: 859048079}
   target_Ally_2: {fileID: 0}
@@ -13211,7 +13211,7 @@ MonoBehaviour:
   target_Exile: {fileID: 409518689}
   hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
-  lvlMenu: {fileID: 861702354}
+  lvlMenu: {fileID: 579880826}
   soolsAfterWin: 3
 --- !u!1 &838739002
 GameObject:
@@ -13377,11 +13377,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850647962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.4, y: -15.2, z: 0}
+  m_LocalPosition: {x: 8.399994, y: -15.199997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 704149322}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &858835516
 GameObject:
@@ -24424,6 +24424,7 @@ GameObject:
   - component: {fileID: 1585035089}
   - component: {fileID: 1585035091}
   - component: {fileID: 1585035090}
+  - component: {fileID: 1585035092}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -24482,6 +24483,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1585035088}
+--- !u!114 &1585035092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585035088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a59409b0255674883924805f499fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabEnemy:
+  - {fileID: 835133022}
+  - {fileID: 523527870}
+  - {fileID: 127374436}
+  - {fileID: 903453050}
+  - {fileID: 73885450}
+  - {fileID: 1620634201}
+  - {fileID: 1204718590}
+  - {fileID: 542883399}
+  - {fileID: 1874585199}
+  - {fileID: 1628880871}
+  - {fileID: 2094395285}
+  - {fileID: 1080582320}
+  - {fileID: 1751707223}
 --- !u!1 &1588512819
 GameObject:
   m_ObjectHideFlags: 0
@@ -32841,7 +32867,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 704149322}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958933945
 GameObject:
@@ -35526,7 +35552,6 @@ GameObject:
   - component: {fileID: 2132323859}
   - component: {fileID: 2132323864}
   - component: {fileID: 2132323865}
-  - component: {fileID: 2132323866}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Hero
@@ -35602,7 +35627,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132323858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.4, y: -91.8, z: 0}
+  m_LocalPosition: {x: 146.1, y: -87.6, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -35675,32 +35700,6 @@ MonoBehaviour:
   buttonDef: {fileID: 60205798}
   buttonSpeed: {fileID: 2076907108}
   exitButton: {fileID: 522903123}
---- !u!114 &2132323866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2132323858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a59409b0255674883924805f499fe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doVerification: 0
-  tabEnemy:
-  - {fileID: 835133022}
-  - {fileID: 523527870}
-  - {fileID: 127374436}
-  - {fileID: 903453050}
-  - {fileID: 73885450}
-  - {fileID: 1620634201}
-  - {fileID: 1204718590}
-  - {fileID: 542883399}
-  - {fileID: 1874585199}
-  - {fileID: 1628880871}
-  - {fileID: 2094395285}
-  - {fileID: 1080582320}
-  - {fileID: 1751707223}
 --- !u!1 &2140523080
 GameObject:
   m_ObjectHideFlags: 0

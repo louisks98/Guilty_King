@@ -84,7 +84,9 @@ public class CombatTurn : MonoBehaviour
         Debug.Log(!currentPlayerIsMoving());
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
+            Debug.Log("Can move : " + PlayerMovment.canMove);
             Debug.Log(currentState);
+
             switch (currentState)
             {
                 case (CombatStates.ANIMSTART):
@@ -205,25 +207,28 @@ public class CombatTurn : MonoBehaviour
                     }
                     else
                     {
-                        if (ennemies[currentPlayer] != null)
+                        if(ennemies != null)
                         {
-                            int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count); // Choisir un spell
+                            if (ennemies[currentPlayer] != null)
+                            {
+                                int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count); // Choisir un spell
 
-                            if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
-                            {
-                                Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
-                            }
-                            else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
-                            {
-                                Attack(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), RandomPersonnage(allies));
-                            }
-                            else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
-                            {
-                                Attack_AOI(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), allies);
-                            }
-                            else if (ennemies[currentPlayer].sorts[randomNumber].type == "AD" || ennemies[currentPlayer].sorts[randomNumber].type == "AF")
-                            {
-                                Buff(ennemies[currentPlayer].sorts[randomNumber].type, ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                                if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
+                                {
+                                    Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                                }
+                                else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
+                                {
+                                    Attack(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), RandomPersonnage(allies));
+                                }
+                                else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
+                                {
+                                    Attack_AOI(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), allies);
+                                }
+                                else if (ennemies[currentPlayer].sorts[randomNumber].type == "AD" || ennemies[currentPlayer].sorts[randomNumber].type == "AF")
+                                {
+                                    Buff(ennemies[currentPlayer].sorts[randomNumber].type, ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                                }
                             }
                         }
                     }
@@ -251,9 +256,6 @@ public class CombatTurn : MonoBehaviour
                     Combat_Lose();
                     break;
                 case (CombatStates.ANIMEND):
-                    //Le personnage peut bouger
-                    PlayerMovment.inCombat = false;
-                    PlayerMovment.canMove = true;
                     currentState = CombatStates.NOTINCOMBAT;
                     break;
                 case (CombatStates.NOTINCOMBAT):
@@ -310,6 +312,10 @@ public class CombatTurn : MonoBehaviour
 
         combatUI.GetComponent<CombatUI>().Reset_BTN();
 
+        //Le personnage peut bouger
+        PlayerMovment.inCombat = false;
+        PlayerMovment.canMove = true;
+
         currentState = CombatStates.ANIMEND;
     }
 
@@ -343,10 +349,23 @@ public class CombatTurn : MonoBehaviour
         }
 
         Quit(target_win);
+
+        //Ouvrir le menu lvl
         LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
         LvlMenu.addSouls(soolsAfterWin);
         LvlMenu.UpdateUI();
         lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
+
+        //Ennemies à null
+        ennemies = null;
+        allies = null;
+        go_enemy1 = null;
+        go_enemy2 = null;
+        go_enemy3 = null;
+        go_enemy4 = null;
+
+        //Faire disparaitre l'ennemie dans le jeu
+        UpdateGameProgress.doVerification = true;
     }
 
     void Combat_Lose()
@@ -851,10 +870,14 @@ public class CombatTurn : MonoBehaviour
 
     int RandomPersonnage(List<Personnage> listPerso)
     {
-        int id = random.Next(-1, listPerso.Count);
-        while (listPerso[id] == null)
+        int id = 0;
+        if (listPerso != null)
         {
-            id = random.Next(-1, 4);
+            id = random.Next(-1, listPerso.Count);
+            while (listPerso[id] == null)
+            {
+                id = random.Next(-1, 4);
+            }   
         }
         return listPerso[id].id;
     }

@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class UpdateGameProgress : MonoBehaviour
 {
-    public bool doVerification;
+    static public bool doVerification;
     public GameObject[] tabEnemy;
 
     // Use this for initialization
     void Start()
     {
-        doVerification = false;
+        doVerification = true;
     }
 
     // Update is called once per frame
@@ -26,7 +26,8 @@ public class UpdateGameProgress : MonoBehaviour
 
             for (int i = 0; i < tabEnemy.Length; i++)
             {
-                string sqlEstVaincu = "select vaincue from personnage where idPersonnage = " + i + 2; // car le Id personnage commence à 1 (+1) et le héro ne doit pas disparaitre (+1).
+                estVaincu = "N";
+                string sqlEstVaincu = "select vaincue from personnage where idPersonnage = " + (i + 2); // car le Id personnage commence à 1 (+1) et le héro ne doit pas disparaitre (+1).
                 reader = bd.select(sqlEstVaincu);
                 string estVaincu = "N";
                 while (reader.Read())
@@ -37,10 +38,9 @@ public class UpdateGameProgress : MonoBehaviour
                 {
                     tabEnemy[i].SetActive(false);
                 }
-                else
-                {
-                    tabEnemy[i].SetActive(true);
-                }
+
+                reader.Close();
+                reader = null;
             }
             bd.Close();
             doVerification = false;
