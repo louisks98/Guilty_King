@@ -41,10 +41,12 @@ namespace Assets.Script
         {
             try
             {
+                int rst;
                 cmd = new SqliteCommand();
                 cmd.Connection = dbconn;
                 cmd.CommandText = query;
-                cmd.ExecuteNonQuery();
+                rst = cmd.ExecuteNonQuery();
+                rst += 10;
                 cmd.Dispose();
             }
             catch(SqliteException e)

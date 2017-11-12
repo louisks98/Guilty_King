@@ -28,6 +28,7 @@ public class CombatUI : MonoBehaviour {
     private List<Button> listBtnSpell;
     private List<Button> ListBtnItem;
     private Dictionary<string, int> listNbItem;
+    private GameObject combatMessage;
 
     private Personnage currentPerso { get; set; }
 
@@ -46,6 +47,8 @@ public class CombatUI : MonoBehaviour {
 
         ListBtnItem = new List<Button>(pnlItemSelect.GetComponentsInChildren<Button>());
         ListBtnItem.Remove(ListBtnItem[ListBtnItem.Count - 1]);
+
+        combatMessage =GameObject.Find("Combat_Message");
     } 
 
     public void onClickAttack()
@@ -73,7 +76,7 @@ public class CombatUI : MonoBehaviour {
 
         selectedSpell = currentPerso.sorts[i];
 
-        if (currentPerso.sorts[i].type == "GR")
+        if (selectedSpell.type == "GR" || selectedSpell.type == "AD" || selectedSpell.type == "AF")
         {
             AfficherAlly();
         }
@@ -98,7 +101,7 @@ public class CombatUI : MonoBehaviour {
 
     public void onCLickTarget(int i)
     {
-        if (selectedSpell.type == "GR")
+        if (selectedSpell.type == "GR" || selectedSpell.type == "AD" || selectedSpell.type == "AF")
         {
             if (listAllies[i] != null)
             {
@@ -126,40 +129,80 @@ public class CombatUI : MonoBehaviour {
     {
         string btnName = EventSystem.current.currentSelectedGameObject.name;
         AccesBD bd = new AccesBD();
+        SqliteDataReader reader;
+        int buff = 0;
         switch (btnName)
         {
             case "Btn_Item_Health":
                 if(listNbItem["health"] > 0)
                 {
+                    string sqlStat = "select Stat from Item where iditem = 3";
+                    reader = bd.select(sqlStat);
+                    while(reader.Read())
+                    {
+                        buff = reader.GetInt32(0);
+                    }
+                    currentPerso.BattleHp += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["health"]- 1) + " where Item = 3";
                     bd.insert(sqlupdate);
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Regénération", 2));
+                    selectedSpell = null;
+                    closeMenu();
                 }
                 break;
             case "Btn_Item_Def":
                 if (listNbItem["def"] > 0)
                 {
+                    string sqlStat = "select Stat from Item where iditem = 6";
+                    reader = bd.select(sqlStat);
+                    while (reader.Read())
+                    {
+                        buff = reader.GetInt32(0);
+                    }
+                    currentPerso.BattleDef += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["def"]-1) + " where Item = 6";
                     bd.insert(sqlupdate);
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Harden", 2));
+                    selectedSpell = null;
+                    closeMenu();
                 }
                 break;
             case "Btn_Item_Steroids":
                 if (listNbItem["steroid"] > 0)
                 {
+                    string sqlStat = "select Stat from Item where iditem = 7";
+                    reader = bd.select(sqlStat);
+                    while (reader.Read())
+                    {
+                        buff = reader.GetInt32(0);
+                    }
+                    currentPerso.BattleStr += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["steroid"]-1) + " where Item = 7";
                     bd.insert(sqlupdate);
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Stéroid", 2));
+                    selectedSpell = null;
+                    closeMenu();
                 }
                 break;
             case "Btn_Item_Speed":
                 if (listNbItem["speed"] > 0)
                 {
+                    string sqlStat = "select Stat from Item where idItem = 5";
+                    reader = bd.select(sqlStat);
+                    while (reader.Read())
+                    {
+                        buff = reader.GetInt32(0);
+                    }
+                    currentPerso.battleSpd += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["speed"]- 1) + " where Item = 5";
                     bd.insert(sqlupdate);
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Speed boost", 2));
+                    selectedSpell = null;
+                    closeMenu();
                 }
                 break;
         }
-        onClickCancel();
         bd.Close();
-        CombatTurn.selecting = false;
     }
 
     private void AfficherItem()
@@ -193,7 +236,7 @@ public class CombatUI : MonoBehaviour {
             reader = bd.select(selectNbSpeed);
             while (reader.Read())
             {
-                listText[2].text = "x" + reader.GetInt32(0).ToString();
+                listText[3].text = "x" + reader.GetInt32(0).ToString();
                 listNbItem["speed"] = reader.GetInt32(0);
             }
             reader.Close();
@@ -201,7 +244,7 @@ public class CombatUI : MonoBehaviour {
             reader = bd.select(selectNbSteroid);
             while (reader.Read())
             {
-                listText[3].text = "x" + reader.GetInt32(0).ToString();
+                listText[2].text = "x" + reader.GetInt32(0).ToString();
                 listNbItem["steroid"] = reader.GetInt32(0);
             }
             reader.Close();
@@ -213,7 +256,6 @@ public class CombatUI : MonoBehaviour {
     
     public void AfficherEnemy()
     {
-        Debug.Log("call ReactivateButtons enemy");
         ReactivateButtons(listBtnEnemy);
         if(listBtnEnemy != null && listEnnemies != null)
         {
@@ -222,7 +264,6 @@ public class CombatUI : MonoBehaviour {
                 if (i < listEnemySprites.Count && listEnemySprites[i] != null && listEnnemies[i] != null)
                 {
                     listBtnEnemy[i].image.sprite = listEnemySprites[i];
-                    Debug.Log("Afficher enemy sprite" + i);
                 }
                 else
                     listBtnEnemy[i].gameObject.SetActive(false);
@@ -233,7 +274,6 @@ public class CombatUI : MonoBehaviour {
 
     public void AfficherAlly()
     {
-        Debug.Log("call ReactivateButtons ally");
         ReactivateButtons(listBtnEnemy);
         if (listBtnEnemy != null && listAllies != null)
         {
@@ -254,7 +294,6 @@ public class CombatUI : MonoBehaviour {
     public void AfficherSpells(Personnage pers)
     {
         currentPerso = pers;
-        Debug.Log("call ReactivateButtons spell");
         ReactivateButtons(listBtnSpell);
         if(listBtnSpell != null && pers != null)
         {
@@ -313,6 +352,15 @@ public class CombatUI : MonoBehaviour {
         }
     }
 
+    public IEnumerator ShowMessage(string msg, int delai)
+    {
+        combatMessage.GetComponent<Text>().text = msg;
+        //combatMessage.SetActive(true);
+        yield return new WaitForSeconds(delai);
+        combatMessage.GetComponent<Text>().text = "";
+        //combatMessage.SetActive(false); // Cause trop de problème
+    }
+
     private void ReactivateButtons(List<Button> listBtn)
     {
         if(listBtn != null)
@@ -320,7 +368,6 @@ public class CombatUI : MonoBehaviour {
             foreach (Button b in listBtn)
             {
                 b.gameObject.SetActive(true);
-                Debug.Log("ReactivateButtons");
             }
         }
     }
