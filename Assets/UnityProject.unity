@@ -2371,7 +2371,6 @@ MonoBehaviour:
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 60
-  soolsAfterWin: 20
 --- !u!1 &139088315
 GameObject:
   m_ObjectHideFlags: 0
@@ -35335,11 +35334,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a59409b0255674883924805f499fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doVerification: 0
   tabEnemy:
-  - {fileID: 1459843809}
-  - {fileID: 656548714}
-  - {fileID: 656548714}
-  - {fileID: 656548714}
+  - {fileID: 835133022}
+  - {fileID: 523527870}
+  - {fileID: 127374436}
+  - {fileID: 903453050}
+  - {fileID: 73885450}
+  - {fileID: 1620634201}
+  - {fileID: 1204718590}
+  - {fileID: 542883399}
+  - {fileID: 1874585199}
+  - {fileID: 1628880871}
+  - {fileID: 2094395285}
+  - {fileID: 1080582320}
+  - {fileID: 1751707223}
 --- !u!1 &2140523080
 GameObject:
   m_ObjectHideFlags: 0
