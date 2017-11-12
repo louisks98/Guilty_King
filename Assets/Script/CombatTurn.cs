@@ -31,10 +31,10 @@ public class CombatTurn : MonoBehaviour
     public bool currentTeamIsAlly { get; set; }
     public int currentPlayer { get; set; }
 
-    public int id_enemy1;
-    public int id_enemy2;
-    public int id_enemy3;
-    public int id_enemy4;
+    public int id_enemy1 = 0;
+    public int id_enemy2 = 0;
+    public int id_enemy3 = 0;
+    public int id_enemy4 = 0;
 
     public GameObject go_enemy1 = null;
     public GameObject go_enemy2 = null;
@@ -71,11 +71,12 @@ public class CombatTurn : MonoBehaviour
 
     public GameObject lvlMenu;
 
+    public int soolsAfterWin;
+
     void Start()
     {
         currentState = CombatStates.NOTINCOMBAT;
         CombatTurn.selecting = false;
-        random = new System.Random();
     }
 
     void Update()
@@ -172,50 +173,57 @@ public class CombatTurn : MonoBehaviour
                     }
                     break;
                 case (CombatStates.ATTACK):
-                    if(combatUI.GetComponent<CombatUI>().selectedSpell != null)
+
+                    if (currentTeamIsAlly)
                     {
-                        if (currentTeamIsAlly)
+                        if (allies[currentPlayer] != null)
                         {
-                            if (allies[currentPlayer] != null)
+                            if(combatUI.GetComponent<CombatUI>().selectedSpell != null)
                             {
                                 if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
                                 {
-                                    Attack_AOI(ennemies, combatUI.GetComponent<CombatUI>().selectedSpell);
+                                    if(combatUI.GetComponent<CombatUI>().selectedSpell.id == "H4")
+                                    {
+                                        allies[currentPlayer].dealDamage(-(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur)));
+                                    }
+                                    Attack_AOI(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur), ennemies);
                                 }
-                                else
+                                else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AS")
                                 {
-                                    Attack(combatUI.GetComponent<CombatUI>().selectedSpell, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                    Attack(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur), combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                }
+                                else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "GR")
+                                {
+                                    Attack(combatUI.GetComponent<CombatUI>().selectedSpell.valeur, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                }
+                                else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AD" || combatUI.GetComponent<CombatUI>().selectedSpell.type == "AF")
+                                {
+                                    Buff(combatUI.GetComponent<CombatUI>().selectedSpell.type, combatUI.GetComponent<CombatUI>().selectedSpell.valeur, combatUI.GetComponent<CombatUI>().selectedEnemy);
                                 }
                             }
                         }
-                        else
+                    }
+                    else
+                    {
+                        if (ennemies[currentPlayer] != null)
                         {
-                            if (ennemies[currentPlayer] != null)
-                            {
-                                int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count);
+                            int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count); // Choisir un spell
 
-                                if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
-                                {
-                                    int id = random.Next(-1, ennemies.Count);
-                                    while (ennemies[id] == null)
-                                    {
-                                        id = random.Next(-1, 4);
-                                    }
-                                    Attack(ennemies[currentPlayer].sorts[randomNumber], ennemies[id].id);
-                                }
-                                else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
-                                {
-                                    Attack_AOI(allies, ennemies[currentPlayer].sorts[randomNumber]);
-                                }
-                                else
-                                {
-                                    int id = random.Next(-1, allies.Count);
-                                    while (allies[id] == null)
-                                    {
-                                        id = random.Next(-1, 4);
-                                    }
-                                    Attack(ennemies[currentPlayer].sorts[randomNumber], allies[id].id);
-                                }
+                            if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
+                            {
+                                Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                            }
+                            else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
+                            {
+                                Attack(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), RandomPersonnage(allies));
+                            }
+                            else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
+                            {
+                                Attack_AOI(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), allies);
+                            }
+                            else if (ennemies[currentPlayer].sorts[randomNumber].type == "AD" || ennemies[currentPlayer].sorts[randomNumber].type == "AF")
+                            {
+                                Buff(ennemies[currentPlayer].sorts[randomNumber].type, ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
                             }
                         }
                     }
@@ -307,9 +315,36 @@ public class CombatTurn : MonoBehaviour
 
     void Combat_WIN()
     {
+        string sql = "UPDATE Personnage SET vaincue = 'O' where idPersonnage = ";
+
+        if (id_enemy1 != 0)
+        {
+            AccesBD bd = new AccesBD();
+            bd.insert(sql + id_enemy1);
+            bd.Close();
+        }
+        if (id_enemy2 != 0)
+        {
+            AccesBD bd = new AccesBD();
+            bd.insert(sql + id_enemy2);
+            bd.Close();
+        }
+        if (id_enemy3 != 0)
+        {
+            AccesBD bd = new AccesBD();
+            bd.insert(sql + id_enemy3);
+            bd.Close();
+        }
+        if (id_enemy4 != 0)
+        {
+            AccesBD bd = new AccesBD();
+            bd.insert(sql + id_enemy4);
+            bd.Close();
+        }
+
         Quit(target_win);
         LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
-        LvlMenu.addSouls(10);
+        LvlMenu.addSouls(soolsAfterWin);
         LvlMenu.UpdateUI();
         lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
     }
@@ -321,6 +356,7 @@ public class CombatTurn : MonoBehaviour
 
     void Initialize_Component()
     {
+        random = new System.Random();
         Init_Personnages();
         InitUI();
     }
@@ -347,7 +383,7 @@ public class CombatTurn : MonoBehaviour
         ui.listAllySprites.Add(null);
         ui.listAllySprites.Add(null);
 
-        if (Personnage_Is_In_Team(1))
+        if (Personnage_Is_In_Team(1) && target_Ally_1 != null)
         {
             allies[0] = new Personnage(GameObject.FindGameObjectWithTag("HeroCombat"), 1);
             allies[0].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_1.position;
@@ -355,7 +391,7 @@ public class CombatTurn : MonoBehaviour
             ui.listAllySprites[0] = allies[0].gameObject.GetComponent<SpriteRenderer>().sprite;
             allies[0].deplacement.isDying = false;
         }
-        if (Personnage_Is_In_Team(2))
+        if (Personnage_Is_In_Team(2) && target_Ally_2 != null)
         {
             allies[1] = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
             allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
@@ -363,7 +399,7 @@ public class CombatTurn : MonoBehaviour
             ui.listAllySprites[1] = allies[1].gameObject.GetComponent<SpriteRenderer>().sprite;
             allies[1].deplacement.isDying = false;
         }
-        if (Personnage_Is_In_Team(3))
+        if (Personnage_Is_In_Team(3) && target_Ally_3 != null)
         {
             allies[2] = new Personnage(GameObject.FindGameObjectWithTag("FireAlly"), 3);
             allies[2].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_3.position;
@@ -371,7 +407,7 @@ public class CombatTurn : MonoBehaviour
             ui.listAllySprites[2] = allies[2].gameObject.GetComponent<SpriteRenderer>().sprite;
             allies[2].deplacement.isDying = false;
         }
-        if (Personnage_Is_In_Team(4))
+        if (Personnage_Is_In_Team(4) && target_Ally_4 != null)
         {
             allies[3] = new Personnage(GameObject.FindGameObjectWithTag("IceAlly"), 4);
             allies[3].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_4.position;
@@ -399,18 +435,12 @@ public class CombatTurn : MonoBehaviour
                     isKnown = true;
                 }
             }
+            bd.Close();
         }
         catch (SqliteException e)
         {
-            Debug.Log(e);
-        }
-        catch (Exception e)
-        {
-            Debug.Log(e);
-        }
-        finally
-        {
             bd.Close();
+            Debug.Log(e);
         }
 
         Debug.Log("Est dans la team:" + isKnown.ToString());
@@ -637,7 +667,17 @@ public class CombatTurn : MonoBehaviour
 
     public void QuitButton()
     {
-        Quit(target_loose);
+        Quit(target_win);
+        //if (Escape())
+        //{
+        //    Quit(target_win);
+        //}
+        //else
+        //{
+        //    //combatUI.GetComponent<CombatUI>().closeMenu();
+        //    //StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne m'échapperez pas !!!", 1));
+        //    currentState = CombatStates.NEXTPLAYER;
+        //}
     }
 
     bool currentPlayerIsMoving()
@@ -669,7 +709,7 @@ public class CombatTurn : MonoBehaviour
         return moving;
     }
 
-    void Attack(Sort spell, int idPersonnage)
+    void Attack(int damage, int idPersonnage)
     {
         foreach (Personnage perso in allies)
         {
@@ -677,7 +717,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    perso.dealDamage(-(spell.valeur));
+                    perso.dealDamage(-(damage));
                 }
             }
         }
@@ -688,19 +728,78 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    perso.dealDamage(-(spell.valeur));
+                    perso.dealDamage(-(damage));
                 }
             }
         }
     }
 
-    void Attack_AOI(List<Personnage> personnages, Sort spell)
+    void Attack_AOI(int damage,List<Personnage> personnages)
     {
         foreach (Personnage perso in personnages)
         {
             if (perso != null)
             {
-                perso.dealDamage(-(spell.valeur));
+                perso.dealDamage(-(damage));
+            }
+        }
+    }
+
+    void Buff(string type, int valeur, int idPerso)
+    {
+        Personnage personnage = null;
+
+        foreach (Personnage perso in allies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPerso)
+                {
+                    personnage = perso;
+                }
+            }
+        }
+
+        foreach (Personnage perso in ennemies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPerso)
+                {
+                    personnage = perso;
+                }
+            }
+        }
+
+        if(personnage != null)
+        {
+            if (type == "AD")
+            {
+                int temp = personnage.BattleDef;
+                personnage.BattleDef += valeur;
+                int bost = personnage.BattleDef - temp;
+                if (bost == 0)
+                {
+                    StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Défense maximale", 2));
+                }
+                else
+                {
+                    StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Défense + " + (personnage.BattleDef - temp).ToString(), 2));
+                }
+            }
+            if (type == "AF")
+            {
+                int temp = personnage.BattleStr;
+                personnage.BattleStr += valeur;
+                int bost = personnage.BattleStr - temp;
+                if (bost == 0)
+                {
+                    StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Force maximale", 2));
+                }
+                else
+                {
+                    StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Force + " + (personnage.BattleStr - temp).ToString(), 2));
+                }
             }
         }
     }
@@ -730,5 +829,39 @@ public class CombatTurn : MonoBehaviour
                 }
             }
         }
+    }
+
+    bool Escape()
+    {
+        bool escape = false;
+
+        if ((Team_Speed(allies) + random.Next(1, 100)) >= (Team_Speed(ennemies) + random.Next(1, 100)))
+        {
+            escape = true;
+        }
+
+        return escape;
+    }
+
+    int RandomPersonnage(List<Personnage> listPerso)
+    {
+        int id = random.Next(-1, listPerso.Count);
+        while (listPerso[id] == null)
+        {
+            id = random.Next(-1, 4);
+        }
+        return listPerso[id].id;
+    }
+
+    int GetDamage(Personnage perso, int baseDamage)
+    {
+        int damage = baseDamage;
+
+        if(perso.strength > 0)
+        {
+            damage += (baseDamage * perso.strength / 100);
+        }
+
+        return damage;   
     }
 }
