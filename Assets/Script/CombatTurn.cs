@@ -383,12 +383,15 @@ public class CombatTurn : MonoBehaviour
         ui.listAllySprites.Add(null);
         ui.listAllySprites.Add(null);
 
+        SpriteRenderer sprite;
+
         if (Personnage_Is_In_Team(1) && target_Ally_1 != null)
         {
             allies[0] = new Personnage(GameObject.FindGameObjectWithTag("HeroCombat"), 1);
             allies[0].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_1.position;
             allies[0].deplacement.Init_Position();
-            ui.listAllySprites[0] = allies[0].gameObject.GetComponent<SpriteRenderer>().sprite;
+            sprite = allies[0].gameObject.GetComponent<SpriteRenderer>();
+            ui.listAllySprites[0] = sprite.sprite;
             allies[0].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(2) && target_Ally_2 != null)
@@ -396,7 +399,8 @@ public class CombatTurn : MonoBehaviour
             allies[1] = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
             allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
             allies[1].deplacement.Init_Position();
-            ui.listAllySprites[1] = allies[1].gameObject.GetComponent<SpriteRenderer>().sprite;
+            sprite = allies[1].gameObject.GetComponent<SpriteRenderer>();
+            ui.listAllySprites[1] = sprite.sprite;
             allies[1].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(3) && target_Ally_3 != null)
@@ -404,7 +408,8 @@ public class CombatTurn : MonoBehaviour
             allies[2] = new Personnage(GameObject.FindGameObjectWithTag("FireAlly"), 3);
             allies[2].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_3.position;
             allies[2].deplacement.Init_Position();
-            ui.listAllySprites[2] = allies[2].gameObject.GetComponent<SpriteRenderer>().sprite;
+            sprite = allies[2].gameObject.GetComponent<SpriteRenderer>();
+            ui.listAllySprites[2] = sprite.sprite;
             allies[2].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(4) && target_Ally_4 != null)
@@ -412,7 +417,8 @@ public class CombatTurn : MonoBehaviour
             allies[3] = new Personnage(GameObject.FindGameObjectWithTag("IceAlly"), 4);
             allies[3].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_4.position;
             allies[3].deplacement.Init_Position();
-            ui.listAllySprites[3] = allies[3].gameObject.GetComponent<SpriteRenderer>().sprite;
+            sprite = allies[3].gameObject.GetComponent<SpriteRenderer>();
+            ui.listAllySprites[3] = sprite.sprite;
             allies[3].deplacement.isDying = false;
         }
 
