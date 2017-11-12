@@ -24,7 +24,7 @@ public class LevelUp : MonoBehaviour
     public Button exitButton;
 
     private int forceValue;
-    private int DefenseValue;
+    private int defenseValue;
     private int hpValue;
     private int SpeedValue;
     private int soulsNumber;
@@ -36,8 +36,8 @@ public class LevelUp : MonoBehaviour
     int maxSpeed = 60;
 
     int pointForce = 20;
-    int pointDef = 20;
-    int pointSpeed = 20;
+    int pointDef = 10;
+    int pointSpeed = 10;
 
     // Use this for initialization
     void Start()
@@ -53,7 +53,7 @@ public class LevelUp : MonoBehaviour
             {
                 hpValue = reader.GetInt32(1);
                 forceValue = reader.GetInt32(2);
-                DefenseValue = reader.GetInt32(3);
+                defenseValue = reader.GetInt32(3);
                 SpeedValue = reader.GetInt32(4);
                 soulsNumber = reader.GetInt32(5);
             }
@@ -83,7 +83,7 @@ public class LevelUp : MonoBehaviour
         textRemainingSouls.text = soulsNumber.ToString();
 
         sliderForce.value = forceValue / pointForce;
-        sliderDef.value = DefenseValue / pointDef;
+        sliderDef.value = defenseValue / pointDef;
         sliderSpeed.value = SpeedValue / pointSpeed;
     }
 
@@ -100,11 +100,11 @@ public class LevelUp : MonoBehaviour
 
     private void onDefenseClick()
     {
-        if (DefenseValue < maxDef && soulsNumber > 0)
+        if (defenseValue < maxDef && soulsNumber > 0)
         {
             bdModifier = true;
-            DefenseValue += pointDef;
-            hpValue += 100;
+            defenseValue += pointDef;
+            hpValue += 250;
             soulsNumber--;
             UpdateUI();
         }
@@ -130,8 +130,9 @@ public class LevelUp : MonoBehaviour
 
             try
             {
-                string query = "update Stats Set Force = " + forceValue + ", Defence = " + DefenseValue + ", Vitesse = " + SpeedValue + ", nbAmes = " + soulsNumber + ", Point_de_vie = " + hpValue + " where Stats.idStats = 1";
+                string query = "update Stats Set Force = " + forceValue + ", Defence = " + defenseValue + ", Vitesse = " + SpeedValue + ", nbAmes = " + soulsNumber + ", Point_de_vie = " + hpValue + " where Stats.idStats = 1";
                 bd.insert(query);
+                bd.Close();
             }
             catch (SqliteException e)
             {
@@ -139,12 +140,12 @@ public class LevelUp : MonoBehaviour
                 Debug.Log(e);
                 bdModifier = false;
             }
-            finally
-            {
-                bd.Close();
-                Debug.Log("bd fermer");
-                bdModifier = false;
-            }
+            //finally
+            //{
+            //    bd.Close();
+            //    Debug.Log("bd fermer");
+            //    bdModifier = false;
+            //}
         }
     }
 
