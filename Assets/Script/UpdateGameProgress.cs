@@ -22,13 +22,15 @@ public class UpdateGameProgress : MonoBehaviour
         {
             AccesBD bd = new AccesBD();
             SqliteDataReader reader;
-            string estVaincu = "";
+
+            string estVaincu = "N";
 
             for (int i = 0; i < tabEnemy.Length; i++)
             {
                 estVaincu = "N";
                 string sqlEstVaincu = "select vaincue from personnage where idPersonnage = " + (i + 2); // car le Id personnage commence à 1 (+1) et le héro ne doit pas disparaitre (+1).
                 reader = bd.select(sqlEstVaincu);
+
                 while (reader.Read())
                 {
                     estVaincu = reader.GetString(0);

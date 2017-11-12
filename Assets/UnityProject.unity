@@ -2374,6 +2374,8 @@ MonoBehaviour:
     \xE0 l'est dans la carte d'eau..."
   - "Am\xE8ne toi!"
   ennemy: {fileID: 127374436}
+  instantTalk: 1
+  hasBeenTalked: 0
 --- !u!114 &127374442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,6 +3327,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de regeneration
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!58 &219965371
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7825,6 +7829,8 @@ MonoBehaviour:
     la carte d'eau..."
   - "Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
   ennemy: {fileID: 523527870}
+  instantTalk: 1
+  hasBeenTalked: 0
 --- !u!114 &523527875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8107,6 +8113,8 @@ MonoBehaviour:
     courage pour prendre sa place h\xE9 h\xE9..."
   - "Maman: Bonne chance dans ta qu\xEAte!"
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!1 &532811508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8499,6 +8507,8 @@ MonoBehaviour:
   - "Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce throne!"
   - Battons-nous!
   ennemy: {fileID: 542883399}
+  instantTalk: 1
+  hasBeenTalked: 0
 --- !u!114 &542883405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9301,6 +9311,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de defence
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &591290904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13185,6 +13197,8 @@ MonoBehaviour:
     ta force avant que je t'aide!
   - "Tu ne r\xE9ussiras jamais \xE0 me battre!"
   ennemy: {fileID: 835133022}
+  instantTalk: 1
+  hasBeenTalked: 0
 --- !u!114 &835133028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14381,6 +14395,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de regeneration
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &909461565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19366,6 +19382,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de regeneration
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1244574981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19510,6 +19528,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de Regeneration
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1247715283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22193,6 +22213,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de defence
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1447451508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25038,6 +25060,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de steroids
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1601113148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25182,6 +25206,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de vitesse
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1604609642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26279,6 +26305,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de steroids
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1716238378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29506,6 +29534,8 @@ MonoBehaviour:
   dialogueLines:
   - Vous avez recu une potion de steroids
   ennemy: {fileID: 0}
+  instantTalk: 0
+  hasBeenTalked: 0
 --- !u!61 &1836536948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34501,7 +34531,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 14
   m_Sprite: {fileID: 21300006, guid: 95592b28c53b69d40b13be454d0a024c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34531,6 +34561,8 @@ MonoBehaviour:
   - '...Glou Glou...'
   - Vous vous sentez automatiquement plus fort!
   ennemy: {fileID: 0}
+  instantTalk: 1
+  hasBeenTalked: 0
 --- !u!1 &2092012956
 GameObject:
   m_ObjectHideFlags: 0
@@ -35638,7 +35670,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132323858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.1, y: -87.6, z: 0}
+  m_LocalPosition: {x: 144.4, y: -93.2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}

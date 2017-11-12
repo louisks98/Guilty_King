@@ -370,6 +370,7 @@ public class CombatTurn : MonoBehaviour
 
     void Combat_Lose()
     {
+        GetComponent<DialogHolder>().hasBeenTalked = false;
         Quit(target_loose);
     }
 
@@ -692,6 +693,7 @@ public class CombatTurn : MonoBehaviour
 
     public void QuitButton()
     {
+        GetComponent<DialogHolder>().hasBeenTalked = false;
         Quit(target_win);
         //if (Escape())
         //{
