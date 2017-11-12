@@ -76,7 +76,7 @@ public class CombatUI : MonoBehaviour {
 
         selectedSpell = currentPerso.sorts[i];
 
-        if (currentPerso.sorts[i].type == "GR")
+        if (selectedSpell.type == "GR" || selectedSpell.type == "AD" || selectedSpell.type == "AF")
         {
             AfficherAlly();
         }
@@ -101,7 +101,7 @@ public class CombatUI : MonoBehaviour {
 
     public void onCLickTarget(int i)
     {
-        if (selectedSpell.type == "GR")
+        if (selectedSpell.type == "GR" || selectedSpell.type == "AD" || selectedSpell.type == "AF")
         {
             if (listAllies[i] != null)
             {
@@ -159,7 +159,7 @@ public class CombatUI : MonoBehaviour {
                     {
                         buff = reader.GetInt32(0);
                     }
-                    currentPerso.battleDef += buff;
+                    currentPerso.BattleDef += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["def"]-1) + " where Item = 6";
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Harden", 2));
@@ -176,7 +176,7 @@ public class CombatUI : MonoBehaviour {
                     {
                         buff = reader.GetInt32(0);
                     }
-                    currentPerso.battleStr += buff;
+                    currentPerso.BattleStr += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["steroid"]-1) + " where Item = 7";
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Stéroid", 2));
@@ -352,12 +352,13 @@ public class CombatUI : MonoBehaviour {
         }
     }
 
-    IEnumerator ShowMessage(string msg, int delai)
+    public IEnumerator ShowMessage(string msg, int delai)
     {
         combatMessage.GetComponent<Text>().text = msg;
-        combatMessage.SetActive(true);
+        //combatMessage.SetActive(true);
         yield return new WaitForSeconds(delai);
-        combatMessage.SetActive(false);
+        combatMessage.GetComponent<Text>().text = "";
+        //combatMessage.SetActive(false); // Cause trop de problème
     }
 
     private void ReactivateButtons(List<Button> listBtn)

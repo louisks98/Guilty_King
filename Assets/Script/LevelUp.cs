@@ -25,10 +25,19 @@ public class LevelUp : MonoBehaviour
 
     private int forceValue;
     private int DefenseValue;
+    private int hpValue;
     private int SpeedValue;
     private int soulsNumber;
 
     private bool bdModifier = false;
+
+    int maxForce = 120;
+    int maxDef = 60;
+    int maxSpeed = 60;
+
+    int pointForce = 20;
+    int pointDef = 20;
+    int pointSpeed = 20;
 
     // Use this for initialization
     void Start()
@@ -38,10 +47,11 @@ public class LevelUp : MonoBehaviour
         try
         {
             IDataReader reader;
-            reader = bd.select("select * from Stats where Stats.idStats = 2"); // *voir quelle personnage sera le main*
+            reader = bd.select("select * from Stats where Stats.idStats = 1");
 
             while (reader.Read())
             {
+                hpValue = reader.GetInt32(1);
                 forceValue = reader.GetInt32(2);
                 DefenseValue = reader.GetInt32(3);
                 SpeedValue = reader.GetInt32(4);
@@ -72,17 +82,17 @@ public class LevelUp : MonoBehaviour
     {
         textRemainingSouls.text = soulsNumber.ToString();
 
-        sliderForce.value = forceValue;
-        sliderDef.value = DefenseValue;
-        sliderSpeed.value = SpeedValue;
+        sliderForce.value = forceValue / pointForce;
+        sliderDef.value = DefenseValue / pointDef;
+        sliderSpeed.value = SpeedValue / pointSpeed;
     }
 
     public void onForceClick()
     {
-        if (forceValue < 600 && soulsNumber > 0)
+        if (forceValue < maxForce && soulsNumber > 0)
         {
             bdModifier = true;
-            forceValue += 1;
+            forceValue += pointForce;
             soulsNumber--;
             UpdateUI();
         }
@@ -90,10 +100,11 @@ public class LevelUp : MonoBehaviour
 
     private void onDefenseClick()
     {
-        if (DefenseValue < 600 && soulsNumber > 0)
+        if (DefenseValue < maxDef && soulsNumber > 0)
         {
             bdModifier = true;
-            DefenseValue += 1;
+            DefenseValue += pointDef;
+            hpValue += 100;
             soulsNumber--;
             UpdateUI();
         }
@@ -101,10 +112,10 @@ public class LevelUp : MonoBehaviour
 
     private void onSpeedClick()
     {
-        if (SpeedValue < 600 && soulsNumber > 0)
+        if (SpeedValue < maxSpeed && soulsNumber > 0)
         {
             bdModifier = true;
-            SpeedValue += 1;
+            SpeedValue += pointSpeed;
             soulsNumber--;
             UpdateUI();
         }
@@ -119,7 +130,7 @@ public class LevelUp : MonoBehaviour
 
             try
             {
-                string query = "update Stats Set Force = " + forceValue + ", Defence = " + DefenseValue + ", Vitesse = " + SpeedValue + ", nbAmes = " + soulsNumber + " where Stats.idStats = 2";
+                string query = "update Stats Set Force = " + forceValue + ", Defence = " + DefenseValue + ", Vitesse = " + SpeedValue + ", nbAmes = " + soulsNumber + ", Point_de_vie = " + hpValue + " where Stats.idStats = 1";
                 bd.insert(query);
             }
             catch (SqliteException e)
