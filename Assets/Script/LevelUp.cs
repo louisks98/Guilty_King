@@ -74,7 +74,7 @@ public class LevelUp : MonoBehaviour
         finally
         {
             bd.Close();
-            Debug.Log("bd fermer");
+            //Debug.Log("bd fermer");
         }
     }
 

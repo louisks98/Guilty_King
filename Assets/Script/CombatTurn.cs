@@ -81,11 +81,11 @@ public class CombatTurn : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(!currentPlayerIsMoving());
+        //Debug.Log(!currentPlayerIsMoving());
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
-            Debug.Log("Can move : " + PlayerMovment.canMove);
-            Debug.Log(currentState);
+            //Debug.Log("Can move : " + PlayerMovment.canMove);
+            //Debug.Log(currentState);
 
             switch (currentState)
             {
@@ -141,17 +141,23 @@ public class CombatTurn : MonoBehaviour
                 case (CombatStates.ANIMLEFT):
                     if (currentTeamIsAlly)
                     {
-                        if (allies[currentPlayer] != null)
+                        if (allies != null)
                         {
-                            allies[currentPlayer].MoveLeft();
+                            if (allies[currentPlayer] != null)
+                            {
+                                allies[currentPlayer].MoveLeft();
+                            }
                         }
                         currentState = CombatStates.ANIMATTACK;
                     }
                     else
                     {
-                        if (ennemies[currentPlayer] != null)
+                        if(ennemies != null)
                         {
-                            ennemies[currentPlayer].MoveLeft();
+                            if (ennemies[currentPlayer] != null)
+                            {
+                                ennemies[currentPlayer].MoveLeft();
+                            }
                         }
                         currentState = CombatStates.NEXTPLAYER;
                     }
@@ -211,24 +217,28 @@ public class CombatTurn : MonoBehaviour
                         {
                             if (ennemies[currentPlayer] != null)
                             {
-                                int randomNumber = random.Next(-1, ennemies[currentPlayer].sorts.Count); // Choisir un spell
+                                int randomNumber = random.Next(0, ennemies[currentPlayer].sorts.Count); // Choisir un spell
+                                Debug.Log("Sort :" + randomNumber);
+                                if(ennemies[currentPlayer].sorts[randomNumber] != null)
+                                {
+                                    if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
+                                    {
+                                        Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                                    }
+                                    else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
+                                    {
+                                        Attack(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), RandomPersonnage(allies));
+                                    }
+                                    else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
+                                    {
+                                        Attack_AOI(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), allies);
+                                    }
+                                    else if (ennemies[currentPlayer].sorts[randomNumber].type == "AD" || ennemies[currentPlayer].sorts[randomNumber].type == "AF")
+                                    {
+                                        Buff(ennemies[currentPlayer].sorts[randomNumber].type, ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                                    }
+                                }
 
-                                if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
-                                {
-                                    Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
-                                }
-                                else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
-                                {
-                                    Attack(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), RandomPersonnage(allies));
-                                }
-                                else if (ennemies[currentPlayer].sorts[randomNumber].type == "AZ")
-                                {
-                                    Attack_AOI(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), allies);
-                                }
-                                else if (ennemies[currentPlayer].sorts[randomNumber].type == "AD" || ennemies[currentPlayer].sorts[randomNumber].type == "AF")
-                                {
-                                    Buff(ennemies[currentPlayer].sorts[randomNumber].type, ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
-                                }
                             }
                         }
                     }
@@ -248,6 +258,7 @@ public class CombatTurn : MonoBehaviour
                     break;
                 case (CombatStates.NEXTPLAYER):
                     Next_Turn();
+                    Debug.Log("NEXT");
                     break;
                 case (CombatStates.WIN):
                     Combat_WIN();
@@ -469,7 +480,7 @@ public class CombatTurn : MonoBehaviour
             Debug.Log(e);
         }
 
-        Debug.Log("Est dans la team:" + isKnown.ToString());
+        //Debug.Log("Est dans la team:" + isKnown.ToString());
         return isKnown;
     }
 
@@ -560,7 +571,7 @@ public class CombatTurn : MonoBehaviour
         {
             currentState = CombatStates.STARTATTACK;
         }
-        Debug.Log(currentTeamIsAlly.ToString() + currentPlayer);
+        //Debug.Log(currentTeamIsAlly.ToString() + currentPlayer);
     }
 
     //IsLoose
@@ -875,12 +886,13 @@ public class CombatTurn : MonoBehaviour
         int id = 0;
         if (listPerso != null)
         {
-            id = random.Next(-1, listPerso.Count);
+            id = random.Next(0, listPerso.Count);
             while (listPerso[id] == null)
             {
-                id = random.Next(-1, 4);
+                id = random.Next(0, listPerso.Count);
             }   
         }
+        Debug.Log("Target :" + id);
         return listPerso[id].id;
     }
 

@@ -80,7 +80,7 @@ public class PlayerMovment : MonoBehaviour {
             if (heroActive)
             {
                 boat.GetComponent<Rigidbody2D>().position = hero.GetComponent<Rigidbody2D>().position;
-                Debug.Log("Boat to position Hero");
+                //Debug.Log("Boat to position Hero");
             }
             hero.SetActive(false); heroActive = false;
             boat.GetComponent<Rigidbody2D>().MovePosition(rdbody.position + movment * Time.deltaTime * speed);
@@ -91,7 +91,7 @@ public class PlayerMovment : MonoBehaviour {
             if (boatActive)
             {
                 hero.transform.position = boat.GetComponent<Rigidbody2D>().position;
-                Debug.Log("Hero to boat position");
+                //Debug.Log("Hero to boat position");
             }
             boat.SetActive(false); boatActive = false;
             hero.GetComponent<Rigidbody2D>().MovePosition(rdbody.position + movment * Time.deltaTime * speed);
