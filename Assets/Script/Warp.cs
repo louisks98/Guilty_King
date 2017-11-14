@@ -34,6 +34,6 @@ public class Warp : MonoBehaviour {
         boat.GetComponent<Animator>().enabled = true;
         PlayerMovment.isTransition = false;
 
-        Debug.Log("Un objet est entré en colision.");
+        //Debug.Log("Un objet est entré en colision.");
     }
 }

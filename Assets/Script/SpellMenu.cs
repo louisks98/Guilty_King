@@ -82,7 +82,7 @@ public class SpellMenu : MonoBehaviour {
             while (reader.Read())
             {
                 rep = reader.GetString(0);
-                Debug.Log("Hero " + heroId + " vaincue:" + rep);
+                //Debug.Log("Hero " + heroId + " vaincue:" + rep);
             }
 
             if (rep.Equals("O"))
@@ -128,7 +128,7 @@ public class SpellMenu : MonoBehaviour {
                 description = reader.GetString(1);
                 type = reader.GetString(2) + " (X): " + reader.GetDecimal(3).ToString();
                 acquis = reader.GetString(4);
-                Debug.Log("GetSort(" + name + "," + description + "," + type + "," + acquis + ")");
+                //Debug.Log("GetSort(" + name + "," + description + "," + type + "," + acquis + ")");
             }
 
             if (acquis.Equals("O") && isKnown)
