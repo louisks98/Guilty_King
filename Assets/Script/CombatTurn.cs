@@ -324,6 +324,7 @@ public class CombatTurn : MonoBehaviour
 
     void Quit(Transform target)
     {
+        SoundManager.instance.PlayAmbient();
         combatUI.SetActive(false);
 
         //Hero retourne ou il doit etre après le combat.
@@ -791,6 +792,7 @@ public class CombatTurn : MonoBehaviour
                 if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(damage));
+                    SoundManager.instance.PlayAttack();
                 }
             }
         }
@@ -802,6 +804,7 @@ public class CombatTurn : MonoBehaviour
                 if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(damage));
+                    SoundManager.instance.PlayAttack();
                 }
             }
         }
@@ -814,6 +817,7 @@ public class CombatTurn : MonoBehaviour
             if (perso != null)
             {
                 perso.dealDamage(-(damage));
+                SoundManager.instance.PlayAttack();
             }
         }
     }
