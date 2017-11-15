@@ -27,6 +27,8 @@ public class DialogueManager : MonoBehaviour {
 		if (dialogActive && Input.GetKeyUp(KeyCode.Space))
         {
             currentLine++;
+            SoundManager.instance.PlayDialog();
+
         }
         if (currentLine >= dialogLines.Length)
         {

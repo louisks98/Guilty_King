@@ -76,6 +76,7 @@ public class CombatTurn : MonoBehaviour
 
     void Start()
     {
+        
         currentState = CombatStates.NOTINCOMBAT;
         CombatTurn.selecting = false;
     }
@@ -304,6 +305,7 @@ public class CombatTurn : MonoBehaviour
 
     void Combat_Start()
     {
+        SoundManager.instance.PlayBattleMusic();
         Initialize_Component();
         Define_Turn();
         combatUI.GetComponent<CombatUI>().Start_Init_UI();

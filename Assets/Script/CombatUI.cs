@@ -27,6 +27,10 @@ public class CombatUI : MonoBehaviour {
     private List<Button> listBtnEnemy;
     private List<Button> listBtnSpell;
     private List<Button> ListBtnItem;
+    private List<Text> toolTipSpellCharacter;
+    private List<Text> toolTipItem;
+    private List<Image> bgToolTipSpellCharacter;
+    private List<Image> bgtoolTipItem;
     private Dictionary<string, int> listNbItem;
     private GameObject combatMessage;
 
@@ -49,6 +53,12 @@ public class CombatUI : MonoBehaviour {
         ListBtnItem.Remove(ListBtnItem[ListBtnItem.Count - 1]);
 
         combatMessage =GameObject.Find("Combat_Message");
+
+        toolTipItem = new List<Text>(GameObject.Find("ToolTipItem").GetComponentsInChildren<Text>());
+        toolTipSpellCharacter = new List<Text>(GameObject.Find("ToolTipSpell_CharSelect").GetComponentsInChildren<Text>());
+
+        bgToolTipSpellCharacter = new List<Image>(GameObject.Find("ToolTipSpell_CharSelect").GetComponentsInChildren<Image>());
+        bgtoolTipItem = new List<Image>(GameObject.Find("ToolTipItem").GetComponentsInChildren<Image>());
     } 
 
     public void onClickAttack()
@@ -389,6 +399,53 @@ public class CombatUI : MonoBehaviour {
     public void ShowMenu()
     {
         pnlMenuBtn.SetActive(true);
+    }
+
+    public void ShowToolTipSpell(int idBtn)
+    {
+        Color cl = bgToolTipSpellCharacter[idBtn].color;
+        cl.a = 255;
+        bgToolTipSpellCharacter[idBtn].color = cl;
+        toolTipSpellCharacter[idBtn].text = " " + currentPerso.sorts[idBtn].nom + " ," + currentPerso.sorts[idBtn].type + " ," + currentPerso.sorts[idBtn].nbattaque;
+        
+    }
+
+    public void HideToolTipSpell(int idBtn)
+    {
+        Color cl = bgToolTipSpellCharacter[idBtn].color;
+        cl.a = 0;
+        bgToolTipSpellCharacter[idBtn].color = cl;
+        toolTipSpellCharacter[idBtn].text = "";
+    }
+
+    public void ShowTooltipItem(int idBtn)
+    {
+        Color cl = bgtoolTipItem[idBtn].color;
+        cl.a = 255;
+        bgtoolTipItem[idBtn].color = cl;
+        switch(idBtn)
+        {
+            case 0:
+                toolTipItem[idBtn].text = " Potion Regeneration: +10hp";
+                break;
+            case 1:
+                toolTipItem[idBtn].text = " Potion Steroids: +10Str";
+                break;
+            case 2:
+                toolTipItem[idBtn].text = " Potion Harden: +10Def";
+                break;
+            case 3:
+                toolTipItem[idBtn].text = " Potion Speed boost: +10Spd";
+                break;
+        }
+    }
+
+    public void HideToolTipItem(int idBtn)
+    {
+        Color cl = bgtoolTipItem[idBtn].color;
+        cl.a = 0;
+        bgtoolTipItem[idBtn].color = cl;
+        toolTipItem[idBtn].text = "";
     }
 }
 
