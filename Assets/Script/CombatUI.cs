@@ -282,7 +282,7 @@ public class CombatUI : MonoBehaviour {
                 if (i < listAllySprites.Count && listAllySprites[i] != null && listAllies[i] != null)
                 {
                     listBtnEnemy[i].image.sprite = listAllySprites[i];
-                    Debug.Log("Afficher enemy sprite" + i);
+                    //Debug.Log("Afficher enemy sprite" + i);
                 }
                 else
                     listBtnEnemy[i].gameObject.SetActive(false);
@@ -302,7 +302,7 @@ public class CombatUI : MonoBehaviour {
                 case 1:
                     for (int i = 0; i < listBtnSpell.Count; i++)
                     {
-                        if (i < listSpellHero.Count && listSpellHero[i] != null && pers.sorts[i] != null)
+                        if (i < listSpellHero.Count && listSpellHero[i] != null && pers.sorts[i] != null && pers.sorts[i].acquis.Equals("O"))
                         {
                             listBtnSpell[i].image.sprite = listSpellHero[i];
                         }
