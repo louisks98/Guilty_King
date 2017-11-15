@@ -12,6 +12,7 @@ public class AddItem : MonoBehaviour {
     public bool Open = false;
     public Sprite imgChest;
     private SpriteRenderer sprite;
+    public AudioClip sound;
 
 	// Use this for initialization
 	void Start () {
@@ -53,7 +54,7 @@ public class AddItem : MonoBehaviour {
                         reader.Dispose();
                         bd.Close();
                         Debug.Log("close addItem");
-
+                        SoundManager.instance.PlaySingle(sound);
                     }
                     catch(SqliteException e)
                     {

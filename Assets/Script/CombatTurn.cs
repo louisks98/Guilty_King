@@ -72,6 +72,7 @@ public class CombatTurn : MonoBehaviour
 
     void Start()
     {
+        
         currentState = CombatStates.NOTINCOMBAT;
         anim = false;
         CombatTurn.selecting = false;
@@ -236,6 +237,7 @@ public class CombatTurn : MonoBehaviour
 
     void Combat_Start()
     {
+        SoundManager.instance.PlayBattleMusic();
         Initialize_Component();
         Define_Turn();
         combatUI.GetComponent<CombatUI>().Start_Init_UI();
@@ -303,6 +305,7 @@ public class CombatTurn : MonoBehaviour
         combatUI.GetComponent<CombatUI>().Reset_BTN();
 
         currentState = CombatStates.NOTINCOMBAT;
+        SoundManager.instance.PlayAmbient();
     }
 
     void Combat_WIN()
@@ -681,6 +684,7 @@ public class CombatTurn : MonoBehaviour
                 if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(spell.valeur));
+                    SoundManager.instance.PlayAttack();
                 }
             }
         }
@@ -692,6 +696,7 @@ public class CombatTurn : MonoBehaviour
                 if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(spell.valeur));
+                    SoundManager.instance.PlayAttack();
                 }
             }
         }
@@ -704,6 +709,7 @@ public class CombatTurn : MonoBehaviour
             if (perso != null)
             {
                 perso.dealDamage(-(spell.valeur));
+                SoundManager.instance.PlayAttack();
             }
         }
     }
