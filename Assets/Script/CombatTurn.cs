@@ -72,6 +72,7 @@ public class CombatTurn : MonoBehaviour
     public GameObject lvlMenu;
 
     public int soolsAfterWin;
+    public string idSpellGain;
 
     void Start()
     {
@@ -217,13 +218,32 @@ public class CombatTurn : MonoBehaviour
                         {
                             if (ennemies[currentPlayer] != null)
                             {
-                                int randomNumber = random.Next(0, ennemies[currentPlayer].sorts.Count); // Choisir un spell
+                                int randomNumber = SelectSpell(ennemies[currentPlayer].sorts.Count); // Choisir un spell
                                 Debug.Log("Sort :" + randomNumber);
                                 if(ennemies[currentPlayer].sorts[randomNumber] != null)
                                 {
                                     if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
                                     {
-                                        Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, RandomPersonnage(ennemies));
+                                        int idPerso = RandomPersonnage(ennemies);
+                                        //Twist du boss de glace
+                                        if (idSpellGain.Equals("H4"))
+                                        {
+                                            if (currentPlayer == 2 || currentPlayer == 0)
+                                            {
+                                                if (ennemies != null)
+                                                {
+                                                    if (ennemies[1] != null)
+                                                    {
+                                                        if (ennemies[1].hpTotal > (ennemies[1].BattleHp + 300))
+                                                        {
+                                                            idPerso = 4;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, idPerso);
                                     }
                                     else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
                                     {
@@ -264,7 +284,14 @@ public class CombatTurn : MonoBehaviour
                     Combat_WIN();
                     break;
                 case (CombatStates.LOSE):
-                    Combat_Lose();
+                    if(idSpellGain != "H2")
+                    {
+                        Combat_Lose();
+                    }
+                    else
+                    {
+                        Combat_WIN();
+                    }
                     break;
                 case (CombatStates.ANIMEND):
                     currentState = CombatStates.NOTINCOMBAT;
@@ -356,6 +383,12 @@ public class CombatTurn : MonoBehaviour
         {
             AccesBD bd = new AccesBD();
             bd.insert(sql + id_enemy4);
+            bd.Close();
+        }
+        if(!idSpellGain.Trim().Equals(""))
+        {
+            AccesBD bd = new AccesBD();
+            bd.insert("UPDATE Sort SET Acquis = 'O' where id = '" + idSpellGain + "'");
             bd.Close();
         }
 
@@ -906,5 +939,30 @@ public class CombatTurn : MonoBehaviour
         }
 
         return damage;   
+    }
+
+    int SelectSpell(int nbSort)
+    {
+        int idSpell = random.Next(0, nbSort);
+
+        //Twist du boss de glace
+        if (idSpellGain.Equals("H4"))
+        {
+            if(currentPlayer == 2 || currentPlayer == 0)
+            {
+                if(ennemies != null)
+                {
+                    if (ennemies[1] != null)
+                    {
+                        if (ennemies[1].hpTotal > (ennemies[1].BattleHp + 300))
+                        {
+                            idSpell = 2;
+                        }
+                    }
+                }
+            }
+        }
+
+        return idSpell;
     }
 }
