@@ -71,6 +71,7 @@ public class CombatTurn : MonoBehaviour
 
     public GameObject lvlMenu;
 
+
     public int soolsAfterWin;
     public string idSpellGain;
 
@@ -401,7 +402,7 @@ public class CombatTurn : MonoBehaviour
         LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
         LvlMenu.addSouls(soolsAfterWin);
         LvlMenu.UpdateUI();
-        lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
+        //lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
 
         //Ennemies à null
         ennemies = null;
@@ -413,6 +414,15 @@ public class CombatTurn : MonoBehaviour
 
         //Faire disparaitre l'ennemie dans le jeu
         UpdateGameProgress.doVerification = true;
+
+        AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
+        menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
+        menuAfterFight.SetGameResultText("gagnez!");
+        menuAfterFight.SetSortText("George help");
+        menuAfterFight.SetDetailsText("Jpense va falloir determiner quelle combat se deroule...");
+        menuAfterFight.AfficherMenu = true;
+
+
     }
 
     void Combat_Lose()
