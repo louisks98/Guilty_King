@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour {
 
     GameObject ennemy;
 
+    public bool inCombat;
+
 	// Use this for initialization
 	void Start () {
         dialogLines = new string[1]; // pour enlever l'exception mais inutile.

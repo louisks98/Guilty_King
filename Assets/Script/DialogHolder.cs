@@ -2,26 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogHolder : MonoBehaviour {
+public class DialogHolder : MonoBehaviour
+{
 
     public string dialogue;
     private DialogueManager dMan;
     public string[] dialogueLines;
-
     public GameObject ennemy;
     bool inCombat;
+    public bool instantTalk;
+    public bool hasBeenTalked;
 
-    
-	// Use this for initialization
-	void Start () {
+
+
+    // Use this for initialization
+    void Start()
+    {
         dMan = FindObjectOfType<DialogueManager>();
         inCombat = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        hasBeenTalked = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -44,23 +50,48 @@ public class DialogHolder : MonoBehaviour {
         {
             if (collision.gameObject.name == "Hero")
             {
-                if (Input.GetKeyUp(KeyCode.Space))
+                if (!instantTalk)
                 {
-                    if (!dMan.dialogActive)
+                    if (Input.GetKeyUp(KeyCode.Space))
                     {
-                        if (ennemy != null)
+                        if (!dMan.dialogActive)
                         {
-                            dMan.SetEnnemy(ennemy);
+                            if (ennemy != null)
+                            {
+                                dMan.SetEnnemy(ennemy);
+                            }
+                            else
+                            {
+                                dMan.SetEnnemy(null);
+                            }
+                            dMan.dialogLines = dialogueLines;
+                            dMan.currentLine = -1;
+                            dMan.ShowDialogue();
                         }
-                        else
-                        {
-                            dMan.SetEnnemy(null);
-                        }
-                        dMan.dialogLines = dialogueLines;
-                        dMan.currentLine = -1;
-                        dMan.ShowDialogue();
                     }
                 }
+                else
+                {
+                    if (!hasBeenTalked)
+                    {
+                        if (!dMan.dialogActive)
+                        {
+                            if (ennemy != null)
+                            {
+                                dMan.SetEnnemy(ennemy);
+                            }
+                            else
+                            {
+                                dMan.SetEnnemy(null);
+                            }
+                            dMan.dialogLines = dialogueLines;
+                            dMan.currentLine = 0;
+                            dMan.ShowDialogue();
+                            hasBeenTalked = true;
+                        }
+                    }
+                }
+
                 //     CECI SERA INTÉRESSANT POUR EMPECHER DE BOUGER UN OBJET(MERCENAIRE?) LORSQU'ON DISCUTE AVEC LUI.    
                 //         if (transform.parent.GetComponent<ObjectMovement>() != null)
                 //          {

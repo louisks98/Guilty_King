@@ -23,7 +23,6 @@ namespace Assets.Script
         public Sprite image { get; set; }
         public bool defeated { get; set; }
         public GameObject gameObject { get; set; }
-
         public FighterMovement deplacement;
 
         // battle stats
@@ -46,10 +45,45 @@ namespace Assets.Script
                 }
             }
         }
-        public int turnStunned { get; set; }
-        public bool stunned { get; set; } //?
-        public int battleStr { get; set; }
-        public int battleDef { get; set; }
+
+        private int battleDef;
+        public int BattleDef
+        {
+            get { return battleDef; }
+            set
+            {
+                battleDef = value;
+                if (battleDef < 0)
+                {
+                    battleDef = 0;
+                }
+
+                if (battleDef > 95)
+                {
+                    battleDef = 95;
+                }
+            }
+        }
+
+        private int battleStr;
+        public int BattleStr
+        {
+            get { return battleStr; }
+            set
+            {
+                battleStr = value;
+                if (battleStr < 0)
+                {
+                    battleStr = 0;
+                }
+
+                if (battleStr > 200)
+                {
+                    battleStr = 200;
+                }
+            }
+        }
+
         public int battleSpd { get; set; }
 
         public List<Sort> sorts { get; set; }
@@ -84,10 +118,6 @@ namespace Assets.Script
                 strength = reader.GetInt32(4);
                 defence = reader.GetInt32(5);
                 speed = reader.GetInt32(6);
-                //if (reader.GetString(7) == "N")
-                //    defeated = false;
-                //else if (reader.GetString(7) == "O")
-                //    defeated = true;
                 deplacement = gameObject.GetComponent<FighterMovement>();
                 setupBattleStats();
                 defeated = false;
@@ -106,7 +136,6 @@ namespace Assets.Script
 
         public void setupBattleStats()
         {
-            turnStunned = 0;
             battleHp = hpTotal;
             battleStr = strength;
             battleDef = defence;
@@ -135,7 +164,14 @@ namespace Assets.Script
 
         public void dealDamage(int nbDamage)
         {
-            BattleHp = BattleHp + nbDamage;
+            if(defence > 0 && nbDamage < 0)
+            {
+                BattleHp = BattleHp + nbDamage - (nbDamage * defence / 100);
+            }
+            else
+            {
+                BattleHp = BattleHp + nbDamage;
+            }
         }
 
         public int GetDamage(string id)
@@ -146,8 +182,17 @@ namespace Assets.Script
                 if(item.id.Equals(id))
                 {
                     damage = item.valeur;
+
+                    if (strength > 0) // On veut tu pouvoir ammener le damage à zero avec beaucoup de débuff.
+                    {
+                        if(item.type == "AS" || item.type == "AZ")
+                        {
+                            damage += damage * strength / 100;
+                        }
+                    }
                 }
             }
+
             return damage;
         }
     }

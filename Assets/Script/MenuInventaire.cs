@@ -58,8 +58,8 @@ public class MenuInventaire : MonoBehaviour {
             i++;
         }
         bd.Close();
-        Debug.Log("close get_item");
-        Debug.Log("get item");
+        //Debug.Log("close get_item");
+        //Debug.Log("get item");
     }
     public void Afficher()
     {
