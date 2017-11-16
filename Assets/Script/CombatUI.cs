@@ -158,6 +158,7 @@ public class CombatUI : MonoBehaviour {
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Regénération", 2));
                     selectedSpell = null;
                     closeMenu();
+                    SoundManager.instance.PlayItem();
                 }
                 break;
             case "Btn_Item_Def":

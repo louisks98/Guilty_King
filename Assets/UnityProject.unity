@@ -144,6 +144,10 @@ MonoBehaviour:
   dialogClip: {fileID: 8300000, guid: df0476792a571c841929388d1a55ec7d, type: 3}
   BattleMusic: {fileID: 8300000, guid: a556fc931220ddb468eb26eadb2f86f5, type: 3}
   ambientMusic: {fileID: 8300000, guid: 2309dcdd0ea9ae24587a42b59d2db4e9, type: 3}
+  itemClip: {fileID: 8300000, guid: 9d496cd84b1eb26499d3767a48c15616, type: 3}
+  forceClip: {fileID: 8300000, guid: 3383f8ade99383f49b66c5d5dbbaeb1b, type: 3}
+  defClip: {fileID: 8300000, guid: 79957f30b3ded3c4f9674bcf01d77415, type: 3}
+  HealClip: {fileID: 8300000, guid: 7b76503671a8c464c9b83f4555e3ed28, type: 3}
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &2905787
