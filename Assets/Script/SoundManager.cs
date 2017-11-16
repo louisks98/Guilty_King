@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip forceClip;
     public AudioClip defClip;
     public AudioClip HealClip;
+    public AudioClip doorClip;
     public static SoundManager instance = null;
 
     public float lowPitchRange = .95f;
@@ -83,6 +84,11 @@ public class SoundManager : MonoBehaviour {
     public void playForce()
     {
         PlaySingle(forceClip);
+    }
+
+    public void PlayDoor()
+    {
+        PlaySingle(doorClip);
     }
 
     private void RandomizeSfx(params AudioClip[] clip)

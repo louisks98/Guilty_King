@@ -148,6 +148,7 @@ MonoBehaviour:
   forceClip: {fileID: 8300000, guid: 3383f8ade99383f49b66c5d5dbbaeb1b, type: 3}
   defClip: {fileID: 8300000, guid: 79957f30b3ded3c4f9674bcf01d77415, type: 3}
   HealClip: {fileID: 8300000, guid: 7b76503671a8c464c9b83f4555e3ed28, type: 3}
+  doorClip: {fileID: 8300000, guid: 5c574cd2050d2a54781ad323d031b9bc, type: 3}
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &2905787
@@ -11825,6 +11826,7 @@ MonoBehaviour:
   sp_Fire: {fileID: 21300216, guid: 108bedf9496ff4b46b1bbe17a2ebfc8c, type: 3}
   sp_Forest: {fileID: 21300028, guid: cbca8600baf87e44db61855ce258f764, type: 3}
   sp_Ice: {fileID: 21300028, guid: ae8182e8149554f4a85818a0c4d166ce, type: 3}
+  questionMark: {fileID: 21300000, guid: 704097c6956fbc4439f945ebef9d7655, type: 3}
 --- !u!1 &646608769
 GameObject:
   m_ObjectHideFlags: 0

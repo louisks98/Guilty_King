@@ -246,6 +246,7 @@ public class CombatTurn : MonoBehaviour
                                         }
 
                                         Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, idPerso);
+                                        SoundManager.instance.PlayHeal();
                                     }
                                     else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
                                     {

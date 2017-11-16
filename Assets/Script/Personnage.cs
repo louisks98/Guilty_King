@@ -88,7 +88,7 @@ namespace Assets.Script
 
         public List<Sort> sorts { get; set; }
 
-        public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp)
+        public Personnage(string name, int hp, int level, int nbAme, int str, int def, int sp, bool defeat)
         {
             this.name = name;
             this.hpTotal = hp;
@@ -97,6 +97,7 @@ namespace Assets.Script
             this.strength = str;
             this.defence = def;
             this.speed = sp;
+            this.defeated = defeat;
             
             setupBattleStats();
         }
