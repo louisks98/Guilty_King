@@ -71,11 +71,13 @@ public class CombatTurn : MonoBehaviour
 
     public GameObject lvlMenu;
 
+
     public int soolsAfterWin;
     public string idSpellGain;
 
     void Start()
     {
+        
         currentState = CombatStates.NOTINCOMBAT;
         CombatTurn.selecting = false;
     }
@@ -304,6 +306,7 @@ public class CombatTurn : MonoBehaviour
 
     void Combat_Start()
     {
+        SoundManager.instance.PlayBattleMusic();
         Initialize_Component();
         Define_Turn();
         combatUI.GetComponent<CombatUI>().Start_Init_UI();
@@ -322,6 +325,7 @@ public class CombatTurn : MonoBehaviour
 
     void Quit(Transform target)
     {
+        SoundManager.instance.PlayAmbient();
         combatUI.SetActive(false);
 
         //Hero retourne ou il doit etre après le combat.
@@ -398,7 +402,7 @@ public class CombatTurn : MonoBehaviour
         LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
         LvlMenu.addSouls(soolsAfterWin);
         LvlMenu.UpdateUI();
-        lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
+        //lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
 
         //Ennemies à null
         ennemies = null;
@@ -410,6 +414,15 @@ public class CombatTurn : MonoBehaviour
 
         //Faire disparaitre l'ennemie dans le jeu
         UpdateGameProgress.doVerification = true;
+
+        AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
+        menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
+        menuAfterFight.SetGameResultText("gagnez!");
+        menuAfterFight.SetSortText("George help");
+        menuAfterFight.SetDetailsText("Jpense va falloir determiner quelle combat se deroule...");
+        menuAfterFight.AfficherMenu = true;
+
+
     }
 
     void Combat_Lose()
@@ -789,6 +802,7 @@ public class CombatTurn : MonoBehaviour
                 if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(damage));
+                    SoundManager.instance.PlayAttack();
                 }
             }
         }
@@ -800,6 +814,7 @@ public class CombatTurn : MonoBehaviour
                 if (perso.id == idPersonnage)
                 {
                     perso.dealDamage(-(damage));
+                    SoundManager.instance.PlayAttack();
                 }
             }
         }
@@ -812,6 +827,7 @@ public class CombatTurn : MonoBehaviour
             if (perso != null)
             {
                 perso.dealDamage(-(damage));
+                SoundManager.instance.PlayAttack();
             }
         }
     }

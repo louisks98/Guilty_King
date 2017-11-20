@@ -10,8 +10,9 @@ public class MenuInventaire : MonoBehaviour {
 
     private List<string> item = new List<string>();
     private Dictionary<string, string> itemDesc = new Dictionary<string, string>();
-    private Dictionary<int, bool> placed = new Dictionary<int, bool>();
+    private Dictionary<int, bool> itemPlaced = new Dictionary<int, bool>();
     private List<Text> textinfo;
+    Dictionary<int,bool> placedSlots = new Dictionary<int, bool>();
     public List<Sprite> imageItem = new List<Sprite>();
     public GameObject panel;
     public GameObject pnlInfo;
@@ -51,8 +52,8 @@ public class MenuInventaire : MonoBehaviour {
                 {
                     itemDesc.Add(reader2.GetString(0), reader2.GetString(1));
                 }
-                if (!placed.ContainsKey(i))
-                    placed.Add(i, false);
+                if (!itemPlaced.ContainsKey(i))
+                    itemPlaced.Add(i, false);
             }
             i++;
         }
@@ -62,103 +63,69 @@ public class MenuInventaire : MonoBehaviour {
     }
     public void Afficher()
     {
+        //get_Item();
         AccesBD bd = new AccesBD();
         SqliteDataReader reader;
-
-        string selectNbHealth = "select Quantite from InventaireItem where Personnage = 1 and Item = 3";
-        string selectNbDef = "select Quantite from InventaireItem where Personnage = 1 and Item = 6";
-        string selectNbSpeed = "select Quantite from InventaireItem where Personnage = 1 and Item = 5";
-        string selectNbSteroid = "select Quantite from InventaireItem where Personnage = 1 and Item = 7";
-
         int nbItem = 0;
-        //get_Item();
         List<Image> slots = new List<Image>(panel.GetComponentsInChildren<Image>());
         List<Text> textNb = new List<Text>(panel.GetComponentsInChildren<Text>());
-        Image img;
-        int NbItemPlacer= 0;
+        
+        int NbItemPlacer = 0;
+        textinfo[0].text = "";
+        textinfo[1].text = "";
 
-        for(int i = 0; i < item.Count ; i++)
+        for (int i = 0; i < item.Count; i++)
         {
-            for (int j = 0; j < slots.Count && !placed[i]; j++)
+            string sql = "select Quantite from InventaireItem where Personnage = 1 and Item = (select idItem from Item where Nom = '" + item[i] + "')";
+            reader = bd.select(sql);
+            while (reader.Read())
             {
-                if(slots[j + 1].sprite != imageItem[0] && slots[j + 1].sprite != imageItem[1] 
-                    && slots[j + 1].sprite != imageItem[2] && slots[j + 1].sprite != imageItem[3])
+                nbItem = reader.GetInt32(0);
+            }
+            if (nbItem > 0)
+            {
+                for (int j = 0; j < slots.Count; j++)
                 {
-                    switch (item[i])
+                    if (!itemPlaced[i])
                     {
-                        case "Regeneration":
-                            reader = bd.select(selectNbHealth);
-                            while (reader.Read())
+                        if (placedSlots.ContainsKey(j + 1))
+                        {
+                            if(!placedSlots[j + 1])
                             {
-                                nbItem = reader.GetInt32(0);
-                            }
-                            if (nbItem > 0)
-                            {
-                                img = slots[j + 1];
-                                img.sprite = imageItem[0];
+                                slots[j + 1].sprite = imageItem[i];
                                 textNb[NbItemPlacer].text = "x" + nbItem.ToString();
-                                Debug.Log("health");
-                                placed[i] = true;
+                                itemPlaced[i] = true;
+                                placedSlots[j + 1] = true;
                                 NbItemPlacer++;
                             }
-                            reader.Close();
-                            break;
-
-                        case "Harden":
-                            reader = bd.select(selectNbDef);
-                            while (reader.Read())
+                            else
                             {
-                                nbItem = reader.GetInt32(0);
+                                if(slots[j + 1].sprite == imageItem[i])
+                                {
+                                    textNb[NbItemPlacer].text = "x" + nbItem.ToString();
+                                    NbItemPlacer++;
+                                }
                             }
-                            if (nbItem > 0)
-                            {
-                                img = slots[j + 1];
-                                img.sprite = imageItem[1];
-                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
-                                Debug.Log("mana");
-                                placed[i] = true;
-                                NbItemPlacer++;
-                            }
-                            reader.Close();
-                            break;
-
-                        case "steroids":
-                            reader = bd.select(selectNbSteroid);
-                            while (reader.Read())
-                            {
-                                nbItem = reader.GetInt32(0);
-                            }
-                            if (nbItem > 0)
-                            {
-                                img = slots[j + 1];
-                                img.sprite = imageItem[2];
-                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
-                                Debug.Log("steroid");
-                                placed[i] = true;
-                                NbItemPlacer++;
-                            }
-                            reader.Close();
-                            break;
-
-                        case "Speed boost":
-                            reader = bd.select(selectNbSpeed);
-                            while (reader.Read())
-                            {
-                                nbItem = reader.GetInt32(0);
-                            }
-                            if (nbItem > 0)
-                            {
-                                img = slots[j + 1];
-                                img.sprite = imageItem[3];
-                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
-                                Debug.Log("Speed boost");
-                                placed[i] = true;
-                                NbItemPlacer++;
-                            }
-                            break;
+                        }
+                        else
+                        {
+                            slots[j + 1].sprite = imageItem[i];
+                            textNb[NbItemPlacer].text = "x" + nbItem.ToString();
+                            itemPlaced[i] = true;
+                            placedSlots.Add(j + 1, true);
+                            NbItemPlacer++;
+                        }
                     }
+                    else
+                    {
+                        if (slots[j + 1].sprite == imageItem[i])
+                        {
+                            textNb[NbItemPlacer].text = "x" + nbItem.ToString();
+                            NbItemPlacer++;
+                        }
+                    }
+                    j++;
                 }
-                j++;
             }
         }
     }

@@ -67,7 +67,7 @@ public class PlayerMovment : MonoBehaviour {
         {
             anim.SetBool("iswalking", true);
             anim.SetFloat("axe_x", movment.x);
-            anim.SetFloat("axe_y", movment.y);
+            anim.SetFloat("axe_y", movment.y); 
         }
         else
         {
