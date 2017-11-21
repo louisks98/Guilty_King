@@ -364,11 +364,11 @@ public class CombatUI : MonoBehaviour {
 
     public IEnumerator ShowMessage(string msg, int delai)
     {
+        //CombatTurn.anim = true;
         combatMessage.GetComponent<Text>().text = msg;
-        //combatMessage.SetActive(true);
         yield return new WaitForSeconds(delai);
         combatMessage.GetComponent<Text>().text = "";
-        //combatMessage.SetActive(false); // Cause trop de problème
+        //CombatTurn.anim = false;
     }
 
     private void ReactivateButtons(List<Button> listBtn)

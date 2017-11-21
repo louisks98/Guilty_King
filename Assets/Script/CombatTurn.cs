@@ -22,10 +22,12 @@ public class CombatTurn : MonoBehaviour
         LOSE,
         WIN,
         ANIMEND,
-        NOTINCOMBAT
+        NOTINCOMBAT,
+        Escape
     }
+
     public static bool selecting { get; set; }
-    bool anim;
+    public static bool anim;
     public CombatStates currentState { get; set; }
 
     public bool currentTeamIsAlly { get; set; }
@@ -89,7 +91,7 @@ public class CombatTurn : MonoBehaviour
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             //Debug.Log("Can move : " + PlayerMovment.canMove);
-            //Debug.Log(currentState);
+            Debug.Log(currentState);
 
             switch (currentState)
             {
@@ -296,6 +298,9 @@ public class CombatTurn : MonoBehaviour
                         Combat_WIN();
                     }
                     break;
+                case (CombatStates.Escape):
+                    Combat_Escape();
+                    break;
                 case (CombatStates.ANIMEND):
                     currentState = CombatStates.NOTINCOMBAT;
                     break;
@@ -440,6 +445,12 @@ public class CombatTurn : MonoBehaviour
     {
         GetComponent<DialogHolder>().hasBeenTalked = false;
         Quit(target_loose);
+    }
+
+    void Combat_Escape()
+    {
+        GetComponent<DialogHolder>().hasBeenTalked = false;
+        Quit(target_win);
     }
 
     void Initialize_Component()
@@ -750,18 +761,17 @@ public class CombatTurn : MonoBehaviour
 
     public void QuitButton()
     {
-        GetComponent<DialogHolder>().hasBeenTalked = false;
-        Quit(target_win);
-        //if (Escape())
-        //{
-        //    Quit(target_win);
-        //}
-        //else
-        //{
-        //    //combatUI.GetComponent<CombatUI>().closeMenu();
-        //    //StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne m'échapperez pas !!!", 1));
-        //    currentState = CombatStates.NEXTPLAYER;
-        //}
+        if (Escape())
+        {
+            selecting = false;
+            currentState = CombatStates.Escape;
+        }
+        else
+        {
+            selecting = false;
+            currentState = CombatStates.NEXTPLAYER;
+            StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne m'échapperez pas !!!", 1));
+        }
     }
 
     bool currentPlayerIsMoving()
@@ -795,26 +805,34 @@ public class CombatTurn : MonoBehaviour
 
     void Attack(int damage, int idPersonnage)
     {
-        foreach (Personnage perso in allies)
+        if (damage > 0 && Dodge(idPersonnage))
         {
-            if (perso != null)
+            //On ne prend pas de domage puisque l'attaque à été esquivée.
+            SoundManager.instance.PlayAttack();
+        }
+        else
+        {
+            foreach (Personnage perso in allies)
             {
-                if (perso.id == idPersonnage)
+                if (perso != null)
                 {
-                    perso.dealDamage(-(damage));
-                    SoundManager.instance.PlayAttack();
+                    if (perso.id == idPersonnage)
+                    {
+                        perso.dealDamage(-(damage));
+                        SoundManager.instance.PlayAttack();
+                    }
                 }
             }
-        }
 
-        foreach (Personnage perso in ennemies)
-        {
-            if (perso != null)
+            foreach (Personnage perso in ennemies)
             {
-                if (perso.id == idPersonnage)
+                if (perso != null)
                 {
-                    perso.dealDamage(-(damage));
-                    SoundManager.instance.PlayAttack();
+                    if (perso.id == idPersonnage)
+                    {
+                        perso.dealDamage(-(damage));
+                        SoundManager.instance.PlayAttack();
+                    }
                 }
             }
         }
@@ -826,8 +844,16 @@ public class CombatTurn : MonoBehaviour
         {
             if (perso != null)
             {
-                perso.dealDamage(-(damage));
-                SoundManager.instance.PlayAttack();
+                if (damage > 0 && Dodge(perso.id))
+                {
+                    //On ne prend pas de domage puisque l'attaque à été esquivée.
+                    SoundManager.instance.PlayAttack();
+                }
+                else
+                {
+                    perso.dealDamage(-(damage));
+                    SoundManager.instance.PlayAttack();
+                }
             }
         }
     }
@@ -949,9 +975,9 @@ public class CombatTurn : MonoBehaviour
     {
         int damage = baseDamage;
 
-        if (perso.strength > 0)
+        if (perso.BattleStr > 0)
         {
-            damage += (baseDamage * perso.strength / 100);
+            damage += (baseDamage * perso.BattleStr / 100);
         }
 
         return damage;
@@ -1001,5 +1027,44 @@ public class CombatTurn : MonoBehaviour
             }
         }
         return fullHeal;
+    }
+
+    public bool Dodge(int idPersonnage)
+    {
+        bool dodge = false;
+        int speed = 0;
+        string name = "";
+
+        foreach (Personnage perso in allies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPersonnage)
+                {
+                    speed = perso.speed;
+                    name = perso.name;
+                }
+            }
+        }
+
+        foreach (Personnage perso in ennemies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPersonnage)
+                {
+                    speed = perso.speed;
+                    name = perso.name;
+                }
+            }
+        }
+
+        if(random.Next(0,100) <= speed)
+        {
+            dodge = true;
+            StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(name + " : Esquive", 1));
+        }
+
+        return dodge;
     }
 }
