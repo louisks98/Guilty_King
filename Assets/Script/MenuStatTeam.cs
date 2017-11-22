@@ -91,7 +91,7 @@ public class MenuStatTeam : MonoBehaviour {
                 txt[0].text = listPers[i].name;
                 txt[1].text = "Niveau : " + listPers[i].level.ToString();
                 txt[2].text = "Hp : " + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
-                txt[3].text = "Ames : " + listPers[i].nbAmes.ToString();
+                txt[3].text = "Âmes : " + listPers[i].nbAmes.ToString();
                 i++;
             }
             else
@@ -119,9 +119,9 @@ public class MenuStatTeam : MonoBehaviour {
                 txt[1].text = "Niveau : " + listPers[0].level.ToString();
                 txt[2].text = "HP : " + listPers[0].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[0].strength.ToString();
-                txt[4].text = "Defence : " + listPers[0].defence.ToString();
-                txt[5].text = "Speed : " + listPers[0].speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[0].nbAmes.ToString();
+                txt[4].text = "Defense : " + listPers[0].defence.ToString();
+                txt[5].text = "Rapidité : " + listPers[0].speed.ToString();
+                txt[6].text = "Nombre d'âmes : " + listPers[0].nbAmes.ToString();
                 img[1].sprite = listPers[0].image;
                 break;
 
@@ -130,9 +130,9 @@ public class MenuStatTeam : MonoBehaviour {
                 txt[1].text = "Niveau : " + listPers[1].level.ToString();
                 txt[2].text = "HP : " + listPers[1].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[1].strength.ToString();
-                txt[4].text = "Defence : " + listPers[1].defence.ToString();
-                txt[5].text = "Speed : " + listPers[1].speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[1].nbAmes.ToString();
+                txt[4].text = "Defense : " + listPers[1].defence.ToString();
+                txt[5].text = "Rapidité : " + listPers[1].speed.ToString();
+                txt[6].text = "Nombre d'âmes : " + listPers[1].nbAmes.ToString();
                 img[1].sprite = listPers[1].image;
                 break;
 
@@ -141,9 +141,9 @@ public class MenuStatTeam : MonoBehaviour {
                 txt[1].text = "Niveau : " + listPers[2].level.ToString();
                 txt[2].text = "HP : " + listPers[2].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[2].strength.ToString();
-                txt[4].text = "Defence : " + listPers[2].defence.ToString();
-                txt[5].text = "Speed : " + listPers[2].speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[2].nbAmes.ToString();
+                txt[4].text = "Defense : " + listPers[2].defence.ToString();
+                txt[5].text = "Rapidité : " + listPers[2].speed.ToString();
+                txt[6].text = "Nombre d'âmes : " + listPers[2].nbAmes.ToString();
                 img[1].sprite = listPers[2].image;
                 break;
 
@@ -152,9 +152,9 @@ public class MenuStatTeam : MonoBehaviour {
                 txt[1].text = "Niveau : " + listPers[3].level.ToString();
                 txt[2].text = "HP : " + listPers[3].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[3].strength.ToString();
-                txt[4].text = "Defence : " + listPers[3].defence.ToString();
-                txt[5].text = "Speed : " + listPers[3].speed.ToString();
-                txt[6].text = "Nombre d'ame : " + listPers[3].nbAmes.ToString();
+                txt[4].text = "Defense : " + listPers[3].defence.ToString();
+                txt[5].text = "Rapidité : " + listPers[3].speed.ToString();
+                txt[6].text = "Nombre d'âmes : " + listPers[3].nbAmes.ToString();
                 img[1].sprite = listPers[3].image;
                 break;
         }
