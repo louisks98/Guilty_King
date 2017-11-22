@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class CombatTurn : MonoBehaviour
 {
-
     public enum CombatStates
     {
         ANIMSTART,
@@ -1073,5 +1072,26 @@ public class CombatTurn : MonoBehaviour
         }
 
         return dodge;
+    }
+
+    void ApplyDifficulty()
+    {
+        foreach(var perso in ennemies)
+        {
+            if (perso != null)
+            {
+                perso.BattleHp += perso.BattleHp * 4;
+                foreach(var sort in perso.sorts)
+                {
+                    if(sort != null)
+                    {
+                        if(sort.type == "AS" && sort.type == "AZ")
+                        {
+                            sort.valeur += sort.valeur * 4;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
