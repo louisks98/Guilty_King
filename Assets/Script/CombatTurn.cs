@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CombatTurn : MonoBehaviour
 {
@@ -405,41 +406,48 @@ public class CombatTurn : MonoBehaviour
 
         Quit(target_win);
 
-        //Ouvrir le menu lvl
-        LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
-        LvlMenu.addSouls(soolsAfterWin);
-        LvlMenu.UpdateUI();
-        //lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
-
-        //Ennemies à null
-        ennemies = null;
-        allies = null;
-        go_enemy1 = null;
-        go_enemy2 = null;
-        go_enemy3 = null;
-        go_enemy4 = null;
-
-        //Faire disparaitre l'ennemie dans le jeu
-        UpdateGameProgress.doVerification = true;
-
-        AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
-        menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
-        menuAfterFight.SetGameResultText("gagnez!");
-
-        string spellName = "Aucun";
-        if (idSpellGain != "")
+        if (id_enemy2 == 9)
         {
-            AccesBD bdSql = new AccesBD();
-            SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
-            while (reader.Read())
-            {
-                spellName = reader.GetString(0);
-            }
-            bdSql.Close();
+            SceneManager.LoadScene(2);
         }
-        menuAfterFight.SetSortText(spellName);
-        menuAfterFight.SetDetailsText(lore);
-        menuAfterFight.AfficherMenu = true;
+        else
+        {
+            //Ouvrir le menu lvl
+            LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
+            LvlMenu.addSouls(soolsAfterWin);
+            LvlMenu.UpdateUI();
+            //lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
+
+            //Ennemies à null
+            ennemies = null;
+            allies = null;
+            go_enemy1 = null;
+            go_enemy2 = null;
+            go_enemy3 = null;
+            go_enemy4 = null;
+
+            //Faire disparaitre l'ennemie dans le jeu
+            UpdateGameProgress.doVerification = true;
+
+            AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
+            menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
+            menuAfterFight.SetGameResultText("gagnez!");
+
+            string spellName = "Aucun";
+            if (idSpellGain != "")
+            {
+                AccesBD bdSql = new AccesBD();
+                SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
+                while (reader.Read())
+                {
+                    spellName = reader.GetString(0);
+                }
+                bdSql.Close();
+            }
+            menuAfterFight.SetSortText(spellName);
+            menuAfterFight.SetDetailsText(lore);
+            menuAfterFight.AfficherMenu = true;
+        }
     }
 
     void Combat_Lose()
