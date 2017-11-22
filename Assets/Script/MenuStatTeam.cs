@@ -15,6 +15,7 @@ public class MenuStatTeam : MonoBehaviour {
     public Sprite sp_Fire;
     public Sprite sp_Forest;
     public Sprite sp_Ice;
+    public Sprite questionMark;
 
     // Use this for initialization
     void Start() {
@@ -28,15 +29,17 @@ public class MenuStatTeam : MonoBehaviour {
 
     void OnEnable()
     {
-        GetStatsTeam();
+        Debug.Log("call afficherteam");
         AfficherTeam();
+        Debug.Log("after afficherteam");
     }
 
     void GetStatsTeam()
     {
+        Debug.Log("getstats");
         AccesBD bd = new AccesBD();
         SqliteDataReader reader;
-        reader = bd.select("select Nom, Point_de_vie, niveau, nbAmes, Force, Defence, Vitesse from Personnage inner join Stats on Personnage.Stat = Stats.idStats");
+        reader = bd.select("select Nom, Point_de_vie, niveau, nbAmes, Force, Defence, Vitesse, vaincue from Personnage inner join Stats on Personnage.Stat = Stats.idStats limit 4");
         while(reader.Read())
         {
             string nom = reader.GetString(0);
@@ -46,7 +49,22 @@ public class MenuStatTeam : MonoBehaviour {
             int force = reader.GetInt32(4);
             int def = reader.GetInt32(5);
             int speed = reader.GetInt32(6);
-            listPers.Add(new Personnage(nom, hp, level, ames, force, def, speed));
+            bool defeated = false;
+            if (reader.GetString(7) == "O")
+            {
+                defeated = true;
+            }
+            else if (reader.GetString(7) == "N")
+            {
+                defeated = false;
+            }
+            if(listPers.Count == 4)
+            {
+                listPers.Clear();
+                listPers.Add(new Personnage(nom, hp, level, ames, force, def, speed, defeated));
+            }
+            else { listPers.Add(new Personnage(nom, hp, level, ames, force, def, speed, defeated)); }
+            
         }
         reader.Close();
         bd.Close();
@@ -58,19 +76,35 @@ public class MenuStatTeam : MonoBehaviour {
 
     void AfficherTeam()
     {
+        GetStatsTeam();
         int i = 0;
         foreach (GameObject obj in characterPanels)
         {
             List<Text> txt = new List<Text>(obj.GetComponentsInChildren<Text>());
             List<Image> img = new List<Image>(obj.GetComponentsInChildren<Image>());
-            obj.GetComponent<Button>().onClick.AddListener(() => { Affichercharacter(); });
+            if(listPers[i].defeated)
+            {
+                obj.GetComponent<Button>().interactable = true;
+                obj.GetComponent<Button>().onClick.AddListener(() => { Affichercharacter(); });
 
-            img[1].sprite = listPers[i].image;
-            txt[0].text = listPers[i].name;
-            txt[1].text = "Niveau : " + listPers[i].level.ToString();
-            txt[2].text = "Hp : "  + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
-            txt[3].text = "Ames : " + listPers[i].nbAmes.ToString();
-            i++;
+                img[1].sprite = listPers[i].image;
+                txt[0].text = listPers[i].name;
+                txt[1].text = "Niveau : " + listPers[i].level.ToString();
+                txt[2].text = "Hp : " + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
+                txt[3].text = "Ames : " + listPers[i].nbAmes.ToString();
+                i++;
+            }
+            else
+            {
+
+                obj.GetComponent<Button>().interactable = false;
+                img[1].sprite = questionMark;
+                txt[0].text = "???????";
+                txt[1].text = "???????";
+                txt[2].text = "???????";
+                txt[3].text = "???????";
+                i++;
+            }
         }
     }
     void Affichercharacter()

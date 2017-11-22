@@ -22,10 +22,12 @@ public class CombatTurn : MonoBehaviour
         LOSE,
         WIN,
         ANIMEND,
-        NOTINCOMBAT
+        NOTINCOMBAT,
+        Escape
     }
+
     public static bool selecting { get; set; }
-    bool anim;
+    public static bool anim;
     public CombatStates currentState { get; set; }
 
     public bool currentTeamIsAlly { get; set; }
@@ -74,10 +76,11 @@ public class CombatTurn : MonoBehaviour
 
     public int soolsAfterWin;
     public string idSpellGain;
+    public string lore = "Il y a un public string lore pour chacun des combat à setup.";
 
     void Start()
     {
-        
+
         currentState = CombatStates.NOTINCOMBAT;
         CombatTurn.selecting = false;
     }
@@ -88,7 +91,7 @@ public class CombatTurn : MonoBehaviour
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             //Debug.Log("Can move : " + PlayerMovment.canMove);
-            //Debug.Log(currentState);
+            Debug.Log(currentState);
 
             switch (currentState)
             {
@@ -155,7 +158,7 @@ public class CombatTurn : MonoBehaviour
                     }
                     else
                     {
-                        if(ennemies != null)
+                        if (ennemies != null)
                         {
                             if (ennemies[currentPlayer] != null)
                             {
@@ -189,11 +192,11 @@ public class CombatTurn : MonoBehaviour
                     {
                         if (allies[currentPlayer] != null)
                         {
-                            if(combatUI.GetComponent<CombatUI>().selectedSpell != null)
+                            if (combatUI.GetComponent<CombatUI>().selectedSpell != null)
                             {
                                 if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AZ")
                                 {
-                                    if(combatUI.GetComponent<CombatUI>().selectedSpell.id == "H4")
+                                    if (combatUI.GetComponent<CombatUI>().selectedSpell.id == "H4")
                                     {
                                         allies[currentPlayer].dealDamage(-(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur)));
                                     }
@@ -206,6 +209,7 @@ public class CombatTurn : MonoBehaviour
                                 else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "GR")
                                 {
                                     Attack(combatUI.GetComponent<CombatUI>().selectedSpell.valeur, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                    SoundManager.instance.PlayHeal();
                                 }
                                 else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AD" || combatUI.GetComponent<CombatUI>().selectedSpell.type == "AF")
                                 {
@@ -216,13 +220,13 @@ public class CombatTurn : MonoBehaviour
                     }
                     else
                     {
-                        if(ennemies != null)
+                        if (ennemies != null)
                         {
                             if (ennemies[currentPlayer] != null)
                             {
-                                int randomNumber = SelectSpell(ennemies[currentPlayer].sorts.Count); // Choisir un spell
+                                int randomNumber = SelectSpell(ennemies[currentPlayer].sorts); // Choisir un spell
                                 Debug.Log("Sort :" + randomNumber);
-                                if(ennemies[currentPlayer].sorts[randomNumber] != null)
+                                if (ennemies[currentPlayer].sorts[randomNumber] != null)
                                 {
                                     if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
                                     {
@@ -246,8 +250,9 @@ public class CombatTurn : MonoBehaviour
                                         }
 
                                         Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, idPerso);
+                                        SoundManager.instance.PlayHeal();
                                     }
-                                    else if(ennemies[currentPlayer].sorts[randomNumber].type == "AS")
+                                    else if (ennemies[currentPlayer].sorts[randomNumber].type == "AS")
                                     {
                                         Attack(GetDamage(ennemies[currentPlayer], ennemies[currentPlayer].sorts[randomNumber].valeur), RandomPersonnage(allies));
                                     }
@@ -286,7 +291,7 @@ public class CombatTurn : MonoBehaviour
                     Combat_WIN();
                     break;
                 case (CombatStates.LOSE):
-                    if(idSpellGain != "H2")
+                    if (idSpellGain != "H2")
                     {
                         Combat_Lose();
                     }
@@ -294,6 +299,9 @@ public class CombatTurn : MonoBehaviour
                     {
                         Combat_WIN();
                     }
+                    break;
+                case (CombatStates.Escape):
+                    Combat_Escape();
                     break;
                 case (CombatStates.ANIMEND):
                     currentState = CombatStates.NOTINCOMBAT;
@@ -389,7 +397,7 @@ public class CombatTurn : MonoBehaviour
             bd.insert(sql + id_enemy4);
             bd.Close();
         }
-        if(!idSpellGain.Trim().Equals(""))
+        if (!idSpellGain.Trim().Equals(""))
         {
             AccesBD bd = new AccesBD();
             bd.insert("UPDATE Sort SET Acquis = 'O' where id = '" + idSpellGain + "'");
@@ -418,17 +426,33 @@ public class CombatTurn : MonoBehaviour
         AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
         menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
         menuAfterFight.SetGameResultText("gagnez!");
-        menuAfterFight.SetSortText("George help");
-        menuAfterFight.SetDetailsText("Jpense va falloir determiner quelle combat se deroule...");
+
+        string spellName = "Aucun";
+        if (idSpellGain != "")
+        {
+            AccesBD bdSql = new AccesBD();
+            SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
+            while (reader.Read())
+            {
+                spellName = reader.GetString(0);
+            }
+            bdSql.Close();
+        }
+        menuAfterFight.SetSortText(spellName);
+        menuAfterFight.SetDetailsText(lore);
         menuAfterFight.AfficherMenu = true;
-
-
     }
 
     void Combat_Lose()
     {
         GetComponent<DialogHolder>().hasBeenTalked = false;
         Quit(target_loose);
+    }
+
+    void Combat_Escape()
+    {
+        GetComponent<DialogHolder>().hasBeenTalked = false;
+        Quit(target_win);
     }
 
     void Initialize_Component()
@@ -460,15 +484,12 @@ public class CombatTurn : MonoBehaviour
         ui.listAllySprites.Add(null);
         ui.listAllySprites.Add(null);
 
-        SpriteRenderer sprite;
-
         if (Personnage_Is_In_Team(1) && target_Ally_1 != null)
         {
             allies[0] = new Personnage(GameObject.FindGameObjectWithTag("HeroCombat"), 1);
             allies[0].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_1.position;
             allies[0].deplacement.Init_Position();
-            sprite = allies[0].gameObject.GetComponent<SpriteRenderer>();
-            ui.listAllySprites[0] = sprite.sprite;
+            ui.listAllySprites[0] = allies[0].deplacement.idle;
             allies[0].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(2) && target_Ally_2 != null)
@@ -476,8 +497,7 @@ public class CombatTurn : MonoBehaviour
             allies[1] = new Personnage(GameObject.FindGameObjectWithTag("ForestAlly"), 2);
             allies[1].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_2.position;
             allies[1].deplacement.Init_Position();
-            sprite = allies[1].gameObject.GetComponent<SpriteRenderer>();
-            ui.listAllySprites[1] = sprite.sprite;
+            ui.listAllySprites[1] = allies[1].deplacement.idle;
             allies[1].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(3) && target_Ally_3 != null)
@@ -485,8 +505,7 @@ public class CombatTurn : MonoBehaviour
             allies[2] = new Personnage(GameObject.FindGameObjectWithTag("FireAlly"), 3);
             allies[2].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_3.position;
             allies[2].deplacement.Init_Position();
-            sprite = allies[2].gameObject.GetComponent<SpriteRenderer>();
-            ui.listAllySprites[2] = sprite.sprite;
+            ui.listAllySprites[2] = allies[2].deplacement.idle;
             allies[2].deplacement.isDying = false;
         }
         if (Personnage_Is_In_Team(4) && target_Ally_4 != null)
@@ -494,8 +513,7 @@ public class CombatTurn : MonoBehaviour
             allies[3] = new Personnage(GameObject.FindGameObjectWithTag("IceAlly"), 4);
             allies[3].gameObject.GetComponent<Rigidbody2D>().position = target_Ally_4.position;
             allies[3].deplacement.Init_Position();
-            sprite = allies[3].gameObject.GetComponent<SpriteRenderer>();
-            ui.listAllySprites[3] = sprite.sprite;
+            ui.listAllySprites[3] = allies[3].deplacement.idle;
             allies[3].deplacement.isDying = false;
         }
 
@@ -670,7 +688,6 @@ public class CombatTurn : MonoBehaviour
     void Draw_Spell_And_Target()
     {
         CombatUI ui = combatUI.GetComponent<CombatUI>();
-        SpriteRenderer sprite;
         combatUI.GetComponent<CombatUI>().ShowMenu();
         ui.AfficherSpells(allies[currentPlayer]);
 
@@ -684,26 +701,22 @@ public class CombatTurn : MonoBehaviour
 
             ui.listEnnemies = ennemies;
 
-            if (go_enemy1 != null)
+            if (ennemies[0] != null)
             {
-                sprite = go_enemy1.GetComponent<SpriteRenderer>();
-                ui.listEnemySprites[0] = sprite.sprite;
+                ui.listEnemySprites[0] = ennemies[0].deplacement.idle;
             }
-            if (go_enemy2 != null)
+            if (ennemies[1] != null)
             {
-                sprite = go_enemy2.GetComponent<SpriteRenderer>();
-                ui.listEnemySprites[1] = sprite.sprite;
+                ui.listEnemySprites[1] = ennemies[1].deplacement.idle;
             }
-            if (go_enemy3 != null)
+            if (ennemies[2] != null)
             {
-                sprite = go_enemy3.GetComponent<SpriteRenderer>();
-                ui.listEnemySprites[2] = sprite.sprite;
+                ui.listEnemySprites[2] = ennemies[2].deplacement.idle;
             }
 
-            if (go_enemy4 != null)
+            if (ennemies[3] != null)
             {
-                sprite = go_enemy4.GetComponent<SpriteRenderer>();
-                ui.listEnemySprites[3] = sprite.sprite;
+                ui.listEnemySprites[3] = ennemies[3].deplacement.idle;
             }
 
         }
@@ -750,18 +763,17 @@ public class CombatTurn : MonoBehaviour
 
     public void QuitButton()
     {
-        GetComponent<DialogHolder>().hasBeenTalked = false;
-        Quit(target_win);
-        //if (Escape())
-        //{
-        //    Quit(target_win);
-        //}
-        //else
-        //{
-        //    //combatUI.GetComponent<CombatUI>().closeMenu();
-        //    //StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne m'échapperez pas !!!", 1));
-        //    currentState = CombatStates.NEXTPLAYER;
-        //}
+        if (Escape())
+        {
+            selecting = false;
+            currentState = CombatStates.Escape;
+        }
+        else
+        {
+            selecting = false;
+            currentState = CombatStates.NEXTPLAYER;
+            StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne m'échapperez pas !!!", 1));
+        }
     }
 
     bool currentPlayerIsMoving()
@@ -795,39 +807,55 @@ public class CombatTurn : MonoBehaviour
 
     void Attack(int damage, int idPersonnage)
     {
-        foreach (Personnage perso in allies)
+        if (damage > 0 && Dodge(idPersonnage))
         {
-            if (perso != null)
+            //On ne prend pas de domage puisque l'attaque à été esquivée.
+            SoundManager.instance.PlayAttack();
+        }
+        else
+        {
+            foreach (Personnage perso in allies)
             {
-                if (perso.id == idPersonnage)
+                if (perso != null)
                 {
-                    perso.dealDamage(-(damage));
-                    SoundManager.instance.PlayAttack();
+                    if (perso.id == idPersonnage)
+                    {
+                        perso.dealDamage(-(damage));
+                        SoundManager.instance.PlayAttack();
+                    }
                 }
             }
-        }
 
-        foreach (Personnage perso in ennemies)
-        {
-            if (perso != null)
+            foreach (Personnage perso in ennemies)
             {
-                if (perso.id == idPersonnage)
+                if (perso != null)
                 {
-                    perso.dealDamage(-(damage));
-                    SoundManager.instance.PlayAttack();
+                    if (perso.id == idPersonnage)
+                    {
+                        perso.dealDamage(-(damage));
+                        SoundManager.instance.PlayAttack();
+                    }
                 }
             }
         }
     }
 
-    void Attack_AOI(int damage,List<Personnage> personnages)
+    void Attack_AOI(int damage, List<Personnage> personnages)
     {
         foreach (Personnage perso in personnages)
         {
             if (perso != null)
             {
-                perso.dealDamage(-(damage));
-                SoundManager.instance.PlayAttack();
+                if (damage > 0 && Dodge(perso.id))
+                {
+                    //On ne prend pas de domage puisque l'attaque à été esquivée.
+                    SoundManager.instance.PlayAttack();
+                }
+                else
+                {
+                    perso.dealDamage(-(damage));
+                    SoundManager.instance.PlayAttack();
+                }
             }
         }
     }
@@ -858,7 +886,7 @@ public class CombatTurn : MonoBehaviour
             }
         }
 
-        if(personnage != null)
+        if (personnage != null)
         {
             if (type == "AD")
             {
@@ -872,6 +900,7 @@ public class CombatTurn : MonoBehaviour
                 else
                 {
                     StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Défense + " + (personnage.BattleDef - temp).ToString(), 2));
+                    SoundManager.instance.PlayDef();
                 }
             }
             if (type == "AF")
@@ -886,6 +915,7 @@ public class CombatTurn : MonoBehaviour
                 else
                 {
                     StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Force + " + (personnage.BattleStr - temp).ToString(), 2));
+                    SoundManager.instance.playForce();
                 }
             }
         }
@@ -939,7 +969,7 @@ public class CombatTurn : MonoBehaviour
             while (listPerso[id] == null)
             {
                 id = random.Next(0, listPerso.Count);
-            }   
+            }
         }
         Debug.Log("Target :" + id);
         return listPerso[id].id;
@@ -949,24 +979,29 @@ public class CombatTurn : MonoBehaviour
     {
         int damage = baseDamage;
 
-        if(perso.strength > 0)
+        if (perso.BattleStr > 0)
         {
-            damage += (baseDamage * perso.strength / 100);
+            damage += (baseDamage * perso.BattleStr / 100);
         }
 
-        return damage;   
+        return damage;
     }
 
-    int SelectSpell(int nbSort)
+    int SelectSpell(List<Sort> sorts)
     {
-        int idSpell = random.Next(0, nbSort);
+        int idSpell = random.Next(0, sorts.Count);
+
+        while (team_Is_Full_Heal(ennemies) && sorts[idSpell].type == "GR")
+        {
+            idSpell = random.Next(0, sorts.Count);
+        } 
 
         //Twist du boss de glace
         if (idSpellGain.Equals("H4"))
         {
-            if(currentPlayer == 2 || currentPlayer == 0)
+            if (currentPlayer == 2 || currentPlayer == 0)
             {
-                if(ennemies != null)
+                if (ennemies != null)
                 {
                     if (ennemies[1] != null)
                     {
@@ -980,5 +1015,60 @@ public class CombatTurn : MonoBehaviour
         }
 
         return idSpell;
+    }
+
+    public bool team_Is_Full_Heal(List<Personnage> personnages)
+    {
+        bool fullHeal = true;
+        foreach (var perso in personnages)
+        {
+            if (perso != null)
+            {
+                if (perso.BattleHp < perso.hpTotal)
+                {
+                    fullHeal = false;
+                }
+            }
+        }
+        return fullHeal;
+    }
+
+    public bool Dodge(int idPersonnage)
+    {
+        bool dodge = false;
+        int speed = 0;
+        string name = "";
+
+        foreach (Personnage perso in allies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPersonnage)
+                {
+                    speed = perso.speed;
+                    name = perso.name;
+                }
+            }
+        }
+
+        foreach (Personnage perso in ennemies)
+        {
+            if (perso != null)
+            {
+                if (perso.id == idPersonnage)
+                {
+                    speed = perso.speed;
+                    name = perso.name;
+                }
+            }
+        }
+
+        if(random.Next(0,100) <= speed)
+        {
+            dodge = true;
+            StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(name + " : Esquive", 1));
+        }
+
+        return dodge;
     }
 }

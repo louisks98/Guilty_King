@@ -158,6 +158,7 @@ public class CombatUI : MonoBehaviour {
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Regénération", 2));
                     selectedSpell = null;
                     closeMenu();
+                    SoundManager.instance.PlayItem();
                 }
                 break;
             case "Btn_Item_Def":
@@ -364,11 +365,11 @@ public class CombatUI : MonoBehaviour {
 
     public IEnumerator ShowMessage(string msg, int delai)
     {
+        //CombatTurn.anim = true;
         combatMessage.GetComponent<Text>().text = msg;
-        //combatMessage.SetActive(true);
         yield return new WaitForSeconds(delai);
         combatMessage.GetComponent<Text>().text = "";
-        //combatMessage.SetActive(false); // Cause trop de problème
+        //CombatTurn.anim = false;
     }
 
     private void ReactivateButtons(List<Button> listBtn)
@@ -421,21 +422,44 @@ public class CombatUI : MonoBehaviour {
     public void ShowTooltipItem(int idBtn)
     {
         Color cl = bgtoolTipItem[idBtn].color;
+        AccesBD bd = new AccesBD();
+        SqliteDataReader reader;
+        string desc = "";
         cl.a = 255;
         bgtoolTipItem[idBtn].color = cl;
         switch(idBtn)
         {
             case 0:
-                toolTipItem[idBtn].text = " Potion Regeneration: +10hp";
+                reader = bd.select("select Description from Item where idItem = 3");
+                while(reader.Read())
+                {
+                    desc = reader.GetString(0);
+                }
+                toolTipItem[idBtn].text = desc;
                 break;
             case 1:
-                toolTipItem[idBtn].text = " Potion Steroids: +10Str";
+                reader = bd.select("select Description from Item where idItem = 7");
+                while (reader.Read())
+                {
+                    desc = reader.GetString(0);
+                }
+                toolTipItem[idBtn].text = desc;
                 break;
             case 2:
-                toolTipItem[idBtn].text = " Potion Harden: +10Def";
+                reader = bd.select("select Description from Item where idItem = 6");
+                while (reader.Read())
+                {
+                    desc = reader.GetString(0);
+                }
+                toolTipItem[idBtn].text = desc;
                 break;
             case 3:
-                toolTipItem[idBtn].text = " Potion Speed boost: +10Spd";
+                reader = bd.select("select Description from Item where idItem = 5");
+                while (reader.Read())
+                {
+                    desc = reader.GetString(0);
+                }
+                toolTipItem[idBtn].text = desc;
                 break;
         }
     }

@@ -25,9 +25,6 @@ namespace Assets.Script
             try
             {
                cmd = new SqliteCommand(query, dbconn);
-
-                //IDbCommand dbcmd = dbconn.CreateCommand();
-                //dbcmd.CommandText = query;
             }
             catch(SqliteException e)
             {
@@ -41,12 +38,10 @@ namespace Assets.Script
         {
             try
             {
-                int rst;
                 cmd = new SqliteCommand();
                 cmd.Connection = dbconn;
                 cmd.CommandText = query;
-                rst = cmd.ExecuteNonQuery();
-                rst += 10;
+                cmd.ExecuteNonQuery();
                 cmd.Dispose();
             }
             catch(SqliteException e)
@@ -56,11 +51,40 @@ namespace Assets.Script
             }
             
         }
+        public void ClearBD()
+        {
+            // Table Personnage
+            cmd = new SqliteCommand();
+            cmd.Connection = dbconn;
+            cmd.CommandText = "update Personnage set vaincue = 'N'";
+            cmd.ExecuteNonQuery();
+            
+            cmd.CommandText = "update Personnage set vaincue = 'O' where idPersonnage = 1";
+            cmd.ExecuteNonQuery();
+
+            // Inventaire
+            cmd.CommandText = "update InventaireItem set Quantite = 0";
+            cmd.ExecuteNonQuery();
+
+            // Stats
+            cmd.CommandText = "update Stats set Point_de_Vie = 1500, Force = 0, Defence = 0, Vitesse = 0, nbAmes = 0 where idStats = 1";
+            cmd.ExecuteNonQuery();
+
+            // Sort
+            cmd.CommandText = "update Sort set Acquis = 'N' where id like 'H2'";
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "update Sort set Acquis = 'N' where id like 'H3'";
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "update Sort set Acquis = 'N' where id like 'H4'";
+            cmd.ExecuteNonQuery();
+
+            cmd.Dispose();
+            Close();
+        }
+
 
         public void Close()
         {
-            //cmd.Dispose();
-            //cmd = null;
             dbconn.Close();
             dbconn = null;
         }
