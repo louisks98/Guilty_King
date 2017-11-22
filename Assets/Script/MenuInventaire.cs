@@ -92,11 +92,14 @@ public class MenuInventaire : MonoBehaviour {
                         {
                             if(!placedSlots[j + 1])
                             {
-                                slots[j + 1].sprite = imageItem[i];
-                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
-                                itemPlaced[i] = true;
-                                placedSlots[j + 1] = true;
-                                NbItemPlacer++;
+                                if(!slots[j+1].name.Contains("Slot") && !slots[j + 1].name.Contains("Pnl_Info"))
+                                {
+                                    slots[j + 1].sprite = imageItem[i];
+                                    textNb[NbItemPlacer].text = "x" + nbItem.ToString();
+                                    itemPlaced[i] = true;
+                                    placedSlots[j + 1] = true;
+                                    NbItemPlacer++;
+                                }
                             }
                             else
                             {
@@ -109,11 +112,14 @@ public class MenuInventaire : MonoBehaviour {
                         }
                         else
                         {
-                            slots[j + 1].sprite = imageItem[i];
-                            textNb[NbItemPlacer].text = "x" + nbItem.ToString();
-                            itemPlaced[i] = true;
-                            placedSlots.Add(j + 1, true);
-                            NbItemPlacer++;
+                            if(!slots[j + 1].name.Contains("Slot") && !slots[j + 1].name.Contains("Pnl_Info"))
+                            {
+                                slots[j + 1].sprite = imageItem[i];
+                                textNb[NbItemPlacer].text = "x" + nbItem.ToString();
+                                itemPlaced[i] = true;
+                                placedSlots.Add(j + 1, true);
+                                NbItemPlacer++;
+                            }
                         }
                     }
                     else

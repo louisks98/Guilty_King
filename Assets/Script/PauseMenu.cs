@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
+    
     public enum MenuStates { None, Main, Inventory, Team, Stats, Skill, Level}
     private MenuStates states;
     
@@ -22,6 +24,7 @@ public class PauseMenu : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        SoundManager.instance.musicSource.Play();
         script = inventoryMenu.GetComponent<MenuInventaire>();
     }
 
@@ -120,7 +123,8 @@ public class PauseMenu : MonoBehaviour {
 
     public void Quit()
     {
-        Application.Quit();
+        SoundManager.instance.musicSource.Stop();
+        SceneManager.LoadScene(0);
     }
 
     public void Open_Inventory()
