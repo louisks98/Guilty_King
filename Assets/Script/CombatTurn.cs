@@ -601,11 +601,14 @@ public class CombatTurn : MonoBehaviour
     int Team_Speed(List<Personnage> team)
     {
         int speed = 0;
-        foreach (Personnage personnage in team)
+        if(team != null)
         {
-            if (personnage != null)
+            foreach (Personnage personnage in team)
             {
-                speed += personnage.speed;
+                if (personnage != null)
+                {
+                    speed += personnage.speed;
+                }
             }
         }
         return speed;
