@@ -21,6 +21,8 @@ public class FighterMovement : MonoBehaviour
     // Dying
     public bool isDying = false;
 
+    public Sprite idle;
+
     // Use this for initialization
     void Start()
     {
