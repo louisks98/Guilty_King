@@ -11,6 +11,11 @@ public class SoundManager : MonoBehaviour {
     public AudioClip dialogClip;
     public AudioClip BattleMusic;
     public AudioClip ambientMusic;
+    public AudioClip itemClip;
+    public AudioClip forceClip;
+    public AudioClip defClip;
+    public AudioClip HealClip;
+    public AudioClip doorClip;
     public static SoundManager instance = null;
 
     public float lowPitchRange = .95f;
@@ -56,6 +61,34 @@ public class SoundManager : MonoBehaviour {
         musicSource.Stop();
         musicSource.clip = ambientMusic;
         musicSource.Play();
+    }
+
+    public void PlayItem()
+    {
+        PlaySingle(itemClip);
+    }
+
+    public void PlayHeal()
+    {
+        efxSource.clip = HealClip;
+       // efxSource.volume = 0.85f;
+        efxSource.Play();
+
+    }
+
+    public void PlayDef()
+    {
+        PlaySingle(defClip);
+    }
+
+    public void playForce()
+    {
+        PlaySingle(forceClip);
+    }
+
+    public void PlayDoor()
+    {
+        PlaySingle(doorClip);
     }
 
     private void RandomizeSfx(params AudioClip[] clip)

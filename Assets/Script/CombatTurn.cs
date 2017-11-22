@@ -209,6 +209,7 @@ public class CombatTurn : MonoBehaviour
                                 else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "GR")
                                 {
                                     Attack(combatUI.GetComponent<CombatUI>().selectedSpell.valeur, combatUI.GetComponent<CombatUI>().selectedEnemy);
+                                    SoundManager.instance.PlayHeal();
                                 }
                                 else if (combatUI.GetComponent<CombatUI>().selectedSpell.type == "AD" || combatUI.GetComponent<CombatUI>().selectedSpell.type == "AF")
                                 {
@@ -249,6 +250,7 @@ public class CombatTurn : MonoBehaviour
                                         }
 
                                         Attack(ennemies[currentPlayer].sorts[randomNumber].valeur, idPerso);
+                                        SoundManager.instance.PlayHeal();
                                     }
                                     else if (ennemies[currentPlayer].sorts[randomNumber].type == "AS")
                                     {
@@ -898,6 +900,7 @@ public class CombatTurn : MonoBehaviour
                 else
                 {
                     StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Défense + " + (personnage.BattleDef - temp).ToString(), 2));
+                    SoundManager.instance.PlayDef();
                 }
             }
             if (type == "AF")
@@ -912,6 +915,7 @@ public class CombatTurn : MonoBehaviour
                 else
                 {
                     StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(personnage.name + ": Force + " + (personnage.BattleStr - temp).ToString(), 2));
+                    SoundManager.instance.playForce();
                 }
             }
         }

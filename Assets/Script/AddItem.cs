@@ -38,7 +38,6 @@ public class AddItem : MonoBehaviour {
                     
                     try
                     {
-                        
                         reader = bd.select("select Quantite from InventaireItem where Personnage = 1 and Item = (select idItem from Item where Nom = '"+ item +"')");
                         while (reader.Read())
                         {
@@ -55,6 +54,7 @@ public class AddItem : MonoBehaviour {
                         bd.Close();
                         Debug.Log("close addItem");
                         SoundManager.instance.PlaySingle(sound);
+                        this.GetComponent<Collider2D>().enabled = false;
                     }
                     catch(SqliteException e)
                     {

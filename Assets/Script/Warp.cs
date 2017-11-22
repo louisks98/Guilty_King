@@ -17,6 +17,7 @@ public class Warp : MonoBehaviour {
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
+        SoundManager.instance.PlayDoor();
 
         PlayerMovment.isTransition = true;
         hero.GetComponent<Animator>().enabled = false;
