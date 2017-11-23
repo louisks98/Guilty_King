@@ -48,7 +48,7 @@ public class DialogHolder : MonoBehaviour
 
         if (!inCombat)
         {
-            if (collision.gameObject.name == "Hero")
+            if (collision.gameObject.name == "Hero" || collision.gameObject.name == "Boat")
             {
                 if (!instantTalk)
                 {

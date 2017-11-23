@@ -22,6 +22,7 @@ public class AfterFight : MonoBehaviour {
 	void Start () {
         AfficherMenu = false;
         estAfficher = false;
+
 	}
 
     // Update is called once per frame
@@ -32,14 +33,20 @@ public class AfterFight : MonoBehaviour {
             {
                 leCanvas.SetActive(true);
                 estAfficher = true;
+                PlayerMovment.inCombat = true;
+                PlayerMovment.canMove = false;
+
+            }
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            {
+                AfficherMenu = false;
+                estAfficher = false;
+                leCanvas.SetActive(false);
+                PlayerMovment.inCombat = false;
+                PlayerMovment.canMove = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
-        {
-            AfficherMenu = false;
-            estAfficher = false;
-            leCanvas.SetActive(false);
-        }
+      
     }
     public void SetSoulsText(string leText)
     {
