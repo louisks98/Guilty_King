@@ -385,8 +385,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programmeurs:\n\n\n\n\nSyst\xE8me de combat:\n\n\nMusique et sons:\n\n\nAnimations:\n\n\nChef
-    de projet:\n\n\nChef du versionnage:"
+  m_Text: "Chef de projet:\n\n\nChef du versionnage:\n\n\nProgrammeurs:\n\n\n\n\nSyst\xE8me
+    de combat:\n\n\nMusique et sons:\n\n\nAnimations:\n"
 --- !u!222 &663162319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1021,6 +1021,14 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Etienne Simoneau
 
+
+
+    Louis-Christophe Poulin
+
+
+
+    Etienne Simoneau
+
     Georges Mainville
 
     Louis-Christophe Poulin
@@ -1037,13 +1045,6 @@ MonoBehaviour:
 
     Etienne Simoneau
 
-
-
-    Etienne Simoneau
-
-
-
-    Louis-Christophe Poulin
 
 '
 --- !u!222 &1762222956
