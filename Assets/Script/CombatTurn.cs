@@ -434,6 +434,23 @@ public class CombatTurn : MonoBehaviour
             bd.Close();
         }
 
+        if (id_enemy1 == 2)
+        {
+            CancelDialog.forestDead = true;
+        }
+        if (id_enemy1 == 3)
+        {
+            CancelDialog.fireDead = true;
+        }
+        if (id_enemy1 == 4)
+        {
+            CancelDialog.iceDead = true;
+        }
+        if (id_enemy1 == 23)
+        {
+            CancelDialog.mordraxDead = true;
+        }
+
         Quit(target_win);
 
         if (id_enemy2 == 9)
