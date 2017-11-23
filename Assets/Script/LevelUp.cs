@@ -143,6 +143,24 @@ public class LevelUp : MonoBehaviour
         }
     }
 
+    public void saveSools()
+    {
+        AccesBD bd = new AccesBD();
+
+        try
+        {
+            string query = "update Stats Set nbAmes = " + soulsNumber + " where Stats.idStats = 1";
+            bd.insert(query);
+            bd.Close();
+        }
+        catch (SqliteException e)
+        {
+            bd.Close();
+            Debug.Log(e);
+            bdModifier = false;
+        }
+    }
+
     public void addSouls(int theSouls)
     {
         soulsNumber += theSouls;
