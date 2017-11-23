@@ -318,7 +318,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2905785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 541.4148, y: 197.77045, z: 0}
+  m_LocalPosition: {x: 504, y: 197.77045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -453,7 +453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -60.5}
+  m_AnchoredPosition: {x: 305, y: -12}
   m_SizeDelta: {x: 371.4, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15290007
@@ -2274,7 +2274,7 @@ RectTransform:
   m_GameObject: {fileID: 90922859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9535185, y: 2.8920658, z: 1.1300004}
+  m_LocalScale: {x: 1.3015528, y: 4.639193, z: 1.1300004}
   m_Children:
   - {fileID: 1103797309}
   - {fileID: 1619467005}
@@ -2283,7 +2283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 0}
+  m_AnchoredPosition: {x: -0.000012398, y: -23}
   m_SizeDelta: {x: 351.6, y: 146.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90922861
@@ -2708,10 +2708,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1480, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2887,9 +2887,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 1
   dialogueLines:
-  - "Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
+  - "Illia: Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
     \xE0 l'est dans la carte d'eau..."
-  - "Am\xE8ne toi!"
+  - "Illia: Am\xE8ne toi!"
   ennemy: {fileID: 127374436}
   instantTalk: 1
   hasBeenTalked: 0
@@ -2926,7 +2926,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 4
   idSpellGain: H4
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Illia tombe en amour avec votre force et votre courage et d\xE9cide de rejoindre
+    l'\xE9quipe. La zone du roi est maintenant disponible. Vite! Dirigez-vous vers
+    le sud-est de la carte d'eau!"
 --- !u!1 &137331887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,7 +3828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.1, y: 120}
+  m_AnchoredPosition: {x: -397, y: 120}
   m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195212797
@@ -4959,7 +4961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5088,7 +5090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: 100}
+  m_AnchoredPosition: {x: -282, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258779390
@@ -5657,7 +5659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: -100}
+  m_AnchoredPosition: {x: -402, y: -51}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296424180
@@ -6077,7 +6079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 0}
+  m_AnchoredPosition: {x: -402, y: 49}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320208477
@@ -6544,7 +6546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: 100}
+  m_AnchoredPosition: {x: -212, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353874001
@@ -6666,7 +6668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 28.200005}
+  m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354860513
@@ -7162,7 +7164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 98.600006}
+  m_AnchoredPosition: {x: 0, y: 88.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389013641
@@ -7695,7 +7697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.175034, y: -24.5}
+  m_AnchoredPosition: {x: 53, y: -55.5}
   m_SizeDelta: {x: 90.7, y: 23.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401687545
@@ -8090,7 +8092,7 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 3
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Vous avez r\xE9ussi \xE0 renvoyer Mordrax en enfer. F\xE9licitations!"
 --- !u!114 &419570785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8104,7 +8106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - '...'
+  - 'Mordrax: ...'
   ennemy: {fileID: 419570781}
   instantTalk: 1
   hasBeenTalked: 0
@@ -8413,7 +8415,8 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Trouver l'autre pond qui vous m\xE8nera vers le boss de feu. N'oubliez pas
+    de monter de niveau en utilisant la touche Escape!"
 --- !u!114 &448667299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9117,7 +9120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.8, y: 0.0000044254}
+  m_AnchoredPosition: {x: 3.8, y: -8}
   m_SizeDelta: {x: 345, y: 301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476935463
@@ -9185,7 +9188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407, y: 0}
+  m_AnchoredPosition: {x: 366, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481587619
@@ -9383,7 +9386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: 17.325008}
+  m_AnchoredPosition: {x: -60, y: 0.0000019073}
   m_SizeDelta: {x: 80, y: 107.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495481324
@@ -9824,7 +9827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: -200}
+  m_AnchoredPosition: {x: -352, y: -151}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521874629
@@ -10136,9 +10139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le nord de
-    la carte d'eau..."
-  - "Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
+  - "Raven: Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le
+    nord de la carte d'eau..."
+  - "Raven: Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
   ennemy: {fileID: 523527870}
   instantTalk: 1
   hasBeenTalked: 0
@@ -10175,7 +10178,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 3
   idSpellGain: H3
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "\xC0 la recherche de plus de puissance, la reine de feu se joint \xE0 l'\xE9quipe
+    et vous aidera dans votre qu\xEAte. Retournez en bateau et dirigez-vous vers le
+    nord-est afin de trouver le glacier o\xF9 vit la reine de glace."
 --- !u!1 &527476420
 GameObject:
   m_ObjectHideFlags: 0
@@ -10603,14 +10608,14 @@ RectTransform:
   m_GameObject: {fileID: 533509627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2796875, y: 1.4637512, z: 1}
   m_Children: []
   m_Father: {fileID: 1077866880}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2, y: 163}
+  m_AnchoredPosition: {x: 5.5374, y: 161}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533509629
@@ -10913,9 +10918,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
-  - "Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce throne!"
-  - Battons-nous!
+  - "Roi: Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
+  - "Roi: Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce
+    throne!"
+  - 'Roi: Battons-nous!'
   ennemy: {fileID: 542883399}
   instantTalk: 1
   hasBeenTalked: 0
@@ -10952,7 +10958,8 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 0
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Votre m\xE8re serait fi\xE8re de vous! Vous \xEAtes maintenant le roi...
+    mais qui sait quand le roi corrompu reviendra pour reprendre sa place..."
 --- !u!1 &545767982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10986,7 +10993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: 0}
+  m_AnchoredPosition: {x: -282, y: 49}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &545767984
@@ -11768,7 +11775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -100}
+  m_AnchoredPosition: {x: -452, y: -51}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &588320380
@@ -12253,7 +12260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
+  m_AnchoredPosition: {x: 0, y: 50.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610599803
@@ -12441,7 +12448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.1, y: 225}
+  m_AnchoredPosition: {x: -395, y: 225}
   m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614928054
@@ -12676,7 +12683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 100}
+  m_AnchoredPosition: {x: -142, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628072509
@@ -12826,7 +12833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63.59999}
+  m_AnchoredPosition: {x: 0, y: -73.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636306029
@@ -12982,10 +12989,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -15070,8 +15077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 385.9, y: 155}
-  m_SizeDelta: {x: 298.8, y: 30}
+  m_AnchoredPosition: {x: -395, y: 155}
+  m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758215421
 MonoBehaviour:
@@ -15435,7 +15442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -200}
+  m_AnchoredPosition: {x: -452, y: -151}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773409932
@@ -16159,7 +16166,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Annuler
 --- !u!222 &807027325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16609,14 +16616,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - Bonjour jeune homme
-  - "Pour continuer ta qu\xEAte, il faudra que tu ailles dans la carte d'eau situ\xE9e
-    au nord-est \xE0 partir d'ici"
-  - Une fois dans la carte d'eau, tu devras aller battre la reine de feu qui est au
-    sud de celle-ci
-  - Oh... tu veux que je vienne t'aider? Malheureusement il faudra que tu me prouves
-    ta force avant que je t'aide!
-  - "Tu ne r\xE9ussiras jamais \xE0 me battre!"
+  - 'Armstrong: Bonjour jeune homme'
+  - "Armstrong: Pour continuer ta qu\xEAte, il faudra que tu ailles dans la carte
+    d'eau situ\xE9e au nord-est \xE0 partir d'ici"
+  - 'Armstrong: Une fois dans la carte d''eau, tu devras aller battre la reine de
+    feu qui est au sud de celle-ci'
+  - 'Armstrong: Oh... tu veux que je vienne t''aider? Malheureusement il faudra que
+    tu me prouves ta force avant que je t''aide!'
+  - "Armstrong: Tu ne r\xE9ussiras jamais \xE0 me battre!"
   ennemy: {fileID: 835133022}
   instantTalk: 1
   hasBeenTalked: 0
@@ -16653,7 +16660,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 1
   idSpellGain: H2
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Armstrong a gagn\xE9 le combat, mais comprenant l'importance de votre qu\xEAte,
+    il se joint \xE0 vous afin de battre le roi corrompu. N'oubliez pas de monter
+    de niveau!"
 --- !u!1 &835556021
 GameObject:
   m_ObjectHideFlags: 0
@@ -16848,10 +16857,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 200
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -18858,7 +18867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 100}
+  m_AnchoredPosition: {x: -352, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &937177829
@@ -19035,7 +19044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &956060330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19049,6 +19058,7 @@ RectTransform:
   - {fileID: 2079396351}
   - {fileID: 1331628684}
   - {fileID: 2121777685}
+  - {fileID: 1892857381}
   m_Father: {fileID: 1755453882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19084,10 +19094,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1420, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -19242,7 +19252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393, y: -157}
+  m_AnchoredPosition: {x: 380, y: -157}
   m_SizeDelta: {x: 325, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976517816
@@ -19442,7 +19452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.65, y: -63}
+  m_AnchoredPosition: {x: 17.9, y: -126.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997830713
@@ -19839,7 +19849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -32.999992}
+  m_AnchoredPosition: {x: 0, y: -43.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023102864
@@ -19959,7 +19969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.000023, y: 25.184998}
+  m_AnchoredPosition: {x: 62.8, y: 4.5}
   m_SizeDelta: {x: 110.35, y: 25.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026282634
@@ -20955,10 +20965,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 150
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1660, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -21569,7 +21579,7 @@ RectTransform:
   m_GameObject: {fileID: 1103797308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9375, y: 0.91250014, z: 1}
   m_Children:
   - {fileID: 1108911480}
   - {fileID: 235046891}
@@ -21588,7 +21598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.12502, y: -11.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1108911479
@@ -21746,7 +21756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: -200}
+  m_AnchoredPosition: {x: -402, y: -151}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111825948
@@ -22707,7 +22717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nombre d'\xE2me(s) gagn\xE9(s) :\n"
+  m_Text: "Nombre d'\xE2me(s) gagn\xE9e(s) :\n"
 --- !u!222 &1143379392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22746,7 +22756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 94.04556, y: 30.296833}
+  m_AnchoredPosition: {x: -795, y: 30.296833}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143517426
@@ -22831,7 +22841,7 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Les portes du ch\xE2teau sont maintenant ouvertes. Bonne chance."
 --- !u!212 &1146949995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22887,7 +22897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - Halte !!! On ne vous laissera pas passer.
+  - 'Gardes: Halte! On ne vous laissera pas passer.'
   ennemy: {fileID: 1146949992}
   instantTalk: 1
   hasBeenTalked: 0
@@ -23821,7 +23831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Annuler
 --- !u!222 &1201504472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24814,8 +24824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 392.1, y: 190}
-  m_SizeDelta: {x: 311.3, y: 30}
+  m_AnchoredPosition: {x: -395, y: 190}
+  m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244669429
 MonoBehaviour:
@@ -25443,7 +25453,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1480, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -25527,7 +25537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.275}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -25691,7 +25701,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: 
 --- !u!222 &1269493569
 CanvasRenderer:
@@ -26504,8 +26514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 71.00001}
-  m_SizeDelta: {x: 80, y: 24}
+  m_AnchoredPosition: {x: 64.749985, y: 71.00001}
+  m_SizeDelta: {x: 177.5, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308497910
 MonoBehaviour:
@@ -26870,7 +26880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 109}
+  m_AnchoredPosition: {x: 0, y: 158}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331628685
@@ -26905,7 +26915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stats
+  m_Text: Statistiques
 --- !u!222 &1331628686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27095,7 +27105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 364, y: -167.00002}
+  m_AnchoredPosition: {x: -322, y: -167.00002}
   m_SizeDelta: {x: 475.5, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346827276
@@ -27890,7 +27900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1381405847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28026,13 +28036,13 @@ MonoBehaviour:
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Toucher Sur Espace Pour Continuer
 --- !u!222 &1383360322
@@ -29447,7 +29457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407, y: 177}
+  m_AnchoredPosition: {x: 366, y: 177}
   m_SizeDelta: {x: 127, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465962619
@@ -29585,7 +29595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241.09998, y: 78.5}
+  m_AnchoredPosition: {x: 306, y: 127}
   m_SizeDelta: {x: 371.4, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471541307
@@ -29732,7 +29742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 57}
+  m_AnchoredPosition: {x: 62.8, y: 35.8}
   m_SizeDelta: {x: 110.35, y: 28.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487746721
@@ -30064,7 +30074,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Item
+  m_Text: Objets
 --- !u!222 &1496006394
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30648,7 +30658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240.92, y: -205.8}
+  m_AnchoredPosition: {x: 306, y: -157}
   m_SizeDelta: {x: 371.8, y: 75.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529590446
@@ -31039,7 +31049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 0}
+  m_AnchoredPosition: {x: -352, y: 49}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546630532
@@ -31161,7 +31171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.7999954}
+  m_AnchoredPosition: {x: 0, y: -13}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556998770
@@ -31418,7 +31428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 110}
+  m_AnchoredPosition: {x: -452, y: 159}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567860737
@@ -32221,7 +32231,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stats
+  m_Text: Statistiques
 --- !u!222 &1592632352
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33038,7 +33048,7 @@ RectTransform:
   m_GameObject: {fileID: 1619467004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9375, y: 0.91250014, z: 1}
   m_Children:
   - {fileID: 74856780}
   - {fileID: 825344186}
@@ -33047,7 +33057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -18.5}
+  m_AnchoredPosition: {x: 2, y: -28.5}
   m_SizeDelta: {x: 240, y: 23.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619467006
@@ -33941,7 +33951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -100}
+  m_AnchoredPosition: {x: -282, y: -51}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712762272
@@ -36639,7 +36649,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Gr\xE2ce \xE0 Armstrong, vous avez r\xE9ussi \xE0 battre les quatre gobelins
+    des for\xEAts. Passez le pond et dirigez-vous vers le sud pour aller dans la carte
+    de feu."
 --- !u!114 &1751707228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36653,8 +36665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "J'esp\xE8re pour toi que tu n'es pas venu seul."
-  - Puisque moi je ne suis pas seul ! HAHAHA !!!
+  - "Gobelin: J'esp\xE8re pour toi que tu n'es pas venu seul."
+  - 'Gobelin: Puisque moi je ne suis pas seul ! HAHAHA !!!'
   ennemy: {fileID: 1751707223}
   instantTalk: 1
   hasBeenTalked: 0
@@ -36901,7 +36913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 210}
+  m_AnchoredPosition: {x: 0, y: 243}
   m_SizeDelta: {x: 129.5, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765564321
@@ -37020,7 +37032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -200}
+  m_AnchoredPosition: {x: -282, y: -151}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772477347
@@ -37809,7 +37821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: -255}
+  m_AnchoredPosition: {x: 798, y: -266}
   m_SizeDelta: {x: 136, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813024001
@@ -38683,7 +38695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 0}
+  m_AnchoredPosition: {x: -452, y: 49}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845070001
@@ -40592,7 +40604,7 @@ RectTransform:
   m_GameObject: {fileID: 1853437387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.090737, y: 1.2409471, z: 1}
   m_Children:
   - {fileID: 1939696225}
   - {fileID: 1204925815}
@@ -40608,7 +40620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9}
+  m_AnchoredPosition: {x: -1.3997, y: 9}
   m_SizeDelta: {x: 329, y: 385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853437389
@@ -40707,7 +40719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.025, y: 0.0000038147}
+  m_AnchoredPosition: {x: 52.9, y: -25.6}
   m_SizeDelta: {x: 91, y: 25.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869016931
@@ -41330,17 +41342,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892857380}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1154664877}
-  m_Father: {fileID: 2121777685}
-  m_RootOrder: 8
+  m_Father: {fileID: 956060330}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -101}
+  m_AnchoredPosition: {x: -0.30002, y: -212}
   m_SizeDelta: {x: 87.28, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892857382
@@ -41940,7 +41952,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Annuler
 --- !u!222 &1908729762
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42007,7 +42019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 392, y: -8.3}
+  m_AnchoredPosition: {x: -294, y: -8.3}
   m_SizeDelta: {x: 531.5, y: 65.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914932060
@@ -43216,7 +43228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 100}
+  m_AnchoredPosition: {x: -402, y: 149}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002338237
@@ -43660,7 +43672,7 @@ RectTransform:
   m_GameObject: {fileID: 2037651498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9875001, y: 1, z: 1}
+  m_LocalScale: {x: 1.2636914, y: 1.4637512, z: 1}
   m_Children:
   - {fileID: 255064199}
   m_Father: {fileID: 1077866880}
@@ -43668,7 +43680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2, y: -116}
+  m_AnchoredPosition: {x: 5.5374, y: -247}
   m_SizeDelta: {x: 162, y: 28.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037651500
@@ -44225,7 +44237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: -100}
+  m_AnchoredPosition: {x: -352, y: -51}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061776485
@@ -44824,11 +44836,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - Hic! J'ai beaucoup trop bu... Hic!
-  - "Bonjour mon enfant! Bois ce jus enchant\xE9, tu te sentiras beaucoup plus fort!
-    H\xE9 h\xE9!"
+  - 'Rich: Hic! J''ai beaucoup trop bu... Hic!'
+  - "Rich: Bonjour mon enfant! Bois ce jus enchant\xE9, tu te sentiras beaucoup plus
+    fort! H\xE9 h\xE9!"
   - '...Glou Glou...'
-  - Vous vous sentez automatiquement plus fort!
+  - "Vous vous sentez automatiquement plus fort et pr\xEAt \xE0 affronter les dangers
+    de la for\xEAt!"
   ennemy: {fileID: 0}
   instantTalk: 1
   hasBeenTalked: 0
@@ -45137,7 +45150,8 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Suivez les tuiles bleues sur le sol, ils vous m\xE8neront vers la reine de
+    feu."
 --- !u!114 &2094395290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46044,13 +46058,12 @@ RectTransform:
   - {fileID: 401687544}
   - {fileID: 997830712}
   - {fileID: 495481323}
-  - {fileID: 1892857381}
   m_Father: {fileID: 956060330}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024795998, y: -65.75}
+  m_AnchoredPosition: {x: -0.000024795998, y: -16}
   m_SizeDelta: {x: 235.3, y: 319.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121777686
