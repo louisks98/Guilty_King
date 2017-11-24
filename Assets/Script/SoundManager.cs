@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip attackClip2;
     public AudioClip dialogClip;
     public AudioClip BattleMusic;
-    public AudioClip ambientMusic;
+    private AudioClip ambientMusic;
     public AudioClip itemClip;
     public AudioClip forceClip;
     public AudioClip defClip;
@@ -36,6 +36,7 @@ public class SoundManager : MonoBehaviour {
     public void PlaySingle(AudioClip clip)
     {
         efxSource.clip = clip;
+        efxSource.volume = 1f;
         efxSource.Play();
     }
 
@@ -46,7 +47,10 @@ public class SoundManager : MonoBehaviour {
 
     public void PlayDialog()
     {
-        PlaySingle(dialogClip);
+        float volume = 0.1f;
+        efxSource.clip = dialogClip;
+        efxSource.volume = volume;
+        efxSource.Play();
     }
 
     public void PlayBattleMusic()
@@ -59,6 +63,15 @@ public class SoundManager : MonoBehaviour {
     public void PlayAmbient()
     {
         musicSource.Stop();
+        musicSource.clip = ambientMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void PlayAmbient(AudioClip clip)
+    {
+        musicSource.Stop();
+        ambientMusic = clip;
         musicSource.clip = ambientMusic;
         musicSource.Play();
     }

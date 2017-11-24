@@ -87,11 +87,21 @@ public class MenuStatTeam : MonoBehaviour {
                 obj.GetComponent<Button>().interactable = true;
                 obj.GetComponent<Button>().onClick.AddListener(() => { Affichercharacter(); });
 
-                img[1].sprite = listPers[i].image;
-                txt[0].text = listPers[i].name;
-                txt[1].text = "Niveau : " + listPers[i].level.ToString();
-                txt[2].text = "Hp : " + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
-                txt[3].text = "Âmes : " + listPers[i].nbAmes.ToString();
+                if(obj.name == "PanelCharacter1")
+                {
+                    img[1].sprite = listPers[i].image;
+                    txt[0].text = listPers[i].name;
+                    txt[1].text = "Niveau : " + listPers[i].level.ToString();
+                    txt[2].text = "Hp : " + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
+                    txt[3].text = "Âmes : " + listPers[i].nbAmes.ToString();
+                    
+                }
+                else
+                {
+                    img[1].sprite = listPers[i].image;
+                    txt[0].text = listPers[i].name;
+                    txt[1].text = "Hp : " + listPers[i].hpTotal.ToString() + "/" + listPers[i].hpTotal.ToString();
+                }
                 i++;
             }
             else
@@ -101,8 +111,8 @@ public class MenuStatTeam : MonoBehaviour {
                 img[1].sprite = questionMark;
                 txt[0].text = "???????";
                 txt[1].text = "???????";
-                txt[2].text = "???????";
-                txt[3].text = "???????";
+                //txt[2].text = "???????";
+                //txt[3].text = "???????";
                 i++;
             }
         }
@@ -127,34 +137,34 @@ public class MenuStatTeam : MonoBehaviour {
 
             case "PanelCharacter2":
                 txt[0].text = listPers[1].name;
-                txt[1].text = "Niveau : " + listPers[1].level.ToString();
+                txt[1].text = "";
                 txt[2].text = "HP : " + listPers[1].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[1].strength.ToString();
                 txt[4].text = "Defense : " + listPers[1].defence.ToString();
                 txt[5].text = "Rapidité : " + listPers[1].speed.ToString();
-                txt[6].text = "Nombre d'âmes : " + listPers[1].nbAmes.ToString();
+                txt[6].text = "";
                 img[1].sprite = listPers[1].image;
                 break;
 
             case "PanelCharacter3":
                 txt[0].text = listPers[2].name;
-                txt[1].text = "Niveau : " + listPers[2].level.ToString();
+                txt[1].text = "";
                 txt[2].text = "HP : " + listPers[2].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[2].strength.ToString();
                 txt[4].text = "Defense : " + listPers[2].defence.ToString();
                 txt[5].text = "Rapidité : " + listPers[2].speed.ToString();
-                txt[6].text = "Nombre d'âmes : " + listPers[2].nbAmes.ToString();
+                txt[6].text = "";
                 img[1].sprite = listPers[2].image;
                 break;
 
             case "PanelCharacter4":
                 txt[0].text = listPers[3].name;
-                txt[1].text = "Niveau : " + listPers[3].level.ToString();
+                txt[1].text = "";
                 txt[2].text = "HP : " + listPers[3].hpTotal.ToString();
                 txt[3].text = "Force : " + listPers[3].strength.ToString();
                 txt[4].text = "Defense : " + listPers[3].defence.ToString();
                 txt[5].text = "Rapidité : " + listPers[3].speed.ToString();
-                txt[6].text = "Nombre d'âmes : " + listPers[3].nbAmes.ToString();
+                txt[6].text = "";
                 img[1].sprite = listPers[3].image;
                 break;
         }
