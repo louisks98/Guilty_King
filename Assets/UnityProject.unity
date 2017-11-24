@@ -923,8 +923,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.73, y: -21.423}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 7.2, y: -17.4}
+  m_SizeDelta: {x: 34.14, y: 19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30779338
 MonoBehaviour:
@@ -947,10 +947,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 2
     m_AlignByGeometry: 0
@@ -1984,8 +1984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.62999, y: 3.2949982}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -24.62999, y: 4.2408}
+  m_SizeDelta: {x: 160, y: 24.529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74856781
 MonoBehaviour:
@@ -4264,7 +4264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Regeneration
+  item: "R\xE9g\xE9neration"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -4491,7 +4491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Regeneration
+  item: "R\xE9g\xE9neration"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -4508,7 +4508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Vous avez re\xE7u une potion de vitesse"
+  - "Vous avez re\xE7u une potion de R\xE9g\xE9neration"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -4761,7 +4761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Harden
+  item: "Potion de d\xE9fense"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -4778,7 +4778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Vous avez re\xE7u une potion de vitesse"
+  - "Vous avez re\xE7u une potion de d\xE9fence"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -7703,8 +7703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.5, y: -21.423}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.7, y: -17}
+  m_SizeDelta: {x: 34.14, y: 18.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396495429
 MonoBehaviour:
@@ -7727,7 +7727,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -8463,8 +8463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.8, y: -21.422}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.8, y: -17.7}
+  m_SizeDelta: {x: 34.14, y: 18.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &445289580
 MonoBehaviour:
@@ -8487,7 +8487,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -9766,10 +9766,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -12143,7 +12143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Harden
+  item: "Potion de d\xE9fense"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -13587,8 +13587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.2, y: -21.422}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 7, y: -17}
+  m_SizeDelta: {x: 34.14, y: 18.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676675536
 MonoBehaviour:
@@ -13611,7 +13611,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -16618,8 +16618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5, y: -21.423}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 2.93, y: -15.2}
+  m_SizeDelta: {x: 34.14, y: 19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819254947
 MonoBehaviour:
@@ -16642,7 +16642,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -16692,8 +16692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.7, y: -3.65}
-  m_SizeDelta: {x: 214.4, y: 25.7}
+  m_AnchoredPosition: {x: 2.7, y: -4.68}
+  m_SizeDelta: {x: 214.4, y: 31.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825344187
 MonoBehaviour:
@@ -16718,8 +16718,8 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 583553e4f66a07c4f8f90c22b76d49a4, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
+    m_BestFit: 1
+    m_MinSize: 5
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -17253,8 +17253,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.6, y: -21.423}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.6, y: -16.6}
+  m_SizeDelta: {x: 34.14, y: 19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &838739004
 MonoBehaviour:
@@ -17277,7 +17277,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -18467,7 +18467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Regeneration
+  item: "R\xE9g\xE9neration"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -20803,8 +20803,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.7, y: -21.422}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.2, y: -16.3}
+  m_SizeDelta: {x: 34.14, y: 18.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067983050
 MonoBehaviour:
@@ -20827,7 +20827,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -21127,10 +21127,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -21163,7 +21163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1077866880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21536,8 +21536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.8, y: -21.422}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.8, y: -16.3}
+  m_SizeDelta: {x: 34.14, y: 18.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088681975
 MonoBehaviour:
@@ -21560,7 +21560,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -23519,7 +23519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Regeneration
+  item: "R\xE9g\xE9neration"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -23536,7 +23536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Vous avez re\xE7u une potion de vitesse"
+  - "Vous avez re\xE7u une potion de R\xE9g\xE9neration"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -24337,8 +24337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.9, y: -21.423}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.3, y: -16.6}
+  m_SizeDelta: {x: 34.14, y: 19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218515199
 MonoBehaviour:
@@ -24361,7 +24361,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -25026,7 +25026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Regeneration
+  item: "R\xE9g\xE9neration"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -25247,7 +25247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Regeneration
+  item: "R\xE9g\xE9neration"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -25476,10 +25476,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -27013,7 +27013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: speed boost
+  item: "Potion de rapidit\xE9"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -28985,8 +28985,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.1, y: -21.423}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 7.1, y: -16.6}
+  m_SizeDelta: {x: 34.14, y: 19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443230830
 MonoBehaviour:
@@ -29009,7 +29009,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -29201,7 +29201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Harden
+  item: "Potion de d\xE9fense"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -30455,8 +30455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.8, y: -21.422}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 6.8, y: -17}
+  m_SizeDelta: {x: 34.14, y: 18.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496967474
 MonoBehaviour:
@@ -30479,7 +30479,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -32868,7 +32868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: steroids
+  item: Potion de force
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -33046,7 +33046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: speed boost
+  item: "Potion de rapidit\xE9"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -33453,8 +33453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -28.5}
-  m_SizeDelta: {x: 240, y: 23.41}
+  m_AnchoredPosition: {x: 2, y: -30.11}
+  m_SizeDelta: {x: 240, y: 26.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619467006
 MonoBehaviour:
@@ -34633,8 +34633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.1, y: -21.422}
-  m_SizeDelta: {x: 34.14, y: 17.155}
+  m_AnchoredPosition: {x: 7.1, y: -16.6}
+  m_SizeDelta: {x: 34.14, y: 19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714609832
 MonoBehaviour:
@@ -34657,7 +34657,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -34719,7 +34719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: steroids
+  item: Potion de force
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -38519,10 +38519,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41df2e81070adf74f946b16d3e226d52, type: 3}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -38774,7 +38774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: steroids
+  item: Potion de force
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -42104,7 +42104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: steroids
+  item: Potion de force
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -42121,7 +42121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Vous avez re\xE7u une potion de vitesse"
+  - "Vous avez re\xE7u une potion de Force"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
