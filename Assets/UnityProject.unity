@@ -318,7 +318,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2905785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 541.4148, y: 197.77045, z: 0}
+  m_LocalPosition: {x: 504, y: 197.77045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -453,7 +453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -60.5}
+  m_AnchoredPosition: {x: 305, y: -12}
   m_SizeDelta: {x: 371.4, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15290007
@@ -1503,6 +1503,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 57054267}
+--- !u!1 &57458020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 57458021}
+  - component: {fileID: 57458023}
+  - component: {fileID: 57458022}
+  m_Layer: 0
+  m_Name: AstuceArmstrong
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57458021
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57458020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 92.5, y: -15.16, z: 0}
+  m_LocalScale: {x: 2.9750395, y: 0.47498798, z: 1}
+  m_Children: []
+  m_Father: {fileID: 145695701}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &57458022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57458020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - 'Armstrong: L''astuce pour trouver la reine de feu est de suivre les tuiles bleues!'
+  ennemy: {fileID: 0}
+  instantTalk: 1
+  hasBeenTalked: 0
+--- !u!61 &57458023
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57458020}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &57555665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2346,7 @@ RectTransform:
   m_GameObject: {fileID: 90922859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9535185, y: 2.8920658, z: 1.1300004}
+  m_LocalScale: {x: 1.3015528, y: 4.639193, z: 1.1300004}
   m_Children:
   - {fileID: 1103797309}
   - {fileID: 1619467005}
@@ -2283,7 +2355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 0}
+  m_AnchoredPosition: {x: -0.000012398, y: -23}
   m_SizeDelta: {x: 351.6, y: 146.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90922861
@@ -2708,10 +2780,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1480, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2871,9 +2943,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.091145515, y: -0.27448273}
+  m_Offset: {x: -0.091145515, y: -0.16463852}
   serializedVersion: 2
-  m_Radius: 2.02077
+  m_Radius: 1.4424973
 --- !u!114 &127374441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2887,9 +2959,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 1
   dialogueLines:
-  - "Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
+  - "Illia: Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
     \xE0 l'est dans la carte d'eau..."
-  - "Am\xE8ne toi!"
+  - "Illia: Am\xE8ne toi!"
   ennemy: {fileID: 127374436}
   instantTalk: 1
   hasBeenTalked: 0
@@ -2904,6 +2976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 5
   id_enemy2: 4
   id_enemy3: 6
@@ -2925,7 +2998,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 4
   idSpellGain: H4
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Illia tombe en amour avec votre force et votre courage et d\xE9cide de rejoindre
+    l'\xE9quipe. La zone du roi est maintenant disponible. Vite! Dirigez-vous vers
+    le sud-est de la carte d'eau!"
 --- !u!1 &137331887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,8 +3562,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165426572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.76, y: -18.53, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.76, y: -14.36, z: 0}
+  m_LocalScale: {x: 1.0867628, y: 1.0867635, z: 1.0867635}
   m_Children: []
   m_Father: {fileID: 2119402929}
   m_RootOrder: 0
@@ -3825,7 +3900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.1, y: 120}
+  m_AnchoredPosition: {x: -397, y: 120}
   m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195212797
@@ -4958,7 +5033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5087,7 +5162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: 100}
+  m_AnchoredPosition: {x: -282, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258779390
@@ -5440,6 +5515,118 @@ Transform:
   m_Father: {fileID: 145695701}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &269963767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1277888866403638, guid: 6bca1dc5adb141d48b2c6fae9901a9ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 269963768}
+  - component: {fileID: 269963772}
+  - component: {fileID: 269963771}
+  - component: {fileID: 269963770}
+  - component: {fileID: 269963769}
+  m_Layer: 0
+  m_Name: farming_fishing (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &269963768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4489561091576368, guid: 6bca1dc5adb141d48b2c6fae9901a9ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269963767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 92.68, y: -171.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1485772791}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &269963769
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269963767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.070282, y: -27.250145}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.859436, y: 2.50029}
+  m_EdgeRadius: 0
+--- !u!114 &269963770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114810845646661816, guid: 6bca1dc5adb141d48b2c6fae9901a9ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269963767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &269963771
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23801369307008682, guid: 6bca1dc5adb141d48b2c6fae9901a9ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269963767}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 54175ff10c898b24ab423cb1029100b2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 18
+--- !u!33 &269963772
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33971819411467774, guid: 6bca1dc5adb141d48b2c6fae9901a9ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269963767}
+  m_Mesh: {fileID: 4300000, guid: 29ab2df1275381f4992a5f0acf1d039d, type: 3}
 --- !u!1 &275037634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,7 +5843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: -100}
+  m_AnchoredPosition: {x: -402, y: -51}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296424180
@@ -6076,7 +6263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 0}
+  m_AnchoredPosition: {x: -402, y: 49}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320208477
@@ -6342,8 +6529,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325896794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.52, y: -11.94, z: 0}
-  m_LocalScale: {x: 3.9588022, y: 9.382391, z: 1}
+  m_LocalPosition: {x: 12.55, y: -11.94, z: 0}
+  m_LocalScale: {x: 8.111218, y: 13.165185, z: 1}
   m_Children: []
   m_Father: {fileID: 1119271375}
   m_RootOrder: 0
@@ -6543,7 +6730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: 100}
+  m_AnchoredPosition: {x: -212, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353874001
@@ -6665,7 +6852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 28.200005}
+  m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354860513
@@ -7161,7 +7348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 98.600006}
+  m_AnchoredPosition: {x: 0, y: 88.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389013641
@@ -7694,7 +7881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.175034, y: -24.5}
+  m_AnchoredPosition: {x: 53, y: -55.5}
   m_SizeDelta: {x: 90.7, y: 23.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401687545
@@ -8067,6 +8254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 23
   id_enemy2: 0
   id_enemy3: 0
@@ -8088,7 +8276,7 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 3
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Vous avez r\xE9ussi \xE0 renvoyer Mordrax en enfer. F\xE9licitations!"
 --- !u!114 &419570785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8102,7 +8290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - '...'
+  - 'Mordrax: ...'
   ennemy: {fileID: 419570781}
   instantTalk: 1
   hasBeenTalked: 0
@@ -8389,6 +8577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 20
   id_enemy2: 21
   id_enemy3: 0
@@ -8410,7 +8599,8 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Trouver l'autre pond qui vous m\xE8nera vers le boss de feu. N'oubliez pas
+    de monter de niveau en utilisant la touche Escape!"
 --- !u!114 &448667299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9114,7 +9304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.8, y: 0.0000044254}
+  m_AnchoredPosition: {x: 3.8, y: -8}
   m_SizeDelta: {x: 345, y: 301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476935463
@@ -9182,7 +9372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407, y: 0}
+  m_AnchoredPosition: {x: 366, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481587619
@@ -9380,7 +9570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: 17.325008}
+  m_AnchoredPosition: {x: -60, y: 0.0000019073}
   m_SizeDelta: {x: 80, y: 107.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495481324
@@ -9821,7 +10011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: -200}
+  m_AnchoredPosition: {x: -352, y: -151}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521874629
@@ -10133,9 +10323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le nord de
-    la carte d'eau..."
-  - "Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
+  - "Raven: Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le
+    nord de la carte d'eau..."
+  - "Raven: Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
   ennemy: {fileID: 523527870}
   instantTalk: 1
   hasBeenTalked: 0
@@ -10150,6 +10340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 10
   id_enemy2: 3
   id_enemy3: 11
@@ -10171,7 +10362,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 3
   idSpellGain: H3
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "\xC0 la recherche de plus de puissance, la reine de feu se joint \xE0 l'\xE9quipe
+    et vous aidera dans votre qu\xEAte. Retournez en bateau et dirigez-vous vers le
+    nord-est afin de trouver le glacier o\xF9 vit la reine de glace."
 --- !u!1 &527476420
 GameObject:
   m_ObjectHideFlags: 0
@@ -10599,14 +10792,14 @@ RectTransform:
   m_GameObject: {fileID: 533509627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2796875, y: 1.4637512, z: 1}
   m_Children: []
   m_Father: {fileID: 1077866880}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2, y: 163}
+  m_AnchoredPosition: {x: 5.5374, y: 161}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533509629
@@ -10909,9 +11102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
-  - "Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce throne!"
-  - Battons-nous!
+  - "Roi: Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
+  - "Roi: Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce
+    throne!"
+  - 'Roi: Battons-nous!'
   ennemy: {fileID: 542883399}
   instantTalk: 1
   hasBeenTalked: 0
@@ -10926,6 +11120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 7
   id_enemy2: 9
   id_enemy3: 8
@@ -10947,7 +11142,8 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 0
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Votre m\xE8re serait fi\xE8re de vous! Vous \xEAtes maintenant le roi...
+    mais qui sait quand le roi corrompu reviendra pour reprendre sa place..."
 --- !u!1 &545767982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10981,7 +11177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: 0}
+  m_AnchoredPosition: {x: -282, y: 49}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &545767984
@@ -11508,7 +11704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4021745324571742, guid: f47cd3d7810a01e4bb769b681fcdb6ef, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f47cd3d7810a01e4bb769b681fcdb6ef, type: 2}
@@ -11696,6 +11892,69 @@ Transform:
   m_Father: {fileID: 1368645405}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &585117257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 585117258}
+  - component: {fileID: 585117260}
+  - component: {fileID: 585117259}
+  m_Layer: 0
+  m_Name: AstuceMordrax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585117258
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585117257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.46, y: -69.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 145695701}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &585117259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585117257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - "Armstrong: Faites attention! La l\xE9gende dit qu'il faut avoir les 3 \xE9l\xE9ments
+    pour pouvoir repousser Mordrax dans les portes de l'enfer..."
+  ennemy: {fileID: 0}
+  instantTalk: 1
+  hasBeenTalked: 0
+--- !u!58 &585117260
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585117257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.992485, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.492485
 --- !u!1 &587172881
 GameObject:
   m_ObjectHideFlags: 0
@@ -11763,7 +12022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -100}
+  m_AnchoredPosition: {x: -452, y: -51}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &588320380
@@ -12248,7 +12507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
+  m_AnchoredPosition: {x: 0, y: 50.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610599803
@@ -12436,7 +12695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.1, y: 225}
+  m_AnchoredPosition: {x: -395, y: 225}
   m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614928054
@@ -12671,7 +12930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 100}
+  m_AnchoredPosition: {x: -142, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628072509
@@ -12781,7 +13040,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635149559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.97, y: -15.14, z: 0}
+  m_LocalPosition: {x: 81.3, y: -15.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2119402929}
@@ -12821,7 +13080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63.59999}
+  m_AnchoredPosition: {x: 0, y: -73.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636306029
@@ -12977,10 +13236,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -13055,6 +13314,7 @@ Transform:
   m_LocalScale: {x: 4.375001, y: 0.17499967, z: 1}
   m_Children:
   - {fileID: 706468716}
+  - {fileID: 1652817628}
   m_Father: {fileID: 453415698}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15065,8 +15325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 385.9, y: 155}
-  m_SizeDelta: {x: 298.8, y: 30}
+  m_AnchoredPosition: {x: -395, y: 155}
+  m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758215421
 MonoBehaviour:
@@ -15430,7 +15690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -200}
+  m_AnchoredPosition: {x: -452, y: -151}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773409932
@@ -16154,7 +16414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Annuler
 --- !u!222 &807027325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16604,14 +16864,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - Bonjour jeune homme
-  - "Pour continuer ta qu\xEAte, il faudra que tu ailles dans la carte d'eau situ\xE9e
-    au nord-est \xE0 partir d'ici"
-  - Une fois dans la carte d'eau, tu devras aller battre la reine de feu qui est au
-    sud de celle-ci
-  - Oh... tu veux que je vienne t'aider? Malheureusement il faudra que tu me prouves
-    ta force avant que je t'aide!
-  - "Tu ne r\xE9ussiras jamais \xE0 me battre!"
+  - 'Armstrong: Bonjour jeune homme'
+  - "Armstrong: Pour continuer ta qu\xEAte, il faudra que tu ailles dans la carte
+    d'eau situ\xE9e au nord-est \xE0 partir d'ici"
+  - 'Armstrong: Une fois dans la carte d''eau, tu devras aller battre la reine de
+    feu qui est au sud de celle-ci'
+  - 'Armstrong: Oh... tu veux que je vienne t''aider? Malheureusement il faudra que
+    tu me prouves ta force avant que je t''aide!'
+  - "Armstrong: Tu ne r\xE9ussiras jamais \xE0 me battre!"
   ennemy: {fileID: 835133022}
   instantTalk: 1
   hasBeenTalked: 0
@@ -16626,6 +16886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 2
   id_enemy2: 0
   id_enemy3: 0
@@ -16647,7 +16908,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 1
   idSpellGain: H2
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Armstrong a gagn\xE9 le combat, mais comprenant l'importance de votre qu\xEAte,
+    il se joint \xE0 vous afin de battre le roi corrompu. N'oubliez pas de monter
+    de niveau!"
 --- !u!1 &835556021
 GameObject:
   m_ObjectHideFlags: 0
@@ -16842,10 +17105,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 200
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -17863,7 +18126,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 899150442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.4, y: -558.8, z: -10}
+  m_LocalPosition: {x: 80.4, y: -558.8, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18852,7 +19115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 100}
+  m_AnchoredPosition: {x: -352, y: 149}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &937177829
@@ -18962,7 +19225,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 939365848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.23, y: -86.63, z: 0}
+  m_LocalPosition: {x: 16.7, y: -83.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2119402929}
@@ -19029,7 +19292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &956060330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19043,6 +19306,7 @@ RectTransform:
   - {fileID: 2079396351}
   - {fileID: 1331628684}
   - {fileID: 2121777685}
+  - {fileID: 1892857381}
   m_Father: {fileID: 1755453882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19078,10 +19342,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1420, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -19236,7 +19500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393, y: -157}
+  m_AnchoredPosition: {x: 380, y: -157}
   m_SizeDelta: {x: 325, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976517816
@@ -19436,7 +19700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.65, y: -63}
+  m_AnchoredPosition: {x: 17.9, y: -126.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997830713
@@ -19833,7 +20097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -32.999992}
+  m_AnchoredPosition: {x: 0, y: -43.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023102864
@@ -19953,7 +20217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.000023, y: 25.184998}
+  m_AnchoredPosition: {x: 62.8, y: 4.5}
   m_SizeDelta: {x: 110.35, y: 25.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026282634
@@ -20949,10 +21213,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 150
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1660, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -21563,7 +21827,7 @@ RectTransform:
   m_GameObject: {fileID: 1103797308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9375, y: 0.91250014, z: 1}
   m_Children:
   - {fileID: 1108911480}
   - {fileID: 235046891}
@@ -21582,7 +21846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.12502, y: -11.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1108911479
@@ -21740,7 +22004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: -200}
+  m_AnchoredPosition: {x: -402, y: -151}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111825948
@@ -21861,7 +22125,7 @@ Transform:
   m_GameObject: {fileID: 1122412679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 87.53, y: -13.7, z: 0}
-  m_LocalScale: {x: 3.5625002, y: 7.862509, z: 1}
+  m_LocalScale: {x: 5.7445726, y: 8.943584, z: 1}
   m_Children: []
   m_Father: {fileID: 1119271375}
   m_RootOrder: 3
@@ -22701,7 +22965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nombre d'\xE2me(s) gagn\xE9(s) :\n"
+  m_Text: "Nombre d'\xE2me(s) gagn\xE9e(s) :\n"
 --- !u!222 &1143379392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22740,7 +23004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 94.04556, y: 30.296833}
+  m_AnchoredPosition: {x: -795, y: 30.296833}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143517426
@@ -22803,6 +23067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 18
   id_enemy2: 19
   id_enemy3: 0
@@ -22824,7 +23089,7 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Les portes du ch\xE2teau sont maintenant ouvertes. Bonne chance."
 --- !u!212 &1146949995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22880,7 +23145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - Halte !!! On ne vous laissera pas passer.
+  - 'Gardes: Halte! On ne vous laissera pas passer.'
   ennemy: {fileID: 1146949992}
   instantTalk: 1
   hasBeenTalked: 0
@@ -23814,7 +24079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Annuler
 --- !u!222 &1201504472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24320,9 +24585,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0035087585, y: -0.012100363}
+  m_Offset: {x: 0.0035087566, y: -0.02266119}
   serializedVersion: 2
-  m_Radius: 0.07538147
+  m_Radius: 0.08594229
 --- !u!50 &1235506541
 Rigidbody2D:
   serializedVersion: 4
@@ -24425,11 +24690,100 @@ Transform:
   m_GameObject: {fileID: 1235506539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 64.43, y: -55.95, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1235676399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1235676400}
+  - component: {fileID: 1235676403}
+  - component: {fileID: 1235676402}
+  - component: {fileID: 1235676401}
+  m_Layer: 0
+  m_Name: BlockBossPassage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235676400
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235676399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 81.71, y: -87.28, z: 0}
+  m_LocalScale: {x: 1.0673437, y: 1.3500041, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1405367801}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1235676401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235676399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogueLines:
+  - "Une aura mal\xE9fique bloque le passage. Vous aurez besoin des trois \xE9l\xE9ments
+    pour rentrer ici."
+  ennemy: {fileID: 0}
+  instantTalk: 1
+  hasBeenTalked: 0
+--- !u!58 &1235676402
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235676399}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.1358614, y: -1.4657336}
+  serializedVersion: 2
+  m_Radius: 6.2984405
+--- !u!61 &1235676403
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235676399}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.8073606, y: -1.556695}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.345291, y: 5.481558}
+  m_EdgeRadius: 0
 --- !u!1 &1236656946
 GameObject:
   m_ObjectHideFlags: 0
@@ -24807,8 +25161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 392.1, y: 190}
-  m_SizeDelta: {x: 311.3, y: 30}
+  m_AnchoredPosition: {x: -395, y: 190}
+  m_SizeDelta: {x: 331.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244669429
 MonoBehaviour:
@@ -25436,7 +25790,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1480, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -25520,7 +25874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.275}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -25684,7 +26038,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: 
 --- !u!222 &1269493569
 CanvasRenderer:
@@ -26497,8 +26851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 71.00001}
-  m_SizeDelta: {x: 80, y: 24}
+  m_AnchoredPosition: {x: 64.749985, y: 71.00001}
+  m_SizeDelta: {x: 177.5, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308497910
 MonoBehaviour:
@@ -26863,7 +27217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 109}
+  m_AnchoredPosition: {x: 0, y: 158}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331628685
@@ -26898,7 +27252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stats
+  m_Text: Statistiques
 --- !u!222 &1331628686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27088,7 +27442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 364, y: -167.00002}
+  m_AnchoredPosition: {x: -322, y: -167.00002}
   m_SizeDelta: {x: 475.5, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346827276
@@ -27883,7 +28237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1381405847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28019,13 +28373,13 @@ MonoBehaviour:
     m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Toucher Sur Espace Pour Continuer
 --- !u!222 &1383360322
@@ -29440,7 +29794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407, y: 177}
+  m_AnchoredPosition: {x: 366, y: 177}
   m_SizeDelta: {x: 127, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1465962619
@@ -29578,7 +29932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241.09998, y: 78.5}
+  m_AnchoredPosition: {x: 306, y: 127}
   m_SizeDelta: {x: 371.4, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471541307
@@ -29625,6 +29979,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4124722492869858, guid: ddbbd3c05fef94d44b86b87e15136f5b,
     type: 2}
   m_PrefabInternal: {fileID: 1540755451}
+--- !u!4 &1485772791 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4686587716795476, guid: 6bca1dc5adb141d48b2c6fae9901a9ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 867207885}
 --- !u!1 &1486755347
 GameObject:
   m_ObjectHideFlags: 0
@@ -29725,7 +30084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 57}
+  m_AnchoredPosition: {x: 62.8, y: 35.8}
   m_SizeDelta: {x: 110.35, y: 28.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487746721
@@ -30057,7 +30416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Item
+  m_Text: Objets
 --- !u!222 &1496006394
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30641,7 +31000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240.92, y: -205.8}
+  m_AnchoredPosition: {x: 306, y: -157}
   m_SizeDelta: {x: 371.8, y: 75.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529590446
@@ -31032,7 +31391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 0}
+  m_AnchoredPosition: {x: -352, y: 49}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546630532
@@ -31154,7 +31513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.7999954}
+  m_AnchoredPosition: {x: 0, y: -13}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556998770
@@ -31310,6 +31669,60 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1561377100}
+--- !u!1 &1564299100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1564299101}
+  - component: {fileID: 1564299102}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1564299101
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564299100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 54.55, y: -61.29, z: 0}
+  m_LocalScale: {x: 1.270933, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 145695701}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1564299102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564299100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1564996142
 GameObject:
   m_ObjectHideFlags: 0
@@ -31411,7 +31824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 110}
+  m_AnchoredPosition: {x: -452, y: 159}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567860737
@@ -31563,7 +31976,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1571367937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 471755031}
+        m_MethodName: onClickEscape
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1571367937
@@ -32203,7 +32627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stats
+  m_Text: Statistiques
 --- !u!222 &1592632352
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32866,7 +33290,7 @@ Transform:
   m_GameObject: {fileID: 1616077159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.58, y: -87.4, z: 0}
-  m_LocalScale: {x: 4.4575663, y: 9.737476, z: 1}
+  m_LocalScale: {x: 6.055332, y: 12.556739, z: 1}
   m_Children: []
   m_Father: {fileID: 1119271375}
   m_RootOrder: 2
@@ -33020,7 +33444,7 @@ RectTransform:
   m_GameObject: {fileID: 1619467004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9375, y: 0.91250014, z: 1}
   m_Children:
   - {fileID: 74856780}
   - {fileID: 825344186}
@@ -33029,7 +33453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -18.5}
+  m_AnchoredPosition: {x: 2, y: -28.5}
   m_SizeDelta: {x: 240, y: 23.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619467006
@@ -33383,6 +33807,86 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1652817627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1652817628}
+  - component: {fileID: 1652817630}
+  - component: {fileID: 1652817629}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652817628
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652817627}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.007, y: 3.55, z: 0}
+  m_LocalScale: {x: 0.4787111, y: 7.837487, z: 1}
+  m_Children: []
+  m_Father: {fileID: 646608770}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1652817629
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652817627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &1652817630
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652817627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1653622601
 GameObject:
   m_ObjectHideFlags: 0
@@ -33923,7 +34427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -100}
+  m_AnchoredPosition: {x: -282, y: -51}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712762272
@@ -36599,6 +37103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 14
   id_enemy2: 15
   id_enemy3: 16
@@ -36620,7 +37125,9 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Gr\xE2ce \xE0 Armstrong, vous avez r\xE9ussi \xE0 battre les quatre gobelins
+    des for\xEAts. Passez le pond et dirigez-vous vers le sud pour aller dans la carte
+    de feu."
 --- !u!114 &1751707228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36634,8 +37141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - "J'esp\xE8re pour toi que tu n'es pas venu seul."
-  - Puisque moi je ne suis pas seul ! HAHAHA !!!
+  - "Gobelin: J'esp\xE8re pour toi que tu n'es pas venu seul."
+  - 'Gobelin: Puisque moi je ne suis pas seul ! HAHAHA !!!'
   ennemy: {fileID: 1751707223}
   instantTalk: 1
   hasBeenTalked: 0
@@ -36882,7 +37389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 210}
+  m_AnchoredPosition: {x: 0, y: 243}
   m_SizeDelta: {x: 129.5, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765564321
@@ -37001,7 +37508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -200}
+  m_AnchoredPosition: {x: -282, y: -151}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772477347
@@ -37185,7 +37692,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788476989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.56, y: -85.23, z: 0}
+  m_LocalPosition: {x: 86.7, y: -83.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2119402929}
@@ -37790,7 +38297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: -255}
+  m_AnchoredPosition: {x: 798, y: -266}
   m_SizeDelta: {x: 136, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813024001
@@ -38664,7 +39171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 0}
+  m_AnchoredPosition: {x: -452, y: 49}
   m_SizeDelta: {x: 50, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845070001
@@ -40573,7 +41080,7 @@ RectTransform:
   m_GameObject: {fileID: 1853437387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.090737, y: 1.2409471, z: 1}
   m_Children:
   - {fileID: 1939696225}
   - {fileID: 1204925815}
@@ -40589,7 +41096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9}
+  m_AnchoredPosition: {x: -1.3997, y: 9}
   m_SizeDelta: {x: 329, y: 385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853437389
@@ -40688,7 +41195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.025, y: 0.0000038147}
+  m_AnchoredPosition: {x: 52.9, y: -25.6}
   m_SizeDelta: {x: 91, y: 25.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869016931
@@ -41311,17 +41818,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892857380}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1154664877}
-  m_Father: {fileID: 2121777685}
-  m_RootOrder: 8
+  m_Father: {fileID: 956060330}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -101}
+  m_AnchoredPosition: {x: -0.30002, y: -212}
   m_SizeDelta: {x: 87.28, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892857382
@@ -41921,7 +42428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Annuler
 --- !u!222 &1908729762
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41988,7 +42495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 392, y: -8.3}
+  m_AnchoredPosition: {x: -294, y: -8.3}
   m_SizeDelta: {x: 531.5, y: 65.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914932060
@@ -43197,7 +43704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: 100}
+  m_AnchoredPosition: {x: -402, y: 149}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002338237
@@ -43415,8 +43922,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.6, y: -51.6}
-  m_SizeDelta: {x: 322.8, y: 22}
+  m_AnchoredPosition: {x: 47.8, y: -51.6}
+  m_SizeDelta: {x: 364.7, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025590869
 MonoBehaviour:
@@ -43641,7 +44148,7 @@ RectTransform:
   m_GameObject: {fileID: 2037651498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9875001, y: 1, z: 1}
+  m_LocalScale: {x: 1.2636914, y: 1.4637512, z: 1}
   m_Children:
   - {fileID: 255064199}
   m_Father: {fileID: 1077866880}
@@ -43649,7 +44156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2, y: -116}
+  m_AnchoredPosition: {x: 5.5374, y: -247}
   m_SizeDelta: {x: 162, y: 28.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037651500
@@ -44206,7 +44713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: -100}
+  m_AnchoredPosition: {x: -352, y: -51}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061776485
@@ -44805,11 +45312,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: 
   dialogueLines:
-  - Hic! J'ai beaucoup trop bu... Hic!
-  - "Bonjour mon enfant! Bois ce jus enchant\xE9, tu te sentiras beaucoup plus fort!
-    H\xE9 h\xE9!"
+  - 'Rich: Hic! J''ai beaucoup trop bu... Hic!'
+  - "Rich: Bonjour mon enfant! Bois ce jus enchant\xE9, tu te sentiras beaucoup plus
+    fort! H\xE9 h\xE9!"
   - '...Glou Glou...'
-  - Vous vous sentez automatiquement plus fort!
+  - "Vous vous sentez automatiquement plus fort et pr\xEAt \xE0 affronter les dangers
+    de la for\xEAt!"
   ennemy: {fileID: 0}
   instantTalk: 1
   hasBeenTalked: 0
@@ -45096,6 +45604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c085e678067c584a89f7cf0cfd7e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: 0
   id_enemy1: 12
   id_enemy2: 13
   id_enemy3: 22
@@ -45117,7 +45626,8 @@ MonoBehaviour:
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Suivez les tuiles bleues sur le sol, ils vous m\xE8neront vers la reine de
+    feu."
 --- !u!114 &2094395290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45772,7 +46282,7 @@ Transform:
   m_GameObject: {fileID: 2107567904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 86.87, y: -89.45, z: 0}
-  m_LocalScale: {x: 8.999825, y: 3.8249683, z: 1}
+  m_LocalScale: {x: 11.900337, y: 6.378349, z: 1}
   m_Children: []
   m_Father: {fileID: 1119271375}
   m_RootOrder: 1
@@ -46024,13 +46534,12 @@ RectTransform:
   - {fileID: 401687544}
   - {fileID: 997830712}
   - {fileID: 495481323}
-  - {fileID: 1892857381}
   m_Father: {fileID: 956060330}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024795998, y: -65.75}
+  m_AnchoredPosition: {x: -0.000024795998, y: -16}
   m_SizeDelta: {x: 235.3, y: 319.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121777686
@@ -46082,6 +46591,7 @@ GameObject:
   - component: {fileID: 2132323865}
   - component: {fileID: 2132323866}
   - component: {fileID: 2132323867}
+  - component: {fileID: 2132323868}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Hero
@@ -46158,7 +46668,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132323858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.39, y: -55.84, z: 0}
+  m_LocalPosition: {x: 183.6, y: -119.4, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46260,6 +46770,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leCanvas: {fileID: 1381405846}
+--- !u!114 &2132323868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132323858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ab055d5ceb4664e9c98942310aeb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mom: {fileID: 531142347}
+  Rich: {fileID: 2082990813}
+  MordraxCollider: {fileID: 585117257}
+  FinalZoneCollider: {fileID: 1235676399}
 --- !u!1 &2140523080
 GameObject:
   m_ObjectHideFlags: 0

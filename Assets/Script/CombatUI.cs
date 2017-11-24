@@ -36,8 +36,15 @@ public class CombatUI : MonoBehaviour {
 
     private Personnage currentPerso { get; set; }
 
+    public bool tryEscape { get; set; }
+
+    System.Random random;
+
     public void Start_Init_UI()
     {
+        tryEscape = false;
+        random = new System.Random();
+
         listNbItem = new Dictionary<string, int>();
         listNbItem.Add("health", 0);
         listNbItem.Add("def", 0);
@@ -125,6 +132,12 @@ public class CombatUI : MonoBehaviour {
                 selectedEnemy = listEnnemies[i].id;
             }
         }
+        closeMenu();
+    }
+
+    public void onClickEscape()
+    {
+        tryEscape = true;
         closeMenu();
     }
 

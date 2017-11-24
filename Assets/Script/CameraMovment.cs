@@ -23,9 +23,11 @@ public class CameraMovment : MonoBehaviour {
         if (inCombat)
         {
             transform.position = target_Combat.position + new Vector3(0,0,-10);
+            Debug.Log("Encombat");
         }
         else
         {
+            Debug.Log("Pas en combat");
             if (hero.activeInHierarchy == true)
             {
                 if (hero.GetComponent<Transform>())
@@ -38,6 +40,7 @@ public class CameraMovment : MonoBehaviour {
             {
                 if (boat.GetComponent<Transform>())
                 {
+                    cam.orthographicSize = 12;
                     transform.position = Vector3.Lerp(transform.position, boat.GetComponent<Transform>().position, 0.1f) + new Vector3(0, 0, -10);
                 }
             }

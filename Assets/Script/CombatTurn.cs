@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CombatTurn : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class CombatTurn : MonoBehaviour
     }
 
     public static bool selecting { get; set; }
-    public static bool anim;
+    public bool anim;
     public CombatStates currentState { get; set; }
 
     public bool currentTeamIsAlly { get; set; }
@@ -79,14 +80,15 @@ public class CombatTurn : MonoBehaviour
 
     void Start()
     {
-
         currentState = CombatStates.NOTINCOMBAT;
-        CombatTurn.selecting = false;
+        selecting = false;
     }
 
     void Update()
     {
         //Debug.Log(!currentPlayerIsMoving());
+        Debug.Log(currentState + "Anim:" + anim + "Selecting:" + selecting + "Moving:" + !currentPlayerIsMoving());
+
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
             //Debug.Log("Can move : " + PlayerMovment.canMove);
@@ -104,9 +106,9 @@ public class CombatTurn : MonoBehaviour
                     break;
                 case (CombatStates.START):
                     //Positionner la caméra sur le combat
-                    CameraMovment.inCombat = true;
                     CameraMovment.target_Combat = target_combat;
-
+                    CameraMovment.inCombat = true;
+                    Debug.Log("On place la caméra sur le combat");
                     Combat_Start();
 
                     currentState = CombatStates.STARTATTACK;
@@ -117,7 +119,7 @@ public class CombatTurn : MonoBehaviour
                         if (allies[currentPlayer] != null)
                         {
                             Draw_Spell_And_Target();
-                            CombatTurn.selecting = true;
+                            selecting = true;
                         }
                         currentState = CombatStates.ANIMLEFT;
                     }
@@ -146,14 +148,32 @@ public class CombatTurn : MonoBehaviour
                 case (CombatStates.ANIMLEFT):
                     if (currentTeamIsAlly)
                     {
-                        if (allies != null)
+                        if(combatUI.GetComponent<CombatUI>().tryEscape)
                         {
-                            if (allies[currentPlayer] != null)
+                            combatUI.GetComponent<CombatUI>().tryEscape = false;
+                            if (Escape())
                             {
-                                allies[currentPlayer].MoveLeft();
+                                Start_Quit();
+                                currentState = CombatStates.Escape;
+                            }
+                            else
+                            {
+                                StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne vous échapperez pas!!!", 1));
+                                currentState = CombatStates.NEXTPLAYER;
                             }
                         }
-                        currentState = CombatStates.ANIMATTACK;
+                        else
+                        {
+                            if (allies != null)
+                            {
+                                if (allies[currentPlayer] != null)
+                                {
+                                    allies[currentPlayer].MoveLeft();
+                                }
+                            }
+
+                            currentState = CombatStates.ANIMATTACK;
+                        }
                     }
                     else
                     {
@@ -197,7 +217,7 @@ public class CombatTurn : MonoBehaviour
                                 {
                                     if (combatUI.GetComponent<CombatUI>().selectedSpell.id == "H4")
                                     {
-                                        allies[currentPlayer].dealDamage(-(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur)));
+                                        allies[currentPlayer].dealDamage(-(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur * 2)));
                                     }
                                     Attack_AOI(GetDamage(allies[currentPlayer], combatUI.GetComponent<CombatUI>().selectedSpell.valeur), ennemies);
                                 }
@@ -330,10 +350,22 @@ public class CombatTurn : MonoBehaviour
         yield return StartCoroutine(sf.FadeToClear());
     }
 
+    void Start_Quit()
+    {
+        //Transition
+        StartCoroutine(Fade());
+
+        //Ferme le menu
+        combatUI.GetComponent<CombatUI>().closeMenu();
+
+        //Désactrive le combat ui
+        combatUI.SetActive(false);
+    }
+
     void Quit(Transform target)
     {
+        //Change la musique
         SoundManager.instance.PlayAmbient();
-        combatUI.SetActive(false);
 
         //Hero retourne ou il doit etre après le combat.
         hero.transform.position = target.position;
@@ -343,10 +375,8 @@ public class CombatTurn : MonoBehaviour
 
         //Camera retourne sur le personnage
         CameraMovment.inCombat = false;
-        CameraMovment.target_Combat = null;
 
-        CombatTurn.selecting = false;
-
+        //Reset label
         for (int i = 0; i < hpTextAlly.Count; i++)
         {
             hpTextAlly[i].gameObject.SetActive(true);
@@ -359,6 +389,7 @@ public class CombatTurn : MonoBehaviour
             hpBarEnemy[i].gameObject.SetActive(true);
         }
 
+        //Reset btn
         combatUI.GetComponent<CombatUI>().Reset_BTN();
 
         //Le personnage peut bouger
@@ -403,43 +434,67 @@ public class CombatTurn : MonoBehaviour
             bd.Close();
         }
 
+        if (id_enemy1 == 2)
+        {
+            CancelDialog.forestDead = true;
+        }
+        if (id_enemy1 == 3)
+        {
+            CancelDialog.fireDead = true;
+        }
+        if (id_enemy1 == 4)
+        {
+            CancelDialog.iceDead = true;
+        }
+        if (id_enemy1 == 23)
+        {
+            CancelDialog.mordraxDead = true;
+        }
+
         Quit(target_win);
 
-        //Ouvrir le menu lvl
-        LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
-        LvlMenu.addSouls(soolsAfterWin);
-        LvlMenu.UpdateUI();
-        //lvlMenu.GetComponent<PauseMenu>().Open_LevelUp();
-
-        //Ennemies à null
-        ennemies = null;
-        allies = null;
-        go_enemy1 = null;
-        go_enemy2 = null;
-        go_enemy3 = null;
-        go_enemy4 = null;
-
-        //Faire disparaitre l'ennemie dans le jeu
-        UpdateGameProgress.doVerification = true;
-
-        AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
-        menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
-        menuAfterFight.SetGameResultText("gagnez!");
-
-        string spellName = "Aucun";
-        if (idSpellGain != "")
+        if (id_enemy2 == 9)
         {
-            AccesBD bdSql = new AccesBD();
-            SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
-            while (reader.Read())
-            {
-                spellName = reader.GetString(0);
-            }
-            bdSql.Close();
+            SceneManager.LoadScene(2);
         }
-        menuAfterFight.SetSortText(spellName);
-        menuAfterFight.SetDetailsText(lore);
-        menuAfterFight.AfficherMenu = true;
+        else
+        {
+            //Ouvrir le menu lvl
+            LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
+            LvlMenu.addSouls(soolsAfterWin);
+            LvlMenu.UpdateUI();
+            LvlMenu.saveSools();
+
+            //Ennemies à null
+            ennemies = null;
+            allies = null;
+            go_enemy1 = null;
+            go_enemy2 = null;
+            go_enemy3 = null;
+            go_enemy4 = null;
+
+            //Faire disparaitre l'ennemie dans le jeu
+            UpdateGameProgress.doVerification = true;
+
+            AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
+            menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
+            menuAfterFight.SetGameResultText("gagnez!");
+
+            string spellName = "Aucun";
+            if (idSpellGain != "")
+            {
+                AccesBD bdSql = new AccesBD();
+                SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
+                while (reader.Read())
+                {
+                    spellName = reader.GetString(0);
+                }
+                bdSql.Close();
+            }
+            menuAfterFight.SetSortText(spellName);
+            menuAfterFight.SetDetailsText(lore);
+            menuAfterFight.AfficherMenu = true;
+        }
     }
 
     void Combat_Lose()
@@ -543,7 +598,6 @@ public class CombatTurn : MonoBehaviour
             Debug.Log(e);
         }
 
-        //Debug.Log("Est dans la team:" + isKnown.ToString());
         return isKnown;
     }
 
@@ -627,17 +681,18 @@ public class CombatTurn : MonoBehaviour
 
         if (isWin())
         {
+            Start_Quit();
             currentState = CombatStates.WIN;
         }
         else if (isLoose())
         {
+            Start_Quit();
             currentState = CombatStates.LOSE;
         }
         else
         {
             currentState = CombatStates.STARTATTACK;
         }
-        //Debug.Log(currentTeamIsAlly.ToString() + currentPlayer);
     }
 
     //IsLoose
@@ -681,8 +736,6 @@ public class CombatTurn : MonoBehaviour
         hpTextEnemy = new List<Text>(pnlEnemy.GetComponentsInChildren<Text>());
         hpBarAlly = new List<Slider>(pnlAlly.GetComponentsInChildren<Slider>());
         hpBarEnemy = new List<Slider>(pnlEnemy.GetComponentsInChildren<Slider>());
-
-        ListBtn[2].onClick.AddListener(QuitButton);
 
         Update_Stats();
     }
@@ -763,21 +816,6 @@ public class CombatTurn : MonoBehaviour
         }
     }
 
-    public void QuitButton()
-    {
-        if (Escape())
-        {
-            selecting = false;
-            currentState = CombatStates.Escape;
-        }
-        else
-        {
-            selecting = false;
-            currentState = CombatStates.NEXTPLAYER;
-            StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage("Vous ne m'échapperez pas !!!", 1));
-        }
-    }
-
     bool currentPlayerIsMoving()
     {
         bool moving = false;
@@ -787,7 +825,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (allies[currentPlayer] != null)
                 {
-                    if (allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking") || allies[currentPlayer].deplacement.anim.GetBool("isDying"))
+                    if (allies[currentPlayer].deplacement.anim.GetBool("iswalking") || allies[currentPlayer].deplacement.anim.GetBool("isAttacking")) //|| allies[currentPlayer].deplacement.anim.GetBool("isDying"))
                     {
                         moving = true;
                     }
@@ -797,7 +835,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (ennemies[currentPlayer] != null)
                 {
-                    if (ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking") || ennemies[currentPlayer].deplacement.anim.GetBool("isDying"))
+                    if (ennemies[currentPlayer].deplacement.anim.GetBool("iswalking") || ennemies[currentPlayer].deplacement.anim.GetBool("isAttacking"))// || ennemies[currentPlayer].deplacement.anim.GetBool("isDying"))
                     {
                         moving = true;
                     }
