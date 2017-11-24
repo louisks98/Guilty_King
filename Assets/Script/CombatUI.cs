@@ -420,7 +420,7 @@ public class CombatUI : MonoBehaviour {
         Color cl = bgToolTipSpellCharacter[idBtn].color;
         cl.a = 255;
         bgToolTipSpellCharacter[idBtn].color = cl;
-        toolTipSpellCharacter[idBtn].text = " " + currentPerso.sorts[idBtn].nom + " ," + currentPerso.sorts[idBtn].type + " ," + currentPerso.sorts[idBtn].nbattaque;
+        toolTipSpellCharacter[idBtn].text = " " + currentPerso.sorts[idBtn].nom;
         
     }
 

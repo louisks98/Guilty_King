@@ -6,6 +6,7 @@ public class Warp : MonoBehaviour {
     public Transform warpTarget;
     private PlayerMovment hero;
     private PlayerMovment boat;
+    public AudioClip Music;
     public bool isBoat;
 
     void Start()
@@ -18,6 +19,8 @@ public class Warp : MonoBehaviour {
     {
         ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
         SoundManager.instance.PlayDoor();
+        if (Music != null)
+            SoundManager.instance.PlayAmbient(Music);
 
         PlayerMovment.isTransition = true;
         hero.GetComponent<Animator>().enabled = false;
