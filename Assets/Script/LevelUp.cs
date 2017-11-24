@@ -122,7 +122,7 @@ public class LevelUp : MonoBehaviour
     }
 
     // voir si le escape met a jour la bd IMPORTANT
-    private void exitLevelMenu()
+    public void exitLevelMenu()
     {
         if (bdModifier)
         {

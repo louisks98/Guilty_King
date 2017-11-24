@@ -217,7 +217,7 @@ public class CombatUI : MonoBehaviour {
                     {
                         buff = reader.GetInt32(0);
                     }
-                    currentPerso.battleSpd += buff;
+                    currentPerso.BattleSpd += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["speed"]- 1) + " where Item = 5";
                     bd.insert(sqlupdate);
                     StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Potion de rapidité", 2));
