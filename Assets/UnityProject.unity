@@ -1823,6 +1823,7 @@ GameObject:
   - component: {fileID: 67064875}
   - component: {fileID: 67064877}
   - component: {fileID: 67064876}
+  - component: {fileID: 67064878}
   m_Layer: 0
   m_Name: In_Transition_To_Water
   m_TagString: Untagged
@@ -1837,7 +1838,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67064874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.92, y: -53.6, z: 0}
+  m_LocalPosition: {x: 4.81, y: -53.22, z: 0}
   m_LocalScale: {x: 3.2749999, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 602014806}
@@ -1880,6 +1881,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &67064878
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 67064874}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.35385808, y: 0.6329422}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2922886, y: 2.2658844}
   m_EdgeRadius: 0
 --- !u!1 &73885450
 GameObject:
@@ -4474,7 +4500,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 248011237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.48, y: -9.87, z: 0}
+  m_LocalPosition: {x: 20.249996, y: -68.44001, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -4744,7 +4770,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 254157758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.59, y: -8.89, z: 0}
+  m_LocalPosition: {x: 18.359997, y: -67.46001, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -8195,7 +8221,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419570781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.51, y: -7.81, z: 0}
+  m_LocalPosition: {x: 22.279995, y: -66.380005, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 1282275071}
@@ -11402,7 +11428,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550242560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.33, y: -8.09, z: 0}
+  m_LocalPosition: {x: 29.06, y: -62.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1740843907}
@@ -11916,7 +11942,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 585117257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.46, y: -69.66, z: 0}
+  m_LocalPosition: {x: 11.45, y: -66.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -11952,9 +11978,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.992485, y: 0}
+  m_Offset: {x: 6.992485, y: -4.5440407}
   serializedVersion: 2
-  m_Radius: 7.492485
+  m_Radius: 12.036526
 --- !u!1 &587172881
 GameObject:
   m_ObjectHideFlags: 0
@@ -18450,7 +18476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909461561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.7, y: -34.15, z: 0}
+  m_LocalPosition: {x: 54.92, y: -14.48, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -23502,7 +23528,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1174543121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.6, y: -6.97, z: 0}
+  m_LocalPosition: {x: 18.369995, y: -65.54001, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -23644,7 +23670,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1180677462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.94, y: -6.58, z: 0}
+  m_LocalPosition: {x: 28.02, y: -8.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613142503}
@@ -26996,7 +27022,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1326347326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.43, y: -6.37, z: 0}
+  m_LocalPosition: {x: 20.2, y: -64.94, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -32851,7 +32877,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601113144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 80.78, y: -67.81, z: 0}
+  m_LocalPosition: {x: 35.53, y: -33.63, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -34702,7 +34728,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1716238374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.98, y: -69.54, z: 0}
+  m_LocalPosition: {x: 86.18, y: -67.01, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -42087,7 +42113,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1904972386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.44, y: -7.98, z: 0}
+  m_LocalPosition: {x: 20.209995, y: -66.55, z: 0}
   m_LocalScale: {x: 2.35202, y: 2.3276, z: 1}
   m_Children: []
   m_Father: {fileID: 145695701}
@@ -46668,7 +46694,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132323858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 183.6, y: -119.4, z: 0}
+  m_LocalPosition: {x: 64.43, y: -56.51, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}

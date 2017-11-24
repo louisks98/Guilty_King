@@ -23,7 +23,7 @@ public class CombatTurn : MonoBehaviour
         WIN,
         ANIMEND,
         NOTINCOMBAT,
-        Escape
+        ESCAPE
     }
 
     public static bool selecting { get; set; }
@@ -86,14 +86,8 @@ public class CombatTurn : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(!currentPlayerIsMoving());
-        Debug.Log(currentState + "Anim:" + anim + "Selecting:" + selecting + "Moving:" + !currentPlayerIsMoving());
-
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
-            //Debug.Log("Can move : " + PlayerMovment.canMove);
-            Debug.Log(currentState);
-
             switch (currentState)
             {
                 case (CombatStates.ANIMSTART):
@@ -154,7 +148,7 @@ public class CombatTurn : MonoBehaviour
                             if (Escape())
                             {
                                 Start_Quit();
-                                currentState = CombatStates.Escape;
+                                currentState = CombatStates.ESCAPE;
                             }
                             else
                             {
@@ -319,7 +313,7 @@ public class CombatTurn : MonoBehaviour
                         Combat_WIN();
                     }
                     break;
-                case (CombatStates.Escape):
+                case (CombatStates.ESCAPE):
                     Combat_Escape();
                     break;
                 case (CombatStates.ANIMEND):
@@ -438,11 +432,11 @@ public class CombatTurn : MonoBehaviour
         {
             CancelDialog.forestDead = true;
         }
-        if (id_enemy1 == 3)
+        if (id_enemy2 == 3)
         {
             CancelDialog.fireDead = true;
         }
-        if (id_enemy1 == 4)
+        if (id_enemy2 == 4)
         {
             CancelDialog.iceDead = true;
         }
@@ -520,6 +514,7 @@ public class CombatTurn : MonoBehaviour
     {
         Init_Ally();
         Init_Ennemy();
+        ApplyDifficulty();
     }
 
     void Init_Ally()
@@ -1112,20 +1107,59 @@ public class CombatTurn : MonoBehaviour
         return dodge;
     }
 
+    float DifficultyModifier()
+    {
+        float modifier = 1;
+        int difficulty = 1;
+        AccesBD bd = new AccesBD();
+
+        try
+        {
+            SqliteDataReader reader = bd.select("select Niveau from Personnage where idPersonnage = 1");
+            while (reader.Read())
+            {
+                difficulty = reader.GetInt32(0);
+            }
+            bd.Close();
+        }
+        catch(Exception e)
+        {
+            bd.Close();
+            Debug.Log(e);
+        }
+
+        switch (difficulty)
+        {
+            case 1:
+                modifier = 1f;
+                break;
+            case 2:
+                modifier = 1.25f;
+                break;
+            case 3:
+                modifier = 1.50f;
+                break;
+        }
+
+        return modifier;
+    }
+
     void ApplyDifficulty()
     {
-        foreach(var perso in ennemies)
+        float x = DifficultyModifier();
+        foreach (var perso in ennemies)
         {
             if (perso != null)
             {
-                perso.BattleHp += perso.BattleHp * 4;
+                perso.hpTotal = Convert.ToInt32(perso.BattleHp * x);
+                perso.BattleHp = Convert.ToInt32(perso.BattleHp * x);
                 foreach(var sort in perso.sorts)
                 {
                     if(sort != null)
                     {
-                        if(sort.type == "AS" && sort.type == "AZ")
+                        if(sort.type == "AS" || sort.type == "AZ")
                         {
-                            sort.valeur += sort.valeur * 4;
+                            sort.valeur = Convert.ToInt32(sort.valeur * x);
                         }
                     }
                 }
