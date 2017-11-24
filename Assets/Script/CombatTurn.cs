@@ -1080,7 +1080,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    speed = perso.speed;
+                    speed = perso.BattleSpd;
                     name = perso.name;
                 }
             }
@@ -1092,7 +1092,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    speed = perso.speed;
+                    speed = perso.BattleSpd;
                     name = perso.name;
                 }
             }

@@ -8152,7 +8152,7 @@ MonoBehaviour:
   hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
-  soolsAfterWin: 3
+  soolsAfterWin: 2
   idSpellGain: 
   lore: "Vous avez r\xE9ussi \xE0 renvoyer Mordrax en enfer. F\xE9licitations!"
 --- !u!114 &419570785
@@ -24905,7 +24905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: "R\xE9g\xE9neration"
+  item: "Potion de rapidit\xE9"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -38431,7 +38431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: Potion de force
+  item: "Potion de rapidit\xE9"
   Open: 0
   imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
   sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
@@ -46255,7 +46255,6 @@ Transform:
   m_GameObject: {fileID: 2132323858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 64.43, y: -56.51, z: 0}
-  m_LocalPosition: {x: 64.4, y: -56.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
