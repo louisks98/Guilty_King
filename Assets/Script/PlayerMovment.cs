@@ -26,6 +26,7 @@ public class PlayerMovment : MonoBehaviour {
         isTransition = false;
 		canMove = true;
         inCombat = false;
+        isBoat = false;
         rdbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         heroActive = !isBoat;

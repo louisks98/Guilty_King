@@ -102,7 +102,6 @@ public class CombatTurn : MonoBehaviour
                     //Positionner la caméra sur le combat
                     CameraMovment.target_Combat = target_combat;
                     CameraMovment.inCombat = true;
-                    Debug.Log("On place la caméra sur le combat");
                     Combat_Start();
 
                     currentState = CombatStates.STARTATTACK;
@@ -238,7 +237,6 @@ public class CombatTurn : MonoBehaviour
                             if (ennemies[currentPlayer] != null)
                             {
                                 int randomNumber = SelectSpell(ennemies[currentPlayer].sorts); // Choisir un spell
-                                Debug.Log("Sort :" + randomNumber);
                                 if (ennemies[currentPlayer].sorts[randomNumber] != null)
                                 {
                                     if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
@@ -298,7 +296,6 @@ public class CombatTurn : MonoBehaviour
                     break;
                 case (CombatStates.NEXTPLAYER):
                     Next_Turn();
-                    Debug.Log("NEXT");
                     break;
                 case (CombatStates.WIN):
                     Combat_WIN();
@@ -1007,7 +1004,6 @@ public class CombatTurn : MonoBehaviour
                 id = random.Next(0, listPerso.Count);
             }
         }
-        Debug.Log("Target :" + id);
         return listPerso[id].id;
     }
 
