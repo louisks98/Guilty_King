@@ -85,6 +85,7 @@ public class LevelUp : MonoBehaviour
         sliderForce.value = forceValue / pointForce;
         sliderDef.value = defenseValue / pointDef;
         sliderSpeed.value = SpeedValue / pointSpeed;
+
     }
 
     public void onForceClick()
@@ -133,6 +134,7 @@ public class LevelUp : MonoBehaviour
                 string query = "update Stats Set Force = " + forceValue + ", Defence = " + defenseValue + ", Vitesse = " + SpeedValue + ", nbAmes = " + soulsNumber + ", Point_de_vie = " + hpValue + " where Stats.idStats = 1";
                 bd.insert(query);
                 bd.Close();
+                bdModifier = false;
             }
             catch (SqliteException e)
             {
@@ -140,6 +142,7 @@ public class LevelUp : MonoBehaviour
                 Debug.Log(e);
                 bdModifier = false;
             }
+            GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
         }
     }
 

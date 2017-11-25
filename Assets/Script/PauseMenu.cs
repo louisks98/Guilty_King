@@ -113,7 +113,6 @@ public class PauseMenu : MonoBehaviour {
        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject.Find("Hero").GetComponent<LevelUp>().exitLevelMenu();
             if (states == MenuStates.Main)
             {
                 states = MenuStates.None;
@@ -121,6 +120,7 @@ public class PauseMenu : MonoBehaviour {
             else if(states != MenuStates.Main)
             {
                 states = MenuStates.Main;
+                GameObject.Find("Hero").GetComponent<LevelUp>().exitLevelMenu();
             }
         }
     }

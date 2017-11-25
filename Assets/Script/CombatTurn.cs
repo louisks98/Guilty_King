@@ -458,6 +458,7 @@ public class CombatTurn : MonoBehaviour
             LvlMenu.addSouls(soolsAfterWin);
             LvlMenu.UpdateUI();
             LvlMenu.saveSools();
+            GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
 
             //Ennemies à null
             ennemies = null;
