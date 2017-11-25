@@ -168,7 +168,7 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.BattleHp += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["health"]- 1) + " where Item = 3";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Regénération", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Régéneration", 2));
                     selectedSpell = null;
                     closeMenu();
                     SoundManager.instance.PlayItem();
@@ -186,7 +186,7 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.BattleDef += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["def"]-1) + " where Item = 6";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Harden", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Potion de défense", 2));
                     selectedSpell = null;
                     closeMenu();
                 }
@@ -203,7 +203,7 @@ public class CombatUI : MonoBehaviour {
                     currentPerso.BattleStr += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["steroid"]-1) + " where Item = 7";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Stéroid", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Potion de force", 2));
                     selectedSpell = null;
                     closeMenu();
                 }
@@ -217,10 +217,10 @@ public class CombatUI : MonoBehaviour {
                     {
                         buff = reader.GetInt32(0);
                     }
-                    currentPerso.battleSpd += buff;
+                    currentPerso.BattleSpd += buff;
                     string sqlupdate = "update InventaireItem set Quantite = " + (listNbItem["speed"]- 1) + " where Item = 5";
                     bd.insert(sqlupdate);
-                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Speed boost", 2));
+                    StartCoroutine(ShowMessage(currentPerso.name + " a utilisé : Potion de rapidité", 2));
                     selectedSpell = null;
                     closeMenu();
                 }
@@ -420,7 +420,7 @@ public class CombatUI : MonoBehaviour {
         Color cl = bgToolTipSpellCharacter[idBtn].color;
         cl.a = 255;
         bgToolTipSpellCharacter[idBtn].color = cl;
-        toolTipSpellCharacter[idBtn].text = " " + currentPerso.sorts[idBtn].nom + " ," + currentPerso.sorts[idBtn].type + " ," + currentPerso.sorts[idBtn].nbattaque;
+        toolTipSpellCharacter[idBtn].text = " " + currentPerso.sorts[idBtn].nom;
         
     }
 

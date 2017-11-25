@@ -40,6 +40,7 @@ public class CameraMovment : MonoBehaviour {
             {
                 if (boat.GetComponent<Transform>())
                 {
+                    cam.orthographicSize = 12;
                     transform.position = Vector3.Lerp(transform.position, boat.GetComponent<Transform>().position, 0.1f) + new Vector3(0, 0, -10);
                 }
             }

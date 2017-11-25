@@ -84,7 +84,25 @@ namespace Assets.Script
             }
         }
 
-        public int battleSpd { get; set; }
+
+        private int battleSpd;
+        public int BattleSpd
+        {
+            get { return battleSpd; }
+            set
+            {
+                battleSpd = value;
+                if (battleSpd < 0)
+                {
+                    battleSpd = 0;
+                }
+
+                if (battleSpd > 95)
+                {
+                    battleSpd = 95;
+                }
+            }
+        }
 
         public List<Sort> sorts { get; set; }
 
