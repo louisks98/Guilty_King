@@ -23,7 +23,7 @@ public class CombatTurn : MonoBehaviour
         WIN,
         ANIMEND,
         NOTINCOMBAT,
-        Escape
+        ESCAPE
     }
 
     public static bool selecting { get; set; }
@@ -86,14 +86,8 @@ public class CombatTurn : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(!currentPlayerIsMoving());
-        Debug.Log(currentState + "Anim:" + anim + "Selecting:" + selecting + "Moving:" + !currentPlayerIsMoving());
-
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
-            //Debug.Log("Can move : " + PlayerMovment.canMove);
-            Debug.Log(currentState);
-
             switch (currentState)
             {
                 case (CombatStates.ANIMSTART):
@@ -108,7 +102,6 @@ public class CombatTurn : MonoBehaviour
                     //Positionner la caméra sur le combat
                     CameraMovment.target_Combat = target_combat;
                     CameraMovment.inCombat = true;
-                    Debug.Log("On place la caméra sur le combat");
                     Combat_Start();
 
                     currentState = CombatStates.STARTATTACK;
@@ -154,7 +147,7 @@ public class CombatTurn : MonoBehaviour
                             if (Escape())
                             {
                                 Start_Quit();
-                                currentState = CombatStates.Escape;
+                                currentState = CombatStates.ESCAPE;
                             }
                             else
                             {
@@ -244,7 +237,6 @@ public class CombatTurn : MonoBehaviour
                             if (ennemies[currentPlayer] != null)
                             {
                                 int randomNumber = SelectSpell(ennemies[currentPlayer].sorts); // Choisir un spell
-                                Debug.Log("Sort :" + randomNumber);
                                 if (ennemies[currentPlayer].sorts[randomNumber] != null)
                                 {
                                     if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
@@ -304,7 +296,6 @@ public class CombatTurn : MonoBehaviour
                     break;
                 case (CombatStates.NEXTPLAYER):
                     Next_Turn();
-                    Debug.Log("NEXT");
                     break;
                 case (CombatStates.WIN):
                     Combat_WIN();
@@ -319,7 +310,7 @@ public class CombatTurn : MonoBehaviour
                         Combat_WIN();
                     }
                     break;
-                case (CombatStates.Escape):
+                case (CombatStates.ESCAPE):
                     Combat_Escape();
                     break;
                 case (CombatStates.ANIMEND):
@@ -438,11 +429,11 @@ public class CombatTurn : MonoBehaviour
         {
             CancelDialog.forestDead = true;
         }
-        if (id_enemy1 == 3)
+        if (id_enemy2 == 3)
         {
             CancelDialog.fireDead = true;
         }
-        if (id_enemy1 == 4)
+        if (id_enemy2 == 4)
         {
             CancelDialog.iceDead = true;
         }
@@ -464,6 +455,7 @@ public class CombatTurn : MonoBehaviour
             LvlMenu.addSouls(soolsAfterWin);
             LvlMenu.UpdateUI();
             LvlMenu.saveSools();
+            GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
 
             //Ennemies à null
             ennemies = null;
@@ -520,6 +512,7 @@ public class CombatTurn : MonoBehaviour
     {
         Init_Ally();
         Init_Ennemy();
+        ApplyDifficulty();
     }
 
     void Init_Ally()
@@ -1011,7 +1004,6 @@ public class CombatTurn : MonoBehaviour
                 id = random.Next(0, listPerso.Count);
             }
         }
-        Debug.Log("Target :" + id);
         return listPerso[id].id;
     }
 
@@ -1085,7 +1077,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    speed = perso.speed;
+                    speed = perso.BattleSpd;
                     name = perso.name;
                 }
             }
@@ -1097,7 +1089,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    speed = perso.speed;
+                    speed = perso.BattleSpd;
                     name = perso.name;
                 }
             }
@@ -1112,20 +1104,59 @@ public class CombatTurn : MonoBehaviour
         return dodge;
     }
 
+    float DifficultyModifier()
+    {
+        float modifier = 1;
+        int difficulty = 1;
+        AccesBD bd = new AccesBD();
+
+        try
+        {
+            SqliteDataReader reader = bd.select("select Niveau from Personnage where idPersonnage = 1");
+            while (reader.Read())
+            {
+                difficulty = reader.GetInt32(0);
+            }
+            bd.Close();
+        }
+        catch(Exception e)
+        {
+            bd.Close();
+            Debug.Log(e);
+        }
+
+        switch (difficulty)
+        {
+            case 1:
+                modifier = 1f;
+                break;
+            case 2:
+                modifier = 1.25f;
+                break;
+            case 3:
+                modifier = 1.50f;
+                break;
+        }
+
+        return modifier;
+    }
+
     void ApplyDifficulty()
     {
-        foreach(var perso in ennemies)
+        float x = DifficultyModifier();
+        foreach (var perso in ennemies)
         {
             if (perso != null)
             {
-                perso.BattleHp += perso.BattleHp * 4;
+                perso.hpTotal = Convert.ToInt32(perso.BattleHp * x);
+                perso.BattleHp = Convert.ToInt32(perso.BattleHp * x);
                 foreach(var sort in perso.sorts)
                 {
                     if(sort != null)
                     {
-                        if(sort.type == "AS" && sort.type == "AZ")
+                        if(sort.type == "AS" || sort.type == "AZ")
                         {
-                            sort.valeur += sort.valeur * 4;
+                            sort.valeur = Convert.ToInt32(sort.valeur * x);
                         }
                     }
                 }
