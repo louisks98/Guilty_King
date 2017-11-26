@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class AfterFight : MonoBehaviour {
 
@@ -18,13 +17,11 @@ public class AfterFight : MonoBehaviour {
 
     public bool AfficherMenu;
     private bool estAfficher;
-    public bool gameDone;
 
 	// Use this for initialization
 	void Start () {
         AfficherMenu = false;
         estAfficher = false;
-        gameDone = false;
 
 	}
 
@@ -47,10 +44,6 @@ public class AfterFight : MonoBehaviour {
                 leCanvas.SetActive(false);
                 PlayerMovment.inCombat = false;
                 PlayerMovment.canMove = true;
-                if (gameDone)
-                {
-                    SceneManager.LoadScene(2);
-                }
             }
         }
       
