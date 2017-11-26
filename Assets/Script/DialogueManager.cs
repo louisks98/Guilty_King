@@ -42,7 +42,6 @@ public class DialogueManager : MonoBehaviour {
             if (ennemy != null)
             {
                 ennemy.GetComponent<CombatTurn>().currentState = CombatTurn.CombatStates.ANIMSTART;
-                Debug.Log("SAAAAA STARRTTTTT!!!!!");
             }
         }
 

@@ -42,17 +42,14 @@ public class AddItem : MonoBehaviour {
                         while (reader.Read())
                         {
                             nbItem = reader.GetInt32(0);
-                            Debug.Log("nbItem : " + nbItem);
                         }
 
                         bd.insert("update InventaireItem set Quantite = " + (nbItem + 1) + " where Item = (select idItem from Item where Nom = '" + item + "') and Personnage = 1");
-                        Debug.Log("item ajouter");
                         Open = true;
                         sprite = GetComponent<SpriteRenderer>();
                         sprite.sprite = imgChest;
                         reader.Dispose();
                         bd.Close();
-                        Debug.Log("close addItem");
                         SoundManager.instance.PlaySingle(sound);
                         this.GetComponent<Collider2D>().enabled = false;
                     }
