@@ -33,11 +33,11 @@ public class LevelUp : MonoBehaviour
 
     int maxForce = 120;
     int maxDef = 60;
-    int maxSpeed = 30;
+    int maxSpeed = 24;
 
     int pointForce = 20;
     int pointDef = 10;
-    int pointSpeed = 5;
+    int pointSpeed = 4;
 
     // Use this for initialization
     void Start()
