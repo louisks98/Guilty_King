@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AfterFight : MonoBehaviour {
@@ -18,11 +19,13 @@ public class AfterFight : MonoBehaviour {
     public bool AfficherMenu;
     private bool estAfficher;
 
+    public bool lastFight;
+
 	// Use this for initialization
 	void Start () {
         AfficherMenu = false;
         estAfficher = false;
-
+        lastFight = false;
 	}
 
     // Update is called once per frame
@@ -39,11 +42,16 @@ public class AfterFight : MonoBehaviour {
             }
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
             {
+
                 AfficherMenu = false;
                 estAfficher = false;
                 leCanvas.SetActive(false);
                 PlayerMovment.inCombat = false;
                 PlayerMovment.canMove = true;
+                if (lastFight)
+                {
+                    SceneManager.LoadScene(2);
+                }
             }
         }
       

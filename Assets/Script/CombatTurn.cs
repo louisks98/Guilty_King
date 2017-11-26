@@ -142,7 +142,7 @@ public class CombatTurn : MonoBehaviour
                 case (CombatStates.ANIMLEFT):
                     if (currentTeamIsAlly)
                     {
-                        if(combatUI.GetComponent<CombatUI>().tryEscape)
+                        if (combatUI.GetComponent<CombatUI>().tryEscape)
                         {
                             combatUI.GetComponent<CombatUI>().tryEscape = false;
                             if (Escape())
@@ -447,49 +447,49 @@ public class CombatTurn : MonoBehaviour
 
         Quit(target_win);
 
+
+        //Ouvrir le menu lvl
+        LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
+        LvlMenu.addSouls(soolsAfterWin);
+        LvlMenu.UpdateUI();
+        LvlMenu.saveSools();
+        GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
+
+        //Ennemies à null
+        ennemies = null;
+        allies = null;
+        go_enemy1 = null;
+        go_enemy2 = null;
+        go_enemy3 = null;
+        go_enemy4 = null;
+
+        //Faire disparaitre l'ennemie dans le jeu
+        UpdateGameProgress.doVerification = true;
+
+        AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
+        menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
+        menuAfterFight.SetGameResultText("gagnez!");
+
+        string spellName = "Aucun";
+        if (idSpellGain != "")
+        {
+            AccesBD bdSql = new AccesBD();
+            SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
+            while (reader.Read())
+            {
+                spellName = reader.GetString(0);
+            }
+            bdSql.Close();
+        }
+        menuAfterFight.SetSortText(spellName);
+        menuAfterFight.SetDetailsText(lore);
+
         if (id_enemy2 == 9)
         {
-            SceneManager.LoadScene(2);
+            menuAfterFight.lastFight = true;
         }
-        else
-        {
-            //Ouvrir le menu lvl
-            LevelUp LvlMenu = GameObject.FindGameObjectWithTag("Hero").GetComponent<LevelUp>();
-            LvlMenu.addSouls(soolsAfterWin);
-            LvlMenu.UpdateUI();
-            LvlMenu.saveSools();
-            GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
+        menuAfterFight.AfficherMenu = true;
 
-            //Ennemies à null
-            ennemies = null;
-            allies = null;
-            go_enemy1 = null;
-            go_enemy2 = null;
-            go_enemy3 = null;
-            go_enemy4 = null;
-
-            //Faire disparaitre l'ennemie dans le jeu
-            UpdateGameProgress.doVerification = true;
-
-            AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
-            menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
-            menuAfterFight.SetGameResultText("gagnez!");
-
-            string spellName = "Aucun";
-            if (idSpellGain != "")
-            {
-                AccesBD bdSql = new AccesBD();
-                SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
-                while (reader.Read())
-                {
-                    spellName = reader.GetString(0);
-                }
-                bdSql.Close();
-            }
-            menuAfterFight.SetSortText(spellName);
-            menuAfterFight.SetDetailsText(lore);
-            menuAfterFight.AfficherMenu = true;
-        }
     }
 
     void Combat_Lose()
@@ -650,7 +650,7 @@ public class CombatTurn : MonoBehaviour
     int Team_Speed(List<Personnage> team)
     {
         int speed = 0;
-        if(team != null)
+        if (team != null)
         {
             foreach (Personnage personnage in team)
             {
@@ -1030,7 +1030,7 @@ public class CombatTurn : MonoBehaviour
         while (team_Is_Full_Heal(ennemies) && sorts[idSpell].type == "GR")
         {
             idSpell = random.Next(0, sorts.Count);
-        } 
+        }
 
         //Twist du boss de glace
         if (idSpellGain.Equals("H4"))
@@ -1099,7 +1099,7 @@ public class CombatTurn : MonoBehaviour
             }
         }
 
-        if(random.Next(0,100) <= speed)
+        if (random.Next(0, 100) <= speed)
         {
             dodge = true;
             StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(name + " : Esquive", 1));
@@ -1123,7 +1123,7 @@ public class CombatTurn : MonoBehaviour
             }
             bd.Close();
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             bd.Close();
             Debug.Log(e);
@@ -1154,11 +1154,11 @@ public class CombatTurn : MonoBehaviour
             {
                 perso.hpTotal = Convert.ToInt32(perso.BattleHp * x);
                 perso.BattleHp = Convert.ToInt32(perso.BattleHp * x);
-                foreach(var sort in perso.sorts)
+                foreach (var sort in perso.sorts)
                 {
-                    if(sort != null)
+                    if (sort != null)
                     {
-                        if(sort.type == "AS" || sort.type == "AZ")
+                        if (sort.type == "AS" || sort.type == "AZ")
                         {
                             sort.valeur = Convert.ToInt32(sort.valeur * x);
                         }
