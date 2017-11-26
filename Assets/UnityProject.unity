@@ -137,17 +137,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf3eb9a81b92424e9ccf36e843b68eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  efxSource: {fileID: 0}
-  musicSource: {fileID: 0}
-  attackClip1: {fileID: 0}
-  attackClip2: {fileID: 0}
-  dialogClip: {fileID: 0}
-  BattleMusic: {fileID: 0}
-  itemClip: {fileID: 0}
-  forceClip: {fileID: 0}
-  defClip: {fileID: 0}
-  HealClip: {fileID: 0}
-  doorClip: {fileID: 0}
+  efxSource: {fileID: 2905788}
+  musicSource: {fileID: 2905787}
+  attackClip1: {fileID: 8300000, guid: c9150317b450c8547877ce4b9526938d, type: 3}
+  attackClip2: {fileID: 8300000, guid: 13c333fd205114f4eb3dbf8ef26e01aa, type: 3}
+  dialogClip: {fileID: 8300000, guid: df0476792a571c841929388d1a55ec7d, type: 3}
+  BattleMusic: {fileID: 8300000, guid: a556fc931220ddb468eb26eadb2f86f5, type: 3}
+  itemClip: {fileID: 8300000, guid: 9d496cd84b1eb26499d3767a48c15616, type: 3}
+  forceClip: {fileID: 8300000, guid: 3383f8ade99383f49b66c5d5dbbaeb1b, type: 3}
+  defClip: {fileID: 8300000, guid: 79957f30b3ded3c4f9674bcf01d77415, type: 3}
+  HealClip: {fileID: 8300000, guid: 7b76503671a8c464c9b83f4555e3ed28, type: 3}
+  doorClip: {fileID: 8300000, guid: 5c574cd2050d2a54781ad323d031b9bc, type: 3}
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &2905787
@@ -735,10 +735,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 10
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 287.5, y: 555}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &29664111
@@ -1106,9 +1106,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: bb6b1b5e1bf732e42811858fb7009419, type: 3}
 --- !u!95 &35983435
 Animator:
   serializedVersion: 3
@@ -1392,9 +1392,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300034, guid: 3a64f8e38fef2c843aa78c18bbfe115c, type: 3}
 --- !u!95 &52773900
 Animator:
   serializedVersion: 3
@@ -1638,9 +1638,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - 'Armstrong: L''astuce pour trouver la reine de feu est de suivre les tuiles bleues!'
   ennemy: {fileID: 0}
-  instantTalk: 0
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!61 &57458023
 BoxCollider2D:
@@ -1947,7 +1948,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Le H\xE9ro: Aoutch! C'est chaud!"
+  - "Maman: Je t'ai d\xE9j\xE0 dit de ne pas jouer avec le feu..."
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -2018,9 +2021,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
-  isBoat: 0
+  warpTarget: {fileID: 1788476990}
+  Music: {fileID: 8300000, guid: 8a67ab48684ef1049886209952b2affd, type: 3}
+  isBoat: 1
 --- !u!61 &67064877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2484,7 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
+  warpTarget: {fileID: 1911463428}
   Music: {fileID: 0}
   isBoat: 0
 --- !u!61 &81558075
@@ -3028,9 +3031,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db811d22b232b243852a793cca2210d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageItem: []
-  panel: {fileID: 0}
-  pnlInfo: {fileID: 0}
+  imageItem:
+  - {fileID: 21300000, guid: a21a93b0e76367040924c7184aea2b54, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 8d1362a1c9541534bbbd70bd61d09c9a, type: 3}
+  panel: {fileID: 90922859}
+  pnlInfo: {fileID: 1619467004}
 --- !u!4 &121990466
 Transform:
   m_ObjectHideFlags: 0
@@ -3145,10 +3151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2dbc1ae8dce4444926f5950d0aa8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogue: 1
+  dialogueLines:
+  - "Illia: Si tu r\xE9ussis \xE0 me battre, le chemin du roi s'ouvrira. Il est situ\xE9
+    \xE0 l'est dans la carte d'eau..."
+  - "Illia: Am\xE8ne toi!"
+  ennemy: {fileID: 127374436}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!114 &127374442
 MonoBehaviour:
@@ -3162,28 +3171,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
-  id_enemy3: 0
+  id_enemy1: 5
+  id_enemy2: 4
+  id_enemy3: 6
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
-  go_enemy3: {fileID: 0}
+  go_enemy1: {fileID: 1446800658}
+  go_enemy2: {fileID: 757587450}
+  go_enemy3: {fileID: 2092012956}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
-  target_Ally_3: {fileID: 0}
+  target_combat: {fileID: 1292186212}
+  target_win: {fileID: 580912875}
+  target_loose: {fileID: 580912875}
+  target_Ally_1: {fileID: 714009016}
+  target_Ally_2: {fileID: 870502284}
+  target_Ally_3: {fileID: 99137865}
   target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
-  idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 4
+  idSpellGain: H4
+  lore: "Illia tombe en amour avec votre force et votre courage et d\xE9cide de rejoindre
+    l'\xE9quipe. La zone du roi est maintenant disponible. Vite! Dirigez-vous vers
+    le sud-est de la carte d'eau!"
 --- !u!1 &137331887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,10 +3264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 4
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 353, y: 553.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &142197712
@@ -3303,13 +3314,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  isAlly: 0
+  isAlly: 1
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300016, guid: 108bedf9496ff4b46b1bbe17a2ebfc8c, type: 3}
 --- !u!95 &142197715
 Animator:
   serializedVersion: 3
@@ -3622,7 +3633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
+  warpTarget: {fileID: 761507643}
   Music: {fileID: 0}
   isBoat: 0
 --- !u!61 &163437914
@@ -4121,8 +4132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
+  warpTarget: {fileID: 264647809}
+  Music: {fileID: 8300000, guid: 533c528d81e5f0f4abae7829d3b35376, type: 3}
   isBoat: 0
 --- !u!61 &203856901
 BoxCollider2D:
@@ -4277,7 +4288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de r\xE9g\xE9n\xE9ration "
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -4374,10 +4386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "R\xE9g\xE9neration"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!1 &230233239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4601,10 +4613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "R\xE9g\xE9neration"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &248011240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4617,7 +4629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de R\xE9g\xE9neration"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -4870,10 +4883,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de d\xE9fense"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &254157761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4886,7 +4899,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de d\xE9fence"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -6201,9 +6215,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: 61dfe50d491401f4faa66ed2c5a79a82, type: 3}
 --- !u!95 &311273019
 Animator:
   serializedVersion: 3
@@ -6482,9 +6496,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: 61dfe50d491401f4faa66ed2c5a79a82, type: 3}
 --- !u!95 &320841758
 Animator:
   serializedVersion: 3
@@ -6605,8 +6619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
+  warpTarget: {fileID: 1956831379}
+  Music: {fileID: 8300000, guid: 5af177bb8afe6304ea9f6501c4b93104, type: 3}
   isBoat: 0
 --- !u!61 &325896797
 BoxCollider2D:
@@ -7725,10 +7739,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 8
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 537, y: 191.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &396495427
@@ -8093,9 +8107,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: 61dfe50d491401f4faa66ed2c5a79a82, type: 3}
 --- !u!95 &412088184
 Animator:
   serializedVersion: 3
@@ -8315,28 +8329,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
+  id_enemy1: 23
   id_enemy2: 0
   id_enemy3: 0
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
+  go_enemy1: {fileID: 2098285854}
   go_enemy2: {fileID: 0}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
-  target_Ally_3: {fileID: 0}
-  target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
+  target_combat: {fileID: 1087211488}
+  target_win: {fileID: 550242561}
+  target_loose: {fileID: 1807029842}
+  target_Ally_1: {fileID: 1952856082}
+  target_Ally_2: {fileID: 1795325919}
+  target_Ally_3: {fileID: 230233240}
+  target_Ally_4: {fileID: 1458327149}
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Vous avez r\xE9ussi \xE0 renvoyer Mordrax en enfer. F\xE9licitations!"
 --- !u!114 &419570785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8349,9 +8363,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - 'Mordrax: ...'
+  ennemy: {fileID: 419570781}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!58 &419570786
 CircleCollider2D:
@@ -8438,6 +8453,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &432565919
 GameObject:
   m_ObjectHideFlags: 0
@@ -8514,7 +8530,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 432565919}
-  m_MaskInteraction: 0
 --- !u!1001 &433950508
 Prefab:
   m_ObjectHideFlags: 0
@@ -8713,28 +8728,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
+  id_enemy1: 20
+  id_enemy2: 21
   id_enemy3: 0
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
+  go_enemy1: {fileID: 1029448599}
+  go_enemy2: {fileID: 1816251042}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
-  target_Ally_3: {fileID: 0}
-  target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
+  target_combat: {fileID: 1158451078}
+  target_win: {fileID: 1113147286}
+  target_loose: {fileID: 1807029842}
+  target_Ally_1: {fileID: 1071501869}
+  target_Ally_2: {fileID: 894003188}
+  target_Ally_3: {fileID: 1049037631}
+  target_Ally_4: {fileID: 1843591476}
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Trouver l'autre pond qui vous m\xE8nera vers le boss de feu. N'oubliez pas
+    de monter de niveau en utilisant la touche Escape!"
 --- !u!114 &448667299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8747,9 +8763,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - Doot !!! Doot !!!
+  ennemy: {fileID: 448667296}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!58 &448667300
 CircleCollider2D:
@@ -8935,9 +8952,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: 108bedf9496ff4b46b1bbe17a2ebfc8c, type: 3}
 --- !u!95 &463607595
 Animator:
   serializedVersion: 3
@@ -9251,14 +9268,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8eed110349568e4f92e18e5ca164aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listSpellHero: []
-  listSpellFire: []
-  listSpellEarth: []
-  listSpellIce: []
-  pnlMenuBtn: {fileID: 0}
-  pnlAttakBtn: {fileID: 0}
-  pnlEnemySelect: {fileID: 0}
-  pnlItemSelect: {fileID: 0}
+  listSpellHero:
+  - {fileID: 21300040, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  - {fileID: 21300042, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  - {fileID: 21300022, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  - {fileID: 21300038, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  listSpellFire:
+  - {fileID: 21300012, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  - {fileID: 21300018, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  listSpellEarth:
+  - {fileID: 21300014, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  - {fileID: 21300036, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  listSpellIce:
+  - {fileID: 21300016, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  - {fileID: 21300046, guid: 5783290a1a2cdfe43888d1dc1ee842d2, type: 3}
+  pnlMenuBtn: {fileID: 1494026721}
+  pnlAttakBtn: {fileID: 59134102}
+  pnlEnemySelect: {fileID: 783617344}
+  pnlItemSelect: {fileID: 1262191767}
 --- !u!1 &475957048
 GameObject:
   m_ObjectHideFlags: 0
@@ -10445,9 +10472,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - "Raven: Je ne te laisserai jamais atteindre ma soeur qui est situ\xE9 dans le
+    nord de la carte d'eau..."
+  - "Raven: Je suis la reine du feu et tu vas regretter d'\xEAtre venue ici!"
+  ennemy: {fileID: 523527870}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!114 &523527875
 MonoBehaviour:
@@ -10461,28 +10491,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
-  id_enemy3: 0
+  id_enemy1: 10
+  id_enemy2: 3
+  id_enemy3: 11
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
-  go_enemy3: {fileID: 0}
+  go_enemy1: {fileID: 1588512819}
+  go_enemy2: {fileID: 463607592}
+  go_enemy3: {fileID: 1800367285}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
+  target_combat: {fileID: 575754203}
+  target_win: {fileID: 2028224327}
+  target_loose: {fileID: 1807029842}
+  target_Ally_1: {fileID: 994534584}
+  target_Ally_2: {fileID: 964415766}
   target_Ally_3: {fileID: 0}
   target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
-  idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 3
+  idSpellGain: H3
+  lore: "\xC0 la recherche de plus de puissance, la reine de feu se joint \xE0 l'\xE9quipe
+    et vous aidera dans votre qu\xEAte. Retournez en bateau et dirigez-vous vers le
+    nord-est afin de trouver le glacier o\xF9 vit la reine de glace."
 --- !u!1 &527476420
 GameObject:
   m_ObjectHideFlags: 0
@@ -10726,9 +10758,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - 'Maman: Salut mon enfant!'
+  - "Maman: Tu devrais faire quelque chose de ta vie au lieu de jouer au jeu vid\xE9o
+    toute la journ\xE9e."
+  - "Le H\xE9ro: D'accord, je vais aller tuer le roi et prendre sa place sur le throne!"
+  - "Maman: Pfft! Tu penses devenir roi...? Il te faudra de l'aide et beaucoup de
+    courage pour prendre sa place h\xE9 h\xE9..."
+  - "Maman: Bonne chance dans ta qu\xEAte!"
   ennemy: {fileID: 0}
-  instantTalk: 0
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!61 &531142353
 BoxCollider2D:
@@ -11212,9 +11251,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - "Roi: Tu as enfin r\xE9alis\xE9 quelque chose de ta vie..."
+  - "Roi: Mais tu n'auras jamais la force n\xE9cessaire pour prendre place sur ce
+    throne!"
+  - 'Roi: Battons-nous!'
+  ennemy: {fileID: 542883399}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!114 &542883405
 MonoBehaviour:
@@ -11228,28 +11271,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
-  id_enemy3: 0
+  id_enemy1: 7
+  id_enemy2: 9
+  id_enemy3: 8
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
-  go_enemy3: {fileID: 0}
+  go_enemy1: {fileID: 35983432}
+  go_enemy2: {fileID: 1375124214}
+  go_enemy3: {fileID: 2140523080}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
-  target_Ally_3: {fileID: 0}
-  target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
+  target_combat: {fileID: 1810083723}
+  target_win: {fileID: 1152248580}
+  target_loose: {fileID: 761507643}
+  target_Ally_1: {fileID: 1958933946}
+  target_Ally_2: {fileID: 2039274491}
+  target_Ally_3: {fileID: 1043874225}
+  target_Ally_4: {fileID: 17454275}
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
   soolsAfterWin: 0
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Votre m\xE8re serait fi\xE8re de vous! Vous \xEAtes maintenant le roi...
+    mais qui sait quand le roi corrompu reviendra pour reprendre sa place..."
 --- !u!1 &545767982
 GameObject:
   m_ObjectHideFlags: 0
@@ -11459,9 +11503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
-  isBoat: 0
+  warpTarget: {fileID: 165426573}
+  Music: {fileID: 8300000, guid: 8a67ab48684ef1049886209952b2affd, type: 3}
+  isBoat: 1
 --- !u!61 &547333329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11890,10 +11934,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 5
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 577, y: 120}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &575754202
@@ -11965,12 +12009,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56aab6373c56f7544b41d196fef28633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  inventoryMenu: {fileID: 0}
-  teamMenu: {fileID: 0}
-  statsMenu: {fileID: 0}
-  skillMenu: {fileID: 0}
-  levelMenu: {fileID: 0}
+  pauseMenu: {fileID: 1646351028}
+  inventoryMenu: {fileID: 1077866879}
+  teamMenu: {fileID: 637624744}
+  statsMenu: {fileID: 956060329}
+  skillMenu: {fileID: 119227591}
+  levelMenu: {fileID: 1260414050}
 --- !u!1 &580912874
 GameObject:
   m_ObjectHideFlags: 0
@@ -12041,9 +12085,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Armstrong: Faites attention! La l\xE9gende dit qu'il faut avoir les 3 \xE9l\xE9ments
+    pour pouvoir repousser Mordrax dans les portes de l'enfer..."
   ennemy: {fileID: 0}
-  instantTalk: 0
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!58 &585117260
 CircleCollider2D:
@@ -12248,10 +12294,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de d\xE9fense"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &591290903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12264,7 +12310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de defense"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -12740,8 +12787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
+  warpTarget: {fileID: 264647809}
+  Music: {fileID: 8300000, guid: 533c528d81e5f0f4abae7829d3b35376, type: 3}
   isBoat: 0
 --- !u!61 &612150779
 BoxCollider2D:
@@ -13450,13 +13497,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba07663ed70e4c40bbd14036295b8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPanels: []
-  statsCharacterPanel: {fileID: 0}
-  sp_hero: {fileID: 0}
-  sp_Fire: {fileID: 0}
-  sp_Forest: {fileID: 0}
-  sp_Ice: {fileID: 0}
-  questionMark: {fileID: 0}
+  characterPanels:
+  - {fileID: 520902761}
+  - {fileID: 915679736}
+  - {fileID: 741384480}
+  - {fileID: 297265145}
+  statsCharacterPanel: {fileID: 2121777684}
+  sp_hero: {fileID: 21300156, guid: 4b280e0753531e541babdf393742ec67, type: 3}
+  sp_Fire: {fileID: 21300216, guid: 108bedf9496ff4b46b1bbe17a2ebfc8c, type: 3}
+  sp_Forest: {fileID: 21300028, guid: cbca8600baf87e44db61855ce258f764, type: 3}
+  sp_Ice: {fileID: 21300028, guid: ae8182e8149554f4a85818a0c4d166ce, type: 3}
+  questionMark: {fileID: 21300000, guid: 704097c6956fbc4439f945ebef9d7655, type: 3}
 --- !u!1 &646608769
 GameObject:
   m_ObjectHideFlags: 0
@@ -13683,13 +13734,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  isAlly: 0
+  isAlly: 1
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300016, guid: 4b280e0753531e541babdf393742ec67, type: 3}
 --- !u!1 &661569829
 GameObject:
   m_ObjectHideFlags: 0
@@ -13863,10 +13914,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 3
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 40, y: 42}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &704149321
@@ -14363,17 +14414,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3897c1d68c1d60e40a19d116d2bd4e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellMenuCanva: {fileID: 0}
-  spellName: {fileID: 0}
-  spellType: {fileID: 0}
-  spellDescription: {fileID: 0}
-  fire: {fileID: 0}
-  winter: {fileID: 0}
-  forest: {fileID: 0}
-  spFire: {fileID: 0}
-  spWinter: {fileID: 0}
-  spForest: {fileID: 0}
-  spQuestionMark: {fileID: 0}
+  spellMenuCanva: {fileID: 119227591}
+  spellName: {fileID: 1471541307}
+  spellType: {fileID: 1529590446}
+  spellDescription: {fileID: 15290007}
+  fire: {fileID: 588320381}
+  winter: {fileID: 773409933}
+  forest: {fileID: 1845070002}
+  spFire: {fileID: 21300028, guid: 108bedf9496ff4b46b1bbe17a2ebfc8c, type: 3}
+  spWinter: {fileID: 21300028, guid: ae8182e8149554f4a85818a0c4d166ce, type: 3}
+  spForest: {fileID: 21300028, guid: cbca8600baf87e44db61855ce258f764, type: 3}
+  spQuestionMark: {fileID: 21300000, guid: 704097c6956fbc4439f945ebef9d7655, type: 3}
 --- !u!1 &717786577
 GameObject:
   m_ObjectHideFlags: 0
@@ -14448,13 +14499,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  isAlly: 0
+  isAlly: 1
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300016, guid: cbca8600baf87e44db61855ce258f764, type: 3}
 --- !u!95 &727907089
 Animator:
   serializedVersion: 3
@@ -15378,9 +15429,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: ae8182e8149554f4a85818a0c4d166ce, type: 3}
 --- !u!95 &757587453
 Animator:
   serializedVersion: 3
@@ -15582,9 +15633,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: bb6b1b5e1bf732e42811858fb7009419, type: 3}
 --- !u!95 &758750966
 Animator:
   serializedVersion: 3
@@ -16117,10 +16168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 25
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 226, y: 287}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &775966917
@@ -16413,9 +16464,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
-  isBoat: 0
+  warpTarget: {fileID: 939365849}
+  Music: {fileID: 8300000, guid: 8a67ab48684ef1049886209952b2affd, type: 3}
+  isBoat: 1
 --- !u!61 &796342609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17031,9 +17082,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - 'Armstrong: Bonjour jeune homme'
+  - "Armstrong: Pour continuer ta qu\xEAte, il faudra que tu ailles dans la carte
+    d'eau situ\xE9e au nord-est \xE0 partir d'ici"
+  - 'Armstrong: Une fois dans la carte d''eau, tu devras aller battre la reine de
+    feu qui est au sud de celle-ci'
+  - 'Armstrong: Oh... tu veux que je vienne t''aider? Malheureusement il faudra que
+    tu me prouves ta force avant que je t''aide!'
+  - "Armstrong: Tu ne r\xE9ussiras jamais \xE0 me battre!"
+  ennemy: {fileID: 835133022}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!114 &835133028
 MonoBehaviour:
@@ -17047,28 +17106,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
+  id_enemy1: 2
   id_enemy2: 0
   id_enemy3: 0
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
+  go_enemy1: {fileID: 1459843809}
   go_enemy2: {fileID: 0}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
+  target_combat: {fileID: 200958520}
+  target_win: {fileID: 850647963}
+  target_loose: {fileID: 850647963}
+  target_Ally_1: {fileID: 859048079}
   target_Ally_2: {fileID: 0}
   target_Ally_3: {fileID: 0}
   target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
-  idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 1
+  idSpellGain: H2
+  lore: "Armstrong a gagn\xE9 le combat, mais comprenant l'importance de votre qu\xEAte,
+    il se joint \xE0 vous afin de battre le roi corrompu. N'oubliez pas de monter
+    de niveau!"
 --- !u!1 &835556021
 GameObject:
   m_ObjectHideFlags: 0
@@ -17117,9 +17178,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: bb6b1b5e1bf732e42811858fb7009419, type: 3}
 --- !u!95 &835556024
 Animator:
   serializedVersion: 3
@@ -18423,8 +18484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981fa0bf52ace4f42ba3406c2f97f9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 0}
-  boat: {fileID: 0}
+  hero: {fileID: 2132323858}
+  boat: {fileID: 1235506539}
 --- !u!1 &899646097
 GameObject:
   m_ObjectHideFlags: 0
@@ -18747,10 +18808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "R\xE9g\xE9neration"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &909461564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18763,7 +18824,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de r\xE9g\xE9n\xE9ration "
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -19047,11 +19109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 32
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
-  TmxSize: {x: 0, y: 0}
+  TmxPosition: {x: 39, y: 472.5}
+  TmxSize: {x: 56, y: 38.5}
   TmxRotation: 0
 --- !u!1 &915679736
 GameObject:
@@ -20060,8 +20122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
+  warpTarget: {fileID: 833927800}
+  Music: {fileID: 8300000, guid: 5af177bb8afe6304ea9f6501c4b93104, type: 3}
   isBoat: 0
 --- !u!61 &1005872144
 BoxCollider2D:
@@ -20297,7 +20359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - Vous devez avoir 18 ans pour entrer ici...
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -20732,9 +20795,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: 61dfe50d491401f4faa66ed2c5a79a82, type: 3}
 --- !u!95 &1029448602
 Animator:
   serializedVersion: 3
@@ -21386,11 +21449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 13
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
-  TmxSize: {x: 0, y: 0}
+  TmxPosition: {x: 449, y: 352.5}
+  TmxSize: {x: 30.5, y: 160}
   TmxRotation: 0
 --- !u!1 &1071501868
 GameObject:
@@ -21603,9 +21666,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db811d22b232b243852a793cca2210d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageItem: []
-  panel: {fileID: 0}
-  pnlInfo: {fileID: 0}
+  imageItem:
+  - {fileID: 21300000, guid: a21a93b0e76367040924c7184aea2b54, type: 3}
+  - {fileID: 21300000, guid: c5dce7f3c0652da4f8a089f7081e861a, type: 3}
+  - {fileID: 21300000, guid: cbad4fd3254ad204c9204712bf189e21, type: 3}
+  - {fileID: 21300000, guid: 8d1362a1c9541534bbbd70bd61d09c9a, type: 3}
+  panel: {fileID: 1103797308}
+  pnlInfo: {fileID: 1619467004}
 --- !u!1 &1079159061
 GameObject:
   m_ObjectHideFlags: 0
@@ -22486,7 +22553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
+  warpTarget: {fileID: 580912875}
   Music: {fileID: 0}
   isBoat: 0
 --- !u!61 &1122412682
@@ -23364,8 +23431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd3f07c5050aa440ad72c4ea7f376c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dBox: {fileID: 0}
-  dText: {fileID: 0}
+  dBox: {fileID: 1813023999}
+  dText: {fileID: 1229952016}
   dialogActive: 0
   dialogLines: []
   currentLine: 0
@@ -23414,28 +23481,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
+  id_enemy1: 18
+  id_enemy2: 19
   id_enemy3: 0
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
+  go_enemy1: {fileID: 835556021}
+  go_enemy2: {fileID: 758750963}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
-  target_Ally_3: {fileID: 0}
-  target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
+  target_combat: {fileID: 494789465}
+  target_win: {fileID: 1180677463}
+  target_loose: {fileID: 1791724846}
+  target_Ally_1: {fileID: 1741491874}
+  target_Ally_2: {fileID: 366499938}
+  target_Ally_3: {fileID: 559371528}
+  target_Ally_4: {fileID: 2085763075}
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Les portes du ch\xE2teau sont maintenant ouvertes. Bonne chance."
 --- !u!212 &1146949995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23490,9 +23557,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - 'Gardes: Halte! On ne vous laissera pas passer.'
+  ennemy: {fileID: 1146949992}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!58 &1146949997
 CircleCollider2D:
@@ -23894,10 +23962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "R\xE9g\xE9neration"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1174543124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23910,7 +23978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de R\xE9g\xE9neration"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -24278,10 +24347,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 9
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 415.5, y: 223.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &1196685950
@@ -24847,10 +24916,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 7
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 416.5, y: 224}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &1229952014
@@ -24993,10 +25062,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c5c7e30dab17e4680f81c0b2f89cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
-  runModifier: 1.5
-  boat: {fileID: 0}
-  hero: {fileID: 0}
+  walkSpeed: 8
+  runModifier: 2
+  boat: {fileID: 1235506539}
+  hero: {fileID: 2132323858}
 --- !u!95 &1235506543
 Animator:
   serializedVersion: 3
@@ -25112,9 +25181,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Une aura mal\xE9fique bloque le passage. Vous aurez besoin des trois \xE9l\xE9ments
+    pour rentrer ici."
   ennemy: {fileID: 0}
-  instantTalk: 0
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!58 &1235676402
 CircleCollider2D:
@@ -25268,13 +25339,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  isAlly: 0
+  isAlly: 1
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300016, guid: ae8182e8149554f4a85818a0c4d166ce, type: 3}
 --- !u!95 &1239609149
 Animator:
   serializedVersion: 3
@@ -25398,10 +25469,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de rapidit\xE9"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1244574980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25414,7 +25485,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de r\xE9g\xE9n\xE9ration"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -25618,10 +25690,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "R\xE9g\xE9neration"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1247715282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25634,7 +25706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de r\xE9g\xE9n\xE9ration"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -25784,10 +25857,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 35
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 159.5, y: 288.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &1253453083
@@ -26310,7 +26383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Le marchand ne semble pas vouloir vendre ses armes \xE0 des enfants..."
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -26483,11 +26557,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 14
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
-  TmxSize: {x: 0, y: 0}
+  TmxPosition: {x: 544, y: 352}
+  TmxSize: {x: 31.5, y: 160.5}
   TmxRotation: 0
 --- !u!1 &1276058498
 GameObject:
@@ -27230,10 +27304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de rapidit\xE9"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1326347329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27246,7 +27320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de vitesse"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -28286,9 +28361,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: de03d8e815e23694da468d20c06652d0, type: 3}
 --- !u!95 &1375124217
 Animator:
   serializedVersion: 3
@@ -28453,7 +28528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1381405847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29291,9 +29366,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300042, guid: 6e06b8b12f51458448b4db529b6cb37b, type: 3}
 --- !u!95 &1446800661
 Animator:
   serializedVersion: 3
@@ -29417,10 +29492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de d\xE9fense"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1447451507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29433,7 +29508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de defense"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -29757,9 +29833,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: cbca8600baf87e44db61855ce258f764, type: 3}
 --- !u!95 &1459843812
 Animator:
   serializedVersion: 3
@@ -29971,10 +30047,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 11
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 351, y: 553.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &1465962617
@@ -30109,10 +30185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 27
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 287.5, y: 595.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &1471541305
@@ -31979,9 +32055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
-  isBoat: 0
+  warpTarget: {fileID: 165426573}
+  Music: {fileID: 8300000, guid: 8a67ab48684ef1049886209952b2affd, type: 3}
+  isBoat: 1
 --- !u!61 &1564996145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32280,9 +32356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
-  isBoat: 0
+  warpTarget: {fileID: 939365849}
+  Music: {fileID: 8300000, guid: 8a67ab48684ef1049886209952b2affd, type: 3}
+  isBoat: 1
 --- !u!61 &1574099912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32556,7 +32632,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a59409b0255674883924805f499fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabEnemy: []
+  tabEnemy:
+  - {fileID: 835133022}
+  - {fileID: 523527870}
+  - {fileID: 127374436}
+  - {fileID: 903453050}
+  - {fileID: 73885450}
+  - {fileID: 1620634201}
+  - {fileID: 1204718590}
+  - {fileID: 542883399}
+  - {fileID: 1874585199}
+  - {fileID: 1628880871}
+  - {fileID: 2094395285}
+  - {fileID: 1080582320}
+  - {fileID: 1751707223}
+  - {fileID: 1751707223}
+  - {fileID: 1751707223}
+  - {fileID: 1751707223}
+  - {fileID: 1146949992}
+  - {fileID: 423360205}
+  - {fileID: 448667296}
+  - {fileID: 1161478390}
+  - {fileID: 1161478390}
+  - {fileID: 419570781}
 --- !u!1 &1588512819
 GameObject:
   m_ObjectHideFlags: 0
@@ -32605,9 +32703,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300024, guid: 187b1c6b65e3867459857e2d1f391414, type: 3}
 --- !u!95 &1588512822
 Animator:
   serializedVersion: 3
@@ -32870,7 +32968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
+  warpTarget: {fileID: 1180677463}
   Music: {fileID: 0}
   isBoat: 0
 --- !u!61 &1593035742
@@ -33064,10 +33162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: Potion de force
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1601113147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33080,7 +33178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de force"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -33241,10 +33340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de rapidit\xE9"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1604609641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33257,7 +33356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de vitesse"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -33500,8 +33600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
+  warpTarget: {fileID: 1807029842}
+  Music: {fileID: 8300000, guid: aeae1c67a06987d4fa5d156b985d46fe, type: 3}
   isBoat: 0
 --- !u!61 &1616077162
 BoxCollider2D:
@@ -33896,11 +33996,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 12
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
-  TmxSize: {x: 0, y: 0}
+  TmxPosition: {x: 457, y: 363}
+  TmxSize: {x: 1, y: 3.5}
   TmxRotation: 0
 --- !u!1 &1646351028
 GameObject:
@@ -34914,10 +35014,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: Potion de force
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1716238377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34930,7 +35030,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de force"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -35088,10 +35189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 1
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 40, y: 96}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!4 &1720792424 stripped
@@ -35204,18 +35305,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Orientation: 0
-  StaggerAxis: 0
+  StaggerAxis: 1
   StaggerIndex: 0
   HexSideLength: 0
-  NumLayers: 0
-  NumTilesWide: 0
-  NumTilesHigh: 0
-  TileWidth: 0
-  TileHeight: 0
-  ExportScale: 1
-  MapWidthInPixels: 0
-  MapHeightInPixels: 0
-  BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  NumLayers: 16
+  NumTilesWide: 20
+  NumTilesHigh: 20
+  TileWidth: 32
+  TileHeight: 32
+  ExportScale: 0.03125
+  MapWidthInPixels: 640
+  MapHeightInPixels: 640
+  BackgroundColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
 --- !u!1 &1737058943
 GameObject:
   m_ObjectHideFlags: 0
@@ -37372,28 +37473,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
-  id_enemy3: 0
-  id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
-  go_enemy3: {fileID: 0}
-  go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
+  id_enemy1: 14
+  id_enemy2: 15
+  id_enemy3: 16
+  id_enemy4: 17
+  go_enemy1: {fileID: 52773897}
+  go_enemy2: {fileID: 2066016115}
+  go_enemy3: {fileID: 1978524984}
+  go_enemy4: {fileID: 2059224499}
+  target_combat: {fileID: 49611955}
+  target_win: {fileID: 784214297}
+  target_loose: {fileID: 1581285941}
+  target_Ally_1: {fileID: 326921819}
+  target_Ally_2: {fileID: 1696367656}
   target_Ally_3: {fileID: 0}
   target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Gr\xE2ce \xE0 Armstrong, vous avez r\xE9ussi \xE0 battre les quatre gobelins
+    des for\xEAts. Passez le pont et dirigez-vous vers le sud pour aller dans la carte
+    de feu."
 --- !u!114 &1751707228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37406,9 +37509,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - "Gobelin: J'esp\xE8re pour toi que tu n'es pas venu seul."
+  - 'Gobelin: Puisque moi je ne suis pas seul ! HAHAHA !!!'
+  ennemy: {fileID: 1751707223}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!1 &1754879780
 GameObject:
@@ -38110,9 +38215,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300016, guid: c5b0613bd6fae124a923c9ce99269ddd, type: 3}
 --- !u!95 &1800367288
 Animator:
   serializedVersion: 3
@@ -38645,9 +38750,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: 61dfe50d491401f4faa66ed2c5a79a82, type: 3}
 --- !u!95 &1816251045
 Animator:
   serializedVersion: 3
@@ -39038,10 +39143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: "Potion de rapidit\xE9"
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1836536947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39054,7 +39159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de force"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -41903,10 +42009,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac4c5297bc3b54ca64286aa5e091d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TmxId: 0
+  TmxId: 2
   TmxName: 
   TmxType: 
-  TmxPosition: {x: 0, y: 0}
+  TmxPosition: {x: 257, y: 161.5}
   TmxSize: {x: 0, y: 0}
   TmxRotation: 0
 --- !u!1 &1892636033
@@ -42293,10 +42399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b265f173b1e94c943a11e5c0acf22b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 
+  item: Potion de force
   Open: 0
-  imgChest: {fileID: 0}
-  sound: {fileID: 0}
+  imgChest: {fileID: 21300000, guid: bb873309dd51cf047be170c3dad71ee3, type: 3}
+  sound: {fileID: 8300000, guid: 57d4fa87a0794c444baa6ed05f6462a8, type: 3}
 --- !u!114 &1904972389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42309,7 +42415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Vous avez re\xE7u une potion de Force"
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -42436,7 +42543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
+  warpTarget: {fileID: 1398425819}
   Music: {fileID: 0}
   isBoat: 0
 --- !u!61 &1906634345
@@ -43556,7 +43663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - "Maman: Tu n'iras pas jouer aux jeux vid\xE9os! Fais quelque chose de ta vie!"
+  - Vous ne pouvez pas entrer ici.
   ennemy: {fileID: 0}
   instantTalk: 0
   hasBeenTalked: 0
@@ -43717,9 +43826,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300034, guid: 3a64f8e38fef2c843aa78c18bbfe115c, type: 3}
 --- !u!95 &1978524987
 Animator:
   serializedVersion: 3
@@ -44344,7 +44453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Offset: {x: 0, y: 0}
-  Color: {r: 0, g: 0, b: 0, a: 0}
+  Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
 --- !u!1 &2036736841
 GameObject:
   m_ObjectHideFlags: 0
@@ -44386,9 +44495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
-  isBoat: 0
+  warpTarget: {fileID: 635149560}
+  Music: {fileID: 8300000, guid: 8a67ab48684ef1049886209952b2affd, type: 3}
+  isBoat: 1
 --- !u!61 &2036736844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44836,9 +44945,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300034, guid: 3a64f8e38fef2c843aa78c18bbfe115c, type: 3}
 --- !u!95 &2059224502
 Animator:
   serializedVersion: 3
@@ -45141,9 +45250,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.9
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300034, guid: 3a64f8e38fef2c843aa78c18bbfe115c, type: 3}
 --- !u!95 &2066016118
 Animator:
   serializedVersion: 3
@@ -45603,9 +45712,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
+  dialogueLines:
+  - 'Rich: Hic! J''ai beaucoup trop bu... Hic!'
+  - "Rich: Bonjour mon enfant! Bois ce jus enchant\xE9, tu te sentiras beaucoup plus
+    fort! H\xE9 h\xE9!"
+  - '...Glou Glou...'
+  - "Vous vous sentez automatiquement plus fort et pr\xEAt \xE0 affronter les dangers
+    de la for\xEAt!"
   ennemy: {fileID: 0}
-  instantTalk: 0
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!61 &2082990819
 BoxCollider2D:
@@ -45708,9 +45823,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300042, guid: 6e06b8b12f51458448b4db529b6cb37b, type: 3}
 --- !u!95 &2092012959
 Animator:
   serializedVersion: 3
@@ -45891,28 +46006,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: 0
-  id_enemy1: 0
-  id_enemy2: 0
-  id_enemy3: 0
+  id_enemy1: 12
+  id_enemy2: 13
+  id_enemy3: 22
   id_enemy4: 0
-  go_enemy1: {fileID: 0}
-  go_enemy2: {fileID: 0}
-  go_enemy3: {fileID: 0}
+  go_enemy1: {fileID: 320841755}
+  go_enemy2: {fileID: 412088181}
+  go_enemy3: {fileID: 311273016}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 0}
-  target_win: {fileID: 0}
-  target_loose: {fileID: 0}
-  target_Ally_1: {fileID: 0}
-  target_Ally_2: {fileID: 0}
-  target_Ally_3: {fileID: 0}
-  target_Ally_4: {fileID: 0}
-  target_Exile: {fileID: 0}
-  hero: {fileID: 0}
-  combatUI: {fileID: 0}
-  lvlMenu: {fileID: 0}
-  soolsAfterWin: 0
+  target_combat: {fileID: 1709951808}
+  target_win: {fileID: 1726270918}
+  target_loose: {fileID: 1807029842}
+  target_Ally_1: {fileID: 335186241}
+  target_Ally_2: {fileID: 490018235}
+  target_Ally_3: {fileID: 1985485209}
+  target_Ally_4: {fileID: 647630776}
+  target_Exile: {fileID: 409518689}
+  hero: {fileID: 2132323858}
+  combatUI: {fileID: 471755026}
+  lvlMenu: {fileID: 579880826}
+  soolsAfterWin: 2
   idSpellGain: 
-  lore: "Il y a un public string lore pour chacun des combat \xE0 setup."
+  lore: "Suivez les tuiles bleues sur le sol, ils vous m\xE8neront vers la reine de
+    feu."
 --- !u!114 &2094395290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45925,9 +46041,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: 
-  dialogueLines: []
-  ennemy: {fileID: 0}
-  instantTalk: 0
+  dialogueLines:
+  - Doot !!! Doot !!!
+  ennemy: {fileID: 2094395285}
+  instantTalk: 1
   hasBeenTalked: 0
 --- !u!1 &2095829522
 GameObject:
@@ -46385,9 +46502,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300024, guid: 187b1c6b65e3867459857e2d1f391414, type: 3}
 --- !u!95 &2098285857
 Animator:
   serializedVersion: 3
@@ -46582,8 +46699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afae1d35f0e9154c952e5f7393d7ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpTarget: {fileID: 0}
-  Music: {fileID: 0}
+  warpTarget: {fileID: 1791724846}
+  Music: {fileID: 8300000, guid: f2f8b50b75f79b543859b6b889c2088d, type: 3}
   isBoat: 0
 --- !u!61 &2107567907
 BoxCollider2D:
@@ -46972,9 +47089,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 4
-  runModifier: 1.5
-  boat: {fileID: 0}
-  hero: {fileID: 0}
+  runModifier: 2
+  boat: {fileID: 1235506539}
+  hero: {fileID: 2132323858}
 --- !u!95 &2132323863
 Animator:
   serializedVersion: 3
@@ -47018,15 +47135,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9432c18473acb894cb43001ccdd036b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Menu: {fileID: 0}
-  textRemainingSouls: {fileID: 0}
-  sliderForce: {fileID: 0}
-  sliderDef: {fileID: 0}
-  sliderSpeed: {fileID: 0}
-  buttonForce: {fileID: 0}
-  buttonDef: {fileID: 0}
-  buttonSpeed: {fileID: 0}
-  exitButton: {fileID: 0}
+  Menu: {fileID: 476935461}
+  textRemainingSouls: {fileID: 29664113}
+  sliderForce: {fileID: 1490333278}
+  sliderDef: {fileID: 1384920557}
+  sliderSpeed: {fileID: 1257645671}
+  buttonForce: {fileID: 624541893}
+  buttonDef: {fileID: 60205798}
+  buttonSpeed: {fileID: 2076907108}
+  exitButton: {fileID: 522903123}
 --- !u!114 &2132323866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47038,13 +47155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b404ad998b7d924c987bfcea5e22c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leCanvas: {fileID: 0}
-  gameResult: {fileID: 0}
-  nbSouls: {fileID: 0}
-  newSort: {fileID: 0}
-  details: {fileID: 0}
+  leCanvas: {fileID: 837596974}
+  gameResult: {fileID: 1204925816}
+  nbSouls: {fileID: 814765431}
+  newSort: {fileID: 1308497910}
+  details: {fileID: 1269493568}
   AfficherMenu: 0
-  lastFight: 0
 --- !u!114 &2132323867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47056,7 +47172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b25962b781cff040b175817ba097138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leCanvas: {fileID: 0}
+  leCanvas: {fileID: 1381405846}
 --- !u!114 &2132323868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47068,10 +47184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ab055d5ceb4664e9c98942310aeb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mom: {fileID: 0}
-  Rich: {fileID: 0}
-  MordraxCollider: {fileID: 0}
-  FinalZoneCollider: {fileID: 0}
+  Mom: {fileID: 531142347}
+  Rich: {fileID: 2082990813}
+  MordraxCollider: {fileID: 585117257}
+  FinalZoneCollider: {fileID: 1235676399}
 --- !u!114 &2132323869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47083,7 +47199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c8693d7fabba145b9577f040ea6540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelUpButton: {fileID: 0}
+  levelUpButton: {fileID: 30721907}
 --- !u!1 &2140523080
 GameObject:
   m_ObjectHideFlags: 0
@@ -47132,9 +47248,9 @@ MonoBehaviour:
   movingLeft: 0
   movingRight: 0
   isAttacking: 0
-  attackTime: 0
+  attackTime: 0.8
   isDying: 0
-  idle: {fileID: 0}
+  idle: {fileID: 21300044, guid: bb6b1b5e1bf732e42811858fb7009419, type: 3}
 --- !u!95 &2140523083
 Animator:
   serializedVersion: 3
