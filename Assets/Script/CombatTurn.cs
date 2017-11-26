@@ -444,9 +444,27 @@ public class CombatTurn : MonoBehaviour
 
         Quit(target_win);
 
+        AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
+
         if (id_enemy2 == 9)
         {
-            SceneManager.LoadScene(2);
+            menuAfterFight.gameDone = true;
+            menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
+            menuAfterFight.SetGameResultText("gagnez!");
+            string spellName = "Aucun";
+            if (idSpellGain != "")
+            {
+                AccesBD bdSql = new AccesBD();
+                SqliteDataReader reader = bdSql.select("select nom from sort where id = '" + idSpellGain + "'");
+                while (reader.Read())
+                {
+                    spellName = reader.GetString(0);
+                }
+                bdSql.Close();
+            }
+            menuAfterFight.SetSortText(spellName);
+            menuAfterFight.SetDetailsText(lore);
+            menuAfterFight.AfficherMenu = true;
         }
         else
         {
@@ -468,7 +486,6 @@ public class CombatTurn : MonoBehaviour
             //Faire disparaitre l'ennemie dans le jeu
             UpdateGameProgress.doVerification = true;
 
-            AfterFight menuAfterFight = GameObject.FindGameObjectWithTag("Hero").GetComponent<AfterFight>();
             menuAfterFight.SetSoulsText(soolsAfterWin.ToString());
             menuAfterFight.SetGameResultText("gagnez!");
 
