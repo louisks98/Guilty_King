@@ -22,7 +22,7 @@ public class OpenCreditsMenu : MonoBehaviour {
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
-        if (gameObject.transform.position.y >= 2150.0f || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) )
+        if (gameObject.transform.position.y >= 2250.0f || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) )
         {
             AfficherMenu = false;
             SceneManager.LoadScene(0);
