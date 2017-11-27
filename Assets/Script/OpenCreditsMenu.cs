@@ -13,6 +13,7 @@ public class OpenCreditsMenu : MonoBehaviour {
     // Use this for initialization
     void Start () {
         AfficherMenu = true;
+        SoundManager.instance.PlayEndMusic();
     }
 	
 	// Update is called once per frame

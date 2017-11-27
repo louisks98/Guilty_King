@@ -125,7 +125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2905786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   defClip: {fileID: 8300000, guid: 79957f30b3ded3c4f9674bcf01d77415, type: 3}
   HealClip: {fileID: 8300000, guid: 7b76503671a8c464c9b83f4555e3ed28, type: 3}
   doorClip: {fileID: 8300000, guid: 5c574cd2050d2a54781ad323d031b9bc, type: 3}
+  endClip: {fileID: 8300000, guid: 79f98d624a485ba4dbf90fdbf5c6ab99, type: 3}
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &2905787
@@ -8453,6 +8454,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &432565919
 GameObject:
   m_ObjectHideFlags: 0
@@ -8529,7 +8531,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 432565919}
-  m_MaskInteraction: 0
 --- !u!1001 &433950508
 Prefab:
   m_ObjectHideFlags: 0
@@ -10564,7 +10565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &528632338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26689,7 +26690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1286694962
 Transform:
   m_ObjectHideFlags: 0
