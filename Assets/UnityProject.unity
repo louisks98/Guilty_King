@@ -148,6 +148,7 @@ MonoBehaviour:
   defClip: {fileID: 8300000, guid: 79957f30b3ded3c4f9674bcf01d77415, type: 3}
   HealClip: {fileID: 8300000, guid: 7b76503671a8c464c9b83f4555e3ed28, type: 3}
   doorClip: {fileID: 8300000, guid: 5c574cd2050d2a54781ad323d031b9bc, type: 3}
+  endClip: {fileID: 8300000, guid: 79f98d624a485ba4dbf90fdbf5c6ab99, type: 3}
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &2905787
@@ -8428,6 +8429,8 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &432565919
 GameObject:
   m_ObjectHideFlags: 0
