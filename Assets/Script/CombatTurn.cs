@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class CombatTurn : MonoBehaviour
 {
+    // CombatStates
+    // Represente les états du combat. 
     public enum CombatStates
     {
         ANIMSTART,
@@ -23,15 +25,27 @@ public class CombatTurn : MonoBehaviour
         WIN,
         ANIMEND,
         NOTINCOMBAT,
-        Escape
+        ESCAPE
     }
 
-    public static bool selecting { get; set; }
-    public bool anim;
-    public CombatStates currentState { get; set; }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Variables globales 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    // currentState, selecting, anim 
+    // Permettent de faire avancer le moteur de combat.
+    public CombatStates currentState { get; set; } // Represente l'états courant du combat.
+    public static bool selecting { get; set; } // Represente si le joueur est entrain de sélectionner son attaque ou non.
+    public bool anim; // Represente si il y a une animation qui est entrain de se dérouler.
+
+    //CurrentTeamIsAlly et CurrentPlayer permettent de savoir c'est le tour de qu'elle personnage dans le combat.
     public bool currentTeamIsAlly { get; set; }
     public int currentPlayer { get; set; }
+
+    // ennemies, allies, id_..., go_enemy...
+    // Permettent d'initialiser les combatants.
+    List<Personnage> ennemies;
+    List<Personnage> allies;
 
     public int id_enemy1 = 0;
     public int id_enemy2 = 0;
@@ -43,72 +57,86 @@ public class CombatTurn : MonoBehaviour
     public GameObject go_enemy3 = null;
     public GameObject go_enemy4 = null;
 
-    List<Personnage> ennemies;
-    List<Personnage> allies;
-
-    public Transform target_combat;
+    // target_win, target_loose
+    // Permet de repositionner nottre personnage au bon endrois après le combat.
     public Transform target_win;
     public Transform target_loose;
 
+    // target_win, target_loose
+    // Permet de positionner les éléments au bon endrois (caméra, combattant, ) dans l'interface de combat.
+    public Transform target_combat;
     public Transform target_Ally_1;
     public Transform target_Ally_2;
     public Transform target_Ally_3;
     public Transform target_Ally_4;
     public Transform target_Exile;
 
-    public GameObject hero;
-
+    // combatUI, pnlAlly, pnlEnemy, pnlButton, listBtn, hpTextAlly, hpTextEnemy, hpBarAlly, hpBarEnemy
+    // Permettent de faire l'affichage des informations de combat.
     public GameObject combatUI;
     private GameObject pnlAlly;
     private GameObject pnlEnemy;
     private GameObject pnlButton;
 
-    private List<Button> ListBtn;
+    private List<Button> listBtn;
     private List<Text> hpTextAlly;
     private List<Text> hpTextEnemy;
     private List<Slider> hpBarAlly;
     private List<Slider> hpBarEnemy;
 
-    System.Random random;
-
+    // soolsAfterWin, idSpellGain, lore, lvlMenu
+    // Représente touts les gains après un combat.
     public GameObject lvlMenu;
-
-
     public int soolsAfterWin;
     public string idSpellGain;
     public string lore = "Il y a un public string lore pour chacun des combat à setup.";
 
+    // random
+    // Utiliser pour générer des nombres aléatoire pour simuler des action aléatiore (sélection d'un sort, esquive ...)
+    System.Random random;
+
+    // hero
+    // Utiliser pour déplacer notre héro a la bonne position après le combat.
+    public GameObject hero;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Fonctions et procedures
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    // Start 
+    // Appeler lorsque le jeux est démarer.
+    // But: Initializer les variables.
     void Start()
     {
         currentState = CombatStates.NOTINCOMBAT;
         selecting = false;
     }
 
+    // Update 
+    // Appeler un fois par rafraichissement.
+    // But: Permet de faire tourner le moteur de combat en continue.
     void Update()
     {
-        //Debug.Log(!currentPlayerIsMoving());
-        Debug.Log(currentState + "Anim:" + anim + "Selecting:" + selecting + "Moving:" + !currentPlayerIsMoving());
-
         if (!anim && !currentPlayerIsMoving() && !selecting)
         {
-            //Debug.Log("Can move : " + PlayerMovment.canMove);
-            Debug.Log(currentState);
-
             switch (currentState)
             {
                 case (CombatStates.ANIMSTART):
-                    //Empêcher le joueur de bouger
+                    //Empêcher le joueur de bouger.
                     PlayerMovment.inCombat = true;
                     PlayerMovment.canMove = false;
 
+                    //Démare une transition.
                     StartCoroutine(Fade());
+
                     currentState = CombatStates.START;
                     break;
                 case (CombatStates.START):
                     //Positionner la caméra sur le combat
                     CameraMovment.target_Combat = target_combat;
                     CameraMovment.inCombat = true;
-                    Debug.Log("On place la caméra sur le combat");
+
                     Combat_Start();
 
                     currentState = CombatStates.STARTATTACK;
@@ -154,7 +182,7 @@ public class CombatTurn : MonoBehaviour
                             if (Escape())
                             {
                                 Start_Quit();
-                                currentState = CombatStates.Escape;
+                                currentState = CombatStates.ESCAPE;
                             }
                             else
                             {
@@ -244,7 +272,6 @@ public class CombatTurn : MonoBehaviour
                             if (ennemies[currentPlayer] != null)
                             {
                                 int randomNumber = SelectSpell(ennemies[currentPlayer].sorts); // Choisir un spell
-                                Debug.Log("Sort :" + randomNumber);
                                 if (ennemies[currentPlayer].sorts[randomNumber] != null)
                                 {
                                     if (ennemies[currentPlayer].sorts[randomNumber].type == "GR")
@@ -304,7 +331,6 @@ public class CombatTurn : MonoBehaviour
                     break;
                 case (CombatStates.NEXTPLAYER):
                     Next_Turn();
-                    Debug.Log("NEXT");
                     break;
                 case (CombatStates.WIN):
                     Combat_WIN();
@@ -319,7 +345,7 @@ public class CombatTurn : MonoBehaviour
                         Combat_WIN();
                     }
                     break;
-                case (CombatStates.Escape):
+                case (CombatStates.ESCAPE):
                     Combat_Escape();
                     break;
                 case (CombatStates.ANIMEND):
@@ -438,11 +464,11 @@ public class CombatTurn : MonoBehaviour
         {
             CancelDialog.forestDead = true;
         }
-        if (id_enemy1 == 3)
+        if (id_enemy2 == 3)
         {
             CancelDialog.fireDead = true;
         }
-        if (id_enemy1 == 4)
+        if (id_enemy2 == 4)
         {
             CancelDialog.iceDead = true;
         }
@@ -464,6 +490,7 @@ public class CombatTurn : MonoBehaviour
             LvlMenu.addSouls(soolsAfterWin);
             LvlMenu.UpdateUI();
             LvlMenu.saveSools();
+            GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
 
             //Ennemies à null
             ennemies = null;
@@ -520,6 +547,7 @@ public class CombatTurn : MonoBehaviour
     {
         Init_Ally();
         Init_Ennemy();
+        ApplyDifficulty();
     }
 
     void Init_Ally()
@@ -731,7 +759,7 @@ public class CombatTurn : MonoBehaviour
         pnlAlly = GameObject.Find("PNL_TeamHp");
         pnlEnemy = GameObject.Find("PNL_Enemy");
         pnlButton = GameObject.Find("PNL_Button");
-        ListBtn = new List<Button>(pnlButton.GetComponentsInChildren<Button>());
+        listBtn = new List<Button>(pnlButton.GetComponentsInChildren<Button>());
         hpTextAlly = new List<Text>(pnlAlly.GetComponentsInChildren<Text>());
         hpTextEnemy = new List<Text>(pnlEnemy.GetComponentsInChildren<Text>());
         hpBarAlly = new List<Slider>(pnlAlly.GetComponentsInChildren<Slider>());
@@ -1011,7 +1039,6 @@ public class CombatTurn : MonoBehaviour
                 id = random.Next(0, listPerso.Count);
             }
         }
-        Debug.Log("Target :" + id);
         return listPerso[id].id;
     }
 
@@ -1035,6 +1062,12 @@ public class CombatTurn : MonoBehaviour
         {
             idSpell = random.Next(0, sorts.Count);
         } 
+
+        //Pas de heal premier combat, rend le combat long pour rien.
+        if(id_enemy1 == 2)
+        {
+            idSpell = 0;
+        }
 
         //Twist du boss de glace
         if (idSpellGain.Equals("H4"))
@@ -1085,7 +1118,7 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    speed = perso.speed;
+                    speed = perso.BattleSpd;
                     name = perso.name;
                 }
             }
@@ -1097,13 +1130,13 @@ public class CombatTurn : MonoBehaviour
             {
                 if (perso.id == idPersonnage)
                 {
-                    speed = perso.speed;
+                    speed = perso.BattleSpd;
                     name = perso.name;
                 }
             }
         }
 
-        if(random.Next(0,100) <= speed)
+        if(random.Next(1,101) <= speed)
         {
             dodge = true;
             StartCoroutine(combatUI.GetComponent<CombatUI>().ShowMessage(name + " : Esquive", 1));
@@ -1112,20 +1145,59 @@ public class CombatTurn : MonoBehaviour
         return dodge;
     }
 
+    float DifficultyModifier()
+    {
+        float modifier = 1;
+        int difficulty = 1;
+        AccesBD bd = new AccesBD();
+
+        try
+        {
+            SqliteDataReader reader = bd.select("select Niveau from Personnage where idPersonnage = 1");
+            while (reader.Read())
+            {
+                difficulty = reader.GetInt32(0);
+            }
+            bd.Close();
+        }
+        catch(Exception e)
+        {
+            bd.Close();
+            Debug.Log(e);
+        }
+
+        switch (difficulty)
+        {
+            case 1:
+                modifier = 1f;
+                break;
+            case 2:
+                modifier = 1.25f;
+                break;
+            case 3:
+                modifier = 1.50f;
+                break;
+        }
+
+        return modifier;
+    }
+
     void ApplyDifficulty()
     {
-        foreach(var perso in ennemies)
+        float x = DifficultyModifier();
+        foreach (var perso in ennemies)
         {
             if (perso != null)
             {
-                perso.BattleHp += perso.BattleHp * 4;
+                perso.hpTotal = Convert.ToInt32(perso.BattleHp * x);
+                perso.BattleHp = Convert.ToInt32(perso.BattleHp * x);
                 foreach(var sort in perso.sorts)
                 {
                     if(sort != null)
                     {
-                        if(sort.type == "AS" && sort.type == "AZ")
+                        if(sort.type == "AS" || sort.type == "AZ")
                         {
-                            sort.valeur += sort.valeur * 4;
+                            sort.valeur = Convert.ToInt32(sort.valeur * x);
                         }
                     }
                 }

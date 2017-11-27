@@ -33,11 +33,11 @@ public class LevelUp : MonoBehaviour
 
     int maxForce = 120;
     int maxDef = 60;
-    int maxSpeed = 30;
+    int maxSpeed = 24;
 
     int pointForce = 20;
     int pointDef = 10;
-    int pointSpeed = 5;
+    int pointSpeed = 4;
 
     // Use this for initialization
     void Start()
@@ -85,6 +85,7 @@ public class LevelUp : MonoBehaviour
         sliderForce.value = forceValue / pointForce;
         sliderDef.value = defenseValue / pointDef;
         sliderSpeed.value = SpeedValue / pointSpeed;
+
     }
 
     public void onForceClick()
@@ -122,7 +123,7 @@ public class LevelUp : MonoBehaviour
     }
 
     // voir si le escape met a jour la bd IMPORTANT
-    private void exitLevelMenu()
+    public void exitLevelMenu()
     {
         if (bdModifier)
         {
@@ -133,6 +134,7 @@ public class LevelUp : MonoBehaviour
                 string query = "update Stats Set Force = " + forceValue + ", Defence = " + defenseValue + ", Vitesse = " + SpeedValue + ", nbAmes = " + soulsNumber + ", Point_de_vie = " + hpValue + " where Stats.idStats = 1";
                 bd.insert(query);
                 bd.Close();
+                bdModifier = false;
             }
             catch (SqliteException e)
             {
@@ -140,6 +142,7 @@ public class LevelUp : MonoBehaviour
                 Debug.Log(e);
                 bdModifier = false;
             }
+            GameObject.Find("Hero").GetComponent<OpenLevelUpHint>().AfficherLevelHint();
         }
     }
 

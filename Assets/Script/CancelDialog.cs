@@ -110,8 +110,11 @@ public class CancelDialog : MonoBehaviour {
 
         if (forestDead && fireDead && iceDead)
         {
-            FinalZoneCollider.GetComponent<DialogHolder>().hasBeenTalked = true;
-            Destroy(FinalZoneCollider);
+            if(FinalZoneCollider != null)
+            {
+                FinalZoneCollider.GetComponent<DialogHolder>().hasBeenTalked = true;
+                Destroy(FinalZoneCollider);
+            }
         }
     }
 }
