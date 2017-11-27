@@ -3179,15 +3179,14 @@ MonoBehaviour:
   go_enemy2: {fileID: 757587450}
   go_enemy3: {fileID: 2092012956}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 1292186212}
   target_win: {fileID: 580912875}
   target_loose: {fileID: 580912875}
+  target_combat: {fileID: 1292186212}
   target_Ally_1: {fileID: 714009016}
   target_Ally_2: {fileID: 870502284}
   target_Ally_3: {fileID: 99137865}
   target_Ally_4: {fileID: 0}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 4
@@ -3195,6 +3194,7 @@ MonoBehaviour:
   lore: "Illia tombe en amour avec votre force et votre courage et d\xE9cide de rejoindre
     l'\xE9quipe. La zone du roi est maintenant disponible. Vite! Dirigez-vous vers
     le sud-est de la carte d'eau!"
+  hero: {fileID: 2132323858}
 --- !u!1 &137331887
 GameObject:
   m_ObjectHideFlags: 0
@@ -8337,20 +8337,20 @@ MonoBehaviour:
   go_enemy2: {fileID: 0}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 1087211488}
   target_win: {fileID: 550242561}
   target_loose: {fileID: 1807029842}
+  target_combat: {fileID: 1087211488}
   target_Ally_1: {fileID: 1952856082}
   target_Ally_2: {fileID: 1795325919}
   target_Ally_3: {fileID: 230233240}
   target_Ally_4: {fileID: 1458327149}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
   lore: "Vous avez r\xE9ussi \xE0 renvoyer Mordrax en enfer. F\xE9licitations!"
+  hero: {fileID: 2132323858}
 --- !u!114 &419570785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8736,21 +8736,21 @@ MonoBehaviour:
   go_enemy2: {fileID: 1816251042}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 1158451078}
   target_win: {fileID: 1113147286}
   target_loose: {fileID: 1807029842}
+  target_combat: {fileID: 1158451078}
   target_Ally_1: {fileID: 1071501869}
   target_Ally_2: {fileID: 894003188}
   target_Ally_3: {fileID: 1049037631}
   target_Ally_4: {fileID: 1843591476}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
   lore: "Trouver l'autre pond qui vous m\xE8nera vers le boss de feu. N'oubliez pas
     de monter de niveau en utilisant la touche Escape!"
+  hero: {fileID: 2132323858}
 --- !u!114 &448667299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10499,15 +10499,14 @@ MonoBehaviour:
   go_enemy2: {fileID: 463607592}
   go_enemy3: {fileID: 1800367285}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 575754203}
   target_win: {fileID: 2028224327}
   target_loose: {fileID: 1807029842}
+  target_combat: {fileID: 575754203}
   target_Ally_1: {fileID: 994534584}
   target_Ally_2: {fileID: 964415766}
   target_Ally_3: {fileID: 0}
   target_Ally_4: {fileID: 0}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 3
@@ -10515,6 +10514,7 @@ MonoBehaviour:
   lore: "\xC0 la recherche de plus de puissance, la reine de feu se joint \xE0 l'\xE9quipe
     et vous aidera dans votre qu\xEAte. Retournez en bateau et dirigez-vous vers le
     nord-est afin de trouver le glacier o\xF9 vit la reine de glace."
+  hero: {fileID: 2132323858}
 --- !u!1 &527476420
 GameObject:
   m_ObjectHideFlags: 0
@@ -11279,21 +11279,21 @@ MonoBehaviour:
   go_enemy2: {fileID: 1375124214}
   go_enemy3: {fileID: 2140523080}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 1810083723}
   target_win: {fileID: 1152248580}
   target_loose: {fileID: 761507643}
+  target_combat: {fileID: 1810083723}
   target_Ally_1: {fileID: 1958933946}
   target_Ally_2: {fileID: 2039274491}
   target_Ally_3: {fileID: 1043874225}
   target_Ally_4: {fileID: 17454275}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 0
   idSpellGain: 
   lore: "Votre m\xE8re serait fi\xE8re de vous! Vous \xEAtes maintenant le roi...
     mais qui sait quand le roi corrompu reviendra pour reprendre sa place..."
+  hero: {fileID: 2132323858}
 --- !u!1 &545767982
 GameObject:
   m_ObjectHideFlags: 0
@@ -17114,15 +17114,14 @@ MonoBehaviour:
   go_enemy2: {fileID: 0}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 200958520}
   target_win: {fileID: 850647963}
   target_loose: {fileID: 850647963}
+  target_combat: {fileID: 200958520}
   target_Ally_1: {fileID: 859048079}
   target_Ally_2: {fileID: 0}
   target_Ally_3: {fileID: 0}
   target_Ally_4: {fileID: 0}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 1
@@ -17130,6 +17129,7 @@ MonoBehaviour:
   lore: "Armstrong a gagn\xE9 le combat, mais comprenant l'importance de votre qu\xEAte,
     il se joint \xE0 vous afin de battre le roi corrompu. N'oubliez pas de monter
     de niveau!"
+  hero: {fileID: 2132323858}
 --- !u!1 &835556021
 GameObject:
   m_ObjectHideFlags: 0
@@ -23489,20 +23489,20 @@ MonoBehaviour:
   go_enemy2: {fileID: 758750963}
   go_enemy3: {fileID: 0}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 494789465}
   target_win: {fileID: 1180677463}
   target_loose: {fileID: 1791724846}
+  target_combat: {fileID: 494789465}
   target_Ally_1: {fileID: 1741491874}
   target_Ally_2: {fileID: 366499938}
   target_Ally_3: {fileID: 559371528}
   target_Ally_4: {fileID: 2085763075}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
   lore: "Les portes du ch\xE2teau sont maintenant ouvertes. Bonne chance."
+  hero: {fileID: 2132323858}
 --- !u!212 &1146949995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37481,15 +37481,14 @@ MonoBehaviour:
   go_enemy2: {fileID: 2066016115}
   go_enemy3: {fileID: 1978524984}
   go_enemy4: {fileID: 2059224499}
-  target_combat: {fileID: 49611955}
   target_win: {fileID: 784214297}
   target_loose: {fileID: 1581285941}
+  target_combat: {fileID: 49611955}
   target_Ally_1: {fileID: 326921819}
   target_Ally_2: {fileID: 1696367656}
   target_Ally_3: {fileID: 0}
   target_Ally_4: {fileID: 0}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
@@ -37497,6 +37496,7 @@ MonoBehaviour:
   lore: "Gr\xE2ce \xE0 Armstrong, vous avez r\xE9ussi \xE0 battre les quatre gobelins
     des for\xEAts. Passez le pont et dirigez-vous vers le sud pour aller dans la carte
     de feu."
+  hero: {fileID: 2132323858}
 --- !u!114 &1751707228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37685,7 +37685,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000085831, y: 104}
-  m_SizeDelta: {x: 421.8, y: 30}
+  m_SizeDelta: {x: 1000, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763831964
 MonoBehaviour:
@@ -46014,21 +46014,21 @@ MonoBehaviour:
   go_enemy2: {fileID: 412088181}
   go_enemy3: {fileID: 311273016}
   go_enemy4: {fileID: 0}
-  target_combat: {fileID: 1709951808}
   target_win: {fileID: 1726270918}
   target_loose: {fileID: 1807029842}
+  target_combat: {fileID: 1709951808}
   target_Ally_1: {fileID: 335186241}
   target_Ally_2: {fileID: 490018235}
   target_Ally_3: {fileID: 1985485209}
   target_Ally_4: {fileID: 647630776}
   target_Exile: {fileID: 409518689}
-  hero: {fileID: 2132323858}
   combatUI: {fileID: 471755026}
   lvlMenu: {fileID: 579880826}
   soolsAfterWin: 2
   idSpellGain: 
   lore: "Suivez les tuiles bleues sur le sol, ils vous m\xE8neront vers la reine de
     feu."
+  hero: {fileID: 2132323858}
 --- !u!114 &2094395290
 MonoBehaviour:
   m_ObjectHideFlags: 0
