@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip defClip;
     public AudioClip HealClip;
     public AudioClip doorClip;
+    public AudioClip endClip;
     public static SoundManager instance = null;
 
     public float lowPitchRange = .95f;
@@ -36,7 +37,7 @@ public class SoundManager : MonoBehaviour {
     public void PlaySingle(AudioClip clip)
     {
         efxSource.clip = clip;
-        efxSource.volume = 1f;
+        efxSource.volume = 0.5f;
         efxSource.Play();
     }
 
@@ -57,6 +58,13 @@ public class SoundManager : MonoBehaviour {
     {
         musicSource.Stop();
         musicSource.clip = BattleMusic;
+        musicSource.Play();
+    }
+    
+    public void PlayEndMusic()
+    {
+        musicSource.Stop();
+        musicSource.clip = endClip;
         musicSource.Play();
     } 
 
@@ -84,7 +92,6 @@ public class SoundManager : MonoBehaviour {
     public void PlayHeal()
     {
         efxSource.clip = HealClip;
-       // efxSource.volume = 0.85f;
         efxSource.Play();
 
     }
@@ -108,7 +115,8 @@ public class SoundManager : MonoBehaviour {
     {
         int randomIndex = Random.Range(0, clip.Length);
         float randomPitch = Random.Range(lowPitchRange, highPitchRange);
-
+        
+        efxSource.volume = 0.5f;
         efxSource.pitch = randomPitch;
         efxSource.clip = clip[randomIndex];
         efxSource.Play();
